@@ -1,0 +1,224 @@
+# Daten aus Literaturquellen
+hillery1955 <- list(
+  N = 94,
+  n_konz = 16,
+  n_combn = 22,
+  sozint = 91,
+  gemverb = 73,
+  geo = 69
+  )
+
+obst2005_varnames <- c("psoc", "sal", "ties", "aff", "centr")
+obst2005_parnames <- c("mean", "sd", "rel", "n_items", "coefs_reg")
+obst2005_n_items <- c(10, 1, rep(4, 3))
+obst2005 <- list(
+  neigh = matrix(
+    c(39.11, 4.08, 3.23, 5.30, 2.95,
+      9.10, 1.62, 1.33, 1.07, 1.27,
+      0.80, 0.91, 0.79, 0.77, 0.75,
+      obst2005_n_items,
+      NA, 0.03, 0.53, 0.29, 0.21),
+    ncol = length(obst2005_varnames), byrow = TRUE
+    ),
+  stud = matrix(
+    c(46.30, 5.08, 4.11, 5.73, 4.32,
+      7.17, 1.36, 1.31, 1.05, 1.31,
+      0.87, 0.81, 0.82, 0.81, 0.80,
+      obst2005_n_items,
+      NA, 0.13, 0.47, 0.22, 0.25),
+    ncol = length(obst2005_varnames), byrow = TRUE 
+    ),
+  int = matrix(
+    c(51.75, 4.75, 4.85, 5.79, 4.22,
+      9.41, 1.52, 1.34, 1.02, 1.31,
+      0.91, 0.87, 0.80, 0.85, 0.84,
+      obst2005_n_items,
+      NA, 0.07, 0.47, 0.25, 0.30),
+    ncol = length(obst2005_varnames), byrow = TRUE 
+    )
+  )
+obst2005 <- lapply(obst2005,
+  structure,
+  dimnames = list(obst2005_parnames, obst2005_varnames))
+
+jason2015_cor <- c(self_mem = 0.669, self_ent = 0.548, mem_ent = 0.634)
+jason2015_cormat <- diag(3)
+rownames(jason2015_cormat) <- c("self", "mem", "ent")
+colnames(jason2015_cormat) <- rownames(jason2015_cormat)
+jason2015_cormat[upper.tri(jason2015_cormat)] <- jason2015_cor
+jason2015_cormat[lower.tri(jason2015_cormat)] <- t(jason2015_cor)
+jason2015 <- list(
+  N = 158,
+  descr = matrix(
+    c(4.49, 1.24, 0.865, 3,
+      4.29, 1.18, 0.904, 3,
+      4.15, 1.33, 0.833, 3,
+      4.31, 1.11, 0.923, 9),
+    ncol = 4,
+    dimnames = list(
+      c("mean", "sd", "alpha", "n_items"),
+      c("self", "mem", "ent", "full"))
+    ),
+  cormat = jason2015_cormat,
+  EFA_Fit = c(CFI = 1.000, TLI = 1.007, RMSEA = 0.000),
+  AIC = setNames(c(181.703, 162.217, 162.606, 161.899, 164.385),
+          c("Nullmodell", "1 Faktor", "3 Faktoren", 
+            "3-fach-Interaktion", "3 Faktoren + 3-fach-Interaktion")
+          )
+  )
+
+glynn1981 <- list(
+  descr = matrix(
+    c(68, 73, 30,
+      4.04, 4.09, 3.98,
+      3.12, 3.67, 3.81),
+    ncol = 3,
+    dimnames = list(
+      c("hy", "gr", "kb"),
+      c("n", "psoc_i", "psoc_a"))
+    ),
+  rel = setNames(c(0.924, 0.972), c("psoc_i", "psoc_a")),
+  df = c(2, 168),
+  f = setNames(c(1.3, 23.6), c("psoc_i", "psoc_a"))
+  )
+
+halamova2018 <- list(
+  excor = matrix(
+    c(0.39, 0.64, 0.35,
+      0.31, 0.69, 0.29),
+    ncol = 2,
+    dimnames = list(
+      c("ad", "ao", "do"),
+      c("RC", "IC"))
+    ),
+  koncor = matrix(
+    c(0.37, 0.87, 0.50,
+      0.46, 0.94, 0.45),
+    ncol = 2,
+    dimnames = list(
+      c("ad", "ao", "do"),
+      c("RC", "IC"))
+    ),
+  items_acc = c(1, 6, 8, 9, 13, 14, 16, 19, 21, 22),
+  items_dyn = c(2, 4, 5, 7, 12, 15, 17, 20),
+  items_opn = c(3, 10, 11, 18),
+  exloadings_rc = matrix(
+    c(0.844, 0.053, 0.334, 0.177, 0.059, 0.714, 0.109, 0.865, 0.805, 0.028, 0.228, 0.093, 0.536, 0.852, 0.039, 0.732, 0.011, 0.223, 0.485, 0.229, 0.693, 0.577,
+      0.113, 0.273, 0.018, 0.535, 0.667, 0.104, 0.476, 0.064, 0.030, 0.058, 0.194, 0.730, 0.036, 0.041, 0.839, 0.071, 0.828, 0.174, 0.036, 0.582, 0.165, 0.166,
+      0.012, 0.026, 0.407, 0.198, 0.214, 0.135, 0.112, 0.068, 0.076, 0.459, 0.582, 0.096, 0.250, 0.079, 0.049, 0.119, 0.043, 0.453, 0.125, 0.171, 0.147, 0.126),
+    ncol = 3,
+    dimnames = list(
+      c("RC01", "RC02", "RC03", "RC04", "RC05", "RC06", "RC07", "RC08", "RC09", "RC10", "RC11", "RC12", "RC13", "RC14", "RC15", "RC16", "RC17", "RC18", "RC19", "RC20", "RC21", "RC22"),
+    c("acc", "dyn", "opn"))
+    ),
+  exloadings_ic = matrix(
+    c(0.959, 0.042, 0.019, 0.041, 0.088, 0.938, 0.110, 0.950, 0.932, 0.086, 0.092, 0.032, 0.860, 0.955, 0.060, 0.683, 0.025, 0.151, 0.737, 0.181, 0.861, 0.867,
+      0.098, 0.362, 0.075, 0.607, 0.543, 0.035, 0.570, 0.013, 0.014, 0.009, 0.077, 0.547, 0.061, 0.046, 0.792, 0.022, 0.863, 0.095, 0.026, 0.530, 0.113, 0.102,
+      0.066, 0.150, 0.756, 0.320, 0.119, 0.092, 0.318, 0.039, 0.035, 0.390, 0.855, 0.286, 0.078, 0.038, 0.076, 0.037, 0.072, 0.738, 0.069, 0.149, 0.001, 0.001),
+    ncol = 3,
+    dimnames = list(
+      c("IC01", "IC02", "IC03", "IC04", "IC05", "IC06", "IC07", "IC08", "IC09", "IC10", "IC11", "IC12", "IC13", "IC14", "IC15", "IC16", "IC17", "IC18", "IC19", "IC20", "IC21", "IC22"),
+    c("acc", "dyn", "opn"))
+    ),
+  konloadings_acc = matrix(
+    c(0.851, 0.871, 0.858, 0.899, 0.736, 0.855, 0.714, 0.691, 0.884, 0.721,
+      0.957, 0.956, 0.969, 0.963, 0.869, 0.968, 0.783, 0.866, 0.940, 0.942),
+    ncol = 2,
+    dimnames = list(
+      c(1, 6, 8, 9, 13, 14, 16, 19, 21, 22),
+      c("RC", "IC"))
+    ),
+  konloadings_dyn = matrix(
+    c(0.386, 0.477, 0.730, 0.614, 0.677, 0.867, 0.817, 0.589,
+      0.408, 0.428, 0.638, 0.498, 0.593, 0.807, 0.918, 0.684),
+    ncol = 2,
+    dimnames = list(
+      c(2, 4, 5, 7, 12, 15, 17, 20),
+      c("RC", "IC"))
+    ),
+  konloadings_opn = matrix(
+    c(0.642, 0.380, 0.792, 0.680,
+      0.832, 0.485, 0.933, 0.844),
+    ncol = 2,
+    dimnames = list(
+      c(3, 10, 11, 18),
+      c("RC", "IC"))
+    ),
+  exloglik = matrix(
+    c(-15531, -15140, -15085,
+      -10943, -10557, -10535),
+    ncol = 2,
+    dimnames = list(
+      c("1 Faktor", "2 Faktoren", "3 Faktoren"),
+      c("RC", "IC"))
+    )
+  )
+
+mannarini2018b <- list(
+  acc_rel = setNames(c(0.83, 0.77), c("accorig", "accnew")),
+  acc_freq = matrix(
+    c(64, 37, 27, 102, 33, 22, 59, 12),
+    ncol = 2,
+    dimnames = list(c("int", "ass", "sep", "mar"), c("albania", "srilanka"))),
+  albania = matrix(
+    c(22.80, 7.35, 0.87, 22.13, 7.16, 0.87),
+    ncol = 2,
+    dimnames = list(c("mean", "sd", "rel"), c("tpsoc", "epsoc"))),
+  srilanka = matrix(
+    c(23.14, 3.32, 0.87, 27.13, 4.59, 0.87),
+    ncol = 2,
+    dimnames = list(c("mean", "sd", "rel"), c("tpsoc", "epsoc")))
+  )
+
+fernuni2018 <- list(
+  gender = setNames(c(39277, 33697, 0),
+    c("M\u00e4nnlich", "Weiblich", "Divers")),
+  genderpsych = setNames(c(3673, 9055, 0),
+    c("M\u00e4nnlich", "Weiblich", "Divers")),
+  alterm = setNames(c(60, 1788, 9855, 11153, 7197, 4860, 2633, 1731),
+    c("Unter 18", "18--24", "25--31", "32--38", "39--45", "46--52", "53--59",
+    "\u00dcber 60")),
+  alterw = setNames(c(29, 2461, 9665, 9277, 5454, 3869, 2168, 774),
+    c("Unter 18", "18--24", "25--31", "32--38", "39--45", "46--52", "53--59",
+    "\u00dcber 60")),
+  bundesland = setNames(c(7697, 10621, 5166, 1185, 458, 2272, 5306, 547, 4980,
+    20478, 2660, 706, 1990, 683, 1737, 723, 5765),
+    c("Baden-W\u00fcrttemberg", "Bayern", "Berlin", "Brandenburg", "Bremen",
+    "Hamburg", "Hessen", "Mecklenburg-Vorpommern", "Niedersachsen",
+    "Nordrhein-Westfalen", "Rheinland-Pfalz", "Saarland", "Sachsen",
+    "Sachsen-Anhalt", "Schleswig-Holstein", "Th\u00fcringen",
+    "Au\u00dferhalb von Deutschland")),
+  studstatus = setNames(c(16212, 44931, 170, 22, 431, 3432, 5389, 2387),
+    c("Vollzeitstudium", "Teilzeitstudium", "Kooperationsstudium",
+    "Jungstudium", "Promotionsstudium", "Zweith\u00f6rerstudium", "Akademiestudium",
+    "Weiterbildungsstudium"))
+  )
+
+fernuni2019 <- list(
+  gender = setNames(c(40429, 34992, 5),
+    c("M\u00e4nnlich", "Weiblich", "Divers")),
+  genderpsych = setNames(c(4085, 10012, 1),
+    c("M\u00e4nnlich", "Weiblich", "Divers")),
+  alterm = setNames(c(82, 2450, 9991, 10972, 7390, 4738, 2895, 1911),
+    c("Unter 18", "18--24", "25--31", "32--38", "39--45", "46--52", "53--59",
+    "\u00dcber 60")),
+  alterw = setNames(c(33, 3429, 9641, 9199, 5738, 3775, 2283, 894),
+    c("Unter 18", "18--24", "25--31", "32--38", "39--45", "46--52", "53--59",
+    "\u00dcber 60")),
+  bundesland = setNames(c(8015, 10906, 5242, 1278, 539, 2333, 5594, 574, 5135,
+    21128, 2815, 707, 2081, 703, 1837, 716, 5823),
+    c("Baden-W\u00fcrttemberg", "Bayern", "Berlin", "Brandenburg", "Bremen",
+    "Hamburg", "Hessen", "Mecklenburg-Vorpommern", "Niedersachsen",
+    "Nordrhein-Westfalen", "Rheinland-Pfalz", "Saarland", "Sachsen",
+    "Sachsen-Anhalt", "Schleswig-Holstein", "Th\u00fcringen",
+    "Au\u00dferhalb von Deutschland")),
+  studstatus = setNames(c(17326, 46363, 139, 8, 436, 2816, 6028, 2310),
+    c("Vollzeitstudium", "Teilzeitstudium", "Kooperationsstudium",
+    "Jungstudium", "Promotionsstudium", "Zweith\u00f6rerstudium", "Akademiestudium",
+    "Weiterbildungsstudium"))
+  )
+
+kvarven2020 <- list(
+  eff_orig = c(0.496, 0.57, 0.459, 0.127, 0.877, 0.31, 0.676, 0.57, 0.31, 0.236, 0.62, 0.117, 0.2, 0.3541, 0.426),
+  eff_rep = c(0.27, 0.6, 0.13, -0.07, 0.785, 0.04, 0.29, 0.03, 0.147, 0.171, 0.04, -0.02, 0.016, 0.063, -0.04)
+  )

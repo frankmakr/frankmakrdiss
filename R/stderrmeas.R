@@ -1,0 +1,59 @@
+#' Calculate the standard error of measurement
+#' 
+#' Utility function
+#' 
+#' @param sd A vector of standard deviations of measurement scales.
+#' @param rel A vector of reliability coefficients of measurement scales.
+#' @return The output will be a numeric vector of equal length to input. 
+calc_sem <- function(sd, rel) {
+  sem <- sd * sqrt(1 - rel)
+  return(sem)
+}
+
+#' Calculate the standard error of measurement and confidence intervals
+#'
+#' \code{calc_semci} returns the standard error of measurement
+#' from a given reliability and the corresponding standard deviation.
+#' The confidence intervals are calculated using
+#' a normal or a student t distribution
+#' or according to the Tschebyschow inequality for an unknown distribution.
+#'
+#' @param data A vector containing the measured values
+#' @param sd A vector of standard deviations of measurement scales.
+#' @param rel A vector of reliability coefficients of measurement scales.
+#' @param se0 The number of standard errors from 0 which are regarded
+#'   as the critical value for the confidence interval
+#' @param p_ci The confidence niveau in percent
+#' @param dist One of \code{"normal"}, \code{"t"}, or \code{"none"}
+#' @param ... The number of degrees of freedom for the student t distribution
+#' @return The output will be a data.frame containing the inputs,
+#'   the standard error of measurement, and the lower and upper bounds
+#'   of the confidence interval
+calc_semci <- function(data, sd, rel,
+                       se0 = 2.8,
+                       p_ci = NA,
+                       dist = "none",
+                       ...) {
+  args <- list(...)
+  sem <- calc_sem(sd, rel)
+  # Tschebyschow inequality
+  if(dist == "none") {
+    if(!is.na(se0)) {
+      p_ci <- 1 - 1 / se0^2
+    } else {
+      se0 <- sqrt(1 / (1 - p_ci))
+    }
+  # z or t distribution
+  } else {
+    df <- ifelse(dist == "z", Inf, args$df)
+    if(!is.na(se0)) { 
+      p_ci <- 1 - (1 - stats::pt(se0, df)) * 2
+    } else {
+      se0 <- stats::qt(1 - ((1 - p_ci) / 2), df)
+    }
+  } 
+  res <- data.frame(value = data, sd = sd, rel = rel, sem = sem, se0 = se0,
+    p_ci = p_ci, dist = ifelse(dist == "t", paste0(dist, ", df=", df), dist),
+    ll = data - se0 * sem, ul = data + se0 * sem)
+  return(res)
+}

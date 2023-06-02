@@ -1,0 +1,20 @@
+citHeader("To cite frankmakrdissr in publications use:")
+
+bibentry(
+  bibtype     = "misc",
+  title       = "Psychological Sense of Community",
+  subtitle    = "Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften",
+  author      = "Frank Krumbholz",
+  year        = 2023,
+  titleaddon  = "Dissertation, FernUniversität in Hagen",
+  eprint      = "",
+  doi         = "",
+  langid      = "ngerman",
+  textVersion = paste(
+                  "Krumbholz, F. (2023).",
+                  "Psychological Sense of Community:
+                    Inhaltsvalidität von Testverfahren
+                    in Abhängigkeit von Bezugsgemeinschaften
+                    [Dissertation, FernUniversität in Hagen]."
+  )
+)

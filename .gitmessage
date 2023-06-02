@@ -1,0 +1,20 @@
+# Please enter the commit message for your changes.
+# Lines starting with '#' will be ignored.
+# An empty message aborts the commit.
+#
+# The first line should be shorter than 50 characters
+#
+# On branch master
+# Changes to be committed:
+#     use 'git reset HEAD <file>...' to unstage
+# 
+# -------------------------------------
+# <type>[optional scope]: <description>
+#
+# [optional body]
+#
+# [optional footer]
+# -------------------------------------
+#
+
+

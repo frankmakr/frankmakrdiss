@@ -1,0 +1,1581 @@
+"","person","field","k_start","k_iter1","k_iter2","k_iter3"
+"1",1,1,"Freiburger","Freiburger","Wohnort","Indirekte Wohnumgebung"
+"2",1,2,"Deutsche","Deutschland","Nationalität","Nationalität"
+"3",1,3,"Familie","Familie","Familie","Familie"
+"4",1,4,"Oldenburger","Oldenburger","Wohnort","Indirekte Wohnumgebung"
+"5",1,5,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"6",1,6,"Studierende","Mitstudierende","Mitstudierende","Mitstudierende"
+"7",1,7,"Generation Y","Generation Y","Ähnliches Alter","Ähnliches Alter"
+"8",1,8,NA,NA,NA,NA
+"9",1,9,NA,NA,NA,NA
+"10",1,10,NA,NA,NA,NA
+"11",2,1,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"12",2,2,"Familie","Familie","Familie","Familie"
+"13",2,3,"Tierschutz","Tierschutz","Umweltschutz","Engagement Umweltschutz"
+"14",2,4,"Naturschutz","Naturschutz","Umweltschutz","Engagement Umweltschutz"
+"15",2,5,"Veganismus","Vegan lebende Menschen","Umweltschutz","Engagement Umweltschutz"
+"16",2,6,NA,NA,NA,NA
+"17",2,7,NA,NA,NA,NA
+"18",2,8,NA,NA,NA,NA
+"19",2,9,NA,NA,NA,NA
+"20",2,10,NA,NA,NA,NA
+"21",3,1,"Orchester","Orchester","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"22",3,2,"Team auf Arbeit","Arbeitsteam","Berufliches Team","Berufliche Tätigkeit"
+"23",3,3,"Lerngruppe","Lerngruppe","Lerngruppe","Lerngruppe"
+"24",3,4,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"25",3,5,NA,NA,NA,NA
+"26",3,6,NA,NA,NA,NA
+"27",3,7,NA,NA,NA,NA
+"28",3,8,NA,NA,NA,NA
+"29",3,9,NA,NA,NA,NA
+"30",3,10,NA,NA,NA,NA
+"31",4,1,"eigene Familie","Familie","Familie","Familie"
+"32",4,2,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"33",4,3,"Familie meines Partners","Familie meines Partners","Familie","Familie"
+"34",4,4,"gemeinsamer Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"35",4,5,"Arbeitsplatz","Arbeitsstelle","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"36",4,6,"Mitstudent*innen","Mitstudierende","Mitstudierende","Mitstudierende"
+"37",4,7,"Vegan lebende Menschen, Tierschützer*innen","Vegan lebende Menschen","Umweltschutz","Engagement Umweltschutz"
+"38",4,8,"Frauen","Frauen","Gender","Gender"
+"39",4,9,"Heimatstadt","Heimatort","Heimat","Heimat"
+"40",4,10,"Raucher (klingt bescheuert, ist aber so)","Raucherinnen und Raucher","Raucherinnen und Raucher","Raucherinnen und Raucher"
+"41",5,1,"Kollegen auf der Arbeit","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"42",5,2,"Betriebsratsmitglieder","Betriebsratsmitglieder","Betriebsratsmitglieder","Berufliche Tätigkeit"
+"43",5,3,"Vereinsmitglieder","Verein","Verein","Gemeinsames Hobby"
+"44",5,4,"Universitätsmitglieder","Universität","Mitstudierende","Mitstudierende"
+"45",5,5,"Gemeinde","Gemeinde","Wohnort","Indirekte Wohnumgebung"
+"46",5,6,"Landkreis","Landkreis","Menschen einer Region","Indirekte Wohnumgebung"
+"47",5,7,"Denkgemeinschaften","Denkgemeinschaften","Bildungsstand","Sozialer Status"
+"48",5,8,"Nachbarn","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"49",5,9,"Stadtmitglieder","Stadt","Wohnort","Indirekte Wohnumgebung"
+"50",5,10,"Ausschußmitglieder","Ausschussmitglieder","Bürgerinitiative","Bürgerinitiative"
+"51",6,1,"Freundschaftsgruppen","Freunde","Freundeskreis","Freundeskreis"
+"52",6,2,"Gemeinde einer Kirche","Kirchengemeinde","Religiöse Gemeinde","Glaubensorientierung"
+"53",6,3,"Studierende","Mitstudierende","Mitstudierende","Mitstudierende"
+"54",6,4,NA,NA,NA,NA
+"55",6,5,NA,NA,NA,NA
+"56",6,6,NA,NA,NA,NA
+"57",6,7,NA,NA,NA,NA
+"58",6,8,NA,NA,NA,NA
+"59",6,9,NA,NA,NA,NA
+"60",6,10,NA,NA,NA,NA
+"61",7,1,NA,NA,NA,NA
+"62",7,2,NA,NA,NA,NA
+"63",7,3,NA,NA,NA,NA
+"64",7,4,NA,NA,NA,NA
+"65",7,5,NA,NA,NA,NA
+"66",7,6,NA,NA,NA,NA
+"67",7,7,NA,NA,NA,NA
+"68",7,8,NA,NA,NA,NA
+"69",7,9,NA,NA,NA,NA
+"70",7,10,NA,NA,NA,NA
+"71",8,1,"Ehe","Ehe","Partnerschaft","Familie"
+"72",8,2,"Familie naher Umkreis","Familie naher Umkreis","Familie","Familie"
+"73",8,3,"Freundeskreis eng","Enge Freunde","Freundeskreis","Freundeskreis"
+"74",8,4,"Berufsbild (Sozialpädagogin)","Berufsbild (Sozialpädagogin)","Beruflicher Status","Sozialer Status"
+"75",8,5,"Wandergemeinschaft","Wandergruppe","Gemeinsames Reisen","Gemeinsames Reisen"
+"76",8,6,"Bekannte","Bekannte","Freundeskreis","Freundeskreis"
+"77",8,7,"Hobby Lesen - Bücherwurm","Lesen","Gemeinsames Hobby","Gemeinsames Hobby"
+"78",8,8,"Ort am Land","Dorfgemeinschaft","Dorfgemeinschaft","Direkte Wohnumgebung"
+"79",8,9,"Frau","Frauen","Gender","Gender"
+"80",8,10,"Öberösterreicherin","Oberösterreicher","Menschen einer Region","Indirekte Wohnumgebung"
+"81",9,1,"Familie","Familie","Familie","Familie"
+"82",9,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"83",9,3,"Arbeitsumfeld","Arbeitsumfeld","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"84",9,4,NA,NA,NA,NA
+"85",9,5,NA,NA,NA,NA
+"86",9,6,NA,NA,NA,NA
+"87",9,7,NA,NA,NA,NA
+"88",9,8,NA,NA,NA,NA
+"89",9,9,NA,NA,NA,NA
+"90",9,10,NA,NA,NA,NA
+"91",10,1,"Familie","Familie","Familie","Familie"
+"92",10,2,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"93",10,3,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"94",10,4,"Arbeitkollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"95",10,5,"Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"96",10,6,"Nürnberger","Nürnberger","Wohnort","Indirekte Wohnumgebung"
+"97",10,7,"Deutsche","Deutschland","Nationalität","Nationalität"
+"98",10,8,"Europäer","Europäer","Europäische Gemeinschaft","Globaler Kontext"
+"99",10,9,"Menschheit","Menschheit","Globale Gemeinschaft","Globaler Kontext"
+"100",10,10,"Lebewesen","Lebewesen","Globale Gemeinschaft","Globaler Kontext"
+"101",11,1,"Demokratische Gemeinschaft","Demokratische Gemeinschaft","Gemeinsame Werte","Gemeinsame Werte"
+"102",11,2,"aktive Sportbegeisterte","Aktive Sportbegeisterte","Gemeinsamer Sport","Gemeinsamer Sport"
+"103",11,3,"Kollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"104",11,4,"Spielgruppe","Spielgruppe","Gemeinsames Spielen","Gemeinsames Hobby"
+"105",11,5,"Familie","Familie","Familie","Familie"
+"106",11,6,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"107",11,7,NA,NA,NA,NA
+"108",11,8,NA,NA,NA,NA
+"109",11,9,NA,NA,NA,NA
+"110",11,10,NA,NA,NA,NA
+"111",12,1,"Familie","Familie","Familie","Familie"
+"112",12,2,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"113",12,3,"Arbeitsgruppen","Arbeitsgruppe","Berufliches Team","Berufliche Tätigkeit"
+"114",12,4,"Freizeitgruppen","Freizeitgruppen","Gemeinsames Hobby","Gemeinsames Hobby"
+"115",12,5,"Studiengruppen","Lerngruppe","Lerngruppe","Lerngruppe"
+"116",12,6,"Hausgemeinschaft","Hausgemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"117",12,7,"Wohnviertel","Wohnviertel","Wohnbezirk","Indirekte Wohnumgebung"
+"118",12,8,"Stadt, in der ich lebe","Stadt","Wohnort","Indirekte Wohnumgebung"
+"119",12,9,"Deutschland","Deutschland","Nationalität","Nationalität"
+"120",12,10,"Erde","Weltgemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"121",13,1,"Familie","Familie","Familie","Familie"
+"122",13,2,"Studenten","Mitstudierende","Mitstudierende","Mitstudierende"
+"123",13,3,"Berufstätige in Teilzeit","Berufstätige in Teilzeit","In Teilzeit Arbeitende","Berufliche Tätigkeit"
+"124",13,4,"Frauen","Frauen","Gender","Gender"
+"125",13,5,"Leser","Lesen","Gemeinsames Hobby","Gemeinsames Hobby"
+"126",13,6,"Auswanderer","Auswanderer","Gemeinsames Reisen","Gemeinsames Reisen"
+"127",13,7,NA,NA,NA,NA
+"128",13,8,NA,NA,NA,NA
+"129",13,9,NA,NA,NA,NA
+"130",13,10,NA,NA,NA,NA
+"131",14,1,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"132",14,2,"Familie","Familie","Familie","Familie"
+"133",14,3,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"134",14,4,"Europa","Europa","Europäische Gemeinschaft","Globaler Kontext"
+"135",14,5,"Universität","Universität","Mitstudierende","Mitstudierende"
+"136",14,6,"Arbeitsgruppe","Arbeitsgruppe","Berufliches Team","Berufliche Tätigkeit"
+"137",14,7,NA,NA,NA,NA
+"138",14,8,NA,NA,NA,NA
+"139",14,9,NA,NA,NA,NA
+"140",14,10,NA,NA,NA,NA
+"141",15,1,"Arbeitsgemeinschaft","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"142",15,2,"Lebensgemeinschaft","Lebensgemeinschaft","Alternative Lebensgemeinschaften","Direkte Wohnumgebung"
+"143",15,3,"Hausgemeinschaft","Hausgemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"144",15,4,"Landesgemeinschaft","Land","Nationalität","Nationalität"
+"145",15,5,"Lerngemeinschaft","Lerngruppe","Lerngruppe","Lerngruppe"
+"146",15,6,"Verband","Verband","Verein","Gemeinsames Hobby"
+"147",15,7,"Sportgemeinschaft","Sportgruppe","Gemeinsamer Sport","Gemeinsamer Sport"
+"148",15,8,"Interessengemeinschaft","Bürgerinitiative","Bürgerinitiative","Bürgerinitiative"
+"149",15,9,"Studiumsgemeinschaft","Studium","Mitstudierende","Mitstudierende"
+"150",15,10,"Sprachgemeinschaft","Gemeinsame Sprache","Gemeinsame Sprache","Kulturgruppe"
+"151",16,1,"Wohngemeinschaft","Wohngemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"152",16,2,"Glaubensgemeinschaft","Glaubensgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"153",16,3,"Familie","Familie","Familie","Familie"
+"154",16,4,"Freundschaft","Freunde","Freundeskreis","Freundeskreis"
+"155",16,5,"Arbeitsgemeinschaft (im Beruf)","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"156",16,6,NA,NA,NA,NA
+"157",16,7,NA,NA,NA,NA
+"158",16,8,NA,NA,NA,NA
+"159",16,9,NA,NA,NA,NA
+"160",16,10,NA,NA,NA,NA
+"161",17,1,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"162",17,2,"Freundschaften","Freunde","Freundeskreis","Freundeskreis"
+"163",17,3,"Arbeitsgemeinschaft","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"164",17,4,"Gemeinschaft der Gesellschaft","Gesellschaft","Gesellschaft","Nationalität"
+"165",17,5,"Gemeinschaft der Familie","Familie","Familie","Familie"
+"166",17,6,"Gemeinschaft von Staaten","Staatengemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"167",17,7,"Gemeinschaft der Studierenden","Mitstudierende","Mitstudierende","Mitstudierende"
+"168",17,8,"Weltgemeinschaft","Weltgemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"169",17,9,"Fangemeinschaften","Fans","Fans","Gemeinsames Hobby"
+"170",17,10,NA,NA,NA,NA
+"171",18,1,"familiäre Gemeinschaft","Familie","Familie","Familie"
+"172",18,2,"Freundesgemeinschaft","Freunde","Freundeskreis","Freundeskreis"
+"173",18,3,"sportgemeinschaft","Sportgruppe","Gemeinsamer Sport","Gemeinsamer Sport"
+"174",18,4,"Solidargemeinschaft","Solidargemeinschaft","Gesellschaft","Nationalität"
+"175",18,5,"gruppengemeinschaften generell","Gemeinschaften generell","Gemeinsame Werte","Gemeinsame Werte"
+"176",18,6,NA,NA,NA,NA
+"177",18,7,NA,NA,NA,NA
+"178",18,8,NA,NA,NA,NA
+"179",18,9,NA,NA,NA,NA
+"180",18,10,NA,NA,NA,NA
+"181",19,1,"Tennisverein","Tennisverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"182",19,2,"Arbeit","Arbeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"183",19,3,"Familie","Familie","Familie","Familie"
+"184",19,4,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"185",19,5,"Hund","Hundebesitzer","Hundebesitzer","Hundebesitzer"
+"186",19,6,"Fortbildung","Fortbildung","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"187",19,7,NA,NA,NA,NA
+"188",19,8,NA,NA,NA,NA
+"189",19,9,NA,NA,NA,NA
+"190",19,10,NA,NA,NA,NA
+"191",20,1,"Juden","Juden","Glaubensgemeinschaft","Glaubensorientierung"
+"192",20,2,"Österreicher","Österreicher","Nationalität","Nationalität"
+"193",20,3,NA,NA,NA,NA
+"194",20,4,NA,NA,NA,NA
+"195",20,5,NA,NA,NA,NA
+"196",20,6,NA,NA,NA,NA
+"197",20,7,NA,NA,NA,NA
+"198",20,8,NA,NA,NA,NA
+"199",20,9,NA,NA,NA,NA
+"200",20,10,NA,NA,NA,NA
+"201",21,1,"Sich gegenseitig erkannt fühlen aufgrund von gmeinsamkeiten","Sich gegenseitig erkannt fühlen, aufgrund von Gemeinsamkeiten","Gemeinsame Werte","Gemeinsame Werte"
+"202",21,2,"Beruflicher Status","Beruflicher Status","Beruflicher Status","Sozialer Status"
+"203",21,3,"Mutterschaft","Mütter","Menschen mit Elternrolle","Menschen mit Elternrolle"
+"204",21,4,"Nationalität","Nationalität","Nationalität","Nationalität"
+"205",21,5,"Gemeinsame Werte als Mensch","Gemeinsame Werte","Gemeinsame Werte","Gemeinsame Werte"
+"206",21,6,"Fußball","Fußball","Gemeinsamer Sport","Gemeinsamer Sport"
+"207",21,7,"Jogger","Jogger","Gemeinsamer Sport","Gemeinsamer Sport"
+"208",21,8,"Ernährungsgurus","Ernährungsgurus","Spirituelle Gemeinschaft","Glaubensorientierung"
+"209",21,9,"Studenten","Mitstudierende","Mitstudierende","Mitstudierende"
+"210",21,10,"Studenten mit Kind","Studierende mit Kind","Menschen mit Elternrolle","Menschen mit Elternrolle"
+"211",22,1,"Österreicher","Österreicher","Nationalität","Nationalität"
+"212",22,2,"Arbeiter","Arbeiter","Beruflicher Status","Sozialer Status"
+"213",22,3,"Gärtner","Gärtner","Beruflicher Status","Sozialer Status"
+"214",22,4,"Mitglieder einer Studentenverbindung","Mitglieder einer Studentenverbindung","Verein","Gemeinsames Hobby"
+"215",22,5,NA,NA,NA,NA
+"216",22,6,NA,NA,NA,NA
+"217",22,7,NA,NA,NA,NA
+"218",22,8,NA,NA,NA,NA
+"219",22,9,NA,NA,NA,NA
+"220",22,10,NA,NA,NA,NA
+"221",23,1,"Kollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"222",23,2,"Familie","Familie","Familie","Familie"
+"223",23,3,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"224",23,4," Meine Mädels","Meine Mädels","Freundeskreis","Freundeskreis"
+"225",23,5,"(Ex-)Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"226",23,6,"Demonstrationen","Demonstrationen","Bürgerinitiative","Bürgerinitiative"
+"227",23,7,NA,NA,NA,NA
+"228",23,8,NA,NA,NA,NA
+"229",23,9,NA,NA,NA,NA
+"230",23,10,NA,NA,NA,NA
+"231",24,1,"Familie","Familie","Familie","Familie"
+"232",24,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"233",24,3,"Nachbarn","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"234",24,4,"Vereine","Verein","Verein","Gemeinsames Hobby"
+"235",24,5,"Studienkreise","Lerngruppe","Lerngruppe","Lerngruppe"
+"236",24,6,NA,NA,NA,NA
+"237",24,7,NA,NA,NA,NA
+"238",24,8,NA,NA,NA,NA
+"239",24,9,NA,NA,NA,NA
+"240",24,10,NA,NA,NA,NA
+"241",25,1,"Familie und Verwandte","Familie und Verwandte","Familie","Familie"
+"242",25,2,"Freund/innen","Freunde","Freundeskreis","Freundeskreis"
+"243",25,3,"Studienkolleg/innen","Mitstudierende","Mitstudierende","Mitstudierende"
+"244",25,4,"Vereinsmitglieder/innen","Verein","Verein","Gemeinsames Hobby"
+"245",25,5,"Ortsangehörige","Wohnort","Wohnort","Indirekte Wohnumgebung"
+"246",25,6,"Arbeitskolleg/innen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"247",25,7,NA,NA,NA,NA
+"248",25,8,NA,NA,NA,NA
+"249",25,9,NA,NA,NA,NA
+"250",25,10,NA,NA,NA,NA
+"251",26,1,"Hobbie-Gruppe","Gemeinsames Hobby","Gemeinsames Hobby","Gemeinsames Hobby"
+"252",26,2,"Klassenverbund der Tochter","Klassenverbund der Tochter","Klassengemeinschaft","Lerngruppe"
+"253",26,3,"Arbeitsgruppe","Arbeitsgruppe","Berufliches Team","Berufliche Tätigkeit"
+"254",26,4,"Familie","Familie","Familie","Familie"
+"255",26,5,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"256",26,6,"Moscheegemeinde","Moscheegemeinde","Religiöse Gemeinde","Glaubensorientierung"
+"257",26,7,NA,NA,NA,NA
+"258",26,8,NA,NA,NA,NA
+"259",26,9,NA,NA,NA,NA
+"260",26,10,NA,NA,NA,NA
+"261",27,1,"Beruf","Berufliche Tätigkeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"262",27,2,"Bildung","Bildung","Bildungsstand","Sozialer Status"
+"263",27,3,"Bildungsherkunft","Bildungsherkunft","Bildungsstand","Sozialer Status"
+"264",27,4,"Familie","Familie","Familie","Familie"
+"265",27,5,"Hobbys","Gemeinsames Hobby","Gemeinsames Hobby","Gemeinsames Hobby"
+"266",27,6,"Vereine","Verein","Verein","Gemeinsames Hobby"
+"267",27,7,"Ehrenamt","Ehrenamtliche Tätigkeit","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"268",27,8,"Famlilenstatus","Familienstatus","Familie","Familie"
+"269",27,9,"Kinder","Kinder","Ähnliches Alter","Ähnliches Alter"
+"270",27,10,"Tiere","Tierschutz","Umweltschutz","Engagement Umweltschutz"
+"271",28,1,"Familie","Familie","Familie","Familie"
+"272",28,2,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"273",28,3,"Kollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"274",28,4,"Stadt","Stadt","Wohnort","Indirekte Wohnumgebung"
+"275",28,5,"Land","Land","Nationalität","Nationalität"
+"276",28,6,"Europäer","Europäer","Europäische Gemeinschaft","Globaler Kontext"
+"277",28,7,"Mensch","Menschheit","Globale Gemeinschaft","Globaler Kontext"
+"278",28,8,"Christ","Christen","Glaubensgemeinschaft","Glaubensorientierung"
+"279",28,9,"Student","Mitstudierende","Mitstudierende","Mitstudierende"
+"280",28,10,"Grüne","Grüne","Politische Orientierung","Politische Orientierung"
+"281",29,1,"Familie","Familie","Familie","Familie"
+"282",29,2,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"283",29,3,"Arbeit","Arbeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"284",29,4,"Gemeinde","Gemeinde","Wohnort","Indirekte Wohnumgebung"
+"285",29,5,"Verein","Verein","Verein","Gemeinsames Hobby"
+"286",29,6,"Deutschland","Deutschland","Nationalität","Nationalität"
+"287",29,7,"Europa","Europa","Europäische Gemeinschaft","Globaler Kontext"
+"288",29,8,"Weltbürger","Weltbürger","Globale Gemeinschaft","Globaler Kontext"
+"289",29,9,NA,NA,NA,NA
+"290",29,10,NA,NA,NA,NA
+"291",30,1,"Staatsbürgerschaft","Staatsbürgerschaft","Gesellschaft","Nationalität"
+"292",30,2,"Meine Stadt","Stadt","Wohnort","Indirekte Wohnumgebung"
+"293",30,3,"die Gemeinde","Gemeinde","Wohnort","Indirekte Wohnumgebung"
+"294",30,4,"meine Lerngruppe","Lerngruppe","Lerngruppe","Lerngruppe"
+"295",30,5,"meine Familie(n)","Familie","Familie","Familie"
+"296",30,6,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"297",30,7,"Kollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"298",30,8,"Eltern der Klassengemeinschaft meiner Kinder","Eltern der Klassengemeinschaft meiner Kinder","Menschen mit Elternrolle","Menschen mit Elternrolle"
+"299",30,9,"Sportgruppe(n)","Sportgruppe","Gemeinsamer Sport","Gemeinsamer Sport"
+"300",30,10,"Musikverein","Musikverein","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"301",31,1,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"302",31,2,"Familie","Familie","Familie","Familie"
+"303",31,3,"Salsagruppe","Salsagruppe","Gemeinsames Hobby","Gemeinsames Hobby"
+"304",31,4,"Studentinnen und Studenten","Mitstudierende","Mitstudierende","Mitstudierende"
+"305",31,5,"Kellnerinnen und Kellner","Kellnerinnen und Kellner","Beruflicher Status","Sozialer Status"
+"306",31,6,"Psychologinnen und Psychologen","Psychologinnen und Psychologen","Beruflicher Status","Sozialer Status"
+"307",31,7,"Klavierspielerinnen und Klavierspieler","Klavierspielerinnen und Klavierspieler","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"308",31,8,"Europäerinnen und Europäer","Europäer","Europäische Gemeinschaft","Globaler Kontext"
+"309",31,9,NA,NA,NA,NA
+"310",31,10,NA,NA,NA,NA
+"311",32,1,"Das Leben unter einem Dach mit den Eltern meiner Partnerin","Das Leben unter einem Dach mit den Eltern meiner Partnerin","Wohngemeinschaft","Direkte Wohnumgebung"
+"312",32,2,"Die Dorfgemeinschaft, in welcher ich mein Ferienhaus habe","Dorfgemeinschaft","Dorfgemeinschaft","Direkte Wohnumgebung"
+"313",32,3,"Die Gemeinschaft mit anderen Läufern an Laufevents","Die Gemeinschaft mit anderen Läufern an Laufevents","Gemeinsamer Sport","Gemeinsamer Sport"
+"314",32,4,"Die Kollegen im Fitnessstudio","Die Kollegen im Fitnessstudio","Gemeinsamer Sport","Gemeinsamer Sport"
+"315",32,5,NA,NA,NA,NA
+"316",32,6,NA,NA,NA,NA
+"317",32,7,NA,NA,NA,NA
+"318",32,8,NA,NA,NA,NA
+"319",32,9,NA,NA,NA,NA
+"320",32,10,NA,NA,NA,NA
+"321",33,1,"Universitäten","Universität","Mitstudierende","Mitstudierende"
+"322",33,2,"Familie","Familie","Familie","Familie"
+"323",33,3,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"324",33,4,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"325",33,5,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"326",33,6,"Gesellschaft","Gesellschaft","Gesellschaft","Nationalität"
+"327",33,7,"Weltbevölkerung","Weltgemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"328",33,8,"Gemeinden","Gemeinde","Wohnort","Indirekte Wohnumgebung"
+"329",33,9,"Politiker","Politiker","Politische Orientierung","Politische Orientierung"
+"330",33,10,NA,NA,NA,NA
+"331",34,1,"Familie","Familie","Familie","Familie"
+"332",34,2,"Geschwister","Geschwister","Familie","Familie"
+"333",34,3,"Arbeit","Arbeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"334",34,4,"Studium","Studium","Mitstudierende","Mitstudierende"
+"335",34,5,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"336",34,6,"Bekannte","Bekannte","Freundeskreis","Freundeskreis"
+"337",34,7,"Stadt","Stadt","Wohnort","Indirekte Wohnumgebung"
+"338",34,8,"Land","Land","Nationalität","Nationalität"
+"339",34,9,"Heimat","Heimat","Heimat","Heimat"
+"340",34,10,NA,NA,NA,NA
+"341",35,1,"Familie","Familie","Familie","Familie"
+"342",35,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"343",35,3,"Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"344",35,4,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"345",35,5,NA,NA,NA,NA
+"346",35,6,NA,NA,NA,NA
+"347",35,7,NA,NA,NA,NA
+"348",35,8,NA,NA,NA,NA
+"349",35,9,NA,NA,NA,NA
+"350",35,10,NA,NA,NA,NA
+"351",36,1,"Familie als Gemeinschaft","Familie","Familie","Familie"
+"352",36,2,"Lerngruppe im Studium","Lerngruppe","Lerngruppe","Lerngruppe"
+"353",36,3,"Freunde als Gemeinschaft","Freunde","Freundeskreis","Freundeskreis"
+"354",36,4,"Arbeitsteam","Arbeitsteam","Berufliches Team","Berufliche Tätigkeit"
+"355",36,5,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"356",36,6,"Virtuelle Gemeinschaft und Facebookgruppen","Onlinecommunities","Onlinecommunity","Onlinecommunity"
+"357",36,7,NA,NA,NA,NA
+"358",36,8,NA,NA,NA,NA
+"359",36,9,NA,NA,NA,NA
+"360",36,10,NA,NA,NA,NA
+"361",37,1,"Familie","Familie","Familie","Familie"
+"362",37,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"363",37,3,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"364",37,4,"Chor","Chor","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"365",37,5,"Studenten","Mitstudierende","Mitstudierende","Mitstudierende"
+"366",37,6,"Arbeitsgemeinschaft","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"367",37,7,"Lerngemeinschaft","Lerngruppe","Lerngruppe","Lerngruppe"
+"368",37,8,"Parteigemeinschaft","Partei","Politische Orientierung","Politische Orientierung"
+"369",37,9,"Musikverband","Musikverband","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"370",37,10,"Gewerkschaftsverband","Gewerkschaft","Gewerkschaften","Berufliche Tätigkeit"
+"371",38,1,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"372",38,2,"Kollegium","Kollegium","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"373",38,3,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"374",38,4,"Familie","Familie","Familie","Familie"
+"375",38,5,"Wohngemeinschaft","Wohngemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"376",38,6,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"377",38,7,"Band","Band","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"378",38,8,NA,NA,NA,NA
+"379",38,9,NA,NA,NA,NA
+"380",38,10,NA,NA,NA,NA
+"381",39,1,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"382",39,2,"Familie","Familie","Familie","Familie"
+"383",39,3,"Stadt","Stadt","Wohnort","Indirekte Wohnumgebung"
+"384",39,4,"Land","Land","Nationalität","Nationalität"
+"385",39,5,"Hundebesitzer","Hundebesitzer","Hundebesitzer","Hundebesitzer"
+"386",39,6,"Studenten","Mitstudierende","Mitstudierende","Mitstudierende"
+"387",39,7,"junge Erwachsene","Junge Erwachsene","Ähnliches Alter","Ähnliches Alter"
+"388",39,8,NA,NA,NA,NA
+"389",39,9,NA,NA,NA,NA
+"390",39,10,NA,NA,NA,NA
+"391",40,1,"Familie","Familie","Familie","Familie"
+"392",40,2,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"393",40,3,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"394",40,4,"Frauen","Frauen","Gender","Gender"
+"395",40,5,NA,NA,NA,NA
+"396",40,6,NA,NA,NA,NA
+"397",40,7,NA,NA,NA,NA
+"398",40,8,NA,NA,NA,NA
+"399",40,9,NA,NA,NA,NA
+"400",40,10,NA,NA,NA,NA
+"401",41,1,"Familie","Familie","Familie","Familie"
+"402",41,2,"Verwandtschaft","Verwandtschaft","Familie","Familie"
+"403",41,3,"Studierende","Mitstudierende","Mitstudierende","Mitstudierende"
+"404",41,4,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"405",41,5,"Klassengemeinschaft","Klassengemeinschaft","Klassengemeinschaft","Lerngruppe"
+"406",41,6,"Lebenspartnerschaft","Lebensgemeinschaft","Alternative Lebensgemeinschaften","Direkte Wohnumgebung"
+"407",41,7,"Politik","Politiker","Politische Orientierung","Politische Orientierung"
+"408",41,8,"Deutschland","Deutschland","Nationalität","Nationalität"
+"409",41,9,NA,NA,NA,NA
+"410",41,10,NA,NA,NA,NA
+"411",42,1,"Familie","Familie","Familie","Familie"
+"412",42,2,"Partner","Partnerschaft","Partnerschaft","Familie"
+"413",42,3,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"414",42,4,"Kollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"415",42,5,"Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"416",42,6,"Bewohner eines Ortes","Wohnort","Wohnort","Indirekte Wohnumgebung"
+"417",42,7,"Interessengemeinschaft","Bürgerinitiative","Bürgerinitiative","Bürgerinitiative"
+"418",42,8,"Vereine","Verein","Verein","Gemeinsames Hobby"
+"419",42,9,NA,NA,NA,NA
+"420",42,10,NA,NA,NA,NA
+"421",43,1,"Wohngemeinschaft","Wohngemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"422",43,2,"Familiengemeinschaft","Familie","Familie","Familie"
+"423",43,3,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"424",43,4,"Bezirkscommunity","Bezirkscommunity","Wohnbezirk","Indirekte Wohnumgebung"
+"425",43,5,"Gemeinschaft der in Deutschland lebenden Personen","Deutschland","Nationalität","Nationalität"
+"426",43,6,NA,NA,NA,NA
+"427",43,7,NA,NA,NA,NA
+"428",43,8,NA,NA,NA,NA
+"429",43,9,NA,NA,NA,NA
+"430",43,10,NA,NA,NA,NA
+"431",44,1,"Jugendverbände","Jugendverbände","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"432",44,2,"Arbeitsumfeld","Arbeitsumfeld","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"433",44,3,"Clique","Clique","Freundeskreis","Freundeskreis"
+"434",44,4,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"435",44,5,"Wohnviertel","Wohnviertel","Wohnbezirk","Indirekte Wohnumgebung"
+"436",44,6,"Sportbekannschaften","Sportgruppe","Gemeinsamer Sport","Gemeinsamer Sport"
+"437",44,7,"Urlaubsbekannschaften","Urlaubsbekanntschaften","Gemeinsames Reisen","Gemeinsames Reisen"
+"438",44,8,"Festivals","Festivals","Musikveranstaltungen","Gemeinsames Musizieren"
+"439",44,9,"EU","EU","Europäische Gemeinschaft","Globaler Kontext"
+"440",44,10,"Weltengemeinschaft","Weltgemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"441",45,1,"Club","Club","Freundeskreis","Freundeskreis"
+"442",45,2,"Verein","Verein","Verein","Gemeinsames Hobby"
+"443",45,3,"Community","Community","Onlinecommunity","Onlinecommunity"
+"444",45,4,NA,NA,NA,NA
+"445",45,5,NA,NA,NA,NA
+"446",45,6,NA,NA,NA,NA
+"447",45,7,NA,NA,NA,NA
+"448",45,8,NA,NA,NA,NA
+"449",45,9,NA,NA,NA,NA
+"450",45,10,NA,NA,NA,NA
+"451",46,1,"Wohngemeinschaft","Wohngemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"452",46,2,"Arbeitsgruppen","Arbeitsgruppe","Berufliches Team","Berufliche Tätigkeit"
+"453",46,3,"Lerngruppen","Lerngruppe","Lerngruppe","Lerngruppe"
+"454",46,4,"Trainingspartner","Trainingspartner","Gemeinsamer Sport","Gemeinsamer Sport"
+"455",46,5,"Familie","Familie","Familie","Familie"
+"456",46,6,"Freundschaften","Freunde","Freundeskreis","Freundeskreis"
+"457",46,7,"Vereine","Verein","Verein","Gemeinsames Hobby"
+"458",46,8,"Parteien","Partei","Politische Orientierung","Politische Orientierung"
+"459",46,9,"Reisegruppen","Reisegruppe","Gemeinsames Reisen","Gemeinsames Reisen"
+"460",46,10,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"461",47,1,"Nachbarn","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"462",47,2,"Familie","Familie","Familie","Familie"
+"463",47,3,"Einwohner Wohnort","Wohnort","Wohnort","Indirekte Wohnumgebung"
+"464",47,4,NA,NA,NA,NA
+"465",47,5,NA,NA,NA,NA
+"466",47,6,NA,NA,NA,NA
+"467",47,7,NA,NA,NA,NA
+"468",47,8,NA,NA,NA,NA
+"469",47,9,NA,NA,NA,NA
+"470",47,10,NA,NA,NA,NA
+"471",48,1,"Familie","Familie","Familie","Familie"
+"472",48,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"473",48,3,"Wien","Wien","Wohnort","Indirekte Wohnumgebung"
+"474",48,4,"Österreich","Österreicher","Nationalität","Nationalität"
+"475",48,5,NA,NA,NA,NA
+"476",48,6,NA,NA,NA,NA
+"477",48,7,NA,NA,NA,NA
+"478",48,8,NA,NA,NA,NA
+"479",48,9,NA,NA,NA,NA
+"480",48,10,NA,NA,NA,NA
+"481",49,1,"kirchengemeinde","Kirchengemeinde","Religiöse Gemeinde","Glaubensorientierung"
+"482",49,2,"schule","Schule","Klassengemeinschaft","Lerngruppe"
+"483",49,3,"verein","Verein","Verein","Gemeinsames Hobby"
+"484",49,4,"familie","Familie","Familie","Familie"
+"485",49,5,"freundeskreis bürgerinitiative","Freundeskreis Bürgerinitiative","Bürgerinitiative","Bürgerinitiative"
+"486",49,6,NA,NA,NA,NA
+"487",49,7,NA,NA,NA,NA
+"488",49,8,NA,NA,NA,NA
+"489",49,9,NA,NA,NA,NA
+"490",49,10,NA,NA,NA,NA
+"491",50,1,"Familie","Familie","Familie","Familie"
+"492",50,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"493",50,3,"Kindergarten der Kinder","Kindergarten der Kinder","Klassengemeinschaft","Lerngruppe"
+"494",50,4,"Schule der Kinder","Schule der Kinder","Klassengemeinschaft","Lerngruppe"
+"495",50,5,"Universität","Universität","Mitstudierende","Mitstudierende"
+"496",50,6,"Meine Arbeitsstelle","Arbeitsstelle","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"497",50,7,"Menschen (als alle Bewohner dieser Erde)","Globale Gemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"498",50,8,"Frauen","Frauen","Gender","Gender"
+"499",50,9,NA,NA,NA,NA
+"500",50,10,NA,NA,NA,NA
+"501",51,1,"Arbeitsgemeinschaft","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"502",51,2,"Religion","Religionsgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"503",51,3,"Zusammenhalt","Zusammenhalt","Gemeinsame Werte","Gemeinsame Werte"
+"504",51,4,"Sportveranstaltungen","Sportveranstaltungen","Gemeinsamer Sport","Gemeinsamer Sport"
+"505",51,5,"Konzerte","Konzerte","Musikveranstaltungen","Gemeinsames Musizieren"
+"506",51,6,"Demonstrationen","Demonstrationen","Bürgerinitiative","Bürgerinitiative"
+"507",51,7,"Vereine","Verein","Verein","Gemeinsames Hobby"
+"508",51,8,"Schule","Schule","Klassengemeinschaft","Lerngruppe"
+"509",51,9,NA,NA,NA,NA
+"510",51,10,NA,NA,NA,NA
+"511",52,1,"Arbeit","Arbeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"512",52,2,"Verein","Verein","Verein","Gemeinsames Hobby"
+"513",52,3,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"514",52,4,"Familie","Familie","Familie","Familie"
+"515",52,5,"Studium","Studium","Mitstudierende","Mitstudierende"
+"516",52,6,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"517",52,7,"Heimatort","Heimatort","Heimat","Heimat"
+"518",52,8,"Hobby","Gemeinsames Hobby","Gemeinsames Hobby","Gemeinsames Hobby"
+"519",52,9,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"520",52,10,"Religion","Religionsgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"521",53,1,"Queer Community","Queer Community","Sexuelle Orientierung","Sexuelle Orientierung"
+"522",53,2,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"523",53,3,"Kollegium","Kollegium","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"524",53,4,"Familie","Familie","Familie","Familie"
+"525",53,5,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"526",53,6,NA,NA,NA,NA
+"527",53,7,NA,NA,NA,NA
+"528",53,8,NA,NA,NA,NA
+"529",53,9,NA,NA,NA,NA
+"530",53,10,NA,NA,NA,NA
+"531",54,1,"Religiöse Gemeinschaften","Religionsgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"532",54,2,"Migranten","Migranten","Ausländische Herkunft","Kulturgruppe"
+"533",54,3,"Politische Parteien","Partei","Politische Orientierung","Politische Orientierung"
+"534",54,4,"Junge vs. Alte","Junge vs. Alte","Ähnliches Alter","Ähnliches Alter"
+"535",54,5,"Sportvereine","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"536",54,6,"Pensionistenverbund","Pensionistenverbund","Gewerkschaften","Berufliche Tätigkeit"
+"537",54,7,"Innländer","Inländer","Nationalität","Nationalität"
+"538",54,8,"Schüler","Schüler","Ähnliches Alter","Ähnliches Alter"
+"539",54,9,"Gewerkschaften","Gewerkschaft","Gewerkschaften","Berufliche Tätigkeit"
+"540",54,10,"Orstverbindungen","Wohnort","Wohnort","Indirekte Wohnumgebung"
+"541",55,1,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"542",55,2,"Familie","Familie","Familie","Familie"
+"543",55,3,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"544",55,4,"Bekannte","Bekannte","Freundeskreis","Freundeskreis"
+"545",55,5,"Mitfahrer im Zug","Mitfahrer im Zug","Gemeinsames Reisen","Gemeinsames Reisen"
+"546",55,6,"Fremde im Supermarkt","Fremde im Supermarkt","Gemeinsamer Zweck","Gemeinsamer Zweck"
+"547",55,7,NA,NA,NA,NA
+"548",55,8,NA,NA,NA,NA
+"549",55,9,NA,NA,NA,NA
+"550",55,10,NA,NA,NA,NA
+"551",56,1,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"552",56,2,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"553",56,3,"Bekannte","Bekannte","Freundeskreis","Freundeskreis"
+"554",56,4,"Stadt","Stadt","Wohnort","Indirekte Wohnumgebung"
+"555",56,5,NA,NA,NA,NA
+"556",56,6,NA,NA,NA,NA
+"557",56,7,NA,NA,NA,NA
+"558",56,8,NA,NA,NA,NA
+"559",56,9,NA,NA,NA,NA
+"560",56,10,NA,NA,NA,NA
+"561",57,1,"Sportgruppe","Sportgruppe","Gemeinsamer Sport","Gemeinsamer Sport"
+"562",57,2,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"563",57,3,"Wohngemeinschaft","Wohngemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"564",57,4,"Unternehmensgruppe","Unternehmensgruppe","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"565",57,5,"Studiengruppe","Lerngruppe","Lerngruppe","Lerngruppe"
+"566",57,6,"Familie","Familie","Familie","Familie"
+"567",57,7,"Sprachgruppe","Gemeinsame Sprache","Gemeinsame Sprache","Kulturgruppe"
+"568",57,8,"Theatergruppe","Theatergruppe","Gemeinsames Hobby","Gemeinsames Hobby"
+"569",57,9,NA,NA,NA,NA
+"570",57,10,NA,NA,NA,NA
+"571",58,1,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"572",58,2,"Hobby","Gemeinsames Hobby","Gemeinsames Hobby","Gemeinsames Hobby"
+"573",58,3,"Interesse","Gemeinsames Interesse","Gemeinsames Hobby","Gemeinsames Hobby"
+"574",58,4,"Politische ausrichtung","Politische Gesinnung","Politische Orientierung","Politische Orientierung"
+"575",58,5,NA,NA,NA,NA
+"576",58,6,NA,NA,NA,NA
+"577",58,7,NA,NA,NA,NA
+"578",58,8,NA,NA,NA,NA
+"579",58,9,NA,NA,NA,NA
+"580",58,10,NA,NA,NA,NA
+"581",59,1,"Familie","Familie","Familie","Familie"
+"582",59,2,"Freunde/Bekannte","Freunde","Freundeskreis","Freundeskreis"
+"583",59,3,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"584",59,4,"Mitstudierende","Mitstudierende","Mitstudierende","Mitstudierende"
+"585",59,5,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"586",59,6,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"587",59,7,"Ort","Wohnort","Wohnort","Indirekte Wohnumgebung"
+"588",59,8,"Viertel","Wohnviertel","Wohnbezirk","Indirekte Wohnumgebung"
+"589",59,9,"Land","Land","Nationalität","Nationalität"
+"590",59,10,"Kontinent","Kontinent","Globale Gemeinschaft","Globaler Kontext"
+"591",60,1,"Familie","Familie","Familie","Familie"
+"592",60,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"593",60,3,"Stadt","Stadt","Wohnort","Indirekte Wohnumgebung"
+"594",60,4,"Kollegen/-innen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"595",60,5,"Sportkammeraden","Sportgruppe","Gemeinsamer Sport","Gemeinsamer Sport"
+"596",60,6,"Pertnerin","Rentner","Ähnliches Alter","Ähnliches Alter"
+"597",60,7,NA,NA,NA,NA
+"598",60,8,NA,NA,NA,NA
+"599",60,9,NA,NA,NA,NA
+"600",60,10,NA,NA,NA,NA
+"601",61,1,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"602",61,2,"Familie","Familie","Familie","Familie"
+"603",61,3,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"604",61,4,"Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"605",61,5,"Reisepartner","Reisegruppe","Gemeinsames Reisen","Gemeinsames Reisen"
+"606",61,6,NA,NA,NA,NA
+"607",61,7,NA,NA,NA,NA
+"608",61,8,NA,NA,NA,NA
+"609",61,9,NA,NA,NA,NA
+"610",61,10,NA,NA,NA,NA
+"611",62,1,"Familie","Familie","Familie","Familie"
+"612",62,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"613",62,3,"Chor","Chor","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"614",62,4,"Studium","Studium","Mitstudierende","Mitstudierende"
+"615",62,5,"Hunde","Hundebesitzer","Hundebesitzer","Hundebesitzer"
+"616",62,6,NA,NA,NA,NA
+"617",62,7,NA,NA,NA,NA
+"618",62,8,NA,NA,NA,NA
+"619",62,9,NA,NA,NA,NA
+"620",62,10,NA,NA,NA,NA
+"621",63,1,"Familie","Familie","Familie","Familie"
+"622",63,2,"Arbeitsgemeinschaft","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"623",63,3,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"624",63,4,"Wertegemeinschaft","Gemeinsame Werte","Gemeinsame Werte","Gemeinsame Werte"
+"625",63,5,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"626",63,6,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"627",63,7,"Weltgemeinschaft","Weltgemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"628",63,8,"Europa","Europa","Europäische Gemeinschaft","Globaler Kontext"
+"629",63,9,"Humanismus","Humanismus","Gemeinsame Werte","Gemeinsame Werte"
+"630",63,10,"Intellektuelle Verbindung","Intellektuelle Verbindung","Bildungsstand","Sozialer Status"
+"631",64,1,"Familie","Familie","Familie","Familie"
+"632",64,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"633",64,3,"Gleichgesinnte","Gleichgesinnte","Gemeinsame Werte","Gemeinsame Werte"
+"634",64,4,NA,NA,NA,NA
+"635",64,5,NA,NA,NA,NA
+"636",64,6,NA,NA,NA,NA
+"637",64,7,NA,NA,NA,NA
+"638",64,8,NA,NA,NA,NA
+"639",64,9,NA,NA,NA,NA
+"640",64,10,NA,NA,NA,NA
+"641",65,1,"Arbeitsteams","Arbeitsteam","Berufliches Team","Berufliche Tätigkeit"
+"642",65,2,"Kommune (Gemeinsame Wohnprojekte)","Kommune","Alternative Lebensgemeinschaften","Direkte Wohnumgebung"
+"643",65,3,"eine Gruppe von Gleichgesinnten (z.B. Konzertbesucher)","Gleichgesinnte","Gemeinsame Werte","Gemeinsame Werte"
+"644",65,4,"alle Gruppen, die gemeinsame Ziele verfolgen","Gemeinsame Ziele","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"645",65,5,NA,NA,NA,NA
+"646",65,6,NA,NA,NA,NA
+"647",65,7,NA,NA,NA,NA
+"648",65,8,NA,NA,NA,NA
+"649",65,9,NA,NA,NA,NA
+"650",65,10,NA,NA,NA,NA
+"651",66,1,"Europäer","Europäer","Europäische Gemeinschaft","Globaler Kontext"
+"652",66,2,"Patrioten","Patrioten","Politische Orientierung","Politische Orientierung"
+"653",66,3,"Psychologen","Psychologinnen und Psychologen","Beruflicher Status","Sozialer Status"
+"654",66,4,NA,NA,NA,NA
+"655",66,5,NA,NA,NA,NA
+"656",66,6,NA,NA,NA,NA
+"657",66,7,NA,NA,NA,NA
+"658",66,8,NA,NA,NA,NA
+"659",66,9,NA,NA,NA,NA
+"660",66,10,NA,NA,NA,NA
+"661",67,1,"Völker","Völker","Kulturgruppe","Kulturgruppe"
+"662",67,2,"Mannschaften","Mannschaften","Gemeinsamer Sport","Gemeinsamer Sport"
+"663",67,3,"Religionen","Religionsgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"664",67,4,NA,NA,NA,NA
+"665",67,5,NA,NA,NA,NA
+"666",67,6,NA,NA,NA,NA
+"667",67,7,NA,NA,NA,NA
+"668",67,8,NA,NA,NA,NA
+"669",67,9,NA,NA,NA,NA
+"670",67,10,NA,NA,NA,NA
+"671",68,1,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"672",68,2,"Verein","Verein","Verein","Gemeinsames Hobby"
+"673",68,3,"Kommune","Kommune","Alternative Lebensgemeinschaften","Direkte Wohnumgebung"
+"674",68,4,"Stadtteil","Stadtteil","Wohnbezirk","Indirekte Wohnumgebung"
+"675",68,5,"Dorf","Dorfgemeinschaft","Dorfgemeinschaft","Direkte Wohnumgebung"
+"676",68,6,"Arbeitsgemeinschaften","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"677",68,7,"Projekte","Projektgruppe","Berufliches Team","Berufliche Tätigkeit"
+"678",68,8,NA,NA,NA,NA
+"679",68,9,NA,NA,NA,NA
+"680",68,10,NA,NA,NA,NA
+"681",69,1,"Familie","Familie","Familie","Familie"
+"682",69,2,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"683",69,3,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"684",69,4,"Verein","Verein","Verein","Gemeinsames Hobby"
+"685",69,5,"Reisegruppe","Reisegruppe","Gemeinsames Reisen","Gemeinsames Reisen"
+"686",69,6,"Studienkollegen","Mitstudierende","Mitstudierende","Mitstudierende"
+"687",69,7,NA,NA,NA,NA
+"688",69,8,NA,NA,NA,NA
+"689",69,9,NA,NA,NA,NA
+"690",69,10,NA,NA,NA,NA
+"691",70,1,"Ärzte","Ärzte","Beruflicher Status","Sozialer Status"
+"692",70,2,"Akademiker","Akademiker","Bildungsstand","Sozialer Status"
+"693",70,3,"Wohnungsgemeinschaft bzw. Familienverbund","Wohnungsgemeinschaft bzw. Familienverbund","Wohngemeinschaft","Direkte Wohnumgebung"
+"694",70,4,"Bürogemeinschaft","Bürogemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"695",70,5,"Glaubensgemeinschaft","Glaubensgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"696",70,6,"Freundes-und Bekanntenkreis","Freunde","Freundeskreis","Freundeskreis"
+"697",70,7,"Tierschützerin","Tierschutz","Umweltschutz","Engagement Umweltschutz"
+"698",70,8,"Menschen mit veganer Lebensweise","Vegan lebende Menschen","Umweltschutz","Engagement Umweltschutz"
+"699",70,9,"Pazifisten","Pazifisten","Politische Orientierung","Politische Orientierung"
+"700",70,10,"Hausgemeinschaft","Hausgemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"701",71,1,"Psychologiestudenten","Psychologiestudierende","Mitstudierende","Mitstudierende"
+"702",71,2,"Hundebesitzer","Hundebesitzer","Hundebesitzer","Hundebesitzer"
+"703",71,3,"Partnerschaft/Lebensgemeinschaft","Partnerschaft","Partnerschaft","Familie"
+"704",71,4,"Unijahrgang","Unijahrgang","Mitstudierende","Mitstudierende"
+"705",71,5,NA,NA,NA,NA
+"706",71,6,NA,NA,NA,NA
+"707",71,7,NA,NA,NA,NA
+"708",71,8,NA,NA,NA,NA
+"709",71,9,NA,NA,NA,NA
+"710",71,10,NA,NA,NA,NA
+"711",72,1,"Familie","Familie","Familie","Familie"
+"712",72,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"713",72,3,"Spielrunden","Spielgruppe","Gemeinsames Spielen","Gemeinsames Hobby"
+"714",72,4,"Fan einer Serie/Buch ect","Fans","Fans","Gemeinsames Hobby"
+"715",72,5,"gassirunden","Gassirunde","Hundebesitzer","Hundebesitzer"
+"716",72,6,NA,NA,NA,NA
+"717",72,7,NA,NA,NA,NA
+"718",72,8,NA,NA,NA,NA
+"719",72,9,NA,NA,NA,NA
+"720",72,10,NA,NA,NA,NA
+"721",73,1,"Erdenbürger","Weltgemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"722",73,2,"Mensch","Menschheit","Globale Gemeinschaft","Globaler Kontext"
+"723",73,3,"Familie","Familie","Familie","Familie"
+"724",73,4,"Arbeit","Arbeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"725",73,5,"Studium","Studium","Mitstudierende","Mitstudierende"
+"726",73,6,"Interessen","Gemeinsames Interesse","Gemeinsames Hobby","Gemeinsames Hobby"
+"727",73,7,"Freundschaft","Freunde","Freundeskreis","Freundeskreis"
+"728",73,8,NA,NA,NA,NA
+"729",73,9,NA,NA,NA,NA
+"730",73,10,NA,NA,NA,NA
+"731",74,1,"Freundschaftsbeziehungen","Freunde","Freundeskreis","Freundeskreis"
+"732",74,2,"Arbeitsbeziehungen (Arbeitskollegen)","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"733",74,3,NA,NA,NA,NA
+"734",74,4,NA,NA,NA,NA
+"735",74,5,NA,NA,NA,NA
+"736",74,6,NA,NA,NA,NA
+"737",74,7,NA,NA,NA,NA
+"738",74,8,NA,NA,NA,NA
+"739",74,9,NA,NA,NA,NA
+"740",74,10,NA,NA,NA,NA
+"741",75,1,"Familie","Familie","Familie","Familie"
+"742",75,2,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"743",75,3,"Kollegium","Kollegium","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"744",75,4,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"745",75,5,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"746",75,6,NA,NA,NA,NA
+"747",75,7,NA,NA,NA,NA
+"748",75,8,NA,NA,NA,NA
+"749",75,9,NA,NA,NA,NA
+"750",75,10,NA,NA,NA,NA
+"751",76,1,"fussballverein","Fußballverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"752",76,2,"kneipenfreunde","Kneipenfreunde","Freundeskreis","Freundeskreis"
+"753",76,3,NA,NA,NA,NA
+"754",76,4,NA,NA,NA,NA
+"755",76,5,NA,NA,NA,NA
+"756",76,6,NA,NA,NA,NA
+"757",76,7,NA,NA,NA,NA
+"758",76,8,NA,NA,NA,NA
+"759",76,9,NA,NA,NA,NA
+"760",76,10,NA,NA,NA,NA
+"761",77,1,"Familie und Freunde","Familie und Freunde","Familie","Familie"
+"762",77,2,"Gemeinschaftsgefühl","Gemeinschaftsgefühl","Gemeinsame Werte","Gemeinsame Werte"
+"763",77,3,"Unterstützung","Unterstützung","Gemeinsame Werte","Gemeinsame Werte"
+"764",77,4,"Hilfsbereitschaft","Hilfsbereitschaft","Gemeinsame Werte","Gemeinsame Werte"
+"765",77,5,"Verantwortung für andere","Verantwortung für andere","Gemeinsame Werte","Gemeinsame Werte"
+"766",77,6,NA,NA,NA,NA
+"767",77,7,NA,NA,NA,NA
+"768",77,8,NA,NA,NA,NA
+"769",77,9,NA,NA,NA,NA
+"770",77,10,NA,NA,NA,NA
+"771",78,1,"Wohngemeinschaft","Wohngemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"772",78,2,"Ausbildungsgruppe","Ausbildungsgruppe","Berufliches Team","Berufliche Tätigkeit"
+"773",78,3,"Studienlerngruppe","Lerngruppe","Lerngruppe","Lerngruppe"
+"774",78,4,"Tanzgruppe","Tanzgruppe","Gemeinsames Hobby","Gemeinsames Hobby"
+"775",78,5,"Malgruppe","Malgruppe","Gemeinsames Hobby","Gemeinsames Hobby"
+"776",78,6,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"777",78,7,"Familie","Familie","Familie","Familie"
+"778",78,8,NA,NA,NA,NA
+"779",78,9,NA,NA,NA,NA
+"780",78,10,NA,NA,NA,NA
+"781",79,1,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"782",79,2,"Familie","Familie","Familie","Familie"
+"783",79,3,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"784",79,4,"erweiterter Freundeskreis (Freundes-Freunde/Bekannte)","Erweiterter Freundeskreis","Freundeskreis","Freundeskreis"
+"785",79,5,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"786",79,6,"Mitglieder einer Stadt/Gemeinde","Mitglieder einer Stadt/Gemeinde","Wohnort","Indirekte Wohnumgebung"
+"787",79,7,"Religiöse Gemeinde","Religionsgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"788",79,8,"Mitglieder eines Sport-Vereins","Mitglieder eines Sportvereins","Gemeinsamer Sport","Gemeinsamer Sport"
+"789",79,9,"Menschen mit denen man sein Hobby ausübt (z.B. Töpferkurs)","Gemeinsames Hobby","Gemeinsames Hobby","Gemeinsames Hobby"
+"790",79,10,NA,NA,NA,NA
+"791",80,1,"Sportvereine","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"792",80,2,"Kneipenfreunde","Kneipenfreunde","Freundeskreis","Freundeskreis"
+"793",80,3,NA,NA,NA,NA
+"794",80,4,NA,NA,NA,NA
+"795",80,5,NA,NA,NA,NA
+"796",80,6,NA,NA,NA,NA
+"797",80,7,NA,NA,NA,NA
+"798",80,8,NA,NA,NA,NA
+"799",80,9,NA,NA,NA,NA
+"800",80,10,NA,NA,NA,NA
+"801",81,1,"Familie","Familie","Familie","Familie"
+"802",81,2,NA,NA,NA,NA
+"803",81,3,NA,NA,NA,NA
+"804",81,4,NA,NA,NA,NA
+"805",81,5,NA,NA,NA,NA
+"806",81,6,NA,NA,NA,NA
+"807",81,7,NA,NA,NA,NA
+"808",81,8,NA,NA,NA,NA
+"809",81,9,NA,NA,NA,NA
+"810",81,10,NA,NA,NA,NA
+"811",82,1,"Familie (Kleinfamilie)","Familie","Familie","Familie"
+"812",82,2,"Kollegen, die sich mit dem gleichen Arbeitsgebiet beschäftigen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"813",82,3,"Familien mit autistischen Kindern","Familien mit autistischen Kindern","Menschen mit Elternrolle","Menschen mit Elternrolle"
+"814",82,4,"Frauen meiner Herkunftsfamilie","Frauen meiner Herkunftsfamilie","Familie","Familie"
+"815",82,5,"Bewohner meines Geburtsortes","Geburtsort","Heimat","Heimat"
+"816",82,6,"naturverbundene Menschen","Naturverbundene Menschen","Naturverbundene Menschen","Engagement Umweltschutz"
+"817",82,7,"Mütter schulpflichtiger Kinder","Mütter schulpflichtiger Kinder","Menschen mit Elternrolle","Menschen mit Elternrolle"
+"818",82,8,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"819",82,9,"Menschen, die pfälzischen Dialekt sprechen","Menschen, die pfälzischen Dialekt sprechen","Gemeinsame Sprache","Kulturgruppe"
+"820",82,10,"Menschen, die eigenes Obst und Gemüse anbauen","Menschen, die eigenes Obst und Gemüse anbauen","Naturverbundene Menschen","Engagement Umweltschutz"
+"821",83,1,"Partnerschaften","Partnerschaft","Partnerschaft","Familie"
+"822",83,2,"Freundschaften","Freunde","Freundeskreis","Freundeskreis"
+"823",83,3,"Kollegen / Kolleginnen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"824",83,4,"Wohngemeinschaften","Wohngemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"825",83,5,NA,NA,NA,NA
+"826",83,6,NA,NA,NA,NA
+"827",83,7,NA,NA,NA,NA
+"828",83,8,NA,NA,NA,NA
+"829",83,9,NA,NA,NA,NA
+"830",83,10,NA,NA,NA,NA
+"831",84,1,"Familie","Familie","Familie","Familie"
+"832",84,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"833",84,3,"Veganismus","Vegan lebende Menschen","Umweltschutz","Engagement Umweltschutz"
+"834",84,4,"Tierschutz","Tierschutz","Umweltschutz","Engagement Umweltschutz"
+"835",84,5,NA,NA,NA,NA
+"836",84,6,NA,NA,NA,NA
+"837",84,7,NA,NA,NA,NA
+"838",84,8,NA,NA,NA,NA
+"839",84,9,NA,NA,NA,NA
+"840",84,10,NA,NA,NA,NA
+"841",85,1,"Stadtviertel","Wohnviertel","Wohnbezirk","Indirekte Wohnumgebung"
+"842",85,2,"christliche Gemeinde","Christliche Gemeinde","Religiöse Gemeinde","Glaubensorientierung"
+"843",85,3,"Stadt","Stadt","Wohnort","Indirekte Wohnumgebung"
+"844",85,4,"Nation","Nation","Nationalität","Nationalität"
+"845",85,5,"wohnhaus","Hausgemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"846",85,6,"ehrenamtliche organisation","Bürgerinitiative","Bürgerinitiative","Bürgerinitiative"
+"847",85,7,NA,NA,NA,NA
+"848",85,8,NA,NA,NA,NA
+"849",85,9,NA,NA,NA,NA
+"850",85,10,NA,NA,NA,NA
+"851",86,1,"Freundschaft","Freunde","Freundeskreis","Freundeskreis"
+"852",86,2,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"853",86,3,"Musikgruppe/meine Band","Musiker","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"854",86,4,"Arbeitsgemeinschaft","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"855",86,5,"Studiengruppe","Lerngruppe","Lerngruppe","Lerngruppe"
+"856",86,6,NA,NA,NA,NA
+"857",86,7,NA,NA,NA,NA
+"858",86,8,NA,NA,NA,NA
+"859",86,9,NA,NA,NA,NA
+"860",86,10,NA,NA,NA,NA
+"861",87,1,"Familie","Familie","Familie","Familie"
+"862",87,2,"Stammtisch","Stammtisch","Freundeskreis","Freundeskreis"
+"863",87,3,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"864",87,4,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"865",87,5,"Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"866",87,6,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"867",87,7,"Geburtsort","Geburtsort","Heimat","Heimat"
+"868",87,8,"Deutschland","Deutschland","Nationalität","Nationalität"
+"869",87,9,"Europa","Europa","Europäische Gemeinschaft","Globaler Kontext"
+"870",87,10,NA,NA,NA,NA
+"871",88,1,"Familie","Familie","Familie","Familie"
+"872",88,2,"Freundschaften","Freunde","Freundeskreis","Freundeskreis"
+"873",88,3,"Vereine","Verein","Verein","Gemeinsames Hobby"
+"874",88,4,"Arbeitsstellen/ausbildun","Arbeitsstelle","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"875",88,5,"Fortbildungen","Fortbildung","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"876",88,6,"Hobbygemeinschaften","Gemeinsames Hobby","Gemeinsames Hobby","Gemeinsames Hobby"
+"877",88,7,"Gemeinden","Gemeinde","Wohnort","Indirekte Wohnumgebung"
+"878",88,8,NA,NA,NA,NA
+"879",88,9,NA,NA,NA,NA
+"880",88,10,NA,NA,NA,NA
+"881",89,1,"Familie","Familie","Familie","Familie"
+"882",89,2,"Universitätkollegen","Mitstudierende","Mitstudierende","Mitstudierende"
+"883",89,3,"Mitbewohner","Mitbewohner","Wohngemeinschaft","Direkte Wohnumgebung"
+"884",89,4,"Technofreunde","Technofreunde","Fans","Gemeinsames Hobby"
+"885",89,5,NA,NA,NA,NA
+"886",89,6,NA,NA,NA,NA
+"887",89,7,NA,NA,NA,NA
+"888",89,8,NA,NA,NA,NA
+"889",89,9,NA,NA,NA,NA
+"890",89,10,NA,NA,NA,NA
+"891",90,1,"Familie","Familie","Familie","Familie"
+"892",90,2,"Wohngemeinschaft","Wohngemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"893",90,3,"Arbeitsgemeinschaft","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"894",90,4,"Alternative Lebensgemeinschaft","Alternative Lebensgemeinschaft","Alternative Lebensgemeinschaften","Direkte Wohnumgebung"
+"895",90,5,NA,NA,NA,NA
+"896",90,6,NA,NA,NA,NA
+"897",90,7,NA,NA,NA,NA
+"898",90,8,NA,NA,NA,NA
+"899",90,9,NA,NA,NA,NA
+"900",90,10,NA,NA,NA,NA
+"901",91,1,"Familie","Familie","Familie","Familie"
+"902",91,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"903",91,3,"Ballettschule (Gemeinschaft zu meinen Schülern und Kollegen)","Ballettschule (Gemeinschaft zu meinen Schülern und Kollegen)","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"904",91,4,NA,NA,NA,NA
+"905",91,5,NA,NA,NA,NA
+"906",91,6,NA,NA,NA,NA
+"907",91,7,NA,NA,NA,NA
+"908",91,8,NA,NA,NA,NA
+"909",91,9,NA,NA,NA,NA
+"910",91,10,NA,NA,NA,NA
+"911",92,1,"Familie","Familie","Familie","Familie"
+"912",92,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"913",92,3,"Kollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"914",92,4,NA,NA,NA,NA
+"915",92,5,NA,NA,NA,NA
+"916",92,6,NA,NA,NA,NA
+"917",92,7,NA,NA,NA,NA
+"918",92,8,NA,NA,NA,NA
+"919",92,9,NA,NA,NA,NA
+"920",92,10,NA,NA,NA,NA
+"921",93,1,"Kulturgemeinschaften","Gemeinsame Kultur","Kulturgruppe","Kulturgruppe"
+"922",93,2,"Nachbargemeinschaften","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"923",93,3,"Klassengemeinschaften","Klassengemeinschaft","Klassengemeinschaft","Lerngruppe"
+"924",93,4,"Jahrgangsgemeinschaften","Gemeinsamer Jahrgang","Ähnliches Alter","Ähnliches Alter"
+"925",93,5,"Arbeitsgemeinschaften","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"926",93,6,"Wohngemeinschaften","Wohngemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"927",93,7,"Kommunen","Kommune","Alternative Lebensgemeinschaften","Direkte Wohnumgebung"
+"928",93,8,"Politische Gemeinschaften","Partei","Politische Orientierung","Politische Orientierung"
+"929",93,9,"Fahrgemeinschaften","Fahrgemeinschaften","Gemeinsames Reisen","Gemeinsames Reisen"
+"930",93,10,"Dorfgemeinschaft","Dorfgemeinschaft","Dorfgemeinschaft","Direkte Wohnumgebung"
+"931",94,1,"Familie","Familie","Familie","Familie"
+"932",94,2,"Beruf","Berufliche Tätigkeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"933",94,3,"Sport-Gruppe","Sportgruppe","Gemeinsamer Sport","Gemeinsamer Sport"
+"934",94,4,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"935",94,5,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"936",94,6,"Fussballverein","Fußballverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"937",94,7,"DAV","DAV","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"938",94,8,"Projektgruppe","Projektgruppe","Berufliches Team","Berufliche Tätigkeit"
+"939",94,9,NA,NA,NA,NA
+"940",94,10,NA,NA,NA,NA
+"941",95,1,"Verein","Verein","Verein","Gemeinsames Hobby"
+"942",95,2,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"943",95,3,"Familie","Familie","Familie","Familie"
+"944",95,4,"Chor","Chor","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"945",95,5,"Staat","Staat","Gesellschaft","Nationalität"
+"946",95,6,"religiöse Gemeinschaft","Religionsgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"947",95,7,NA,NA,NA,NA
+"948",95,8,NA,NA,NA,NA
+"949",95,9,NA,NA,NA,NA
+"950",95,10,NA,NA,NA,NA
+"951",96,1,"Arbeitsgemeinschaft","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"952",96,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"953",96,3,NA,NA,NA,NA
+"954",96,4,NA,NA,NA,NA
+"955",96,5,NA,NA,NA,NA
+"956",96,6,NA,NA,NA,NA
+"957",96,7,NA,NA,NA,NA
+"958",96,8,NA,NA,NA,NA
+"959",96,9,NA,NA,NA,NA
+"960",96,10,NA,NA,NA,NA
+"961",97,1,"Familie","Familie","Familie","Familie"
+"962",97,2,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"963",97,3,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"964",97,4,"Dorf","Dorfgemeinschaft","Dorfgemeinschaft","Direkte Wohnumgebung"
+"965",97,5,"Bundesland","Bundesland","Menschen einer Region","Indirekte Wohnumgebung"
+"966",97,6,"Frauen","Frauen","Gender","Gender"
+"967",97,7,"Hundebesitzer","Hundebesitzer","Hundebesitzer","Hundebesitzer"
+"968",97,8,"Studierende","Mitstudierende","Mitstudierende","Mitstudierende"
+"969",97,9,NA,NA,NA,NA
+"970",97,10,NA,NA,NA,NA
+"971",98,1,NA,NA,NA,NA
+"972",98,2,NA,NA,NA,NA
+"973",98,3,NA,NA,NA,NA
+"974",98,4,NA,NA,NA,NA
+"975",98,5,NA,NA,NA,NA
+"976",98,6,NA,NA,NA,NA
+"977",98,7,NA,NA,NA,NA
+"978",98,8,NA,NA,NA,NA
+"979",98,9,NA,NA,NA,NA
+"980",98,10,NA,NA,NA,NA
+"981",99,1,"familie","Familie","Familie","Familie"
+"982",99,2,"christen","Christen","Glaubensgemeinschaft","Glaubensorientierung"
+"983",99,3,"israel","Israel","Nationalität","Nationalität"
+"984",99,4,NA,NA,NA,NA
+"985",99,5,NA,NA,NA,NA
+"986",99,6,NA,NA,NA,NA
+"987",99,7,NA,NA,NA,NA
+"988",99,8,NA,NA,NA,NA
+"989",99,9,NA,NA,NA,NA
+"990",99,10,NA,NA,NA,NA
+"991",100,1,"Familie","Familie","Familie","Familie"
+"992",100,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"993",100,3,"Kultur","Gemeinsame Kultur","Kulturgruppe","Kulturgruppe"
+"994",100,4,"Staat","Staat","Gesellschaft","Nationalität"
+"995",100,5,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"996",100,6,NA,NA,NA,NA
+"997",100,7,NA,NA,NA,NA
+"998",100,8,NA,NA,NA,NA
+"999",100,9,NA,NA,NA,NA
+"1000",100,10,NA,NA,NA,NA
+"1001",101,1,"Familie","Familie","Familie","Familie"
+"1002",101,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1003",101,3,"Arbeit","Arbeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1004",101,4,"Verein","Verein","Verein","Gemeinsames Hobby"
+"1005",101,5,"Gemeinde","Gemeinde","Wohnort","Indirekte Wohnumgebung"
+"1006",101,6,NA,NA,NA,NA
+"1007",101,7,NA,NA,NA,NA
+"1008",101,8,NA,NA,NA,NA
+"1009",101,9,NA,NA,NA,NA
+"1010",101,10,NA,NA,NA,NA
+"1011",102,1,NA,NA,NA,NA
+"1012",102,2,NA,NA,NA,NA
+"1013",102,3,NA,NA,NA,NA
+"1014",102,4,NA,NA,NA,NA
+"1015",102,5,NA,NA,NA,NA
+"1016",102,6,NA,NA,NA,NA
+"1017",102,7,NA,NA,NA,NA
+"1018",102,8,NA,NA,NA,NA
+"1019",102,9,NA,NA,NA,NA
+"1020",102,10,NA,NA,NA,NA
+"1021",103,1,NA,NA,NA,NA
+"1022",103,2,"Mitbewohner","Mitbewohner","Wohngemeinschaft","Direkte Wohnumgebung"
+"1023",103,3,"befreundete Nachbarn","Befreundete Nachbarn","Nachbarschaft","Direkte Wohnumgebung"
+"1024",103,4,"alte Schulfreunde","Alte Schulfreunde","Freundeskreis","Freundeskreis"
+"1025",103,5,"Menschen, mit denen mich eine gemeinsame Geschichte verbindet","Menschen, mit denen mich eine gemeinsame Geschichte verbindet","Ähnliche Geschichte","Ähnliche Geschichte"
+"1026",103,6,"Familie zu Hause","Familie zu Hause","Familie","Familie"
+"1027",103,7,"Zusammen mit anderen im Ausland sein","Mit anderen im Ausland sein","Gemeinsames Reisen","Gemeinsames Reisen"
+"1028",103,8,"Zusammen mit anderen eine schwierige Situation durchstehen, Kollegen z.B.","Eine schwierige Situation durchstehen","Eine schwierige Situation durchstehen","Eine schwierige Situation durchstehen"
+"1029",103,9,"Menschen, mit denen mich ein ähnliches Ziel oder eine ähnliche Geschichte verbindet  zusammenhalten","Menschen mit ähnlichen Zielen oder einer ähnlichen Geschichte","Ähnliche Geschichte","Ähnliche Geschichte"
+"1030",103,10,NA,NA,NA,NA
+"1031",104,1,"Familie","Familie","Familie","Familie"
+"1032",104,2,"Bekanntenkreis","Bekannte","Freundeskreis","Freundeskreis"
+"1033",104,3,"Mitarbeiter","Mitarbeiter","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"1034",104,4,"Enger Freundeskreis","Enge Freunde","Freundeskreis","Freundeskreis"
+"1035",104,5,"Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"1036",104,6,"Berufsverband","Berufsverband","Berufsverband","Berufliche Tätigkeit"
+"1037",104,7,NA,NA,NA,NA
+"1038",104,8,NA,NA,NA,NA
+"1039",104,9,NA,NA,NA,NA
+"1040",104,10,NA,NA,NA,NA
+"1041",105,1,"Sudierendenschaft","Studierendenschaft","Mitstudierende","Mitstudierende"
+"1042",105,2,"Wohnort als Gemeinde","Wohnort","Wohnort","Indirekte Wohnumgebung"
+"1043",105,3,"Schulelterschaft","Schulelternschaft","Menschen mit Elternrolle","Menschen mit Elternrolle"
+"1044",105,4,NA,NA,NA,NA
+"1045",105,5,NA,NA,NA,NA
+"1046",105,6,NA,NA,NA,NA
+"1047",105,7,NA,NA,NA,NA
+"1048",105,8,NA,NA,NA,NA
+"1049",105,9,NA,NA,NA,NA
+"1050",105,10,NA,NA,NA,NA
+"1051",106,1,"Familie","Familie","Familie","Familie"
+"1052",106,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1053",106,3,"Schulklassen","Schulklassen","Klassengemeinschaft","Lerngruppe"
+"1054",106,4,"Parteien","Partei","Politische Orientierung","Politische Orientierung"
+"1055",106,5,"Sportvereine","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"1056",106,6,"Das Land in dem man lebt","Land","Nationalität","Nationalität"
+"1057",106,7,"Teams","Teams","Berufliches Team","Berufliche Tätigkeit"
+"1058",106,8,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"1059",106,9,"gesamte Weltbevölkerung","Weltgemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"1060",106,10,"Arbeitsplatz","Arbeitsstelle","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1061",107,1,"familie","Familie","Familie","Familie"
+"1062",107,2,"haus","Hausgemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"1063",107,3,"büro","Bürogemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"1064",107,4,"ort","Wohnort","Wohnort","Indirekte Wohnumgebung"
+"1065",107,5,"religion","Religionsgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"1066",107,6,"studium","Studium","Mitstudierende","Mitstudierende"
+"1067",107,7,"freunde","Freunde","Freundeskreis","Freundeskreis"
+"1068",107,8,"land","Land","Nationalität","Nationalität"
+"1069",107,9,"welt","Weltgemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"1070",107,10,"gattung","Gattung","Kulturgruppe","Kulturgruppe"
+"1071",108,1,"Ehe","Ehe","Partnerschaft","Familie"
+"1072",108,2,"Familie","Familie","Familie","Familie"
+"1073",108,3,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"1074",108,4,"Menschheit","Menschheit","Globale Gemeinschaft","Globaler Kontext"
+"1075",108,5,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1076",108,6,"Menschen in meiner Heimat","Heimat","Heimat","Heimat"
+"1077",108,7,"Wir Frauen","Frauen","Gender","Gender"
+"1078",108,8,"Wir Mütter","Mütter","Menschen mit Elternrolle","Menschen mit Elternrolle"
+"1079",108,9,"Menschen, mit denen mich etwas wie gleiche Interessen, Schicksale, Ideologien, Hobbies usw. verbindet","Menschen mit gleichen Interessen, Schicksalen, Ideologien, Hobbies, usw.","Gemeinsames Hobby","Gemeinsames Hobby"
+"1080",108,10,"Lerngruppe","Lerngruppe","Lerngruppe","Lerngruppe"
+"1081",109,1,"Respekt","Respekt","Gemeinsame Werte","Gemeinsame Werte"
+"1082",109,2,"Toleranz","Toleranz","Gemeinsame Werte","Gemeinsame Werte"
+"1083",109,3,"Schutz","Schutz","Gemeinsame Werte","Gemeinsame Werte"
+"1084",109,4,"Zusammenhalt","Zusammenhalt","Gemeinsame Werte","Gemeinsame Werte"
+"1085",109,5,"Soziales Verhalten","Soziales Verhalten","Gemeinsame Werte","Gemeinsame Werte"
+"1086",109,6,"Demokratie","Demokratische Gemeinschaft","Gemeinsame Werte","Gemeinsame Werte"
+"1087",109,7,"Vernundenheit","Verbundenheit","Gemeinsame Werte","Gemeinsame Werte"
+"1088",109,8,"Dankbarkeit","Dankbarkeit","Gemeinsame Werte","Gemeinsame Werte"
+"1089",109,9,"Planung","Planung","Bürgerinitiative","Bürgerinitiative"
+"1090",109,10,"gemeinsame Ziele","Gemeinsame Ziele","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"1091",110,1,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1092",110,2,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"1093",110,3,"Freizeitpartner","Freizeitpartner","Gemeinsames Hobby","Gemeinsames Hobby"
+"1094",110,4,"Familie","Familie","Familie","Familie"
+"1095",110,5,"Partner","Partnerschaft","Partnerschaft","Familie"
+"1096",110,6,"Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"1097",110,7,NA,NA,NA,NA
+"1098",110,8,NA,NA,NA,NA
+"1099",110,9,NA,NA,NA,NA
+"1100",110,10,NA,NA,NA,NA
+"1101",111,1,"Teilen politischer Ansichten","Teilen politischer Ansichten","Politische Orientierung","Politische Orientierung"
+"1102",111,2,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"1103",111,3,"Teilen gemeinsamer sportlicher Interessen","Teilen gemeinsamer sportlicher Interessen","Gemeinsamer Sport","Gemeinsamer Sport"
+"1104",111,4,"nicht-kommerzieller Austausch von Kompetenzen, Dingen,","Austausch von Kompetenzen und Dingen","Gemeinsame Werte","Gemeinsame Werte"
+"1105",111,5,NA,NA,NA,NA
+"1106",111,6,NA,NA,NA,NA
+"1107",111,7,NA,NA,NA,NA
+"1108",111,8,NA,NA,NA,NA
+"1109",111,9,NA,NA,NA,NA
+"1110",111,10,NA,NA,NA,NA
+"1111",112,1,"Familie","Familie","Familie","Familie"
+"1112",112,2,"Studium","Studium","Mitstudierende","Mitstudierende"
+"1113",112,3,"Beruf","Berufliche Tätigkeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1114",112,4,"Politische Gesinnung","Politische Gesinnung","Politische Orientierung","Politische Orientierung"
+"1115",112,5,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"1116",112,6,NA,NA,NA,NA
+"1117",112,7,NA,NA,NA,NA
+"1118",112,8,NA,NA,NA,NA
+"1119",112,9,NA,NA,NA,NA
+"1120",112,10,NA,NA,NA,NA
+"1121",113,1,"Uni","Universität","Mitstudierende","Mitstudierende"
+"1122",113,2,"Familie","Familie","Familie","Familie"
+"1123",113,3,"Stadtteil","Stadtteil","Wohnbezirk","Indirekte Wohnumgebung"
+"1124",113,4,"Gemeinde","Gemeinde","Wohnort","Indirekte Wohnumgebung"
+"1125",113,5,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"1126",113,6,"Arbeit","Arbeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1127",113,7,"Verwaltungsapparat","Verwaltungsapparat","Gesellschaft","Nationalität"
+"1128",113,8,"Staat","Staat","Gesellschaft","Nationalität"
+"1129",113,9,"gleiche Kulturgruppe","Gemeinsame Kultur","Kulturgruppe","Kulturgruppe"
+"1130",113,10,"Deutschland","Deutschland","Nationalität","Nationalität"
+"1131",114,1,"Der kleine Ortsteil, in dem ich lebe und die Menschen dort.","Ortsteil","Wohnbezirk","Indirekte Wohnumgebung"
+"1132",114,2,"meine Familie","Familie","Familie","Familie"
+"1133",114,3,"die Redaktion, in der ich arbeite","Die Redaktion, in der ich arbeite","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1134",114,4,"Gleichaltrige","Gleichaltrige","Ähnliches Alter","Ähnliches Alter"
+"1135",114,5,"andere Studierende an der Uni Hagen","Mitstudierende","Mitstudierende","Mitstudierende"
+"1136",114,6,"Frauen","Frauen","Gender","Gender"
+"1137",114,7,"Singles","Singles","Partnerschaft","Familie"
+"1138",114,8,NA,NA,NA,NA
+"1139",114,9,NA,NA,NA,NA
+"1140",114,10,NA,NA,NA,NA
+"1141",115,1,"Familie","Familie","Familie","Familie"
+"1142",115,2,"Enge Freunde","Enge Freunde","Freundeskreis","Freundeskreis"
+"1143",115,3,"Schulfreunde","Schulfreunde","Freundeskreis","Freundeskreis"
+"1144",115,4,"Partyfreunde","Partyfreunde","Freundeskreis","Freundeskreis"
+"1145",115,5,"Schwiegerfamilie","Schwiegerfamilie","Familie","Familie"
+"1146",115,6,NA,NA,NA,NA
+"1147",115,7,NA,NA,NA,NA
+"1148",115,8,NA,NA,NA,NA
+"1149",115,9,NA,NA,NA,NA
+"1150",115,10,NA,NA,NA,NA
+"1151",116,1,"Bundesland","Bundesland","Menschen einer Region","Indirekte Wohnumgebung"
+"1152",116,2,"Studentenschaft","Studierendenschaft","Mitstudierende","Mitstudierende"
+"1153",116,3,"Hobbyvereine","Gemeinsames Hobby","Gemeinsames Hobby","Gemeinsames Hobby"
+"1154",116,4,NA,NA,NA,NA
+"1155",116,5,NA,NA,NA,NA
+"1156",116,6,NA,NA,NA,NA
+"1157",116,7,NA,NA,NA,NA
+"1158",116,8,NA,NA,NA,NA
+"1159",116,9,NA,NA,NA,NA
+"1160",116,10,NA,NA,NA,NA
+"1161",117,1,"Familie","Familie","Familie","Familie"
+"1162",117,2,"Vereine","Verein","Verein","Gemeinsames Hobby"
+"1163",117,3,"Studenten","Mitstudierende","Mitstudierende","Mitstudierende"
+"1164",117,4,"Kommunen","Kommune","Alternative Lebensgemeinschaften","Direkte Wohnumgebung"
+"1165",117,5,"Bewohner eines Staates","Staat","Gesellschaft","Nationalität"
+"1166",117,6,"Gruppen, die ein gemeinsames Hobby teilen","Gemeinsames Hobby","Gemeinsames Hobby","Gemeinsames Hobby"
+"1167",117,7,NA,NA,NA,NA
+"1168",117,8,NA,NA,NA,NA
+"1169",117,9,NA,NA,NA,NA
+"1170",117,10,NA,NA,NA,NA
+"1171",118,1,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1172",118,2,"Partner","Partnerschaft","Partnerschaft","Familie"
+"1173",118,3,"Arbeit","Arbeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1174",118,4,"Studium","Studium","Mitstudierende","Mitstudierende"
+"1175",118,5,NA,NA,NA,NA
+"1176",118,6,NA,NA,NA,NA
+"1177",118,7,NA,NA,NA,NA
+"1178",118,8,NA,NA,NA,NA
+"1179",118,9,NA,NA,NA,NA
+"1180",118,10,NA,NA,NA,NA
+"1181",119,1,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1182",119,2,"Kollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"1183",119,3,NA,NA,NA,NA
+"1184",119,4,NA,NA,NA,NA
+"1185",119,5,NA,NA,NA,NA
+"1186",119,6,NA,NA,NA,NA
+"1187",119,7,NA,NA,NA,NA
+"1188",119,8,NA,NA,NA,NA
+"1189",119,9,NA,NA,NA,NA
+"1190",119,10,NA,NA,NA,NA
+"1191",120,1,"FAMILIE","Familie","Familie","Familie"
+"1192",120,2,"FREUNE","Freunde","Freundeskreis","Freundeskreis"
+"1193",120,3,"ARBEITSTEAM","Arbeitsteam","Berufliches Team","Berufliche Tätigkeit"
+"1194",120,4,"SPORTGRUPPE","Sportgruppe","Gemeinsamer Sport","Gemeinsamer Sport"
+"1195",120,5,"HAUSGEMEINSCHAFT","Hausgemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"1196",120,6,NA,NA,NA,NA
+"1197",120,7,NA,NA,NA,NA
+"1198",120,8,NA,NA,NA,NA
+"1199",120,9,NA,NA,NA,NA
+"1200",120,10,NA,NA,NA,NA
+"1201",121,1,"Familie","Familie","Familie","Familie"
+"1202",121,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1203",121,3,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"1204",121,4,"Bewohner meines Heimatortes","Heimatort","Heimat","Heimat"
+"1205",121,5,"Kletterer","Kletterer","Gemeinsamer Sport","Gemeinsamer Sport"
+"1206",121,6,"Mountainbiker","Mountainbiker","Gemeinsamer Sport","Gemeinsamer Sport"
+"1207",121,7,NA,NA,NA,NA
+"1208",121,8,NA,NA,NA,NA
+"1209",121,9,NA,NA,NA,NA
+"1210",121,10,NA,NA,NA,NA
+"1211",122,1,"Metal Gemeinschaft","Metal Gemeinschaft","Fans","Gemeinsames Hobby"
+"1212",122,2,"Trägergemeinschaft","Bürgerinitiative","Bürgerinitiative","Bürgerinitiative"
+"1213",122,3,"Hamburger Fußballgemeinschaft (HSV)","Hamburger Fußballgemeinschaft (HSV)","Fans","Gemeinsames Hobby"
+"1214",122,4,NA,NA,NA,NA
+"1215",122,5,NA,NA,NA,NA
+"1216",122,6,NA,NA,NA,NA
+"1217",122,7,NA,NA,NA,NA
+"1218",122,8,NA,NA,NA,NA
+"1219",122,9,NA,NA,NA,NA
+"1220",122,10,NA,NA,NA,NA
+"1221",123,1,NA,NA,NA,NA
+"1222",123,2,NA,NA,NA,NA
+"1223",123,3,NA,NA,NA,NA
+"1224",123,4,NA,NA,NA,NA
+"1225",123,5,NA,NA,NA,NA
+"1226",123,6,NA,NA,NA,NA
+"1227",123,7,NA,NA,NA,NA
+"1228",123,8,NA,NA,NA,NA
+"1229",123,9,NA,NA,NA,NA
+"1230",123,10,NA,NA,NA,NA
+"1231",124,1,NA,NA,NA,NA
+"1232",124,2,NA,NA,NA,NA
+"1233",124,3,NA,NA,NA,NA
+"1234",124,4,NA,NA,NA,NA
+"1235",124,5,NA,NA,NA,NA
+"1236",124,6,NA,NA,NA,NA
+"1237",124,7,NA,NA,NA,NA
+"1238",124,8,NA,NA,NA,NA
+"1239",124,9,NA,NA,NA,NA
+"1240",124,10,NA,NA,NA,NA
+"1241",125,1,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"1242",125,2,NA,NA,NA,NA
+"1243",125,3,NA,NA,NA,NA
+"1244",125,4,NA,NA,NA,NA
+"1245",125,5,NA,NA,NA,NA
+"1246",125,6,NA,NA,NA,NA
+"1247",125,7,NA,NA,NA,NA
+"1248",125,8,NA,NA,NA,NA
+"1249",125,9,NA,NA,NA,NA
+"1250",125,10,NA,NA,NA,NA
+"1251",126,1,"Christen","Christen","Glaubensgemeinschaft","Glaubensorientierung"
+"1252",126,2,"Nachbarn","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"1253",126,3,"Selbständige","Selbstständige","Beruflicher Status","Sozialer Status"
+"1254",126,4,"Mütter","Mütter","Menschen mit Elternrolle","Menschen mit Elternrolle"
+"1255",126,5,"Studierende","Mitstudierende","Mitstudierende","Mitstudierende"
+"1256",126,6,"Ehrenamtliche Helfer","Ehrenamtliche Tätigkeit","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"1257",126,7,NA,NA,NA,NA
+"1258",126,8,NA,NA,NA,NA
+"1259",126,9,NA,NA,NA,NA
+"1260",126,10,NA,NA,NA,NA
+"1261",127,1,"Familie","Familie","Familie","Familie"
+"1262",127,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1263",127,3,"Chor","Chor","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"1264",127,4,"Europa","Europa","Europäische Gemeinschaft","Globaler Kontext"
+"1265",127,5,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"1266",127,6,NA,NA,NA,NA
+"1267",127,7,NA,NA,NA,NA
+"1268",127,8,NA,NA,NA,NA
+"1269",127,9,NA,NA,NA,NA
+"1270",127,10,NA,NA,NA,NA
+"1271",128,1,"Familie","Familie","Familie","Familie"
+"1272",128,2,"Kirchengemeinde","Kirchengemeinde","Religiöse Gemeinde","Glaubensorientierung"
+"1273",128,3,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1274",128,4,"Verwandtschaft","Verwandtschaft","Familie","Familie"
+"1275",128,5,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"1276",128,6,NA,NA,NA,NA
+"1277",128,7,NA,NA,NA,NA
+"1278",128,8,NA,NA,NA,NA
+"1279",128,9,NA,NA,NA,NA
+"1280",128,10,NA,NA,NA,NA
+"1281",129,1,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"1282",129,2,"Freundschaft","Freunde","Freundeskreis","Freundeskreis"
+"1283",129,3,"Familie","Familie","Familie","Familie"
+"1284",129,4,"Schule","Schule","Klassengemeinschaft","Lerngruppe"
+"1285",129,5,"Studium","Studium","Mitstudierende","Mitstudierende"
+"1286",129,6,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"1287",129,7,"Herkunftsland","Herkunftsland","Menschen einer Region","Indirekte Wohnumgebung"
+"1288",129,8,"Europa","Europa","Europäische Gemeinschaft","Globaler Kontext"
+"1289",129,9,"Berufliche Tätigkeit","Berufliche Tätigkeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1290",129,10,"Interessengemeinschaft","Bürgerinitiative","Bürgerinitiative","Bürgerinitiative"
+"1291",130,1,"Sportgemeinschaft","Sportgruppe","Gemeinsamer Sport","Gemeinsamer Sport"
+"1292",130,2,"Hausgemeinschaft","Hausgemeinschaft","Wohngemeinschaft","Direkte Wohnumgebung"
+"1293",130,3,"Gemeinschaft auf der Arbeit","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"1294",130,4,"Gemeinschaft in meinem Stadtteil","Stadtteil","Wohnbezirk","Indirekte Wohnumgebung"
+"1295",130,5,"Europa als Gemeinschaft","Europa","Europäische Gemeinschaft","Globaler Kontext"
+"1296",130,6,NA,NA,NA,NA
+"1297",130,7,NA,NA,NA,NA
+"1298",130,8,NA,NA,NA,NA
+"1299",130,9,NA,NA,NA,NA
+"1300",130,10,NA,NA,NA,NA
+"1301",131,1,"Segler","Segler","Gemeinsames Reisen","Gemeinsames Reisen"
+"1302",131,2,"Einzelhändler","Einzelhändler","Beruflicher Status","Sozialer Status"
+"1303",131,3,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"1304",131,4,"Familie","Familie","Familie","Familie"
+"1305",131,5,"Insulaner","Insulaner","Dorfgemeinschaft","Direkte Wohnumgebung"
+"1306",131,6,"Musiker","Musiker","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"1307",131,7,"Studierende","Mitstudierende","Mitstudierende","Mitstudierende"
+"1308",131,8,NA,NA,NA,NA
+"1309",131,9,NA,NA,NA,NA
+"1310",131,10,NA,NA,NA,NA
+"1311",132,1,"Regionalität","Regionalität","Menschen einer Region","Indirekte Wohnumgebung"
+"1312",132,2,"Nationalität","Nationalität","Nationalität","Nationalität"
+"1313",132,3,"Kontinent","Kontinent","Globale Gemeinschaft","Globaler Kontext"
+"1314",132,4,"Religionsgemeinschaft","Religionsgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"1315",132,5,"Ausländer","Ausländer","Ausländische Herkunft","Kulturgruppe"
+"1316",132,6,"Ältere","Ältere","Ähnliches Alter","Ähnliches Alter"
+"1317",132,7,"Kinder","Kinder","Ähnliches Alter","Ähnliches Alter"
+"1318",132,8,"Jugendliche","Jugendliche","Ähnliches Alter","Ähnliches Alter"
+"1319",132,9,"Erwachsene","Erwachsene","Ähnliches Alter","Ähnliches Alter"
+"1320",132,10,"Yogis","Yogis","Spirituelle Gemeinschaft","Glaubensorientierung"
+"1321",133,1,"Familie","Familie","Familie","Familie"
+"1322",133,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1323",133,3,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"1324",133,4,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"1325",133,5,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"1326",133,6,"Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"1327",133,7,NA,NA,NA,NA
+"1328",133,8,NA,NA,NA,NA
+"1329",133,9,NA,NA,NA,NA
+"1330",133,10,NA,NA,NA,NA
+"1331",134,1,"Firma","Firma","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1332",134,2,"Stadtteil","Stadtteil","Wohnbezirk","Indirekte Wohnumgebung"
+"1333",134,3,"Stadt","Stadt","Wohnort","Indirekte Wohnumgebung"
+"1334",134,4,"Studenten","Mitstudierende","Mitstudierende","Mitstudierende"
+"1335",134,5,"Familie","Familie","Familie","Familie"
+"1336",134,6,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1337",134,7,NA,NA,NA,NA
+"1338",134,8,NA,NA,NA,NA
+"1339",134,9,NA,NA,NA,NA
+"1340",134,10,NA,NA,NA,NA
+"1341",135,1,"Münchner","Münchener","Wohnort","Indirekte Wohnumgebung"
+"1342",135,2,"Bayern","Bayern","Menschen einer Region","Indirekte Wohnumgebung"
+"1343",135,3,"Pfadfinder","Pfadfinder","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"1344",135,4,"Bezirk München Ost","Bezirk München Ost","Wohnbezirk","Indirekte Wohnumgebung"
+"1345",135,5,"Pfadfindergruppe","Pfadfinder","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"1346",135,6,"Studenten","Mitstudierende","Mitstudierende","Mitstudierende"
+"1347",135,7,"Psychologen","Psychologinnen und Psychologen","Beruflicher Status","Sozialer Status"
+"1348",135,8,"Deutsche","Deutschland","Nationalität","Nationalität"
+"1349",135,9,"Wissenschaftlern","Wissenschaftler","Beruflicher Status","Sozialer Status"
+"1350",135,10,"Kaukasier","Kaukasier","Kulturgruppe","Kulturgruppe"
+"1351",136,1,"Deutsche","Deutschland","Nationalität","Nationalität"
+"1352",136,2,"Amerikaner","Amerikaner","Nationalität","Nationalität"
+"1353",136,3,"Schwarze Amerikaner","Schwarze Amerikaner","Kulturgruppe","Kulturgruppe"
+"1354",136,4,"Gamer","Gamer","Gemeinsames Spielen","Gemeinsames Hobby"
+"1355",136,5,"Psychologie-Studenten","Psychologiestudierende","Mitstudierende","Mitstudierende"
+"1356",136,6,NA,NA,NA,NA
+"1357",136,7,NA,NA,NA,NA
+"1358",136,8,NA,NA,NA,NA
+"1359",136,9,NA,NA,NA,NA
+"1360",136,10,NA,NA,NA,NA
+"1361",137,1,NA,NA,NA,NA
+"1362",137,2,NA,NA,NA,NA
+"1363",137,3,NA,NA,NA,NA
+"1364",137,4,NA,NA,NA,NA
+"1365",137,5,NA,NA,NA,NA
+"1366",137,6,NA,NA,NA,NA
+"1367",137,7,NA,NA,NA,NA
+"1368",137,8,NA,NA,NA,NA
+"1369",137,9,NA,NA,NA,NA
+"1370",137,10,NA,NA,NA,NA
+"1371",138,1,"Familie","Familie","Familie","Familie"
+"1372",138,2,"Arbeitskollegen","Arbeitskolleginnen und Arbeitskollegen","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"1373",138,3,"Wandergruppen","Wandergruppe","Gemeinsames Reisen","Gemeinsames Reisen"
+"1374",138,4,"Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"1375",138,5,"Wissenschaftler","Wissenschaftler","Beruflicher Status","Sozialer Status"
+"1376",138,6,"Mathematiker","Mathematiker","Beruflicher Status","Sozialer Status"
+"1377",138,7,"Kletterbegeisterte","Kletterer","Gemeinsamer Sport","Gemeinsamer Sport"
+"1378",138,8,NA,NA,NA,NA
+"1379",138,9,NA,NA,NA,NA
+"1380",138,10,NA,NA,NA,NA
+"1381",139,1,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"1382",139,2,"Familie","Familie","Familie","Familie"
+"1383",139,3,"Sportmannschaft","Sportmannschaft","Gemeinsamer Sport","Gemeinsamer Sport"
+"1384",139,4,"Militäreinheit","Militäreinheit","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"1385",139,5,NA,NA,NA,NA
+"1386",139,6,NA,NA,NA,NA
+"1387",139,7,NA,NA,NA,NA
+"1388",139,8,NA,NA,NA,NA
+"1389",139,9,NA,NA,NA,NA
+"1390",139,10,NA,NA,NA,NA
+"1391",140,1,"Dortmunder","Dortmunder","Wohnort","Indirekte Wohnumgebung"
+"1392",140,2,"Deutsche","Deutschland","Nationalität","Nationalität"
+"1393",140,3,"Atheisten","Atheisten","Glaubensgemeinschaft","Glaubensorientierung"
+"1394",140,4,"Akademiker","Akademiker","Bildungsstand","Sozialer Status"
+"1395",140,5,"Gamer","Gamer","Gemeinsames Spielen","Gemeinsames Hobby"
+"1396",140,6,"Universalinteressierte","Universalinteressierte","Bildungsstand","Sozialer Status"
+"1397",140,7,"Historiker","Historiker","Beruflicher Status","Sozialer Status"
+"1398",140,8,"Psychologen","Psychologinnen und Psychologen","Beruflicher Status","Sozialer Status"
+"1399",140,9,"Menschen d. Neuzeit","Menschheit","Globale Gemeinschaft","Globaler Kontext"
+"1400",140,10,"Meine Familie","Familie","Familie","Familie"
+"1401",141,1,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1402",141,2,"Familie","Familie","Familie","Familie"
+"1403",141,3,"Mitarbeiter","Mitarbeiter","Berufliche Kolleginnen und Kollegen","Berufliche Tätigkeit"
+"1404",141,4,NA,NA,NA,NA
+"1405",141,5,NA,NA,NA,NA
+"1406",141,6,NA,NA,NA,NA
+"1407",141,7,NA,NA,NA,NA
+"1408",141,8,NA,NA,NA,NA
+"1409",141,9,NA,NA,NA,NA
+"1410",141,10,NA,NA,NA,NA
+"1411",142,1,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"1412",142,2,"Gewerkschaft","Gewerkschaft","Gewerkschaften","Berufliche Tätigkeit"
+"1413",142,3,NA,NA,NA,NA
+"1414",142,4,NA,NA,NA,NA
+"1415",142,5,NA,NA,NA,NA
+"1416",142,6,NA,NA,NA,NA
+"1417",142,7,NA,NA,NA,NA
+"1418",142,8,NA,NA,NA,NA
+"1419",142,9,NA,NA,NA,NA
+"1420",142,10,NA,NA,NA,NA
+"1421",143,1,"gemeinsame Anschauungen","Gemeinsame Anschauungen","Gemeinsame Werte","Gemeinsame Werte"
+"1422",143,2,"gemeinsame Normen","Gemeinsame Werte","Gemeinsame Werte","Gemeinsame Werte"
+"1423",143,3,"gemeinsame Ziele","Gemeinsame Ziele","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"1424",143,4,"ähnliche Vergangenheit","Ähnliche Vergangenheit","Ähnliche Geschichte","Ähnliche Geschichte"
+"1425",143,5,"ähnliche Herkunft","Ähnliche Herkunft","Kulturgruppe","Kulturgruppe"
+"1426",143,6,NA,NA,NA,NA
+"1427",143,7,NA,NA,NA,NA
+"1428",143,8,NA,NA,NA,NA
+"1429",143,9,NA,NA,NA,NA
+"1430",143,10,NA,NA,NA,NA
+"1431",144,1,"vegane community","Vegan lebende Menschen","Umweltschutz","Engagement Umweltschutz"
+"1432",144,2,"umweltschützende community","Umweltschutz","Umweltschutz","Engagement Umweltschutz"
+"1433",144,3,"Hamburger/-innen","Hamburger/-innen","Wohnort","Indirekte Wohnumgebung"
+"1434",144,4,"Frauen","Frauen","Gender","Gender"
+"1435",144,5,"Studierende","Mitstudierende","Mitstudierende","Mitstudierende"
+"1436",144,6,"Wissenschaftler/-innen","Wissenschaftler","Beruflicher Status","Sozialer Status"
+"1437",144,7,"Menschen (globale Gemeinschaft)","Globale Gemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"1438",144,8,"Musiker/-innen","Musiker","Gemeinsames Musizieren","Gemeinsames Musizieren"
+"1439",144,9,"Hochsensible","Hochsensible","Hochsensible","Hochsensible"
+"1440",144,10,"Deutsche","Deutschland","Nationalität","Nationalität"
+"1441",145,1,"Verein","Verein","Verein","Gemeinsames Hobby"
+"1442",145,2,"Religion","Religionsgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"1443",145,3,"Stadt","Stadt","Wohnort","Indirekte Wohnumgebung"
+"1444",145,4,NA,NA,NA,NA
+"1445",145,5,NA,NA,NA,NA
+"1446",145,6,NA,NA,NA,NA
+"1447",145,7,NA,NA,NA,NA
+"1448",145,8,NA,NA,NA,NA
+"1449",145,9,NA,NA,NA,NA
+"1450",145,10,NA,NA,NA,NA
+"1451",146,1,"Dorf","Dorfgemeinschaft","Dorfgemeinschaft","Direkte Wohnumgebung"
+"1452",146,2,"Sportverein","Sportverein","Gemeinsamer Sport","Gemeinsamer Sport"
+"1453",146,3,"Kirche","Kirche","Glaubensgemeinschaft","Glaubensorientierung"
+"1454",146,4,"Stadt","Stadt","Wohnort","Indirekte Wohnumgebung"
+"1455",146,5,"Familie","Familie","Familie","Familie"
+"1456",146,6,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"1457",146,7,"Arbeit","Arbeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1458",146,8,"Regierung","Regierung","Politische Orientierung","Politische Orientierung"
+"1459",146,9,"Schule","Schule","Klassengemeinschaft","Lerngruppe"
+"1460",146,10,"Uni","Universität","Mitstudierende","Mitstudierende"
+"1461",147,1,"Familie","Familie","Familie","Familie"
+"1462",147,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1463",147,3,"Lerngruppe","Lerngruppe","Lerngruppe","Lerngruppe"
+"1464",147,4,"Studenten","Mitstudierende","Mitstudierende","Mitstudierende"
+"1465",147,5,"Deutsche","Deutschland","Nationalität","Nationalität"
+"1466",147,6,"Bekannte","Bekannte","Freundeskreis","Freundeskreis"
+"1467",147,7,"Gemeinschaft der Personen meines Hobbys","Gemeinsames Hobby","Gemeinsames Hobby","Gemeinsames Hobby"
+"1468",147,8,"Elterngruppe","Elterngruppe","Menschen mit Elternrolle","Menschen mit Elternrolle"
+"1469",147,9,NA,NA,NA,NA
+"1470",147,10,NA,NA,NA,NA
+"1471",148,1,"Arbeit","Arbeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1472",148,2,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"1473",148,3,"Familie","Familie","Familie","Familie"
+"1474",148,4,"Verein A","Verein","Verein","Gemeinsames Hobby"
+"1475",148,5,"Verein B","Verein","Verein","Gemeinsames Hobby"
+"1476",148,6,"Ältere Freunde","Ältere Freunde","Freundeskreis","Freundeskreis"
+"1477",148,7,"Nachbarschaft","Nachbarschaft","Nachbarschaft","Direkte Wohnumgebung"
+"1478",148,8,"Städtegemeinschaft","Städtegemeinschaft","Wohnort","Indirekte Wohnumgebung"
+"1479",148,9,NA,NA,NA,NA
+"1480",148,10,NA,NA,NA,NA
+"1481",149,1,"Familie","Familie","Familie","Familie"
+"1482",149,2,"Yogalehrerausbildungsgruppe","Yogalehrerausbildungsgruppe","Spirituelle Gemeinschaft","Glaubensorientierung"
+"1483",149,3,"Tanzgruppe","Tanzgruppe","Gemeinsames Hobby","Gemeinsames Hobby"
+"1484",149,4,NA,NA,NA,NA
+"1485",149,5,NA,NA,NA,NA
+"1486",149,6,NA,NA,NA,NA
+"1487",149,7,NA,NA,NA,NA
+"1488",149,8,NA,NA,NA,NA
+"1489",149,9,NA,NA,NA,NA
+"1490",149,10,NA,NA,NA,NA
+"1491",150,1,"Familie","Familie","Familie","Familie"
+"1492",150,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1493",150,3,"Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"1494",150,4,"Arbeit (Altenheim)","Arbeit (Altenheim)","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1495",150,5,"meine Mentees","Mentees","Lerngruppe","Lerngruppe"
+"1496",150,6,"Bürgerinitiative","Bürgerinitiative","Bürgerinitiative","Bürgerinitiative"
+"1497",150,7,"Freiwillige Feuerwehr","Freiwillige Feuerwehr","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"1498",150,8,"Kindergartenfreigruppe","Kindergartenfreigruppe","Klassengemeinschaft","Lerngruppe"
+"1499",150,9,"Waldpiraten","Waldpiraten","Menschen mit Elternrolle","Menschen mit Elternrolle"
+"1500",150,10,"Ehrenamtliche Gruppen","Ehrenamtliche Tätigkeit","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"1501",151,1,"Fernstudierenden","Fernstudierende","Mitstudierende","Mitstudierende"
+"1502",151,2,"WG-Lebenden","WGler","Wohngemeinschaft","Direkte Wohnumgebung"
+"1503",151,3,"Münchnern","Münchener","Wohnort","Indirekte Wohnumgebung"
+"1504",151,4,"Stadtbewohner","Stadt","Wohnort","Indirekte Wohnumgebung"
+"1505",151,5,"20gern","Twens","Ähnliches Alter","Ähnliches Alter"
+"1506",151,6,"Gothics","Gothics","Gemeinsame Werte","Gemeinsame Werte"
+"1507",151,7,"BDSMlern","BDSMler","Sexuelle Orientierung","Sexuelle Orientierung"
+"1508",151,8,"Feministinnen","Feministinnen","Gender","Gender"
+"1509",151,9,"Linken","Linke","Politische Orientierung","Politische Orientierung"
+"1510",151,10,"Depressiven","Depressive","Gesundheitliche Einschränkungen","Gesundheitliche Einschränkungen"
+"1511",152,1,"Familiengemeinschaft","Familie","Familie","Familie"
+"1512",152,2,"Partnergemeinschaft","Partnerschaft","Partnerschaft","Familie"
+"1513",152,3,"Freundesgemeinschaft","Freunde","Freundeskreis","Freundeskreis"
+"1514",152,4,"Arbeitsgemeinschaft","Arbeitsgemeinschaft","Berufliches Team","Berufliche Tätigkeit"
+"1515",152,5,"Meditationsgemeinschaft","Meditationsgemeinschaft","Spirituelle Gemeinschaft","Glaubensorientierung"
+"1516",152,6,"Erholungsgemeinschaft","Erholungsgemeinschaft","Gemeinsames Reisen","Gemeinsames Reisen"
+"1517",152,7,"Gemeinde","Gemeinde","Wohnort","Indirekte Wohnumgebung"
+"1518",152,8,"Verbände, Vereine","Verband","Verein","Gemeinsames Hobby"
+"1519",152,9,"Staatengemeinschaft","Staatengemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"1520",152,10,"Weltgemeinschaft","Weltgemeinschaft","Globale Gemeinschaft","Globaler Kontext"
+"1521",153,1,"Dgb","DGB","Gewerkschaften","Berufliche Tätigkeit"
+"1522",153,2,"Bvb","BVB","Fans","Gemeinsames Hobby"
+"1523",153,3,NA,NA,NA,NA
+"1524",153,4,NA,NA,NA,NA
+"1525",153,5,NA,NA,NA,NA
+"1526",153,6,NA,NA,NA,NA
+"1527",153,7,NA,NA,NA,NA
+"1528",153,8,NA,NA,NA,NA
+"1529",153,9,NA,NA,NA,NA
+"1530",153,10,NA,NA,NA,NA
+"1531",154,1,"Familie","Familie","Familie","Familie"
+"1532",154,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1533",154,3,"Kommilitonen","Mitstudierende","Mitstudierende","Mitstudierende"
+"1534",154,4,"Eltern im Kindergarten meiner Tochter","Eltern im Kindergarten meiner Tochter","Menschen mit Elternrolle","Menschen mit Elternrolle"
+"1535",154,5,"Online Gruppenmitglieder bestimmter Foren","Onlinecommunities","Onlinecommunity","Onlinecommunity"
+"1536",154,6,NA,NA,NA,NA
+"1537",154,7,NA,NA,NA,NA
+"1538",154,8,NA,NA,NA,NA
+"1539",154,9,NA,NA,NA,NA
+"1540",154,10,NA,NA,NA,NA
+"1541",155,1,"Familie","Familie","Familie","Familie"
+"1542",155,2,"Freunde","Freunde","Freundeskreis","Freundeskreis"
+"1543",155,3,"Bekannte","Bekannte","Freundeskreis","Freundeskreis"
+"1544",155,4,NA,NA,NA,NA
+"1545",155,5,NA,NA,NA,NA
+"1546",155,6,NA,NA,NA,NA
+"1547",155,7,NA,NA,NA,NA
+"1548",155,8,NA,NA,NA,NA
+"1549",155,9,NA,NA,NA,NA
+"1550",155,10,NA,NA,NA,NA
+"1551",156,1,"Partnerschaft","Partnerschaft","Partnerschaft","Familie"
+"1552",156,2,"Freundschaft","Freunde","Freundeskreis","Freundeskreis"
+"1553",156,3,"Arbeit","Arbeit","Berufliche Tätigkeit","Berufliche Tätigkeit"
+"1554",156,4,NA,NA,NA,NA
+"1555",156,5,NA,NA,NA,NA
+"1556",156,6,NA,NA,NA,NA
+"1557",156,7,NA,NA,NA,NA
+"1558",156,8,NA,NA,NA,NA
+"1559",156,9,NA,NA,NA,NA
+"1560",156,10,NA,NA,NA,NA
+"1561",157,1,NA,NA,NA,NA
+"1562",157,2,NA,NA,NA,NA
+"1563",157,3,NA,NA,NA,NA
+"1564",157,4,NA,NA,NA,NA
+"1565",157,5,NA,NA,NA,NA
+"1566",157,6,NA,NA,NA,NA
+"1567",157,7,NA,NA,NA,NA
+"1568",157,8,NA,NA,NA,NA
+"1569",157,9,NA,NA,NA,NA
+"1570",157,10,NA,NA,NA,NA
+"1571",158,1,"Religionen","Religionsgemeinschaft","Glaubensgemeinschaft","Glaubensorientierung"
+"1572",158,2,"Hobbygruppen","Gemeinsames Hobby","Gemeinsames Hobby","Gemeinsames Hobby"
+"1573",158,3,"Patriotismus","Patrioten","Politische Orientierung","Politische Orientierung"
+"1574",158,4,"Ehrenamt","Ehrenamtliche Tätigkeit","Ehrenamtliche Tätigkeit","Ehrenamt Gemeinde"
+"1575",158,5,"Gemeinde","Gemeinde","Wohnort","Indirekte Wohnumgebung"
+"1576",158,6,"Staat","Staat","Gesellschaft","Nationalität"
+"1577",158,7,"Arbeitsgruppe","Arbeitsgruppe","Berufliches Team","Berufliche Tätigkeit"
+"1578",158,8,"Freundeskreis","Freunde","Freundeskreis","Freundeskreis"
+"1579",158,9,"Europa","Europa","Europäische Gemeinschaft","Globaler Kontext"
+"1580",158,10,"Familie","Familie","Familie","Familie"

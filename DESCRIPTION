@@ -1,0 +1,23 @@
+Package: frankmakrdiss
+Title: Accompanying Package for F. Krumbholz's dissertation
+Version: 0.0.0.9000
+Authors@R: 
+    person("Frank", "Krumbholz", , "frankmakr@mailbox.org",
+      role = c("aut", "cre", "cph"))
+Description: Makes reproduction, replication, or adaptation
+    of the dissertations analyses easier.
+License: GPL (>= 3) | CC BY-SA 4.0
+Encoding: UTF-8
+LazyData: true
+Imports:
+    cmdstanr,
+    ggplot2,
+    knitr,
+    matrixStats,
+    scales
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Additional_repositories:
+    https://mc-stan.org/r-packages/
+Depends: 
+    R (>= 3.5.0)
