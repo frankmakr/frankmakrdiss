@@ -10,6 +10,7 @@ validity of tests in dependence of community contexts\] \[Unpublished
 Doctoral Dissertation\]. FernUniversität in Hagen.
 
 ``` bibtex
+# Bibtex
 @unpublished{Krumbholz2023,
     author = {Krumbholz, F.},
     date = {2023},
@@ -27,19 +28,15 @@ Doctoral Dissertation\]. FernUniversität in Hagen.
 
 The goal is an easier reproduction, replication, and adaptation of the
 implemented analyses. The data sets are archived as CSV files on
-*Zenodo* and available under the following link:
-
-<https://doi.org/zenodo.xxx>
-
+*Zenodo* and available under the following link:  
+<https://doi.org/zenodo.xxx>  
 For convenience they are also included in this package.
 
 ## Installation
 
-Before installing *frankmakrdiss* you need *cmdstanr* and *CmdStan*.
-Please visit
-
-<https://mc-stan.org/cmdstanr>
-
+Before installing *frankmakrdiss* you need *cmdstanr* and *CmdStan*.  
+Please visit  
+<https://mc-stan.org/cmdstanr>  
 for detailed instructions.
 
 ``` r
@@ -63,7 +60,6 @@ devtools::install_github("frankmakr/frankmakrdiss")
 
 # install.packages("remotes")
 remotes::install_github("frankmakr/frankmakrdiss")
- 
 ```
 
 ## Using
@@ -74,7 +70,7 @@ doctoral dissertation before using this package.
 
 This is an ongoing project. So, please be patient.
 
-## Additional License for the Data Sets
+## Additional License for the included Data Sets
 
 The included data sets are licensed under Attribution-ShareAlike 4.0
 International (CC-BY-SA-4.0). To view a copy of this license visit
