@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this software using these metadata."
+authors:
+  - family-names: Krumbholz
+    given-names: Frank
+date-relased: 2023
+title: "frankmakrdiss"
+version: 0.0.0.9000
+repository-code: "https://github.com/frankmakr/frankmakrdiss"
+license:
+  - GPL-3.0-or-later
+  - CC-BY-SA-4.0
