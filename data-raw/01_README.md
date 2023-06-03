@@ -38,15 +38,8 @@ Content validity of tests in dependence of community contexts]
 
 ## License ##
 These data sets are licensed under
-[Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)](https://creativecommons.org/licenses/by-sa/4.0).
-<!--
-These data sets are licensed under
-Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0).
-To view a copy of this license visit
-<https://creativecommons.org/licenses/by-sa/4.0>
-or send a letter to
-Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
--->
+[Attribution-ShareAlike 4.0 International
+(CC-BY-SA-4.0)](https://creativecommons.org/licenses/by-sa/4.0).
 
 
 
