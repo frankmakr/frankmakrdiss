@@ -1,6 +1,6 @@
 Package: frankmakrdiss
 Title: Accompanying Package for F. Krumbholz's dissertation
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Frank", "Krumbholz", , "frankmakr@mailbox.org",
       role = c("aut", "cre", "cph"))

@@ -27,10 +27,9 @@ Doctoral Dissertation\]. FernUniversität in Hagen.
 ```
 
 The goal is an easier reproduction, replication, and adaptation of the
-implemented analyses. The data sets are archived as CSV files on
-*Zenodo* and available under the following link:  
-<https://doi.org/zenodo.xxx>  
-For convenience they are also included in this package.
+implemented analyses. The [data sets](https://doi.org/zenodo.xxx) are
+archived as CSV files on [*Zenodo*](https://zenodo.org). They are also
+included in this package.
 
 ## Installation
 
@@ -51,8 +50,9 @@ install.packages("cmdstanr",
 cmdstanr::install_cmdstan()
 ```
 
-To install *frankmakrdiss* you can use *devtools* or the lighter
-*remotes*.
+To install *frankmakrdiss* you can use
+[*devtools*](https://devtools.r-lib.org) or the lighter
+[*remotes*](https://remotes.r-lib.org).
 
 ``` r
 # install.packages("devtools")
@@ -72,7 +72,6 @@ This is an ongoing project. So, please be patient.
 
 ## Additional License for the included Data Sets
 
-The included data sets are licensed under Attribution-ShareAlike 4.0
-International (CC-BY-SA-4.0). To view a copy of this license visit
-<https://creativecommons.org/licenses/by-sa/4.0> or send a letter to
-Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+The included data sets are licensed under [Attribution-ShareAlike 4.0
+International
+(CC-BY-SA-4.0)](https://creativecommons.org/licenses/by-sa/4.0).
