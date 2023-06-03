@@ -201,7 +201,7 @@ Chavis, D. M., Lee, K. S., \& Acosta, J. D. (2008).
 *The reliability and validity of the SCI-2.*
 Paper presented at the 2nd International Community Psychology Conference.
 Lisboa, Portugal.
-Retrieved October 20, 2015, from <https://senseofcommunity.com>.
+Retrieved October 17, 2018, from <https://senseofcommunity.com>.
 
 Halamová, J. Kanovsky, M., \& Naništová, E. (2018).
 Development and psychometric analysis of the sense of community descriptors scale.
