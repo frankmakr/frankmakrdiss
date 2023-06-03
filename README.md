@@ -10,7 +10,7 @@ validity of tests in dependence of community contexts\] \[Unpublished
 Doctoral Dissertation\]. FernUniversität in Hagen.
 
 ``` bibtex
-# Bibtex
+# BibTeX
 @unpublished{Krumbholz2023,
     author = {Krumbholz, F.},
     date = {2023},
@@ -39,7 +39,7 @@ Please visit
 for detailed instructions.
 
 ``` r
-# The dev team recommends running this is a fresh R session
+# The cmdstanr dev team recommends running this in a fresh R session
 # or restarting your current session
 
 # Install cmdstanr
@@ -70,7 +70,7 @@ doctoral dissertation before using this package.
 
 This is an ongoing project. So, please be patient.
 
-## Additional License for the included Data Sets
+## Additional License for the Included Data Sets
 
 The included data sets are licensed under [Attribution-ShareAlike 4.0
 International
