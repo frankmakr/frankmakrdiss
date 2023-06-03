@@ -1,23 +1,28 @@
-# Downloading data if not present
+# If not present, download data using Zenodo REST API.
+# Get bucket with
+# curl https://zenodo.org/api/records/5496167 | \
+# json_pp | \
+# awk -F\" '/^.*bucket.*https/ {print $(NF-1)}'
+
 ## comms_demo
 #if (!file.exists("data-raw/02_comms_demo.csv")) {
-#  download.file("https://xxx")
+#  download.file("https://zenodo.org/api/files/.../02_comms_demo.csv")
 #}
 ## comms_data
 #if (!file.exists("data-raw/03_comms_data.csv")) {
-#  download.file("https://xxx")
+#  download.file("https://zenodo.org/api/files/.../03_comms_data.csv")
 #}
 ## conval_demo
 #if (!file.exists("data-raw/04_conval_data.csv")) {
-#  download.file("https://xxx")
+#  download.file("https://zenodo.org/api/files/.../04_comms_demo.csv")
 #}
 ## conval_data
 #if (!file.exists("data-raw/05_conval_data.csv")) {
-#  download.file("https://xxx")
+#  download.file("https://zenodo.org/api/files/.../05_comms_data.csv")
 #}
 ## conval_comms
 #if (!file.exists("data-raw/06_conval_comms.csv")) {
-#  download.file("https://xxx")
+#  download.file("https://zenodo.org/api/files/.../06_conval_comms.csv")
 #}
 
 datalist <- lapply(Sys.glob("data-raw/*.csv"), function(i) read.csv(i,
