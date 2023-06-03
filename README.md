@@ -14,7 +14,7 @@ Doctoral Dissertation\]. FernUniversität in Hagen.
 @unpublished{Krumbholz2023,
     author = {Krumbholz, F.},
     date = {2023},
-    origtitle = {Psychological Sense of Community:},
+    origtitle = {Psychological Sense of Community:,
         Inhaltsvalidität von Testverfahren
         in Abhängigkeit von Bezugsgemeinschaften},
     title = {Psychological Sense of Community},
