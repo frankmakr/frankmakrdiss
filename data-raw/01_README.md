@@ -1,15 +1,15 @@
-This RECORD uses
-[Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 The format of the CHANGELOG section is based on
-[Keep a Changelog](https://keepachangelog.com/en/1.1.0).
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0)
+and uses
+[Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 # CHANGELOG #
 
-## [1.0.0] - 2023-06-02 ##
+## [1.0.0] - 2023-06-04 ##
 
 ### Added ###
 - README file with CHANGELOG, GENERAL INFORMATION, and DATA OVERVIEW sections
-- Data sets comms_demo, comms_data, conval_demo, conval_data, and conval_comms as CSV files
+- CSV files comms_demo, comms_data, conval_demo, conval_data, and conval_comms
 
 
 
@@ -20,26 +20,28 @@ Frank Krumbholz (frankmakr[AT]mailbox[DOT]org)
 
 ## Recommended Citation ##
 
-### German version ###
+### German ###
 Krumbholz, F. (2023).
 *Psychological Sense of Community:*
 *Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften*
+(Version 1.0.0)
 [Datensatz].
 <https://doi.org/zenodo.xxx>
 
-### English version ###
+### English ###
 Krumbholz, F. (2023).
 *Psychological Sense of Community:*
 *Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften*
 [Psychological sense of community:
 Content validity of tests in dependence of community contexts]
+(Version 1.0.0)
 [Data set].
 <https://doi.org/zenodo.xxx>
 
 ## License ##
-These data sets are licensed under
-[Attribution-ShareAlike 4.0 International
-(CC-BY-SA-4.0)](https://creativecommons.org/licenses/by-sa/4.0).
+This data set is licensed under a
+[Creative Commons Attribution 4.0 International License
+(CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 
 

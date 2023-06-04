@@ -28,6 +28,8 @@ Content validity of tests in dependence of community contexts]
 [Unpublished Doctoral Dissertation].
 FernUniversität in Hagen.
 
+<details>
+<summary>BibTeX entry</summary>
 ```BibTeX
 # BibTeX
 @unpublished{Krumbholz2023,
@@ -44,17 +46,19 @@ FernUniversität in Hagen.
     langid = {ngerman}
 }
 ```
+</details>
 
 The goal is
 an easier reproduction, replication, and adaptation
 of the implemented analyses.
-The [data sets](https://doi.org/zenodo.xxx)
-are archived as CSV files on [*Zenodo*](https://zenodo.org).
-They are also included in this package.
+The [data set](https://doi.org/zenodo.xxx)
+is archived on [*Zenodo*](https://zenodo.org)
+and is also included in this package.
 
 
 
 ## Installation ##
+
 Before installing *frankmakrdiss* you need *cmdstanr* and *CmdStan*.  
 Please visit  
 <https://mc-stan.org/cmdstanr>  
@@ -87,6 +91,7 @@ remotes::install_github("frankmakr/frankmakrdiss")
 
 
 ## Using ##
+
 At this time 
 the documentation of *frankmakrdiss* is not detailed enough
 to be self-explanatory.
@@ -99,7 +104,10 @@ So, please be patient.
 
 
 
-## License for the Included Data Sets ##
-The included data sets are licensed under
-[Attribution-ShareAlike 4.0 International
-(CC-BY-SA-4.0)](https://creativecommons.org/licenses/by-sa/4.0).
+## License ##
+The code of this work is licensed under a
+[BSD 3-Clause "New" or "Revised" License
+(BSD-3-Clause)](LICENSE).
+The content and the data set are licensed under a
+[Creative Commons Attribution 4.0 International License
+(CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).

@@ -1,6 +1,10 @@
 
 # frankmakrdiss
 
+<!-- badges: start -->
+
+<!-- badges: end -->
+
 The *R* package *frankmakrdiss* supplements the doctoral dissertation:
 
 Krumbholz, F. (2023). *Psychological Sense of Community:*
@@ -8,6 +12,10 @@ Krumbholz, F. (2023). *Psychological Sense of Community:*
 Bezugsgemeinschaften.* \[Psychological sense of community: Content
 validity of tests in dependence of community contexts\] \[Unpublished
 Doctoral Dissertation\]. FernUniversität in Hagen.
+
+<details>
+
+<summary>BibTeX entry</summary>
 
 ``` bibtex
 # BibTeX
@@ -26,10 +34,12 @@ Doctoral Dissertation\]. FernUniversität in Hagen.
 }
 ```
 
+</details>
+
 The goal is an easier reproduction, replication, and adaptation of the
-implemented analyses. The [data sets](https://doi.org/zenodo.xxx) are
-archived as CSV files on [*Zenodo*](https://zenodo.org). They are also
-included in this package.
+implemented analyses. The [data set](https://doi.org/zenodo.xxx) is
+archived on [*Zenodo*](https://zenodo.org) and is also included in this
+package.
 
 ## Installation
 
@@ -70,8 +80,9 @@ doctoral dissertation before using this package.
 
 This is an ongoing project. So, please be patient.
 
-## Additional License for the Included Data Sets
+## License
 
-The included data sets are licensed under [Attribution-ShareAlike 4.0
-International
-(CC-BY-SA-4.0)](https://creativecommons.org/licenses/by-sa/4.0).
+The code of this work is licensed under a [BSD 3-Clause “New” or
+“Revised” License (BSD-3-Clause)](LICENSE). The content and the data
+set are licensed under a [Creative Commons Attribution 4.0 International
+License (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
