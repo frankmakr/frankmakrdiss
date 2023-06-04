@@ -1,7 +1,7 @@
 # frankmakrdiss #
 
 <!-- badges: start -->
-
+[![R-CMD-check](https://github.com/frankmakr/frankmakrdiss/actions/workflows/r_check_standard.yml/badge.svg)](https://github.com/frankmakr/frankmakrdiss/actions/workflows/r_check_standard.yml)
 <!-- badges: end -->
 
 The *R* package *frankmakrdiss* supplements the doctoral dissertation:
