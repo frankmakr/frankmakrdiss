@@ -1,6 +1,12 @@
+# Add LICENSE and LICENSE.note files with specific requirements for CRAN
+# incompatible with GitHub
+LICENSE
+LICENSE.note
+
+# github/gitignore/R.gitignore
 # History files
 .Rhistory
-.Raap.history
+.Rapp.history
 
 # Session Data files
 .RData

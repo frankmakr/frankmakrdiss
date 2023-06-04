@@ -1,5 +1,4 @@
-
-# frankmakrdiss
+# frankmakrdiss #
 
 <!-- badges: start -->
 
@@ -7,11 +6,13 @@
 
 The *R* package *frankmakrdiss* supplements the doctoral dissertation:
 
-Krumbholz, F. (2023). *Psychological Sense of Community:*
-*Inhaltsvalidität von Testverfahren in Abhängigkeit von
-Bezugsgemeinschaften.* \[Psychological sense of community: Content
-validity of tests in dependence of community contexts\] \[Unpublished
-Doctoral Dissertation\]. FernUniversität in Hagen.
+Krumbholz, F. (2023).
+*Psychological Sense of Community:*
+*Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften.*
+[Psychological sense of community:
+Content validity of tests in dependence of community contexts]
+[Unpublished Doctoral Dissertation].
+FernUniversität in Hagen.
 
 <details>
 
@@ -36,12 +37,15 @@ Doctoral Dissertation\]. FernUniversität in Hagen.
 
 </details>
 
-The goal is an easier reproduction, replication, and adaptation of the
-implemented analyses. The [data set](https://doi.org/zenodo.xxx) is
-archived on [*Zenodo*](https://zenodo.org) and is also included in this
-package.
+The goal is an easier reproduction, replication, and adaptation
+of the implemented analyses.
+The [data set](https://doi.org/zenodo.xxx)
+is archived on [*Zenodo*](https://zenodo.org)
+and is also included in this package.
 
-## Installation
+
+
+## Installation ##
 
 Before installing *frankmakrdiss* you need *cmdstanr* and *CmdStan*.  
 Please visit  
@@ -61,7 +65,8 @@ cmdstanr::install_cmdstan()
 ```
 
 To install *frankmakrdiss* you can use
-[*devtools*](https://devtools.r-lib.org) or the lighter
+[*devtools*](https://devtools.r-lib.org)
+or the lighter
 [*remotes*](https://remotes.r-lib.org).
 
 ``` r
@@ -72,17 +77,26 @@ devtools::install_github("frankmakr/frankmakrdiss")
 remotes::install_github("frankmakr/frankmakrdiss")
 ```
 
-## Using
 
-At this time the documentation of *frankmakrdiss* is not detailed enough
-to be self-explanatory. That is why it is highly recommended to read the
-doctoral dissertation before using this package.
 
-This is an ongoing project. So, please be patient.
+## Getting started ##
 
-## License
+At this time
+the documentation of *frankmakrdiss*
+is not detailed enough to be self-explanatory.
+That is why it is highly recommended
+to read the doctoral dissertation before using this package.
 
-The code of this work is licensed under a [BSD 3-Clause “New” or
-“Revised” License (BSD-3-Clause)](LICENSE). The content and the data
-set are licensed under a [Creative Commons Attribution 4.0 International
-License (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
+This is an ongoing project.
+So, please be patient.
+
+
+
+## License ##
+
+The code of this work is licensed under a
+[BSD 3-Clause “New” or “Revised” License
+(BSD-3-Clause)](LICENSE.md).
+The content and the data set are licensed under a
+[Creative Commons Attribution 4.0 International License
+(CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
