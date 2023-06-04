@@ -96,7 +96,7 @@ So, please be patient.
 
 The code of this work is licensed under a
 [BSD 3-Clause “New” or “Revised” License
-(BSD-3-Clause)](LICENSE.md).  
+(BSD-3-Clause)](LICENSE.md).
 The content and the data set are licensed under a
 [Creative Commons Attribution 4.0 International License
 (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
