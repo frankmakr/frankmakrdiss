@@ -38,7 +38,7 @@ FernUniversität in Hagen.
 </details>
 
 The goal is an easier reproduction, replication, and adaptation
-of the implemented analyses.
+of the implemented analyses.  
 The [data set](https://doi.org/zenodo.xxx)
 is archived on [*Zenodo*](https://zenodo.org)
 and is also included in this package.
@@ -48,8 +48,8 @@ and is also included in this package.
 ## Installation ##
 
 Before installing *frankmakrdiss* you need *cmdstanr* and *CmdStan*.  
-Please visit  
-<https://mc-stan.org/cmdstanr>  
+Please visit
+<https://mc-stan.org/cmdstanr>
 for detailed instructions.
 
 ``` r
@@ -96,7 +96,7 @@ So, please be patient.
 
 The code of this work is licensed under a
 [BSD 3-Clause “New” or “Revised” License
-(BSD-3-Clause)](LICENSE.md).
+(BSD-3-Clause)](LICENSE.md).  
 The content and the data set are licensed under a
 [Creative Commons Attribution 4.0 International License
 (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
