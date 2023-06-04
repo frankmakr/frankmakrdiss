@@ -1,5 +1,5 @@
 Package: frankmakrdiss
-Title: Accompanying Package for F. Krumbholz's dissertation
+Title: Accompanying Package for Frank Krumbholz's dissertation
 Version: 0.1.0
 Authors@R: 
     person("Frank", "Krumbholz", , "frankmakr@mailbox.org",
