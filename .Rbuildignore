@@ -4,6 +4,6 @@
 ^\.gitmessage$
 ^_pkgdown\.yml$
 ^docs$
-^LICENSE.md$
+^LICENSE$
 ^pkgdown$
 ^README\.Rmd$
