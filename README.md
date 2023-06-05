@@ -37,11 +37,10 @@ FernUniversität in Hagen.
 
 </details>
 
-The goal is an easier reproduction, replication, and adaptation
-of the implemented analyses.  
-The [data set](https://doi.org/zenodo.xxx)
-is archived on [*Zenodo*](https://zenodo.org)
-and is also included in this package.
+It provides the [data set](https://doi.org/zenodo.xxx)
+and a set of functions
+for an easier reproduction, replication, and adaptation
+of the implemented analyses.
 
 
 
