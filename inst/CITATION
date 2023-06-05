@@ -1,20 +1,23 @@
 citHeader("To cite frankmakrdiss in publications use:")
 
 bibentry(
-  bibtype     = "misc",
-  title       = "Psychological Sense of Community",
-  subtitle    = "Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften",
-  author      = "Frank Krumbholz",
-  year        = 2023,
-  titleaddon  = "Dissertation, FernUniversität in Hagen",
-  eprint      = "",
-  doi         = "",
-  langid      = "ngerman",
-  textVersion = paste(
-                  "Krumbholz, F. (2023).",
-                  "Psychological Sense of Community:
-                    Inhaltsvalidität von Testverfahren
-                    in Abhängigkeit von Bezugsgemeinschaften
-                    [Dissertation, FernUniversität in Hagen]."
-  )
+  bibtype      = "software",
+  entrysubtype = "R Package",
+  author       = "Frank Krumbholz",
+  year         = 2023,
+  title        = "frankmakrdiss",
+  subtitle     = "",
+  version      = "0.1.0,
+  titleaddon   = "Software",
+  doi          = "https://doi.org/10.5281/zenodo.xxx"
+  url          = "https://github.com/frankmakr/frankmakrdiss",
+  langid       = "american",
+  textVersion  = paste(
+                   "Krumbholz, F. (2023).",
+                   paste0(
+		     "frankmakrdiss",
+	             "(Version 0.1.0)", 
+	             "[R Package]."),
+	           "https://doi.org/10.5281/zenodo.xxx"
+  		 )
 )
