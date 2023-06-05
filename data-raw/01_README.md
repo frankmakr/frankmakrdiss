@@ -5,11 +5,13 @@ and uses
 
 # CHANGELOG #
 
-## [1.0.0] - 2023-06-04 ##
+## [1.0.0] - 2023-06-05 ##
 
-### Added ###
-- README file with CHANGELOG, GENERAL INFORMATION, and DATA OVERVIEW sections
-- CSV files comms_demo, comms_data, conval_demo, conval_data, and conval_comms
+### New ###
++ File `01_README.md` with CHANGELOG, GENERAL INFORMATION,
+  and DATA OVERVIEW sections
++ Files `02_comms_demo.csv`, `03_comms_data.csv`, `04_conval_demo.csv`,
+  `05_conval_data.csv`, and `06_conval_comms.csv`
 
 
 
@@ -48,12 +50,12 @@ This data set is licensed under a
 # DATA OVERVIEW #
 
 ## File List ##
-- 01_README.md
-- 02_comms_demo.csv
-- 03_comms_data.csv
-- 04_conval_demo.csv
-- 05_conval_data.csv
-- 06_conval_comms.csv
++ 01_README.md
++ 02_comms_demo.csv
++ 03_comms_data.csv
++ 04_conval_demo.csv
++ 05_conval_data.csv
++ 06_conval_comms.csv
 
 
 
@@ -63,26 +65,30 @@ This file.
 
 
 ## comms_demo ##
-The sample characteristics for the data set *comms_data*.
+The sample characteristics for the data set `comms_data`.
 
 ### Format ###
 A table with 158 rows and 7 columns.
 
 ### Variables ###
-- **person**
++ **person**
   Person number
-- **gender**
-  Gender coded as male = 1, female = 2, divers = 3
-- **age**
++ **gender**
+  Gender coded as 1 = Male, 2 = Female, 3 = Divers
++ **age**
   Age in years
-- **state**
-  One of the 16 German states the person is living in alphabetical order or 17 = living outside from Germany
-- **studstatus**
++ **state**
+  One of the 16 German states the person is living in alphabetical order
+  or 17 = Living outside from Germany
++ **studstatus**
   Student status used in the FernUniversität official statistics
-- **noexpert**
-  Knowledge of a theory of psychological sense of community coded as 0 = Knowledge, 1 = No knowledge
-- **numcomm**
+  (Berichtswesen, 2022a)
++ **noexpert**
+  Knowledge of a theory of psychological sense of community
+  coded as 0 = Knowledge, 1 = No knowledge
++ **numcomm**
   The number of communities the person mentioned
+  with a maximum number of 10 entry fields
 
 
 
@@ -95,9 +101,9 @@ A table with 1,580 rows and 6 columns.
 
 ### Variables ###
 - **person**
-  Person number from *comms_demo*
+  Person number from `comms_demo`
 - **field**
-  Which of the 10 fields was used for the phrase
+  Which of the 10 entry fields was used for the phrase
 - **k_start**
   The phrases before the classification process
 - **k_iter1**
@@ -110,62 +116,70 @@ A table with 1,580 rows and 6 columns.
 
 
 ## conval_demo ##
-The sample characteristics for the data set *conval_data*.
+The sample characteristics for the data set `conval_data`.
 
 ### Format ###
 A data frame with 1,465 rows and 7 columns.
 
 ### Variables ###
-- **person**
++ **person**
   Person number
-- **gender**
-  Gender coded as male = 1, female = 2, divers = 3
-- **age**
++ **gender**
+  Gender coded as 1 = Male, 2 = Female, 3 = Divers
++ **age**
   Age in years
-- **state**
-  One of the 16 German states the person is living in alphabetical order or
-  17 = living outside from Germany
-- **studstatus**
++ **state**
+  One of the 16 German states the person is living in alphabetical order
+  or 17 = Living outside from Germany
++ **studstatus**
   Student status used in the FernUniversität official statistics
-- **noexpert**
-  Knowledge of a theory of psychological sense of community coded as 0 = Knowledge, 1 = No knowledge
-- **numcomm**
+  (Berichtswesen, 2022b)
++ **noexpert**
+  Knowledge of a theory of psychological sense of community
+  coded as 0 = Knowledge, 1 = No knowledge
++ **numcomm**
   The number of communities the person mentioned
+  with a maximum number of 22 communities given
 
 
 
 ## conval_data ##
-The content validity of the items of 4 different tests
-was rated in specific community contexts.
+The rated content validity of the items of 4 different tests
+in specific community contexts.
 
 ### Format ###
 A table with 5,609 rows and 79 columns.
 
 ### Variables ###
 - **person**
-  Person number from *conval_demo*
+  Person number from `conval_demo`
 - **comm**
-  The specific community from *conval_comms* for which the test items were rated
+  The specific community from `conval_comms`
+  for which the test items were rated
 - **value**
   The grade to which the community is a community of shared values
 - **purpose**
-  The grade to which the community is a community of purpose}
+  The grade to which the community is a community of purpose
 - **value_x_purpose**
-  Interaction variable of *value* and *purpose*
+  Interaction variable of `value` and `purpose`
 - **chavis_[1-25]**
-  The grade to which the test item [1-25] from Chavis et al. (2008) is necessary to characterize sense of community
+  The grade to which the test item [1-25] from Chavis et al. (2008)
+  is rated necessary to characterize sense of community
 - **omoto_[1-18]**
-  The grade to which the test item [1-18] from Omoto and Snyder (2010) is necessary to characterize sense of community
+  The grade to which the test item [1-18] from Omoto and Snyder (2010)
+  is rated necessary to characterize sense of community
 - **jason_[1-9]**
-  The grade to which the test item [1-9] from Jason et al. (2015) is necessary to characterize sense of community
+  The grade to which the test item [1-9] from Jason et al. (2015)
+  is rated necessary to characterize sense of community
 - **halamova_[1-22]**
-  The grade to which the test item [1-22] from Halamová et al. (2018) is necessary to characterize sense of community
+  The grade to which the test item [1-22] from Halamová et al. (2018)
+  is rated necessary to characterize sense of community
 
 
 
 ## conval_comms ##
 The phrases of the communities in German
-for the variable *comm* in the data set *conval_data*.
+for the variable `comm` in the data set `conval_data`.
 
 ### Format ###
 A table with 22 rows and 2 columns.
