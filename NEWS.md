@@ -1,4 +1,4 @@
-The package `frankmakrdiss` uses
+The package *frankmakrdiss* uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 The format of `NEWS.md` is based on
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0).
