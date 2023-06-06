@@ -1,7 +1,7 @@
 citHeader("To cite frankmakrdiss in publications use:")
 
 bibentry(
-  bibtype      = "software",
+  bibtype      = "misc",
   entrysubtype = "R Package",
   author       = "Frank Krumbholz",
   year         = 2023,
@@ -19,5 +19,5 @@ bibentry(
                      "(Version 0.1.0)", 
                      "[R Package]."),
                    "https://doi.org/10.5281/zenodo.xxx"
-)
+                   )
 )
