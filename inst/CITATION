@@ -9,7 +9,7 @@ bibentry(
   subtitle     = "",
   version      = "0.1.0",
   titleaddon   = "Software",
-  doi          = "https://doi.org/10.5281/zenodo.xxx"
+  doi          = "https://doi.org/10.5281/zenodo.xxx",
   url          = "https://github.com/frankmakr/frankmakrdiss",
   langid       = "american",
   textVersion  = paste(
