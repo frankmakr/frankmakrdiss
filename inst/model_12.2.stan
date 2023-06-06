@@ -1,8 +1,8 @@
 /**
- * Parameterization of the Beta distribution according to Betancourt:
- * Since sigma^2 <= mu * (1 - mu),
- * a more useful parameterization instead of mean and variance
- * is the mean and the ratio between the variance and the maximum variance.
+ * Parameterization of the Beta distribution according to Michael Betancourt
+ * <https://betanalpha.github.io/assets/case_studies/probability_densities.html#24_the_beta_family>
+ *
+ * Mean and the ratio between the variance and the maximum variance:
  * mu = a / (a + b)
  * phi = 1 / (a + b + 1)
  * From this follows
@@ -28,8 +28,12 @@ parameters {
 }
 
 transformed parameters {
-  row_vector[2] shape_beta = [ mu * (inv(phi) - 1),
-                               (mu - 1) * (1 - inv(phi)) ];
+  row_vector[2] shape_beta;
+  {
+  real inv_phi = inv(phi);
+  shape_beta = [ mu * (inv_phi - 1),
+                 (mu - 1) * (1 - inv_phi) ];
+  }
 }
 
 model {
@@ -56,4 +60,3 @@ generated quantities {
                   rep_array(N_tilde[l], K), shape_beta[1], shape_beta[2]);
   }
 }
-

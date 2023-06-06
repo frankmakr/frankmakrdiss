@@ -20,7 +20,7 @@ RoxygenNote: 7.2.3
 Additional_repositories:
     https://mc-stan.org/r-packages/
 Depends: 
-    R (>= 3.5.0)
+    R (>= 4.0.0)
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
