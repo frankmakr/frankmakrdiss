@@ -8,7 +8,7 @@ The *R* package *frankmakrdiss* supplements the doctoral dissertation:
 
 Krumbholz, F. (2023).
 *Psychological Sense of Community:*
-*Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften.*
+*Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften*
 [Psychological sense of community:
 Content validity of tests in dependence of community contexts]
 [Unpublished Doctoral Dissertation].
@@ -46,7 +46,7 @@ of the implemented analyses.
 
 ## Installation ##
 
-Before installing *frankmakrdiss* you need *cmdstanr* and *CmdStan*.  
+Before installing *frankmakrdiss* you need *cmdstanr* and *CmdStan*.
 Please visit
 <https://mc-stan.org/cmdstanr>
 for detailed instructions.
