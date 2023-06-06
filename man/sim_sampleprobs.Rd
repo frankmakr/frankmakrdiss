@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggplot2data.R
 \name{sim_sampleprobs}
 \alias{sim_sampleprobs}
-\title{Simulate one replication of sample probabilities}
+\title{One Replication of Sample Probabilities}
 \usage{
 sim_sampleprobs(n, probs)
 }

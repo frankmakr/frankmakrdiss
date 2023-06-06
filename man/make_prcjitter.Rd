@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggplot2data.R
 \name{make_prcjitter}
 \alias{make_prcjitter}
-\title{Make plot data for a posterior retrodictive check}
+\title{Plot Data for a Posterior Retrodictive Check}
 \usage{
 make_prcjitter(y, y_rep_mat)
 }

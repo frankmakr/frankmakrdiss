@@ -2,7 +2,7 @@
 % Please edit documentation in R/deltaaic.R
 \name{tabulate_paic}
 \alias{tabulate_paic}
-\title{Tabulate the probability in pairwise relative AIC comparison}
+\title{Pairwise Relative AIC Comparison}
 \usage{
 tabulate_paic(data)
 }
@@ -15,5 +15,6 @@ containing the probability minimizing the information loss
 }
 \description{
 \code{tabulate_paic} calculates the probability
-that one model minimizes the information loss over another model.
+that one model minimizes the information loss over another model
+and displays the results in a table.
 }

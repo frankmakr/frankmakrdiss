@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggplot2data.R
 \name{make_sigmapointrange}
 \alias{make_sigmapointrange}
-\title{Make plot data for showing a variance component}
+\title{Plot Data for Variance components}
 \usage{
 make_sigmapointrange(draws_mat_1, draws_mat_2, probs = 0.87)
 }

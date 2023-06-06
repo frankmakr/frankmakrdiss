@@ -4,7 +4,7 @@
 # ---                        ---
 # ------------------------------
 
-#' Simulate one replication of sample probabilities
+#' One Replication of Sample Probabilities
 #'
 #' Utility function
 #'
@@ -16,7 +16,7 @@ sim_sampleprobs <- function(n, probs) {
   return(matrixStats::rowSums2(x) / n)
 }
 
-#' Make plot data for evaluating representativity of the sample
+#' Plot Data for Evaluating Sample Representativity
 #'
 #' @description
 #' \code{make_samplepointrange} prepares the data
@@ -41,16 +41,13 @@ make_samplepointrange <- function(sample_simlist, population_simlist,
       function(i) t(apply(i, 2, calc_hdr, probs = probs))))
   varlist <- vector("list", 6)
   names(varlist) <- c("x", "y", "ll", "ul", "color", "fac")
-  #varlist$x <- c(median_1, median_2)
   varlist$x <- c(median_1, median_2) - median_2
   varlist$y <- factor(rep(1:sum(n_cols), 2),
     levels = unlist(lapply(split(1:sum(n_cols), rep(seq_along(n_cols), n_cols)),
       rev), use.names = FALSE),
     labels = unlist(lapply(fernuni2019,
       function(i) rev(names(i)))[c(1, 3, 5, 6)], use.names = FALSE))
-  #varlist$ll <- c(hdr_1[, 1], hdr_2[, 1])
   varlist$ll <- c(hdr_1[, 1], hdr_2[, 1]) - median_2
-  #varlist$ul <- c(hdr_1[, 2], hdr_2[, 2])
   varlist$ul <- c(hdr_1[, 2], hdr_2[, 2]) - median_2
   varlist$color <- factor(rep(1:2, each = sum(n_cols)), levels = 2:1,
     labels = c("Studierendenstatistik", "Stichprobe"))
@@ -69,24 +66,26 @@ make_samplepointrange <- function(sample_simlist, population_simlist,
 # ---                               ---
 # -------------------------------------
 
-#' Count bins
+#' Count Bins
 #'
 #' Utility function
 #'
 #' @param data A numerical vector
 #' @param bx The breaking points
+#' @noRd
 count_bins <- function(data, bx) {
   bincount <- matrixStats::binCounts(data, bx = bx, right = TRUE)
   names(bincount) <- as.character(round(bx[1:length(bx) - 1], digits = 2))
   return(bincount)
 }
 
-#' Count bins from a draws matrix
+#' Count Bins from a Draws Matrix
 #'
 #' Utility function
 #'
 #' @param draws_mat The draws matrix \code{y_rep_mat}
 #' @param bx The breaking points
+#' @noRd
 count_bins_iter <- function(draws_mat, bx) {
   iter <- 1:nrow(draws_mat)
   counts_mat <- sapply(iter, function(i) count_bins(draws_mat[i, ], bx))
@@ -94,13 +93,14 @@ count_bins_iter <- function(draws_mat, bx) {
   return(counts_mat)
 }
 
-#' Group quantiles from a counts and a quantile matrix
+#' Group Quantiles from a Counts and a Quantile Matrix
 #'
 #' Utility function
 #'
 #' @param counts_mat A matrix returned from \code{count_bins_iter}
 #' @param q_mat The row quantiles from a matrix returned from
 #'   \code{count_bins_iter}
+#' @noRd
 qgroups_iter <- function(counts_mat, q_mat) {
   group_rows <- function(row) {
     rowgroup <- .bincode(counts_mat[row, ], q_mat[row, ], include.lowest = TRUE)
@@ -116,7 +116,7 @@ qgroups_iter <- function(counts_mat, q_mat) {
   return(qgroups_mat)
 }
 
-#' Make plot data for a posterior retrodictive check
+#' Plot Data for a Posterior Retrodictive Check
 #'
 #' @description
 #' \code{make_prcjitter} prepares the data
@@ -153,11 +153,12 @@ make_prcjitter <- function(y, y_rep_mat) {
   return(jitterdata)
 }
 
-#' Calculate test statistics for posterior retrodictive checks
+#' Test Statistics for a Posterior Retrodictive Check
 #'
 #' Utility function
 #'
 #' @param data A numerical vector or matrix
+#' @noRd
 calc_prcteststat <- function(data) {
   if (is.vector(data) == TRUE) {
     data <- matrix(data, nrow = 1)
@@ -170,7 +171,7 @@ calc_prcteststat <- function(data) {
   return(prcteststat)
 }
 
-#' Make plot data for a posterior retrodictive check
+#' Plot Data for a Posterior Retrodictive Check
 #'
 #' @description
 #' \code{make_prcstats} prepares the data
@@ -221,7 +222,7 @@ make_prcstats <- function(y, y_rep_mat) {
 # ---                ---
 # ----------------------
 
-#' Make plot data for showing a variance component
+#' Plot Data for Variance components
 #'
 #' @description
 #' \code{make_sigmapointrange} prepares the data
@@ -255,7 +256,7 @@ make_sigmapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87) {
   return(pointrangedata)
 }
 
-#' Calculate median centered effects
+#' Median Centered Effects
 #'
 #' @description
 #' \code{calc_meddelta_gammas} centers the effects from a draws matrix
@@ -269,7 +270,7 @@ calc_meddelta_gammas <- function(draws_mat) {
   return(delta_mat)
 }
 
-#' Make plot data for showing the community effects
+#' Plot Data for Community Effects
 #'
 #' @description
 #' \code{make_gammapointrange} prepares the data
@@ -301,7 +302,7 @@ make_gammapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87) {
   return(pointrangedata)
 }
 
-#' Make plot data for showing the pairwise overlapping probabilities
+#' Plot Data for Pairwise Distribution Overlap
 #'
 #' @description
 #' \code{make_compjitter} prepares the data

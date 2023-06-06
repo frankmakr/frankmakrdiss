@@ -1,8 +1,9 @@
-#' Tabulate the probability in pairwise relative AIC comparison
+#' Pairwise Relative AIC Comparison
 #'
 #' @description
 #' \code{tabulate_paic} calculates the probability
-#' that one model minimizes the information loss over another model.
+#' that one model minimizes the information loss over another model
+#' and displays the results in a table.
 #' 
 #' @param data A numeric vector with AIC values
 #' @return A matrix with pairwise comparisons

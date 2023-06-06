@@ -1,9 +1,10 @@
-#' Add LaTeX tabular row seperation
+#' LaTeX Tabular Row Seperation
 #'
 #' Utility function
 #'
 #' @param x The argument \code{space.after} from \code{make_table_body}
 #' @param y A necessary dummy variable
+#' @noRd
 sep_after <- function(x, y = character()) {
   if (!length(x)) {
     return(y)
@@ -11,10 +12,11 @@ sep_after <- function(x, y = character()) {
   sep_after(x[-length(x)], c(rep("", x[length(x)] - 1), "\\addlinespace", y)) 
 }
 
-#' Make LaTeX tabular body
+#' LaTeX Tabular Body
 #'
 #' @description
-#' \code{make_table_body} strips the table body from a knitr::kable table
+#' \code{make_table_body} strips the table body
+#' from a \code{knitr::kable} table
 #' 
 #' @param data A named matrix or data.frame containing the table data
 #' @param space.after A numeric vector or single number

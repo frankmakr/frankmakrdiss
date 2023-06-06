@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggplot2data.R
 \name{make_samplepointrange}
 \alias{make_samplepointrange}
-\title{Make plot data for evaluating representativity of the sample}
+\title{Plot Data for Evaluating Sample Representativity}
 \usage{
 make_samplepointrange(sample_simlist, population_simlist, probs = 0.87)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggplot2data.R
 \name{make_prcstats}
 \alias{make_prcstats}
-\title{Make plot data for a posterior retrodictive check}
+\title{Plot Data for a Posterior Retrodictive Check}
 \usage{
 make_prcstats(y, y_rep_mat)
 }

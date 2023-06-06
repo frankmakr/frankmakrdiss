@@ -1,4 +1,4 @@
-#' Calculate the Wasserstein distance
+#' Wasserstein distance
 #'
 #' Utility function
 #'
@@ -6,7 +6,8 @@
 #' @param y A distribution function as vector
 #' @param type One of \code{"l1"}, \code{"l2"} or \code{"energy"}
 #' @return The output will be the distance
-calc_wasserstein <- function(x, y, type = c("l1", "l2", "energy")) {
+#' @noRd
+calc_wasserstein <- function(x, y, type = "energy") {
   xy <- c(x, y)
   n_x <- length(x)
   n_y <- length(y)
@@ -26,7 +27,7 @@ calc_wasserstein <- function(x, y, type = c("l1", "l2", "energy")) {
   }
 }
 
-#' Calculate the Wasserstein distance
+#' Wasserstein Distance
 #'
 #' @description
 #' \code{calc_drawswasserstein} calculates the

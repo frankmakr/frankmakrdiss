@@ -3,7 +3,7 @@
 \docType{data}
 \name{conval_comms}
 \alias{conval_comms}
-\title{Phrases of the communities in the dataset conval_data}
+\title{Community phrases for the Dataset conval_data}
 \format{
 \subsection{\code{commnames}}{
 

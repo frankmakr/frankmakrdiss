@@ -7,7 +7,6 @@
 #' @param probs A vector with the probabilities for the credible intervals.
 #'   The default calculates the 50%, 87%, and 99% HDR.
 #' @return The output will be a matrix containing the credible intervals.
-#'
 calc_hdr <- function(vec_x, probs = c(0.50, 0.87, 0.99)) {
   n <- length(vec_x)
   vec_x_ord <- sort.int(vec_x, method='quick')

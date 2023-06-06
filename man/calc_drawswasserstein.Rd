@@ -2,7 +2,7 @@
 % Please edit documentation in R/wassersteindistance.R
 \name{calc_drawswasserstein}
 \alias{calc_drawswasserstein}
-\title{Calculate the Wasserstein distance}
+\title{Wasserstein Distance}
 \usage{
 calc_drawswasserstein(draws_mat, ...)
 }

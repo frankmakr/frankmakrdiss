@@ -1,4 +1,4 @@
-#' Calculation of the pooling factors for a multilevel model
+#' Pooling Factors for a Multilevel Model
 #'
 #' \code{calc_poolfac} calculates the pooling factors
 #' according to Gelman and Pardoe (2006)
@@ -9,7 +9,12 @@
 #' @param pars A character vector with the names of the relevant residuals
 #'   of the multilevel model.
 #' @return The output will be a vector containing the pooling factors.
-#'
+#' @source
+#' Gelman, A., & Pardoe, I. (2006).
+#' Bayesian measures of explained variance and pooling
+#' in multilevel (hierarchical) models.
+#' *Technometrics, 48 (2), 241–251.*
+#' <https://doi.org/10.1198/004017005000000517>.
 calc_poolstats <- function(
                     y,
                     draws,

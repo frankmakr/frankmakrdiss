@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggplot2graphs.R
 \name{plot_samplepointrange}
 \alias{plot_samplepointrange}
-\title{Plot sample characteristics}
+\title{Plot Sample Characteristics}
 \usage{
 plot_samplepointrange(samplepointrange)
 }
@@ -11,7 +11,7 @@ plot_samplepointrange(samplepointrange)
 \code{make_samplepointrange}}
 }
 \value{
-The output will be a ggplot graph
+The output will be a ggplot2 graph
 }
 \description{
 \code{plot_samplepointrange} plots data

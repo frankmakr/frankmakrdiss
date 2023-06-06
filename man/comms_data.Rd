@@ -3,7 +3,7 @@
 \docType{data}
 \name{comms_data}
 \alias{comms_data}
-\title{Classification scheme of communities}
+\title{Classification Scheme of Communities}
 \format{
 \subsection{\code{communities}}{
 

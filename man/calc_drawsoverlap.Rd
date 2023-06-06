@@ -2,7 +2,15 @@
 % Please edit documentation in R/distoverlap.R
 \name{calc_drawsoverlap}
 \alias{calc_drawsoverlap}
-\title{Calculate Distribution overlap}
+\title{Calculate Distribution Overlap}
+\source{
+Weitzman, M. S. (1970).
+\emph{Measures of overlap of income distribution
+of white and negro families in the United States}
+(Technical paper No. 22).
+United States Bureau of the Census.
+\url{https://hdl.handle.net/2027/mdp.39015085502204}.
+}
 \usage{
 calc_drawsoverlap(draws_mat)
 }
@@ -16,4 +24,10 @@ A n x n matrix
 \code{calc_drawsoverlap} calculates the
 generalized distribution overlap according to Weitzman (1970)
 for a \code{draws_matrix}
+}
+\references{
+Al-Saleh, M. F., & Samawi, H. M. (2007).
+Interference on overlapping coefficients in two exponential populations.
+\emph{Journal of Modern Applied Statistical Methods, 6(2), 503–516.}
+\url{https://doi.org/10.22237/jmasm/1193890440}.
 }

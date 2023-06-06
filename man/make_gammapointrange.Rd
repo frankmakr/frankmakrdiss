@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggplot2data.R
 \name{make_gammapointrange}
 \alias{make_gammapointrange}
-\title{Make plot data for showing the community effects}
+\title{Plot Data for Community Effects}
 \usage{
 make_gammapointrange(draws_mat_1, draws_mat_2, probs = 0.87)
 }

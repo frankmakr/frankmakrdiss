@@ -2,7 +2,7 @@
 % Please edit documentation in R/tablebody.R
 \name{make_table_body}
 \alias{make_table_body}
-\title{Make LaTeX tabular body}
+\title{LaTeX Tabular Body}
 \usage{
 make_table_body(
   data,
@@ -28,5 +28,6 @@ indicating the number of rows after which row additional space is inserted}
 The LaTeX table body
 }
 \description{
-\code{make_table_body} strips the table body from a knitr::kable table
+\code{make_table_body} strips the table body
+from a \code{knitr::kable} table
 }

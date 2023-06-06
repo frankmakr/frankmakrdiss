@@ -3,7 +3,7 @@
 \docType{data}
 \name{conval_data}
 \alias{conval_data}
-\title{Content validity of tests for psychological sense of community}
+\title{Content Validity of Tests for Psychological Sense of Community}
 \format{
 \subsection{\code{contentvalidity}}{
 
@@ -39,7 +39,35 @@ Primary data
 conval_data
 }
 \description{
-The content validity of the items of 4 different tests
-was rated in specific community contexts.
+The rated content validity of the items of 4 different tests
+in specific community contexts.
+}
+\references{
+Chavis, D. M., Lee, K. S., & Acosta, J. D. (2008).
+\emph{The Sense of Community Index (SCI) revised:}
+\emph{The reliability and validity of the SCI-2.}
+Paper presented at the 2nd International Community Psychology Conference.
+Lisboa, Portugal.
+Retrieved October 17, 2018, from \url{https://senseofcommunity.com}.
+
+Halamová, J. Kanovsky, M., & Naništová, E. (2018).
+Development and psychometric analysis of the
+sense of community descriptors scale.
+\emph{Psychological Intervention, 27(1), 44-55.}
+\url{https://doi.org/10.5093/pi2018a8}.
+
+Jason, L. A., Stevens, E., & Ram, D. (2015).
+Development of a three-factor psychological sense of community scale.
+\emph{Journal of Community Psychology, 43(8), 973-985.}
+\url{https://doi.org/10.1002/jcop.21726}.
+
+Omoto, A. M., & Snyder, M. (2010).
+Influences of psychological sense of community
+on voluntary helping and prosocial action.
+In S. Stürmer & M. Snyder (Eds.),
+\emph{The psychology of prosocial behavior:}
+\emph{Group processes, intergroup relations, and helping (pp. 223-243).}
+Wiley-Blackwell.
+\url{https://doi.org/10.1002/9781444307948.ch12}.
 }
 \keyword{datasets}

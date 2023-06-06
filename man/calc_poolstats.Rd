@@ -2,7 +2,14 @@
 % Please edit documentation in R/poolingfactors.R
 \name{calc_poolstats}
 \alias{calc_poolstats}
-\title{Calculation of the pooling factors for a multilevel model}
+\title{Pooling Factors for a Multilevel Model}
+\source{
+Gelman, A., & Pardoe, I. (2006).
+Bayesian measures of explained variance and pooling
+in multilevel (hierarchical) models.
+\emph{Technometrics, 48 (2), 241–251.}
+\url{https://doi.org/10.1198/004017005000000517}.
+}
 \usage{
 calc_poolstats(y, draws, pars = c("gamma", "delta", "y"))
 }

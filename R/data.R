@@ -1,7 +1,7 @@
-#' Samples of the studies
+#' Sample Characteristics
 #'
 #' @description
-#' The sample characteristics
+#' The characteristics of the samples for the studies.
 #'
 #' @format
 #' ## `comms_demo`
@@ -18,20 +18,32 @@
 #' ## Variables
 #' \describe{
 #'   \item{person}{Person number}
-#'   \item{gender}{Gender coded as male = 1, female = 2, divers = 3}
+#'   \item{gender}{Gender coded as 1 = Male, 2 = Female, 3 = Divers}
 #'   \item{age}{Age in years}
 #'   \item{state}{One of the 16 German states the person is living
 #'     in alphabetical order
 #'     or 17 = living outside from Germany}
 #'   \item{studstatus}{Student status used in the FernUniversität
-#'     official statistics}
+#'     official statistics ([Berichtswesen, 2022a, 2022b][source])}
 #'   \item{noexpert}{Knowledge of a theory of psychological sense of community
 #'     coded as 0 = Knowledge, 1 = No knowledge}
 #'   \item{numcomm}{The number of communities the person mentioned}
 #' }
+#' @source 
+#' Berichtswesen. (2022a, March 25).
+#' *Studierendenstatistik für Sommersemester 2018*
+#' \[Student statistics for summer semester 2018\].
+#' FernUniversität in Hagen.
+#' <https://www.fernuni-hagen.de/uniintern/organisation/statistik/semesterstatistik/sose2018.shtml>.
+#' 
+#' Berichtswesen. (2022b, April 8).
+#' *Studierendenstatistik für Wintersemester 2019/20*
+#' \[Student statistics for winter semester 2019/20\].
+#' FernUniversität in Hagen.
+#' <https://www.fernuni-hagen.de/uniintern/organisation/statistik/semesterstatistik/wise2019-20.shtml>.
 "conval_demo"
 
-#' Classification scheme of communities
+#' Classification Scheme of Communities
 #'
 #' @description
 #' Phrases for the communities in German
@@ -52,7 +64,7 @@
 #' @source Primary data
 "comms_data"
 
-#' Phrases of the communities in the dataset conval_data
+#' Community phrases for the Dataset conval_data
 #'
 #' @description
 #' The phrases of the communities in German the persons could choose from
@@ -68,11 +80,11 @@
 #' @source Primary data
 "conval_comms"
 
-#' Content validity of tests for psychological sense of community
+#' Content Validity of Tests for Psychological Sense of Community
 #'
 #' @description
-#' The content validity of the items of 4 different tests
-#' was rated in specific community contexts.
+#' The rated content validity of the items of 4 different tests
+#' in specific community contexts.
 #'
 #' @format
 #' ## `contentvalidity`
@@ -97,5 +109,31 @@
 #'     Halamová et al. (2018) is necessary to characterize sense of community}
 #' }
 #' @source Primary data
+#' @references
+#' Chavis, D. M., Lee, K. S., & Acosta, J. D. (2008).
+#' *The Sense of Community Index (SCI) revised:*
+#' *The reliability and validity of the SCI-2.*
+#' Paper presented at the 2nd International Community Psychology Conference.
+#' Lisboa, Portugal.
+#' Retrieved October 17, 2018, from <https://senseofcommunity.com>.
+#' 
+#' Halamová, J. Kanovsky, M., & Naništová, E. (2018).
+#' Development and psychometric analysis of the
+#' sense of community descriptors scale.
+#' *Psychological Intervention, 27(1), 44-55.*
+#' <https://doi.org/10.5093/pi2018a8>.
+#' 
+#' Jason, L. A., Stevens, E., & Ram, D. (2015).
+#' Development of a three-factor psychological sense of community scale.
+#' *Journal of Community Psychology, 43(8), 973-985.*
+#' <https://doi.org/10.1002/jcop.21726>.
+#' 
+#' Omoto, A. M., & Snyder, M. (2010).
+#' Influences of psychological sense of community
+#' on voluntary helping and prosocial action.
+#' In S. Stürmer & M. Snyder (Eds.),
+#' *The psychology of prosocial behavior:*
+#' *Group processes, intergroup relations, and helping (pp. 223-243).*
+#' Wiley-Blackwell.
+#' <https://doi.org/10.1002/9781444307948.ch12>.
 "conval_data"
-

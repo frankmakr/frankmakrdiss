@@ -2,7 +2,7 @@
 % Please edit documentation in R/stderrmeas.R
 \name{calc_semci}
 \alias{calc_semci}
-\title{Calculate the standard error of measurement and confidence intervals}
+\title{Standard Error of Measurement and Confidence Intervals}
 \usage{
 calc_semci(data, sd, rel, se0 = 2.8, p_ci = NA, dist = "none", ...)
 }

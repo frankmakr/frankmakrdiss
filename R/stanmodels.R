@@ -9,7 +9,8 @@
 #' @param ... Other arguments for `sample()`
 #' 
 #' @details
-#' The compiled model is stored in the R user cache.
+#' The compiled model is stored in the R user cache
+#' \code{tools::R_user_dir(package = "frankmakrdiss", which = "cache")}.
 #'
 #' @return The function returns a stan fit object.
 #' @export

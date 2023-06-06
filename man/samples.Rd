@@ -5,7 +5,7 @@
 \alias{samples}
 \alias{comms_demo}
 \alias{conval_demo}
-\title{Samples of the studies}
+\title{Sample Characteristics}
 \format{
 \subsection{\code{comms_demo}}{
 
@@ -21,13 +21,13 @@ A data frame with 1,465 rows and 7 columns.
 
 \describe{
 \item{person}{Person number}
-\item{gender}{Gender coded as male = 1, female = 2, divers = 3}
+\item{gender}{Gender coded as 1 = Male, 2 = Female, 3 = Divers}
 \item{age}{Age in years}
 \item{state}{One of the 16 German states the person is living
 in alphabetical order
 or 17 = living outside from Germany}
 \item{studstatus}{Student status used in the FernUniversität
-official statistics}
+official statistics (\link[=source]{Berichtswesen, 2022a, 2022b})}
 \item{noexpert}{Knowledge of a theory of psychological sense of community
 coded as 0 = Knowledge, 1 = No knowledge}
 \item{numcomm}{The number of communities the person mentioned}
@@ -36,6 +36,18 @@ coded as 0 = Knowledge, 1 = No knowledge}
 }
 \source{
 Primary data
+
+Berichtswesen. (2022a, March 25).
+\emph{Studierendenstatistik für Sommersemester 2018}
+[Student statistics for summer semester 2018].
+FernUniversität in Hagen.
+\url{https://www.fernuni-hagen.de/uniintern/organisation/statistik/semesterstatistik/sose2018.shtml}.
+
+Berichtswesen. (2022b, April 8).
+\emph{Studierendenstatistik für Wintersemester 2019/20}
+[Student statistics for winter semester 2019/20].
+FernUniversität in Hagen.
+\url{https://www.fernuni-hagen.de/uniintern/organisation/statistik/semesterstatistik/wise2019-20.shtml}.
 }
 \usage{
 comms_demo
@@ -43,6 +55,6 @@ comms_demo
 conval_demo
 }
 \description{
-The sample characteristics
+The characteristics of the samples for the studies.
 }
 \keyword{datasets}

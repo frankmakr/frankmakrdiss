@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggplot2data.R
 \name{make_compjitter}
 \alias{make_compjitter}
-\title{Make plot data for showing the pairwise overlapping probabilities}
+\title{Plot Data for Pairwise Distribution Overlap}
 \usage{
 make_compjitter(probs_list, dims_list)
 }

@@ -28,7 +28,7 @@ theme_frankmakrdiss <- function() {
     )
 }
 
-#' Plot sample characteristics
+#' Plot Sample Characteristics
 #'
 #' @description
 #' \code{plot_samplepointrange} plots data
@@ -36,7 +36,7 @@ theme_frankmakrdiss <- function() {
 #'
 #' @param samplepointrange A data frame returned from the function
 #'   \code{make_samplepointrange}
-#' @return The output will be a ggplot graph
+#' @return The output will be a ggplot2 graph
 #' @export
 plot_samplepointrange <- function(samplepointrange) {
   # R CMD Check Note
@@ -63,7 +63,16 @@ plot_samplepointrange <- function(samplepointrange) {
     ggplot2::theme(legend.position = "top")
 }
 
-
+#' Plot Posterior Retrodictive Check
+#'
+#' @description
+#' \code{plot_prcjitter} plots data
+#' in the format from the function \code{make_prcjitter}.
+#'
+#' @param prcjitter A data frame returned from the function
+#'   \code{make_prcjitter}
+#' @return The output will be a ggplot2 graph
+#' @export
 plot_prcjitter <- function(prcjitter) {
   # R CMD Check Note
   x <- y_rep <- fill_jitter <- y_step <- color_step <- NULL
@@ -93,6 +102,16 @@ plot_prcjitter <- function(prcjitter) {
     theme_frankmakrdiss()
 }
 
+#' Plot Posterior Retrodictive Check
+#'
+#' @description
+#' \code{plot_prcstats} plots data
+#' in the format from the function \code{make_prcstats}.
+#'
+#' @param prcstats A data frame returned from the function
+#'   \code{make_prcstats}
+#' @return The output will be a ggplot2 graph
+#' @export
 plot_prcstats <- function(prcstats) {
   # R CMD Check Note
   x <- y <- fill <- stat_y <- stat <- NULL
@@ -117,6 +136,16 @@ plot_prcstats <- function(prcstats) {
     theme_frankmakrdiss()
 }
 
+#' Plot Variance Components
+#'
+#' @description
+#' \code{plot_sigmapointrange} plots data
+#' in the format from the function \code{make_sigmapointrange}.
+#'
+#' @param sigmapointrange A data frame returned from the function
+#'   \code{make_sigmapointrange}
+#' @return The output will be a ggplot2 graph
+#' @export
 plot_sigmapointrange <- function(sigmapointrange) {
   # R CMD Check Note
   x <- item <- color <- ll <- ul <- y <- NULL
@@ -140,6 +169,16 @@ plot_sigmapointrange <- function(sigmapointrange) {
     ggplot2::theme(legend.position = "top")
 }
 
+#' Plot Community Effects
+#'
+#' @description
+#' \code{plot_gammapointrange} plots data
+#' in the format from the function \code{make_gammapointrange}.
+#'
+#' @param gammapointrange A data frame returned from the function
+#'   \code{make_gammapointrange}
+#' @return The output will be a ggplot2 graph
+#' @export
 plot_gammapointrange <- function(gammapointrange) {
   # R CMD Check Note
   x <- y <- color <- ll <- ul <- item <- NULL
@@ -165,6 +204,16 @@ plot_gammapointrange <- function(gammapointrange) {
     ggplot2::theme(legend.position = "top")
 }
 
+#' Plot Pairwise Distribution Overlapping
+#'
+#' @description
+#' \code{plot_compjitter} plots data
+#' in the format from the function \code{make_compjitter}.
+#'
+#' @param compjitter A data frame returned from the function
+#'   \code{make_compjitter}
+#' @return The output will be a ggplot2 graph
+#' @export
 plot_compjitter <- function(compjitter) {
   # R CMD Check Note
   probs <- dims <- fill_jitter <- alpha_jitter <- NULL

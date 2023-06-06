@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggplot2data.R
 \name{calc_meddelta_gammas}
 \alias{calc_meddelta_gammas}
-\title{Calculate median centered effects}
+\title{Median Centered Effects}
 \usage{
 calc_meddelta_gammas(draws_mat)
 }

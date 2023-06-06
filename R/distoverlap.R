@@ -1,10 +1,11 @@
-#' Calculate Distribution overlap
+#' Calculate Distribution Overlap
 #'
 #' Utility function
 #'
 #' @param dist1 An empirical distribution of equal length to dist2
 #' @param dist2 An empirical distribution of equal length to dist1
 #' @return A number
+#' @noRd
 calc_overlap <- function(dist1, dist2) {
   dist_mat <- cbind(dist1, dist2)
   length_dist <- nrow(dist_mat)
@@ -19,7 +20,7 @@ calc_overlap <- function(dist1, dist2) {
   return(overlap)
 }
 
-#' Calculate Distribution overlap
+#' Calculate Distribution Overlap
 #'
 #' @description
 #' \code{calc_drawsoverlap} calculates the
@@ -28,6 +29,18 @@ calc_overlap <- function(dist1, dist2) {
 #'
 #' @param draws_mat A \code{draws_matrix}
 #' @return A n x n matrix
+#' @source
+#' Weitzman, M. S. (1970).
+#' *Measures of overlap of income distribution
+#' of white and negro families in the United States*
+#' (Technical paper No. 22).
+#' United States Bureau of the Census.
+#' <https://hdl.handle.net/2027/mdp.39015085502204>.
+#' @references
+#' Al-Saleh, M. F., & Samawi, H. M. (2007).
+#' Interference on overlapping coefficients in two exponential populations.
+#' *Journal of Modern Applied Statistical Methods, 6(2), 503–516.*
+#' <https://doi.org/10.22237/jmasm/1193890440>.
 #' @export
 calc_drawsoverlap <- function(draws_mat) {
   n_col <- ncol(draws_mat)

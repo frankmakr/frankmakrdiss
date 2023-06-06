@@ -1,17 +1,19 @@
-#' Calculate the standard error of measurement
+#' Standard Error of Measurement
 #' 
 #' Utility function
 #' 
 #' @param sd A vector of standard deviations of measurement scales.
 #' @param rel A vector of reliability coefficients of measurement scales.
 #' @return The output will be a numeric vector of equal length to input. 
+#' @noRd
 calc_sem <- function(sd, rel) {
   sem <- sd * sqrt(1 - rel)
   return(sem)
 }
 
-#' Calculate the standard error of measurement and confidence intervals
+#' Standard Error of Measurement and Confidence Intervals
 #'
+#' @description
 #' \code{calc_semci} returns the standard error of measurement
 #' from a given reliability and the corresponding standard deviation.
 #' The confidence intervals are calculated using
