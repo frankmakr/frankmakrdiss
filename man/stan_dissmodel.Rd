@@ -7,18 +7,18 @@
 stan_dissmodel(model_number, stan_data, ...)
 }
 \arguments{
-\item{model_number}{A character string containing the number
+\item{model_number}{A character string containing the model number
 from the doctoral dissertation (i.e. "12.2")}
 
 \item{stan_data}{The data used for the model as a named list}
 
-\item{...}{Other arguments for \code{sample()}}
+\item{...}{Other arguments for \code{model()} or \code{sample()}}
 }
 \value{
 The function returns a stan fit object.
 }
 \description{
-Fits the stan models from the doctoral dissertation
+\code{stan_dissmodel} fits the stan models from the doctoral dissertation.
 }
 \details{
 The compiled model is stored in the R user cache
