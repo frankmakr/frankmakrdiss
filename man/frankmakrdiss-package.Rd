@@ -4,7 +4,7 @@
 \name{frankmakrdiss-package}
 \alias{frankmakrdiss}
 \alias{frankmakrdiss-package}
-\title{frankmakrdiss: Accompanying Package for Frank Krumbholz's dissertation}
+\title{frankmakrdiss: Supplemental Package for Frank Krumbholz's Dissertation}
 \description{
 Makes reproduction, replication, or adaptation of the dissertations analyses easier.
 }

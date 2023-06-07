@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 message: "Please cite this software using these metadata."
-abstract: "Accompanying R package for Frank Krumbholz's doctoral dissertation
+abstract: "Supplemental R package for Frank Krumbholz's doctoral dissertation
           at the FernUniversität in Hagen."
 authors:
   - family-names: Krumbholz
     given-names: Frank
-date-released: "2023-06-02"
+date-released: "2023-06-07"
 title: "frankmakrdiss"
 version: 0.1.0
 identifiers:
