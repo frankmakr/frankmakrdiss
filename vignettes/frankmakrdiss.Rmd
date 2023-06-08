@@ -1,0 +1,23 @@
+---
+title: "frankmakrdiss"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{frankmakrdiss}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Now that you have gone through all the installation procedure
+you want to see what you can do with it.
+So let us begin with attaching the package.
+
+```{r setup}
+library(frankmakrdiss)
+```
