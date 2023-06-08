@@ -19,15 +19,15 @@ sim_sampleprobs <- function(n, probs) {
 #' Plot Data for Evaluating Sample Representativity
 #'
 #' @description
-#' \code{make_samplepointrange} prepares the data
-#' in the format for the function \code{plot_samplepointrange}.
+#' `make_samplepointrange` prepares the data
+#' in the format for the function `plot_samplepointrange`.
 #'
 #' @param sample_simlist A list containing the sample replications
 #' @param population_simlist A list containing the population replications
 #' @param probs The probability of the highest density region,
-#'   which defaults to \code{probs = 0.87}
+#'   which defaults to `probs = 0.87`
 #' @return The ouput will be a data frame in the format for
-#'   using the corresponding \code{plot_samplepointrange} function
+#'   using the corresponding `plot_samplepointrange` function
 #' @export
 make_samplepointrange <- function(sample_simlist, population_simlist,
                                   probs = 0.87) {
@@ -83,7 +83,7 @@ count_bins <- function(data, bx) {
 #'
 #' Utility function
 #'
-#' @param draws_mat The draws matrix \code{y_rep_mat}
+#' @param draws_mat The draws matrix `y_rep_mat`
 #' @param bx The breaking points
 #' @noRd
 count_bins_iter <- function(draws_mat, bx) {
@@ -97,9 +97,9 @@ count_bins_iter <- function(draws_mat, bx) {
 #'
 #' Utility function
 #'
-#' @param counts_mat A matrix returned from \code{count_bins_iter}
+#' @param counts_mat A matrix returned from `count_bins_iter`
 #' @param q_mat The row quantiles from a matrix returned from
-#'   \code{count_bins_iter}
+#'   `count_bins_iter`
 #' @noRd
 qgroups_iter <- function(counts_mat, q_mat) {
   group_rows <- function(row) {
@@ -119,13 +119,13 @@ qgroups_iter <- function(counts_mat, q_mat) {
 #' Plot Data for a Posterior Retrodictive Check
 #'
 #' @description
-#' \code{make_prcjitter} prepares the data
-#' in the format for the function \code{plot_prcjitter}.
+#' `make_prcjitter` prepares the data
+#' in the format for the function `plot_prcjitter`.
 #'
 #' @param y A list containing the sample replications
 #' @param y_rep_mat A list containing the population replications
 #' @return The ouput will be a data frame in the format for
-#'   using the corresponding \code{plot_prcjitter} function
+#'   using the corresponding `plot_prcjitter` function
 #' @export
 make_prcjitter <- function(y, y_rep_mat) {
   bx <- seq(from = floor(min(y, y_rep_mat) * 100) / 100,
@@ -174,13 +174,13 @@ calc_prcteststat <- function(data) {
 #' Plot Data for a Posterior Retrodictive Check
 #'
 #' @description
-#' \code{make_prcstats} prepares the data
-#' in the format for the function \code{plot_prcstats}.
+#' `make_prcstats` prepares the data
+#' in the format for the function `plot_prcstats`.
 #'
 #' @param y A list containing the sample replications
 #' @param y_rep_mat A list containing the population replications
 #' @return The ouput will be a data frame in the format for
-#'   using the corresponding \code{plot_prcstats} function
+#'   using the corresponding `plot_prcstats` function
 #' @export
 make_prcstats <- function(y, y_rep_mat) {
   stat_y <- calc_prcteststat(y)
@@ -218,6 +218,54 @@ make_prcstats <- function(y, y_rep_mat) {
 
 # ----------------------
 # ---                ---
+# --- Graphs study 1 ---
+# ---                ---
+# ----------------------
+
+#' Plot data for community probabilities
+#'
+#' @description
+#' `make_thetapointrange` prepares the data
+#' in the format for the function `plot_thetapointrange`.
+#'
+#' @param draws_mat A draws matrix containing the
+#'   community probabilities
+#' @param probs The probability for the Highest Density Region
+#'   which defaults to `probs = 0.87`
+#' @param n_group_tilde Expected group size in the future sample
+#' @param n_sample_tilde Expected size of the future sample
+#' @return The output will be a data frame in the format for
+#'   using the corresponding `plot_thetapointrange` function
+#' @export
+make_thetapointrange <- function(draws_mat,
+                                 probs = 0.87,
+                                 n_group_tilde, n_sample_tilde) {
+  thetapointrange <- vector(mode = "list", length = 6)
+  names(thetapointrange) <- c("med", "ll", "ul", "y", "color", "theta_tilde")
+  thetapointrange$theta_tilde <- n_group_tilde / n_sample_tilde
+  thetapointrange$med <- matrixStats::colMedians(draws_mat)
+  thetapointrange[2:3] <- asplit(apply(draws_mat, 2, calc_hdr, probs = probs), 1)
+  thetapointrange[1:3] <- lapply(thetapointrange[1:3], function(i)
+    i[order(thetapointrange$med)])
+  thetapointrange$y <- factor(seq(ncol(draws_mat)),
+    levels = seq(ncol(draws_mat)),
+    labels = theta_comms[order(thetapointrange$med)])
+  thetapointrange$color <- factor(
+    ifelse(thetapointrange$ll >= thetapointrange$theta_tilde, 1, 2)[order(
+    thetapointrange$med)], levels = 1:2, labels = c(
+      paste0("\\qty{87}{\\percent}\\operatorname{HDR}\\tilde{y} \\geq ",
+        n_group_tilde),
+      paste0("\\qty{87}{\\percent}\\operatorname{HDR}\\tilde{y} < ",
+        n_group_tilde)))
+  thetapointrange <- data.frame(thetapointrange, row.names = seq(ncol(draws_mat)))
+  thetapointrange$med <- thetapointrange$med[order(thetapointrange$med)]
+  return(thetapointrange)
+}
+
+
+
+# ----------------------
+# ---                ---
 # --- Graphs study 2 ---
 # ---                ---
 # ----------------------
@@ -225,8 +273,8 @@ make_prcstats <- function(y, y_rep_mat) {
 #' Plot Data for Variance components
 #'
 #' @description
-#' \code{make_sigmapointrange} prepares the data
-#' in the format for the function \code{plot_sigmapointrange}.
+#' `make_sigmapointrange` prepares the data
+#' in the format for the function `plot_sigmapointrange`.
 #'
 #' @param draws_mat_1 A draws matrix containing the
 #'   superpopulation standard deviation from the unadjusted model
@@ -234,9 +282,9 @@ make_prcstats <- function(y, y_rep_mat) {
 #'   superpopulation standard deviation from the adjusted model
 #' @param probs A numeric value representing
 #'   the probability for the highest density region,
-#'   which defaults to \code{probs = 0.87}
+#'   which defaults to `probs = 0.87`
 #' @return The ouput will be a data frame in the format for
-#'   using the corresponding \code{plot_sigmapointrange} function
+#'   using the corresponding `plot_sigmapointrange` function
 #' @export
 make_sigmapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87) {
   n_cols <- ncol(draws_mat_1)
@@ -259,7 +307,7 @@ make_sigmapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87) {
 #' Median Centered Effects
 #'
 #' @description
-#' \code{calc_meddelta_gammas} centers the effects from a draws matrix
+#' `calc_meddelta_gammas` centers the effects from a draws matrix
 #' at the median
 #'
 #' @param draws_mat A draws matrix containing the effects
@@ -273,8 +321,8 @@ calc_meddelta_gammas <- function(draws_mat) {
 #' Plot Data for Community Effects
 #'
 #' @description
-#' \code{make_gammapointrange} prepares the data
-#' in the format for the function \code{plot_gammapointrange}.
+#' `make_gammapointrange} prepares the data
+#' in the format for the function `plot_gammapointrange`.
 #'
 #' @param draws_mat_1 A draws matrix containing the community effects
 #'   from the unadjusted model
@@ -282,9 +330,9 @@ calc_meddelta_gammas <- function(draws_mat) {
 #'   from the adjusted model
 #' @param probs A numeric value representing
 #'   the probability for the highest density region,
-#'   which defaults to \code{probs = 0.87}
+#'   which defaults to `probs = 0.87`
 #' @return The ouput will be a data frame in the format for
-#'   using the corresponding \code{plot_gammapointrange} function
+#'   using the corresponding `plot_gammapointrange` function
 #' @export
 make_gammapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87) {
   n_cols <- ncol(draws_mat_1)
@@ -305,14 +353,14 @@ make_gammapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87) {
 #' Plot Data for Pairwise Distribution Overlap
 #'
 #' @description
-#' \code{make_compjitter} prepares the data
-#' in the format for the function \code{plot_compjitter}.
+#' `make_compjitter` prepares the data
+#' in the format for the function `plot_compjitter`.
 #'
 #' @param probs_list A list containing the
 #'   pairwise overlapping probabilities
 #' @param dims_list A list containing the names of the test dimensions
 #' @return The ouput will be a data frame in the format for
-#'   using the corresponding \code{plot_compjitter} function
+#'   using the corresponding `plot_compjitter` function
 #' @export
 make_compjitter <- function(probs_list, dims_list) {
   n_probs <- lapply(probs_list, function(i) sum(lower.tri(i)))

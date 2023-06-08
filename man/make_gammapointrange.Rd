@@ -22,6 +22,5 @@ The ouput will be a data frame in the format for
 using the corresponding \code{plot_gammapointrange} function
 }
 \description{
-\code{make_gammapointrange} prepares the data
-in the format for the function \code{plot_gammapointrange}.
+\verb{make_gammapointrange\} prepares the data in the format for the function }plot_gammapointrange`.
 }

@@ -1,20 +1,3 @@
-#' ggplot2 colorscheme
-#'
-#' Utility data
-colorscheme_frankmakrdiss <- matrix(
-  c("#dcbccc", "#c799b0", "#b97c9b", "#a25079", "#8f275b", "#7c003e",
-    "#bcdcdc", "#99c7c7", "#7cb9b9", "#50a2a2", "#278f8f", "#007c7c",
-    "#fbf3da", "#f8e8b5", "#f5dc90", "#dbc376", "#aa975c", "#7a6c42",
-    "#d1e1ec", "#b3cde0", "#6497b1", "#005b96", "#03396c", "#011f4b",
-    "#dcbcbc", "#c79999", "#b97c7c", "#a25050", "#8f2727", "#7c0000"),
-  ncol = 5,
-  dimnames = list(
-    c("light", "light_highlight",
-      "mid", "mid_highlight",
-      "dark", "dark_highlight"),
-    c("pink", "teal", "yellow", "blue", "red"))
-  )
-
 #' ggplot2 theme
 #'
 #' Utility function
@@ -32,11 +15,11 @@ theme_frankmakrdiss <- function(...) {
 #' Plot Sample Characteristics
 #'
 #' @description
-#' \code{plot_samplepointrange} plots data
-#' in the format from the function \code{make_samplepointrange}.
+#' `plot_samplepointrange` plots data
+#' in the format from the function `make_samplepointrange`.
 #'
 #' @param samplepointrange A data frame returned from the function
-#'   \code{make_samplepointrange}
+#'   `make_samplepointrange`
 #' @return The output will be a ggplot2 graph
 #' @export
 plot_samplepointrange <- function(samplepointrange) {
@@ -65,11 +48,11 @@ plot_samplepointrange <- function(samplepointrange) {
 #' Plot Posterior Retrodictive Check
 #'
 #' @description
-#' \code{plot_prcjitter} plots data
-#' in the format from the function \code{make_prcjitter}.
+#' `plot_prcjitter` plots data
+#' in the format from the function `make_prcjitter`.
 #'
 #' @param prcjitter A data frame returned from the function
-#'   \code{make_prcjitter}
+#'   `make_prcjitter`
 #' @return The output will be a ggplot2 graph
 #' @export
 plot_prcjitter <- function(prcjitter) {
@@ -101,11 +84,11 @@ plot_prcjitter <- function(prcjitter) {
 #' Plot Posterior Retrodictive Check
 #'
 #' @description
-#' \code{plot_prcstats} plots data
-#' in the format from the function \code{make_prcstats}.
+#' `plot_prcstats} plots data
+#' in the format from the function `make_prcstats`.
 #'
 #' @param prcstats A data frame returned from the function
-#'   \code{make_prcstats}
+#'   `make_prcstats`
 #' @return The output will be a ggplot2 graph
 #' @export
 plot_prcstats <- function(prcstats) {
@@ -129,14 +112,38 @@ plot_prcstats <- function(prcstats) {
     theme_frankmakrdiss()
 }
 
+#' Plot Community Probabilities
+#'
+#' @description
+#' `plot_thetapointrange` plots data
+#' in the format from the function `make_thetapointrange`.
+#'
+#' @param thetapointrange A data frame returned from the function
+#'   `make_thetapointrange`
+#' @return The output will be a ggplot2 graph
+#' @export
+plot_thetapointrange <- function(thetapointrange) {
+  ggplot2::ggplot(thetapointrange,
+                  ggplot2::aes(x = .data$med, y = .data$y, color = .data$color)) +
+  ggplot2::geom_vline(xintercept = .data$theta_tilde, linetype = "longdash") +
+  ggplot2::geom_linerange(ggplot2::aes(xmin = .data$ll, xmax = .data$ul)) +
+  ggplot2::geom_point() +
+  ggplot2::scale_color_manual(values = ggplot2::alpha(
+    as.vector(colorscheme_frankmakrdiss[c(3, 1), 5]), c(1, 0.3))) +
+  ggplot2::scale_x_continuous(limits = c(0, 1),
+    labels = scales::label_number(decimal.mark = ",")) +
+  ggplot2::labs(x = "Auftretenswahrscheinlichkeit", y = NULL, color = NULL) +
+  theme_frankmakrdiss()
+}
+
 #' Plot Variance Components
 #'
 #' @description
-#' \code{plot_sigmapointrange} plots data
-#' in the format from the function \code{make_sigmapointrange}.
+#' `plot_sigmapointrange` plots data
+#' in the format from the function `make_sigmapointrange`.
 #'
 #' @param sigmapointrange A data frame returned from the function
-#'   \code{make_sigmapointrange}
+#'   `make_sigmapointrange`
 #' @return The output will be a ggplot2 graph
 #' @export
 plot_sigmapointrange <- function(sigmapointrange) {
@@ -163,11 +170,11 @@ plot_sigmapointrange <- function(sigmapointrange) {
 #' Plot Community Effects
 #'
 #' @description
-#' \code{plot_gammapointrange} plots data
-#' in the format from the function \code{make_gammapointrange}.
+#' `plot_gammapointrange` plots data
+#' in the format from the function `make_gammapointrange`.
 #'
 #' @param gammapointrange A data frame returned from the function
-#'   \code{make_gammapointrange}
+#'   `make_gammapointrange`
 #' @return The output will be a ggplot2 graph
 #' @export
 plot_gammapointrange <- function(gammapointrange) {
@@ -195,11 +202,11 @@ plot_gammapointrange <- function(gammapointrange) {
 #' Plot Pairwise Distribution Overlapping
 #'
 #' @description
-#' \code{plot_compjitter} plots data
-#' in the format from the function \code{make_compjitter}.
+#' `plot_compjitter` plots data
+#' in the format from the function `make_compjitter`.
 #'
 #' @param compjitter A data frame returned from the function
-#'   \code{make_compjitter}
+#'   `make_compjitter`
 #' @return The output will be a ggplot2 graph
 #' @export
 plot_compjitter <- function(compjitter) {

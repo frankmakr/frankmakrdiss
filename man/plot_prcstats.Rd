@@ -14,6 +14,5 @@ plot_prcstats(prcstats)
 The output will be a ggplot2 graph
 }
 \description{
-\code{plot_prcstats} plots data
-in the format from the function \code{make_prcstats}.
+\verb{plot_prcstats\} plots data in the format from the function }make_prcstats`.
 }
