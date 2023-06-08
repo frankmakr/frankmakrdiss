@@ -8,6 +8,13 @@
 \description{
 Makes reproduction, replication, or adaptation of the dissertations analyses easier.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/frankmakr/frankmakrdiss}
+}
+
+}
 \author{
 \strong{Maintainer}: Frank Krumbholz \email{frankmakr@mailbox.org} [copyright holder]
 
