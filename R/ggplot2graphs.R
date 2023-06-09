@@ -125,15 +125,16 @@ plot_prcstats <- function(prcstats) {
 plot_thetapointrange <- function(thetapointrange) {
   ggplot2::ggplot(thetapointrange,
                   ggplot2::aes(x = .data$med, y = .data$y, color = .data$color)) +
-  ggplot2::geom_vline(xintercept = .data$theta_tilde, linetype = "longdash") +
-  ggplot2::geom_linerange(ggplot2::aes(xmin = .data$ll, xmax = .data$ul)) +
-  ggplot2::geom_point() +
-  ggplot2::scale_color_manual(values = ggplot2::alpha(
-    as.vector(colorscheme_frankmakrdiss[c(3, 1), 5]), c(1, 0.3))) +
-  ggplot2::scale_x_continuous(limits = c(0, 1),
-    labels = scales::label_number(decimal.mark = ",")) +
-  ggplot2::labs(x = "Auftretenswahrscheinlichkeit", y = NULL, color = NULL) +
-  theme_frankmakrdiss()
+    ggplot2::geom_vline(ggplot2::aes(xintercept = .data$xint),
+      linetype = "longdash") +
+    ggplot2::geom_linerange(ggplot2::aes(xmin = .data$ll, xmax = .data$ul)) +
+    ggplot2::geom_point() +
+    ggplot2::scale_color_manual(values = scales::alpha(
+      as.vector(colorscheme_frankmakrdiss[c(3, 1), 5]), c(1, 0.3))) +
+    ggplot2::scale_x_continuous(limits = c(0, 1),
+      labels = scales::label_number(decimal.mark = ",")) +
+    ggplot2::labs(x = "Auftretenswahrscheinlichkeit", y = NULL, color = NULL) +
+    theme_frankmakrdiss()
 }
 
 #' Plot Variance Components

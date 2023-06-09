@@ -7,17 +7,136 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(
+  eval = FALSE,
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
-Now that you have gone through all the installation procedure
-you want to see what you can do with it.
-So let us begin with attaching the package.
+# Get Started #
 
-```{r setup}
+Now that you have gone through all the installation procedure
+let's see what you can do with `frankmakrdiss`.
+We begin with attaching the package
+and setting the number of computer cores
+we dedicate to the Bayesian modeling.
+For this example we will set the number of cores
+to the default number of parallel MCMC chains.
+
+```{r attach}
 library(frankmakrdiss)
+options(mc.cores = 4)
+```
+
+On attaching the package
+there are some checks,
+if `CmdStan` and `cmdstanr` are properly installed.
+Remember, they are not on *CRAN*.
+If everything looks good
+we start with reproducing the figure 12.6 from the doctoral dissertation.
+
+## Reproduce figure 12.6 ##
+
+The figure is from the first study.
+By looking in the doctoral dissertation you know
+that we need to use model 12.2
+and by looking in the package help
+we know which variables we need to use.
+
+```{r help1, eval = FALSE}
+?comms_demo
+?comms_data
+?stan_dissmodel
+```
+
+It's time to prepare the data
+and fit the model.
+
+```{r fit}
+standat_f12.6 <- list(
+  K = length(levels(comms_data$k_iter3)),
+  N = nrow(comms_demo),
+  y = tabulate(comms_data$k_iter3),
+  L = 5,
+  N_tilde = seq(from = 200, to = 1000, by = 200)
+  )
+
+fit_f12.6 <- stan_dissmodel(model_number = "12.2", stan_data = standat_f12.6)
+```
+
+After fitting the model
+let's check if something is suspicious with the sampling.
+
+```{r check}
+fit_f12.6$cmdstan_diagnose()
+```
+
+Now we can save the fitted model for later reuse
+in the active working directory or any other location
+
+```{r save, eval = FALSE}
+fit_f12.6$save_object(file = "fit_f12.6.rds")
+```
+
+Now that we have the posterior distribution of the parameters we need
+we can prepare the data for the `ggplot2` graph and plot it.
+Because the function to prepare the data frame for the actual plot is exported
+you can also easily use your own style.
+
+```{r help2, eval = FALSE}
+?make_thetapointrange
+?plot_thetapointrange
+```
+```{r plotdat1}
+plotdat_f12.6 <- make_thetapointrange(
+  fit_f12.6$draws("theta", format = "draws_matrix"),
+  probs = 0.87, n_group_tilde = 40, n_sample_tilde = 1000)
+```
+```{r plot1}
+plot_thetapointrange(plotdat_f12.6)
+```
+
+## Adapt figure 12.6 ##
+
+Let's now suppose
+we're planning a similar study with the same target population.
+But because of strict time restrictions
+we would expect a sample size of rather 300 or 400 than 1000.
+Under these constraints,
+what are the expected probabilities for a minimum group size of 40?
+
+We already have fit the model so all we need now is new plot data.
+In addition we want a figure with the two expected sample sizes
+shown side by side.
+Therefore we first build a list of two data frames with the plot data.
+
+```{r plotlist}
+plotdat_f12.6_list <- lapply(c(300, 400), function(i)
+  make_thetapointrange(
+  fit_f12.6$draws("theta", format = "draws_matrix"),
+  probs = 0.87, n_group_tilde = 40, n_sample_tilde = i)
+  )
+```
+
+We want to change the `ggplot2` graph.
+Because we haven't attached `ggplot2` yet
+we need to refer to a function in `ggplot2` with an explicit `ggplot2::`.
+To show the differences side by side
+we will use `ggplot2::facet_wrap`.
+First we make a new column indicating the facets.
+Than we add the new layer to the plot.
+
+```{r plotdat2}
+plotdat_f12.6_fac <- do.call(rbind,
+  sapply(1:2, function(i) data.frame(
+    plotdat_f12.6_list[[i]],
+    fac = factor(i, levels = 1:2, labels = c("N = 300", "N = 400"))),
+    simplify = FALSE)
+  )
+```
+```{r plot2}
+plot_thetapointrange(plotdat_f12.6_fac) +
+  ggplot2::facet_wrap(ggplot2::vars(fac))
 ```

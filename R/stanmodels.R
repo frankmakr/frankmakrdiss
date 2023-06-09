@@ -10,7 +10,7 @@
 #' 
 #' @details
 #' The compiled model is stored in the R user cache
-#' \code{tools::R_user_dir(package = "frankmakrdiss", which = "cache")}.
+#' `tools::R_user_dir(package = "frankmakrdiss", which = "cache")`.
 #'
 #' @return The function returns a stan fit object.
 #' @export
@@ -24,7 +24,7 @@ stan_dissmodel <- function(model_number, stan_data, ...) {
   assign(paste0("stan_", model_name),
     cmdstanr::cmdstan_model(
       stan_file = file.path(
-        system.file(package = "frankmakrdiss"), paste0(model_name, ".stan")),
+        system.file(package = "frankmakrdiss", paste0(model_name, ".stan"))),
       dir = tools::R_user_dir(package = "frankmakrdiss", which = "cache"),
       cpp_options = args$cpp_options)
     )

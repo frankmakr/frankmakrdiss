@@ -241,8 +241,8 @@ make_thetapointrange <- function(draws_mat,
                                  probs = 0.87,
                                  n_group_tilde, n_sample_tilde) {
   thetapointrange <- vector(mode = "list", length = 6)
-  names(thetapointrange) <- c("med", "ll", "ul", "y", "color", "theta_tilde")
-  thetapointrange$theta_tilde <- n_group_tilde / n_sample_tilde
+  names(thetapointrange) <- c("med", "ll", "ul", "y", "color", "xint")
+  thetapointrange$xint <- n_group_tilde / n_sample_tilde
   thetapointrange$med <- matrixStats::colMedians(draws_mat)
   thetapointrange[2:3] <- asplit(apply(draws_mat, 2, calc_hdr, probs = probs), 1)
   thetapointrange[1:3] <- lapply(thetapointrange[1:3], function(i)
@@ -251,7 +251,7 @@ make_thetapointrange <- function(draws_mat,
     levels = seq(ncol(draws_mat)),
     labels = theta_comms[order(thetapointrange$med)])
   thetapointrange$color <- factor(
-    ifelse(thetapointrange$ll >= thetapointrange$theta_tilde, 1, 2)[order(
+    ifelse(thetapointrange$ll >= thetapointrange$xint, 1, 2)[order(
     thetapointrange$med)], levels = 1:2, labels = c(
       paste0("\\qty{87}{\\percent}\\operatorname{HDR}\\tilde{y} \\geq ",
         n_group_tilde),
