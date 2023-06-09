@@ -103,7 +103,7 @@ plot_thetapointrange(plotdat_f12.6)
 Let's now suppose
 we're planning a similar study with the same target population.
 But because of strict time restrictions
-we would expect a sample size of rather 300 or 400 than 1000.
+we would expect a sample size of rather 200 or 300 than 1000.
 Under these constraints,
 what are the expected probabilities for a minimum group size of 40?
 
@@ -113,7 +113,7 @@ shown side by side.
 Therefore we first build a list of two data frames with the plot data.
 
 ```{r plotlist}
-plotdat_f12.6_list <- lapply(c(300, 400), function(i)
+plotdat_f12.6_list <- lapply(c(200, 300), function(i)
   make_thetapointrange(
   fit_f12.6$draws("theta", format = "draws_matrix"),
   probs = 0.87, n_group_tilde = 40, n_sample_tilde = i)
