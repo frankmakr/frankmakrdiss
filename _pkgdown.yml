@@ -1,0 +1,40 @@
+url: ~
+template:
+  bootstrap: 5
+  bootswatch: spacelab
+
+reference:
+  - title: Data Sets
+    desc:  The data sets included in the package.
+  - contents:
+    - starts_with("comms_")
+    - starts_with("conval_")
+
+  - title: Plot Data
+    desc:  Prepares the data in the format for the corresponding `plot_*`function.
+  - contents:
+    - starts_with("make_")
+
+  - title: Plots
+    desc:  Plots the data from the corresponding `make_*`function.
+  - contents:
+    - starts_with("plot_")
+
+  - title: Statistics
+    desc:  Calculates useful statistics.
+  - contents:
+    - starts_with("calc_")
+    - starts_with("tabulate_")
+
+  - title: Simulations
+    desc:  Simulates data
+  - contents:
+    - starts_with("sim_")
+
+  - title: Stan Models
+    desc:  Fits the Stan models
+  - contents:
+    - starts_with("stan_")
+
+news:
+  cran_dates: false
