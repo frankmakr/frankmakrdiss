@@ -4,11 +4,14 @@
 \alias{plot_thetapointrange}
 \title{Plot Community Probabilities}
 \usage{
-plot_thetapointrange(thetapointrange)
+plot_thetapointrange(thetapointrange, tikzdevice = FALSE)
 }
 \arguments{
 \item{thetapointrange}{A data frame returned from the function
 \code{make_thetapointrange}}
+
+\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
 The output will be a ggplot2 graph

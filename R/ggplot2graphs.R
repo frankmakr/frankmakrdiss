@@ -120,10 +120,12 @@ plot_prcstats <- function(prcstats) {
 #'
 #' @param thetapointrange A data frame returned from the function
 #'   `make_thetapointrange`
+#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#'   which defaults to `tikzdevice = FALSE`
 #' @return The output will be a ggplot2 graph
 #' @export
-plot_thetapointrange <- function(thetapointrange) {
-  ggplot2::ggplot(thetapointrange,
+plot_thetapointrange <- function(thetapointrange, tikzdevice = FALSE) {
+  thetaplot <- ggplot2::ggplot(thetapointrange,
                   ggplot2::aes(x = .data$med, y = .data$y, color = .data$color)) +
     ggplot2::geom_vline(ggplot2::aes(xintercept = .data$xint),
       linetype = "longdash") +
@@ -133,8 +135,15 @@ plot_thetapointrange <- function(thetapointrange) {
       as.vector(colorscheme_frankmakrdiss[c(3, 1), 5]), c(1, 0.3))) +
     ggplot2::scale_x_continuous(limits = c(0, 1),
       labels = scales::label_number(decimal.mark = ",")) +
-    ggplot2::labs(x = "Auftretenswahrscheinlichkeit", y = NULL, color = NULL) +
-    theme_frankmakrdiss()
+    theme_frankmakrdiss() +
+    ggplot2::theme(legend.position = "top")
+    if (!tikzdevice) {
+      thetaplot + ggplot2::labs(
+        x = "Auftretenswahrscheinlichkeit \u03B8", y = NULL, color = NULL)
+    } else {
+      thetaplot + ggplot2::labs(
+        x = "Auftretenswahrscheinlichkeit $\\theta$", y = NULL, color = NULL)
+    }
 }
 
 #' Plot Variance Components

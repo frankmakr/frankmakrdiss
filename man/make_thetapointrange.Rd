@@ -4,7 +4,13 @@
 \alias{make_thetapointrange}
 \title{Plot data for community probabilities}
 \usage{
-make_thetapointrange(draws_mat, probs = 0.87, n_group_tilde, n_sample_tilde)
+make_thetapointrange(
+  draws_mat,
+  probs = 0.87,
+  n_group_tilde,
+  n_sample_tilde,
+  tikzdevice = FALSE
+)
 }
 \arguments{
 \item{draws_mat}{A draws matrix containing the
@@ -16,6 +22,9 @@ which defaults to \code{probs = 0.87}}
 \item{n_group_tilde}{Expected group size in the future sample}
 
 \item{n_sample_tilde}{Expected size of the future sample}
+
+\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
 The output will be a data frame in the format for
