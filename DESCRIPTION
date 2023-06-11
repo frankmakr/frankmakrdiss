@@ -2,8 +2,8 @@ Package: frankmakrdiss
 Title: Supplemental Package for Frank Krumbholz's Dissertation
 Version: 0.1.0
 Authors@R: 
-    person("Frank", "Krumbholz", , "frankmakr@mailbox.org",
-      role = c("aut", "cre", "cph"))
+    person("Frank", "Krumbholz", role = c("aut", "cre", "cph"),
+      email = "frankmakr@mailbox.org")
 Description: Makes reproduction, replication, or adaptation
     of the dissertations analyses easier.
 License: file LICENSE
