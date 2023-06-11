@@ -1,7 +1,9 @@
-# frankmakrdiss #
+# frankmakrdiss
 
 <!-- badges: start -->
+
 [![R-CMD-check](https://github.com/frankmakr/frankmakrdiss/actions/workflows/r_check_standard.yml/badge.svg)](https://github.com/frankmakr/frankmakrdiss/actions/workflows/r_check_standard.yml)
+
 <!-- badges: end -->
 
 The *R* package *frankmakrdiss* supplements the doctoral dissertation:
@@ -44,7 +46,7 @@ of the implemented analyses.
 
 
 
-## Installation ##
+## Installation
 
 Before installing *frankmakrdiss* you need *cmdstanr* and *CmdStan*.
 Please visit
@@ -63,22 +65,18 @@ install.packages("cmdstanr",
 cmdstanr::install_cmdstan()
 ```
 
-To install *frankmakrdiss* you can use
-[*devtools*](https://devtools.r-lib.org)
-or the lighter
-[*remotes*](https://remotes.r-lib.org).
+To install *frankmakrdiss* you can use the
+[*remotes*](https://remotes.r-lib.org)
+package.
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("frankmakr/frankmakrdiss")
-
 # install.packages("remotes")
 remotes::install_github("frankmakr/frankmakrdiss")
 ```
 
 
 
-## Getting started ##
+## Getting started
 
 At this time
 the documentation of *frankmakrdiss*
@@ -91,7 +89,7 @@ So, please be patient.
 
 
 
-## License ##
+## License
 
 The code of this work is licensed under a
 [BSD 3-Clause “New” or “Revised” License
