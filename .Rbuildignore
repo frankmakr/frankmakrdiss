@@ -1,10 +1,11 @@
-^CITATION.cff$
+^CHANGELOG\.md$
+^CITATION\.cff$
 ^data-raw$
+^docs$
 ^\.github$
 ^\.gitmessage$
-^_pkgdown\.yml$
-^docs$
-^LICENSE.md$
+^LICENSE\.md$
 ^pkgdown$
+^_pkgdown\.yml$
 ^README\.Rmd$
-^CHANGELOG\.md$
+^\.zenodo\.json$
