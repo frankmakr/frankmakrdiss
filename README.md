@@ -4,6 +4,8 @@
 
 [![R-CMD-check](https://github.com/frankmakr/frankmakrdiss/actions/workflows/r_check_standard.yml/badge.svg)](https://github.com/frankmakr/frankmakrdiss/actions/workflows/r_check_standard.yml)
 
+[![DOI](https://zenodo.org/badge/648243839.svg)](https://zenodo.org/badge/latestdoi/648243839)
+
 <!-- badges: end -->
 
 The *R* package *frankmakrdiss* supplements the doctoral dissertation:
