@@ -1,0 +1,49 @@
+{
+  "upload_type": "software",
+
+  "title": "frankmakrdiss",
+
+  "creators": [
+    {
+      "name": "Krumbholz, Frank"
+    }
+  ],
+
+  "description": "Supplemental R package for Frank Krumbholz's doctoral dissertation at the FernUniversität in Hagen.",
+  
+  "access_right": "open",
+
+  "license": "BSD-3-Clause",
+
+  "keywords": [
+    "Gemeindepsychologie",
+    "Gemeinschaft",
+    "Gemeinschaftsgefühl",
+    "Psychologie",
+    "Psychological Sense of Community",
+    "Sense of Community",
+    "community",
+    "community psychology",
+    "psychological sense of community",
+    "psychology",
+    "sense of community"
+  ],
+
+  "related_identifiers": [
+    {
+      "relation": "hasPart",
+      "identifier":"https://doi.org/10.5281/zenodo.xxx",
+      "resource_type": "dataset"
+    }
+  ],
+
+  "references": [
+    ""
+  ],
+
+  "communities": [
+    {
+      "identifier": "Zenodo"
+    }
+  ]
+}
