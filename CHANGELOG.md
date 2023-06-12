@@ -3,9 +3,9 @@ The package *frankmakrdiss* uses
 The format of `CHANGELOG.md` is based on
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0).
 
-# [Unreleased] #
+# [Unreleased]
 
-# [0.1.0] - 2023-06-05 #
+# [0.1.0] - 2023-06-12
 
-## NEW ##
+## NEW
 + Initial release

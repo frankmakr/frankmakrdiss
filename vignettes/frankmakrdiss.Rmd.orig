@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Get Started #
+# Get Started
 
 Now that you have gone through all the installation procedure
 let's see what you can do with `frankmakrdiss`.
@@ -40,7 +40,7 @@ Remember, they are not on *CRAN*.
 If everything looks good
 we start with reproducing the figure 12.6 from the doctoral dissertation.
 
-## Reproduce figure 12.6 ##
+## Reproduce figure 12.6
 
 The figure is from the first study.
 By looking in the doctoral dissertation you know
@@ -57,7 +57,7 @@ we know which variables we need to use.
 It's time to prepare the data
 and fit the model.
 
-```{r fit}
+```{r dat}
 standat_f12.6 <- list(
   K = length(levels(comms_data$k_iter3)),
   N = nrow(comms_demo),
@@ -65,7 +65,9 @@ standat_f12.6 <- list(
   L = 5,
   N_tilde = seq(from = 200, to = 1000, by = 200)
   )
+```
 
+```{r fit}
 fit_f12.6 <- stan_dissmodel(model_number = "12.2", stan_data = standat_f12.6)
 ```
 
@@ -102,7 +104,7 @@ plotdat_f12.6 <- make_thetapointrange(
 plot_thetapointrange(plotdat_f12.6)
 ```
 
-## Adapt figure 12.6 ##
+## Adapt figure 12.6
 
 Let's now suppose
 we're planning a similar study with the same target population.
@@ -141,6 +143,7 @@ plotdat_f12.6_fac <- do.call(rbind,
     simplify = FALSE)
   )
 ```
+
 ```{r plot2}
 plot_thetapointrange(plotdat_f12.6_fac) +
   ggplot2::scale_color_manual(values = rep(c("blue", "lightblue"), 2)) +
