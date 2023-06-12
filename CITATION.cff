@@ -8,13 +8,6 @@ authors:
 date-released: "2023-06-07"
 title: "frankmakrdiss"
 version: 0.1.0
-identifiers:
-  - description: "The DOI for the collection of all versions."
-    type: doi
-    value: 10.5281/zenodo.xxx
-  - description: "The DOI for the version 0.1.0."
-    type: doi
-    value: 10.5281/zenodo.xxx
 repository-code: "https://github.com/frankmakr/frankmakrdiss"
 license:
   - BSD-3-Clause
