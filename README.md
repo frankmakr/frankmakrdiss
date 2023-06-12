@@ -41,7 +41,7 @@ FernUniversität in Hagen.
 
 </details>
 
-It provides the [data set](https://doi.org/zenodo.xxx)
+It provides the [data set](https://doi.org/10.5281/zenodo.8000035)
 and a set of functions
 for an easier reproduction, replication, and adaptation
 of the implemented analyses.

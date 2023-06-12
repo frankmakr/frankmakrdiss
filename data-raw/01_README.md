@@ -1,11 +1,11 @@
+# CHANGELOG
+
 The format of the CHANGELOG section is based on
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0)
 and uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-# CHANGELOG
-
-## [1.0.0] - 2023-06-11
+## [1.0.0] - 2023-06-12
 
 ### New
 
@@ -31,7 +31,7 @@ Krumbholz, F. (2023).
 *Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften*
 (Version 1.0.0)
 [Datensatz].
-<https://doi.org/zenodo.xxx>
+<https://doi.org/10.5281/zenodo.8000035>
 
 ### English
 
@@ -42,7 +42,7 @@ Krumbholz, F. (2023).
 Content validity of tests in dependence of community contexts]
 (Version 1.0.0)
 [Data set].
-<https://doi.org/zenodo.xxx>
+<https://doi.org/10.5281/zenodo.8000035>
 
 ## License
 
