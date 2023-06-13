@@ -78,8 +78,8 @@ let's check if something is suspicious with the sampling.
 fit_f12.6$cmdstan_diagnose()
 ```
 
-Now we can save the fitted model for later reuse
-in the active working directory or any other location
+We can also save the fitted model for later reuse
+in the active working directory or any other location.
 
 ```{r save, eval = FALSE}
 fit_f12.6$save_object(file = "fit_f12.6.rds")
@@ -106,14 +106,14 @@ plot_thetapointrange(plotdat_f12.6)
 
 ## Adapt figure 12.6
 
-Let's now suppose
+Let's suppose
 we're planning a similar study with the same target population.
 But because of strict time restrictions
-we would expect a sample size of rather 200 or 300 than 1000.
+we would expect a sample size of rather 150 or 250 than 1000.
 Under these constraints,
 what are the expected probabilities for a minimum group size of 40?
 
-We already have fit the model so all we need now is new plot data.
+We already fit the model so all we need is new plot data.
 In addition we want a figure with the two expected sample sizes
 shown side by side.
 Therefore we first build a list of two data frames with the plot data.
@@ -133,7 +133,7 @@ To show the differences side by side
 we will use `ggplot2::facet_wrap`.
 First we make a new column indicating the facets.
 We also change the color label.
-Than we add the new layer to the plot.
+Than we add the new layers to the plot.
 
 ```{r plotdat2}
 plotdat_f12.6_fac <- do.call(rbind,
