@@ -2,6 +2,8 @@
 
 <!-- badges: start -->
 
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+
 [![R-CMD-check](https://github.com/frankmakr/frankmakrdiss/actions/workflows/r_check_standard.yml/badge.svg)](https://github.com/frankmakr/frankmakrdiss/actions/workflows/r_check_standard.yml)
 
 [![DOI](https://zenodo.org/badge/648243839.svg)](https://zenodo.org/badge/latestdoi/648243839)
