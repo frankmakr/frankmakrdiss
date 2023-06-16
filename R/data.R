@@ -137,3 +137,37 @@
 #' Wiley-Blackwell.
 #' <https://doi.org/10.1002/9781444307948.ch12>.
 "conval_data"
+
+#' Distance Matrices of Community Effects
+#'
+#' @description
+#' The Matrices contain the pairwise energy distances
+#' of the distributions of community effects in the ratings.
+#' The item ratings are aggregated at the test and the dimension level.
+#'
+#' @format
+#' ## `chavis_dist`
+#' A named list of length 6 containing 22 x 22 distance matrices.
+#' @source Primary data.
+#' @name distmat
+#' @aliases distmat chavis_dist omoto_dist jason_dist halamova_dist
+#' @inherit conval_data references 
+"chavis_dist"
+
+#' @rdname distmat
+#' @format
+#' ## `omoto_dist`
+#' A named list of length 10 containing 22 x 22 distance matrices.
+"omoto_dist"
+
+#' @rdname distmat
+#' @format
+#' ## `jason_dist`
+#' A named list of length 4 containing 22 x 22 distance matrices.
+"jason_dist"
+
+#' @rdname distmat
+#' @format
+#' ## `halamova_dist`
+#' A named list of length 4 containing 22 x 22 distance matrices.
+"halamova_dist"
