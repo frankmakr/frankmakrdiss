@@ -58,6 +58,30 @@ functions {
     return dp_probs;
   }
 
+  real partial_sum(array[] real Y_slice,
+                   int start, int end,
+                   array[] row_vector mds_est,
+                   vector Delta_psi,
+                   real U, int N_choose_2, int N) {
+    vector[N_choose_2] Delta_lower_tri; // Estimated distances
+    int index_mds_delta = 1;
+    for (j in 1:(N - 1)) {
+      for (i in (j + 1):N) {
+        Delta_lower_tri[index_mds_delta] = distance(mds_est[i], mds_est[j]);
+        index_mds_delta += 1;
+      }
+    }
+    vector[N_choose_2] inv_Delta_psi = inv(Delta_psi);
+    array[2] vector[N_choose_2] Delta_shape_inv_gamma
+      = { inv_Delta_psi + 2, Delta_lower_tri .* (inv_Delta_psi + 1) };
+    return inv_gamma_lpdf(Y_slice |
+                Delta_shape_inv_gamma[1][start:end],
+                Delta_shape_inv_gamma[2][start:end])
+              - inv_gamma_lcdf(U |
+                Delta_shape_inv_gamma[1][start:end],
+                Delta_shape_inv_gamma[2][start:end]);
+  }
+
   vector trunc_inv_gamma_rng(vector mu, vector psi, real U) {
     int N = num_elements(mu);
     vector[N] inv_psi = inv(psi);
@@ -94,6 +118,7 @@ data {
   int<lower = 1> C;                     // Maximum number of clusters
   int<lower = 0> U;                     // Maximum scaled E-Distance
   matrix<lower = 0, upper = U>[N, N] Y; // Observed E-distance matrix
+  int<lower = 1> n_cores;               // Number of cores
 }
 
 transformed data {
@@ -129,6 +154,9 @@ transformed data {
   // Dirichlet process
   // Dirichlet is uniform over the simplex when concentration parameter is 1
   real dp_alpha = 1;
+
+  // Determine grainsize for threading
+  int grainsize = N_choose_2 %/% n_cores;
 }
 
 parameters {
@@ -152,15 +180,12 @@ parameters {
 
 transformed parameters {
   // Mulidimensional scaling
-  matrix[N, D] mds_est_mat;       // Estimated mds configuration 
-  array[N] row_vector[D] mds_est; // Estimated mds configuration
-  // Estimated distances
-  vector[N_choose_2] Delta_lower_tri;
+  array[N] row_vector[D] mds_est;     // Estimated MDS configuration
   {
     array[N, D] real mds_est_array;
     int index_mds_zeros = 1;
     int index_mds_reals = 1;
-    int index_mds_delta = 1;
+    matrix[N, D] mds_est_mat;
     for (d in 1:D) {
       mds_est_array[, d] = append_array(segment(mds_est_1, index_mds_zeros, d),
                              append_array(rep_array(mds_est_2[d], 1),
@@ -172,30 +197,17 @@ transformed parameters {
     for (n in 1:N) {
       mds_est[n] = mds_est_mat[n];
     }
-    for (j in 1:(N - 1)) {
-      for (i in (j + 1):N) {
-        Delta_lower_tri[index_mds_delta] = distance(mds_est[i], mds_est[j]);
-        index_mds_delta += 1;
-      }
-    }
   }
-  // Mean and scale parameterization for gamma distribution
-  vector[N_choose_2] inv_Delta_psi = inv(Delta_psi);
-  array[2] vector[N_choose_2] Delta_shape_inv_gamma
-    = { inv_Delta_psi + 2, Delta_lower_tri .* (inv_Delta_psi + 1) };
 
   // Dirichlet process
-  //  "stick-breaking" algorithm
-  simplex[C] dp_lambda = calc_dp_probs(C, dp_lambda_raw);
+  vector[C] dp_lambda = calc_dp_probs(C, dp_lambda_raw);
   array[C] row_vector[D] dp_mu;
   {
     for (c in 1:C) {
       dp_mu[c] = [ dp_mu_raw_1[c], dp_mu_raw_2[c] ];
     }
   }
-  //matrix[D, D] dp_Omega = multiply_lower_tri_self_transpose(dp_L);
-  //matrix[D, D] dp_Sigma = quad_form_diag(dp_Omega, dp_sigma);
-  cholesky_factor_cov[D] dp_sigma_L = diag_pre_multiply(dp_sigma, dp_L);
+  matrix[D, D] dp_sigma_L = diag_pre_multiply(dp_sigma, dp_L);
 }
 
 model {
@@ -208,10 +220,10 @@ model {
   
   // Observational model
   // Scale has the upper bound of 10
-  for (n in 1:N_choose_2) {
-    Y_lower_tri[n] ~ inv_gamma(Delta_shape_inv_gamma[1][n],
-                               Delta_shape_inv_gamma[2][n]) T[, U];
-  }
+  // Mean and scale parameterization for gamma distribution
+  target += reduce_sum_static(partial_sum, Y_lower_tri,
+                       grainsize,
+                       mds_est, Delta_psi, U, N_choose_2, N);
 
   // Dirichlet process
   // Population model
@@ -223,21 +235,20 @@ model {
   dp_L ~ lkj_corr_cholesky(3);       // eta > 1 for smaller correlations
   
   // Observational model
-  vector[C] log_dp_lambda = log(dp_lambda);
-  for (n in 1:N) {
-    vector[C] dp_log_mix = log_dp_lambda;
-    for (c in 1:C) {
-      //dp_log_mix[c] += multi_student_t_lupdf(
-      //                   mds_est[n] | dp_nu, dp_mu[c], dp_Sigma);
-      dp_log_mix[c] += multi_student_t_cholesky_lupdf(
-                         mds_est[n] | dp_nu, dp_mu[c], dp_sigma_L);
+  {
+    vector[C] log_dp_lambda = log(dp_lambda);
+    for (n in 1:N) {
+      vector[C] dp_log_mix = log_dp_lambda;
+      for (c in 1:C) {
+        dp_log_mix[c] += multi_student_t_cholesky_lupdf(
+                           mds_est[n] | dp_nu, dp_mu[c], dp_sigma_L);
+      }
+      target += log_sum_exp(dp_log_mix);
     }
-    target += log_sum_exp(dp_log_mix);
   }
 }
 
 generated quantities {
-  matrix[D, D] dp_Omega = multiply_lower_tri_self_transpose(dp_L);
   matrix[D, D] dp_Sigma = multiply_lower_tri_self_transpose(dp_sigma_L);
 
   // Posterior retrodictive check
@@ -249,8 +260,6 @@ generated quantities {
     int index_Delta_lower_tri_rep = 1;
     for (n in 1:N) {
       mix_component[n] = categorical_rng(dp_lambda);
-      //mds_est_rep[n] = multi_student_t_rng(
-      //                   dp_nu, dp_mu[mix_component[n]], dp_Sigma)';
       mds_est_rep[n] = multi_student_t_cholesky_rng(
                          dp_nu, dp_mu[mix_component[n]], dp_sigma_L)';
     }
@@ -270,8 +279,6 @@ generated quantities {
   {
     for (n in 1:N) {
       for (c in 1:C) {
-        //log_cluster_density[n][c] = multi_student_t_lpdf(
-        //                              mds_est[n] | dp_nu, dp_mu[c], dp_Sigma);
         log_cluster_density[n][c] = multi_student_t_cholesky_lpdf(
                                       mds_est[n] | dp_nu, dp_mu[c], dp_sigma_L);
       }

@@ -16,22 +16,37 @@
 #' @export
 stan_dissmodel <- function(model_number, stan_data, ...) {
   args <- list(...)
+  if (is.null(args$stanc_options)) args$stanc_options <- list("O1")
+  if (is.null(args$adapt_delta)) args$adapt_delta <- 0.99
   if (is.null(args$refresh)) args$refresh <- 500
   if (is.null(args$show_messages)) args$show_messages <- FALSE 
-  if (is.null(args$init) && model_number == "12.3") args$init <- 0
-  if (is.null(args$cpp_options)) args$cpp_options <- list(stan_threads = FALSE)
+  if (model_number == "12.3" && is.null(args$init)) args$init <- 0
+  if (model_number == "14" && is.null(args$cpp_options))
+    args$cpp_options <- list(stan_threads = TRUE)
+  if (model_number == "14" && is.null(args$threads_per_chain))
+    args$threads_per_chain <- getOption("mc.cores")
+  if (model_number == "14" && is.null(args$chains)) args$chains <- 1
+  if (model_number == "14" && is.null(args$iter_sampling))
+    args$iter_sampling <- 4000
   model_name <- paste0("model_", model_number)
   assign(paste0("stan_", model_name),
     cmdstanr::cmdstan_model(
       stan_file = file.path(
         system.file(package = "frankmakrdiss", paste0(model_name, ".stan"))),
       dir = tools::R_user_dir(package = "frankmakrdiss", which = "cache"),
-      cpp_options = args$cpp_options)
+      cpp_options = args$cpp_options,
+      stanc_options = args$stanc_options)
     )
   stan_fit <- get(paste0("stan_", model_name))$sample(
     data = stan_data,
-    init = args$init,
     refresh = args$refresh,
-    show_messages = args$show_messages)
+    init = args$init,
+    chains = args$chains,
+    threads_per_chain = args$threads_per_chain,
+    iter_warmup = args$iter_warmup,
+    iter_sampling = args$iter_sampling,
+    adapt_delta = args$adapt_delta,
+    show_messages = args$show_messages
+    )
   return(stan_fit)
 }
