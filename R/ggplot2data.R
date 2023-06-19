@@ -573,3 +573,36 @@ make_logclusterdensities <- function(draws_mat_list) {
   lcddata <- do.call(rbind, lcdlist)
   return(lcddata)
 }
+
+#' Highest Density Region 2d
+#'
+#' Utility function
+#' 
+#' @param x_draws The x coordinates of the MDS configuration in the draws_matrix
+#' @param y_draws The y coordinates of the MDS configuration in the draws_matrix
+#' @param ... Optional arguments for `MASS::kde2d`
+#' @noRd
+calc_2d_hdr <- function(x_draws, y_draws, ...) {
+  probs <- seq(0.5, 0.95, 0.025)
+  kde <- MASS::kde2d(x_draws, y_draws, ...)
+  kde_x <- kde$x
+  kde_y <- kde$y
+  kde_z <- kde$z
+  sort_kde_z <- sort(kde_z)
+  dens_xy <- cumsum(sort_kde_z) * diff(kde_x[1:2]) * diff(kde_y[1:2])
+  contour_levels <- lapply(probs, function(i)
+    stats::approx(dens_xy, sort_kde_z, xout = 1 - i)$y)
+  contour_lines <- grDevices::contourLines(kde_x, kde_y, kde_z,
+    levels = contour_levels)
+  contour_dat <- do.call(rbind, lapply(contour_lines, data.frame))
+  hdr_dat <- data.frame(
+    contour_dat[, -1],
+    hdr_label = as.numeric(as.character(
+      factor(contour_dat$level, labels = sort(probs, decreasing = TRUE))
+      )),
+    hdr_group = factor(
+      rep(sort(seq(contour_lines), decreasing = TRUE),
+        sapply(contour_lines, function(i) length(i$x))
+        )))
+  return(hdr_dat)
+}

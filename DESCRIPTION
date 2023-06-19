@@ -14,6 +14,7 @@ Imports:
     cmdstanr,
     ggplot2,
     knitr,
+    MASS,
     matrixStats,
     rlang,
     scales
