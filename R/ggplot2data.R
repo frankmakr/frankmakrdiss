@@ -122,8 +122,8 @@ qgroups_iter <- function(counts_mat, q_mat) {
 #' `make_prcjitter` prepares the data
 #' in the format for the function `plot_prcjitter`.
 #'
-#' @param y A list containing the sample replications
-#' @param y_rep_mat A list containing the population replications
+#' @param y A vector containing the sample replications
+#' @param y_rep_mat A draws matrix containing the population replications
 #' @return The ouput will be a data frame in the format for
 #'   using the corresponding `plot_prcjitter` function
 #' @export
@@ -177,12 +177,14 @@ calc_prcteststat <- function(data) {
 #' `make_prcstats` prepares the data
 #' in the format for the function `plot_prcstats`.
 #'
-#' @param y A list containing the sample replications
-#' @param y_rep_mat A list containing the population replications
+#' @param y A vector containing the sample replications
+#' @param y_rep_mat A draws matrix containing the population replications
+#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#'   which defaults to `tikzdevice = FALSE`
 #' @return The ouput will be a data frame in the format for
 #'   using the corresponding `plot_prcstats` function
 #' @export
-make_prcstats <- function(y, y_rep_mat) {
+make_prcstats <- function(y, y_rep_mat, tikzdevice = FALSE) {
   stat_y <- calc_prcteststat(y)
   stat_y_rep <- calc_prcteststat(y_rep_mat)
   bx <- lapply(1:2, function(i) seq(
@@ -202,14 +204,19 @@ make_prcstats <- function(y, y_rep_mat) {
   varlist$stat_y <- unlist(lapply(1:2, function(i) rep(stat_y[i], repfactor[i])))
   varlist$x <- as.numeric(unlist(lapply(counts_stat, names)))
   varlist$y <- unlist(counts_stat)
-  varlist$fill <- factor(
-    unlist(mapply(findInterval,
+  varlist$fill <- unlist(
+    mapply(findInterval,
       lapply(counts_stat, function(i) as.numeric(names(i))),
       lapply(shadelimits, sort),
-      MoreArgs = list(left.open = TRUE))),
-    levels = c(0:2),
-    labels = c("Replikationen", "$\\qty{87}{\\percent}\\operatorname{HDR}$",
-      "Replikationen"))
+      MoreArgs = list(left.open = TRUE)))
+  if (!tikzdevice) {
+    varlist$fill <- factor(varlist$fill, levels = c(0:2),
+      labels = c("Replikationen", "87% HDR", "Replikationen"))
+  } else {
+    varlist$fill <- factor(varlist$fill, levels = c(0:2),
+      labels = c("Replikationen", "$\\qty{87}{\\percent}\\operatorname{HDR}$",
+        "Replikationen"))
+  }
   prcstatsdata <- data.frame(varlist, row.names = seq_along(varlist$x))
   return(prcstatsdata)
 }
@@ -296,19 +303,29 @@ make_thetapointrange <- function(draws_mat,
 #' @param probs A numeric value representing
 #'   the probability for the highest density region,
 #'   which defaults to `probs = 0.87`
+#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#'   which defaults to `tikzdevice = FALSE`
 #' @return The ouput will be a data frame in the format for
 #'   using the corresponding `plot_sigmapointrange` function
 #' @export
-make_sigmapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87) {
+make_sigmapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87,
+                                 tikzdevice = FALSE) {
   n_cols <- ncol(draws_mat_1)
   hdr <- t(apply(cbind(draws_mat_1, draws_mat_2), 2, calc_hdr, probs = probs))
   varlist <- vector("list", 5)
   names(varlist) <- c("x", "y", "ll", "ul", "color")
   varlist$x <- c(matrixStats::colMedians(draws_mat_1),
     matrixStats::colMedians(draws_mat_2))
-  varlist$y <- factor(rep(1:n_cols, 2), levels = 1:n_cols,
+  varlist$y <- rep(1:n_cols, 2)
+  if (!tikzdevice) {
+    varlist$y <- factor(varlist$y, levels = 1:n_cols,
+    labels = c("Bezugsgemeinschaften \u03B3", "Personen \u03C8",
+      "Observationen \u0079"))
+  } else {
+    varlist$y <- factor(varlist$y, levels = 1:n_cols,
     labels = c("Bezugsgemeinschaften $\\gamma$", "Personen $\\psi$",
       "Observationen $y$"))
+  }
   varlist$ll <- hdr[, 1]
   varlist$ul <- hdr[, 2]
   varlist$color <- factor(rep(1:2, each = n_cols), levels = 1:2,
@@ -390,9 +407,169 @@ make_compjitter <- function(probs_list, dims_list) {
   return(compjitter)
 }
 
+
+
 # ----------------------
 # ---                ---
 # --- Graphs study 3 ---
 # ---                ---
 # ----------------------
 
+#' Plot Data for a Posterior Retrodictive Check
+#'
+#' @description
+#' `make_dp_prcjitter` prepares the data
+#' in the format for the function `plot_dp_prcjitter`.
+#'
+#' @param y A vector containing the sample replications
+#' @param y_rep_mat A draws matrix containing the population replications
+#' @return The ouput will be a data frame in the format for
+#'   using the corresponding `plot_prcjitter` function
+#' @export
+make_dp_prcjitter <- function(y, y_rep_mat) {
+  bx <- seq(from = floor(min(y, y_rep_mat) * 100) / 100,
+    to = ceiling(max(y, y_rep_mat) * 100) / 100, by = 0.5)
+  num_bins <- length(bx) - 1
+  counts_y <- count_bins(y, bx)
+  counts_y[num_bins] <- counts_y[num_bins - 1]
+  counts_mat <- count_bins_iter(y_rep_mat, bx)
+  counts_mat[num_bins, ] <- NA
+  q_mat <- matrixStats::rowQuantiles(counts_mat, probs = seq(0, 1, 0.01),
+    type = 8L)
+  med_rep <- q_mat[, "50%"]
+  med_rep[num_bins] <- med_rep[num_bins - 1]
+  qgroups_mat <- qgroups_iter(counts_mat, q_mat)
+  repfactor <- ncol(counts_mat)
+  varlist <- vector("list", 5)
+  names(varlist) <- c("x", "y_rep", "fill_jitter", "y_step", "color_step")
+  varlist$x <- rep(as.numeric(rownames(counts_mat)), repfactor)
+  varlist$y_rep <- c(counts_mat)
+  varlist$fill_jitter <- c(qgroups_mat) / 100
+  varlist$y_step <- rep(c(med_rep, counts_y), repfactor / 2)
+  varlist$color_step <- factor(rep(rep(2:1, each = num_bins), repfactor / 2),
+    labels = c("Observationen", "Median Replikationen"))
+  jitterdata <- data.frame(varlist, row.names = seq_along(varlist$x))
+  return(jitterdata)
+}
+
+#' Plot Data for a Posterior Retrodictive Check
+#'
+#' @description
+#' `make_dp_prcstats` prepares the data
+#' in the format for the function `plot_dp_prcstats`.
+#'
+#' @param y A vector containing the sample replications
+#' @param y_rep_mat A draws matrix containing the population replications
+#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#'   which defaults to `tikzdevice = FALSE`
+#' @return The ouput will be a data frame in the format for
+#'   using the corresponding `plot_dp_prcstats` function
+#' @export
+make_dp_prcstats <- function(y, y_rep_mat, tikzdevice = FALSE) {
+  stat_y <- calc_prcteststat(y)
+  stat_y_rep <- calc_prcteststat(y_rep_mat)
+  bx <- lapply(1:2, function(i) seq(
+    from = floor(min(stat_y[, i], stat_y_rep[, i]) * 100) / 100,
+    to = ceiling(max(stat_y[, i], stat_y_rep[, i]) * 100) / 100,
+    by = 0.1
+    ))
+  counts_stat <- lapply(1:2, function(i) count_bins(stat_y_rep[, i], bx[[i]]))
+  shadelimits <- lapply(1:2, function(i) calc_hdr(stat_y_rep[, i],
+    probs = 0.87))
+  repfactor <- sapply(counts_stat, length)
+  varlist <- vector("list", 5)
+  names(varlist) <- c("stat", "stat_y", "x", "y", "fill")
+  varlist$stat <- factor(
+    unlist(lapply(1:2, function(i) rep(colnames(stat_y)[i], repfactor[i]))),
+    levels = colnames(stat_y))
+  varlist$stat_y <- unlist(lapply(1:2, function(i) rep(stat_y[i], repfactor[i])))
+  varlist$x <- as.numeric(unlist(lapply(counts_stat, names)))
+  varlist$y <- unlist(counts_stat)
+  varlist$fill <- unlist(
+    mapply(findInterval,
+      lapply(counts_stat, function(i) as.numeric(names(i))),
+      lapply(shadelimits, sort),
+      MoreArgs = list(left.open = TRUE)))
+  if (!tikzdevice) {
+    varlist$fill <- factor(varlist$fill, levels = c(0:2),
+      labels = c("Replikationen", "87% HDR", "Replikationen"))
+  } else {
+    varlist$fill <- factor(varlist$fill, levels = c(0:2),
+      labels = c("Replikationen", "$\\qty{87}{\\percent}\\operatorname{HDR}$",
+        "Replikationen"))
+  }
+  prcstatsdata <- data.frame(varlist, row.names = seq_along(varlist$x))
+  return(prcstatsdata)
+}
+
+#' Plot Data for Cluster Probabilities
+#'
+#' @description
+#' `make_lambdapointrange` prepares the data
+#' in the format for the function `plot_lambdapointrange`.
+#'
+#' @param draws_mat_list A list of draws matrices containing the lambdas
+#' @param labels A character vector containing the names of the graph facets
+#' @param probs A numeric value representing
+#'   the probability for the highest density region,
+#'   which defaults to `probs = 0.87`
+#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#'   which defaults to `tikzdevice = FALSE`
+#' @return The ouput will be a data frame in the format for
+#'   using the corresponding `plot_dp_prcstats` function
+#' @export
+make_lambdapointrange <- function(draws_mat_list, labels, probs = 0.87,
+                                  tikzdevice = FALSE) {
+  n_rep <- length(draws_mat_list)
+  n_cols <- rapply(draws_mat_list, ncol)[1]
+  draws_cbind <- do.call(cbind, draws_mat_list)
+  hdr <- t(apply(draws_cbind, 2, calc_hdr, probs = probs))
+  varlist <- vector("list", 6)
+  names(varlist) <- c("x", "y", "ll", "ul", "color", "dim")
+  varlist$x <- matrixStats::colMedians(draws_cbind)
+  varlist$y <- factor(rep(1:n_cols, n_rep), levels = rev(1:n_cols))
+  varlist$ll <- hdr[, 1]
+  varlist$ul <- hdr[, 2]
+  varlist$color <- ifelse(varlist$ul < 0.03, 1, ifelse(varlist$x < 0.01, 2, 3))
+  if (!tikzdevice) {    
+    varlist$color <- factor(varlist$color, labels = c(
+      "ul < 0.03 \u22C0 \u0078\u0304 < 0.01",
+      "ul \u2265 0.03 \u22C0 \u0078\u0304 < 0.01",
+      "ul \u2265 0.03 \u22C0 \u0078\u0304 \u2265 0.01"))
+  } else {
+    varlist$color <- factor(varlist$color, labels = c(
+      "$\\mathrm{ul} < \\num{0.03} \\land \\tilde{x} < \\num{0.01}$",
+      "$\\mathrm{ul} \\geq \\num{0.03} \\land \\tilde{x} < \\num{0.01}$",
+      "$\\mathrm{ul} \\geq \\num{0.03} \\land \\tilde{x} \\geq \\num{0.01}$"))
+  }
+  varlist$dim <- factor(rep(1:n_rep, each = n_cols), levels = 1:n_rep,
+    labels = labels)
+  pointrangedata <- data.frame(varlist, row.names = seq_along(varlist$x))
+  return(pointrangedata)
+}
+
+#' Plot Data for Cluster Densities
+#'
+#' @description
+#' `make_logclusterdensities` prepares the data
+#' in the format for the function `plot_logclusterdensities`.
+#'
+#' @param draws_mat_list A named list of draws matrices containing the
+#'   log cluster densities 
+#' @return The ouput will be a data frame in the format for
+#'   using the corresponding `plot_logclusterdensities` function
+#' @export
+make_logclusterdensities <- function(draws_mat_list) {
+  lcd_matlist <- lapply(draws_mat_list, function(i)
+    apply(array(i, c(4000, 22, 10)), c(2, 3), stats::median))
+  xy_vars <- expand.grid(
+    y = factor(1:22, levels = 22:1, labels = rev(frankmakrdiss::conval_comms$short)),
+    x = factor(1:10))
+  lcdlist <- sapply(seq(length(lcd_matlist)), function(i)
+    data.frame(xy_vars[, 2:1], density = c(lcd_matlist[[i]]),
+      dim = factor(seq(length(lcd_matlist))[i],
+        levels = seq(length(lcd_matlist)), labels = names(lcd_matlist))),
+    simplify = FALSE)
+  lcddata <- do.call(rbind, lcdlist)
+  return(lcddata)
+}

@@ -4,7 +4,12 @@
 \alias{make_sigmapointrange}
 \title{Plot Data for Variance components}
 \usage{
-make_sigmapointrange(draws_mat_1, draws_mat_2, probs = 0.87)
+make_sigmapointrange(
+  draws_mat_1,
+  draws_mat_2,
+  probs = 0.87,
+  tikzdevice = FALSE
+)
 }
 \arguments{
 \item{draws_mat_1}{A draws matrix containing the
@@ -16,6 +21,9 @@ superpopulation standard deviation from the adjusted model}
 \item{probs}{A numeric value representing
 the probability for the highest density region,
 which defaults to \code{probs = 0.87}}
+
+\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
 The ouput will be a data frame in the format for

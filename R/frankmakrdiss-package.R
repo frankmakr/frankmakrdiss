@@ -2,7 +2,7 @@
 "_PACKAGE"
 
 ## usethis namespace: start
-#' @importFrom rlang .data
 #' @importFrom ggplot2 %+replace%
+#' @importFrom rlang .data
 ## usethis namespace: end
 NULL
