@@ -1,6 +1,6 @@
 #' Pooling Factors for a Multilevel Model
 #'
-#' \code{calc_poolfac} calculates the pooling factors
+#' `calc_poolfac` calculates the pooling factors
 #' according to Gelman and Pardoe (2006)
 #' from a cmdstanr fit object
 #'

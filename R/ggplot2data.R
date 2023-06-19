@@ -389,3 +389,10 @@ make_compjitter <- function(probs_list, dims_list) {
     1 - compjitter$alpha_jitter[compjitter$alpha_jitter > 0.5]
   return(compjitter)
 }
+
+# ----------------------
+# ---                ---
+# --- Graphs study 3 ---
+# ---                ---
+# ----------------------
+

@@ -1,6 +1,6 @@
 #' Calculate the Highest Density Region
 #'
-#' \code{calc_hdr} calculates the Highest Density Region (HDR)
+#' `calc_hdr` calculates the Highest Density Region (HDR)
 #' from a vector containing posterior samples
 #'
 #' @param vec_x A numeric vector containing the posterior samples.

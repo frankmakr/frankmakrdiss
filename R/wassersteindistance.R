@@ -4,7 +4,7 @@
 #'
 #' @param x A distribution function as vector
 #' @param y A distribution function as vector
-#' @param type One of \code{"l1"}, \code{"l2"} or \code{"energy"}
+#' @param type One of `"l1"`, `"l2"` or `"energy"`
 #' @return The output will be the distance
 #' @noRd
 calc_wasserstein <- function(x, y, type = "energy") {
@@ -30,13 +30,13 @@ calc_wasserstein <- function(x, y, type = "energy") {
 #' Wasserstein Distance
 #'
 #' @description
-#' \code{calc_drawswasserstein} calculates the
+#' `calc_drawswasserstein` calculates the
 #' L1 or L2 Wasserstein distance or the Energy distance
-#' for all pairwise combinations of distributions in a \code{draws_matrix}
+#' for all pairwise combinations of distributions in a `draws_matrix`
 #'
-#' @param draws_mat A \code{draws_matrix} containing the distributions
+#' @param draws_mat A `draws_matrix` containing the distributions
 #' @param ... The type of distance calculated,
-#'   which must be one of \code{"l1"}, \code{"l2"} or \code{"energy"}
+#'   which must be one of `"l1"`, `"l2"` or `"energy"`
 #' @return The output will be a distance matrix
 calc_drawswasserstein <- function(draws_mat, ...) {
   n_col <- ncol(draws_mat)

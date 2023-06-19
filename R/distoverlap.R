@@ -23,11 +23,11 @@ calc_overlap <- function(dist1, dist2) {
 #' Calculate Distribution Overlap
 #'
 #' @description
-#' \code{calc_drawsoverlap} calculates the
+#' `calc_drawsoverlap` calculates the
 #' generalized distribution overlap according to Weitzman (1970)
-#' for a \code{draws_matrix}
+#' for a `draws_matrix`
 #'
-#' @param draws_mat A \code{draws_matrix}
+#' @param draws_mat A `draws_matrix`
 #' @return A n x n matrix
 #' @source
 #' Weitzman, M. S. (1970).

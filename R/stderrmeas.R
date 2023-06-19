@@ -14,7 +14,7 @@ calc_sem <- function(sd, rel) {
 #' Standard Error of Measurement and Confidence Intervals
 #'
 #' @description
-#' \code{calc_semci} returns the standard error of measurement
+#' `calc_semci` returns the standard error of measurement
 #' from a given reliability and the corresponding standard deviation.
 #' The confidence intervals are calculated using
 #' a normal or a student t distribution
@@ -26,7 +26,7 @@ calc_sem <- function(sd, rel) {
 #' @param se0 The number of standard errors from 0 which are regarded
 #'   as the critical value for the confidence interval
 #' @param p_ci The confidence niveau in percent
-#' @param dist One of \code{"normal"}, \code{"t"}, or \code{"none"}
+#' @param dist One of `"normal"`, `"t"`, or `"none"`
 #' @param ... The number of degrees of freedom for the student t distribution
 #' @return The output will be a data.frame containing the inputs,
 #'   the standard error of measurement, and the lower and upper bounds

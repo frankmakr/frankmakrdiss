@@ -54,7 +54,7 @@
 #' A data frame with 1,580 rows and 6 columns.
 #' ## Variables
 #' \describe{
-#'   \item{person}{Person number from \code{comms_demo}}
+#'   \item{person}{Person number from `comms_demo`}
 #'   \item{field}{Which of the 10 fields was used for the phrase}
 #'   \item{k_start}{The phrases before the classification process}
 #'   \item{k_iter1}{The phrases after iteration 1}
@@ -91,8 +91,8 @@
 #' A data frame with 5,609 rows and 79 columns.
 #' ## Variables
 #' \describe{
-#'   \item{person}{Person number from \code{conval_demo}}
-#'   \item{comm}{The specific community from \code{conval_comms}
+#'   \item{person}{Person number from `conval_demo`}
+#'   \item{comm}{The specific community from `conval_comms`
 #'     for which the test items were rated}
 #'   \item{value}{The grade to which the community is a
 #'     community of shared values}

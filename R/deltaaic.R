@@ -1,7 +1,7 @@
 #' Pairwise Relative AIC Comparison
 #'
 #' @description
-#' \code{tabulate_paic} calculates the probability
+#' `tabulate_paic` calculates the probability
 #' that one model minimizes the information loss over another model
 #' and displays the results in a table.
 #' 
