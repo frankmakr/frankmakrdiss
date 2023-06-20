@@ -20,13 +20,13 @@ knitr::opts_chunk$set(
 
 # Get Started
 
-Now that you have gone through all the installation procedure
+Now that you have gone through the installation procedure,
 let's see what you can do with `frankmakrdiss`.
 We begin with attaching the package
 and setting the number of computer cores
-we dedicate to the Bayesian modeling.
+dedicated to the Bayesian modeling.
 For this example we will set the number of cores
-to the default number of parallel MCMC chains.
+to the default number of parallel MCMC chains in *Stan*.
 
 ```{r attach}
 library(frankmakrdiss)
@@ -38,15 +38,16 @@ there are some checks,
 if `CmdStan` and `cmdstanr` are properly installed.
 Remember, they are not on *CRAN*.
 If everything looks good
-we start with reproducing the figure 12.6 from the doctoral dissertation.
+we can continue with a first example:
+Reproducing figure 12.6 from the doctoral dissertation.
 
-## Reproduce figure 12.6
+## Reproducing figure 12.6
 
-The figure is from the first study.
-By looking in the doctoral dissertation you know
-that we need to use model 12.2
-and by looking in the package help
-we know which variables we need to use.
+By looking in the doctoral dissertation
+we know that figure 12.6 is based on model 12.2
+from the first study.
+The package help shows
+which variables we need to use.
 
 ```{r help1, eval = FALSE}
 ?comms_demo
@@ -54,8 +55,8 @@ we know which variables we need to use.
 ?stan_dissmodel
 ```
 
-It's time to prepare the data
-and fit the model.
+To prepare the data
+we build a named list with the relevant variables.
 
 ```{r dat}
 standat_f12.6 <- list(
@@ -67,18 +68,21 @@ standat_f12.6 <- list(
   )
 ```
 
+It's time to fit the model.
+
 ```{r fit}
 fit_f12.6 <- stan_dissmodel(model_number = "12.2", stan_data = standat_f12.6)
 ```
 
 After fitting the model
-let's check if something is suspicious with the sampling.
+we should check the sampling diagnostics.
 
 ```{r check}
 fit_f12.6$cmdstan_diagnose()
 ```
 
-We can also save the fitted model for later reuse
+For later reuse
+we can save the fitted model
 in the active working directory or any other location.
 
 ```{r save, eval = FALSE}
@@ -87,24 +91,27 @@ fit_f12.6$save_object(file = "fit_f12.6.rds")
 
 Now that we have the posterior distribution
 of the parameters we are interested in
-we can prepare the data for the `ggplot2` graph and plot it.
-Because the function to prepare the data frame for the actual plot is exported
-you can also easily use your own style.
+we can make the `ggplot2` graph.
+For each graph a corresponding function to prepare the data frame
+is exported.
+So we can also easily adapt the graphs to a new style.
 
 ```{r help2, eval = FALSE}
 ?make_thetapointrange
 ?plot_thetapointrange
 ```
+
 ```{r plotdat1}
 plotdat_f12.6 <- make_thetapointrange(
   fit_f12.6$draws("theta", format = "draws_matrix"),
   probs = 0.87, n_group_tilde = 40, n_sample_tilde = 1000)
 ```
+
 ```{r plot1}
 plot_thetapointrange(plotdat_f12.6)
 ```
 
-## Adapt figure 12.6
+## Adapting figure 12.6
 
 Let's suppose
 we're planning a similar study with the same target population.
@@ -114,9 +121,10 @@ Under these constraints,
 what are the expected probabilities for a minimum group size of 40?
 
 We already fit the model so all we need is new plot data.
-In addition we want a figure with the two expected sample sizes
-shown side by side.
-Therefore we first build a list of two data frames with the plot data.
+But now we want a figure
+with the two expected sample sizes shown
+side by side.
+Therefore we first build a list of two data frames with the new plot data.
 
 ```{r plotlist}
 plotdat_f12.6_list <- lapply(c(200, 300), function(i)
@@ -126,14 +134,12 @@ plotdat_f12.6_list <- lapply(c(200, 300), function(i)
   )
 ```
 
-We want to change the `ggplot2` graph.
-Because we haven't attached `ggplot2` yet
-we need to refer to a function in `ggplot2` with an explicit `ggplot2::`.
 To show the differences side by side
 we will use `ggplot2::facet_wrap`.
-First we make a new column indicating the facets.
-We also change the color label.
-Than we add the new layers to the plot.
+First we have to add a new column
+to each data frame in the list
+indicating the facets.
+Then we `rbind` the data frames.
 
 ```{r plotdat2}
 plotdat_f12.6_fac <- do.call(rbind,
@@ -143,6 +149,14 @@ plotdat_f12.6_fac <- do.call(rbind,
     simplify = FALSE)
   )
 ```
+
+We want to change the `ggplot2` graph.
+Because we haven't attached `ggplot2` yet
+we need to refer to a function in `ggplot2` with an explicit `ggplot2::`.
+In addition to the facets
+we want change the colors, too.
+All we have to do
+is adding the layers to the plot.
 
 ```{r plot2}
 plot_thetapointrange(plotdat_f12.6_fac) +

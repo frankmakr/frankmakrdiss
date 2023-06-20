@@ -18,6 +18,7 @@ reference:
   - contents:
     - starts_with("comms_")
     - starts_with("conval_")
+    - starts_with("distmat")
 
   - title: Plot Data
     desc: >
@@ -37,6 +38,7 @@ reference:
   - contents:
     - starts_with("calc_")
     - starts_with("tabulate_")
+    - starts_with("transform_")
 
   - title: Simulations
     desc: >
