@@ -565,10 +565,10 @@ make_logclusterdensities <- function(draws_mat_list) {
   xy_vars <- expand.grid(
     y = factor(1:22, levels = 22:1, labels = rev(frankmakrdiss::conval_comms$short)),
     x = factor(1:10))
-  lcdlist <- sapply(seq(length(lcd_matlist)), function(i)
+  lcdlist <- sapply(seq_along(lcd_matlist), function(i)
     data.frame(xy_vars[, 2:1], density = c(lcd_matlist[[i]]),
-      dim = factor(seq(length(lcd_matlist))[i],
-        levels = seq(length(lcd_matlist)), labels = names(lcd_matlist))),
+      dim = factor(seq_along(lcd_matlist)[i],
+        levels = seq_along(lcd_matlist), labels = names(lcd_matlist))),
     simplify = FALSE)
   lcddata <- do.call(rbind, lcdlist)
   return(lcddata)
@@ -578,8 +578,8 @@ make_logclusterdensities <- function(draws_mat_list) {
 #'
 #' Utility function
 #' 
-#' @param x_draws The x coordinates of the MDS configuration in the draws_matrix
-#' @param y_draws The y coordinates of the MDS configuration in the draws_matrix
+#' @param x_draws The x coordinates of the MDS configuration in the draws matrix
+#' @param y_draws The y coordinates of the MDS configuration in the draws matrix
 #' @param ... Optional arguments for `MASS::kde2d`
 #' @noRd
 calc_2d_hdr <- function(x_draws, y_draws, ...) {
@@ -603,6 +603,97 @@ calc_2d_hdr <- function(x_draws, y_draws, ...) {
     hdr_group = factor(
       rep(sort(seq(contour_lines), decreasing = TRUE),
         sapply(contour_lines, function(i) length(i$x))
-        )))
+        ))
+    )
   return(hdr_dat)
+}
+
+#' Highest Density Region 2d Countours
+#'
+#' Utility function
+#' 
+#' @param mds_draws A draws matrix containing the MDS configuration
+#' @noRd
+make_mds_contourdata <- function(mds_draws) {
+  contour_list <- lapply(1:22,
+    function(i) calc_2d_hdr(
+      mds_draws[, i, 1],
+      mds_draws[, i, 2],
+      h = c(MASS::bandwidth.nrd(mds_draws[, i, 1]),
+        MASS::bandwidth.nrd(mds_draws[, i, 2])) * 4,
+      n = 25)
+    )
+  contour_grouplist <- lapply(contour_list,
+    function(i) as.numeric(i$hdr_group)
+    )
+  contour_groupshift <- cumsum(
+    sapply(contour_grouplist, function(i) length(unique(i)))
+    )
+  contour_groups <- c(
+    contour_grouplist[[1]],
+    unlist(lapply(1:21,
+      function(i) contour_grouplist[[i + 1]] + contour_groupshift[i]))
+    )
+  mds_contourdata <- do.call(rbind, contour_list)
+  mds_contourdata$contour_group <- contour_groups
+  mds_contourdata$group <- factor(
+    rep(seq(contour_grouplist), sapply(contour_grouplist, length)),
+    labels = frankmakrdiss::conval_comms$short)
+  return(mds_contourdata)
+}
+
+#' Highest Density Region 2d Medoids
+#'
+#' Utility function
+#' 
+#' @param mds_draws A draws matrix containing the MDS configuration
+#' @noRd
+make_mds_pointdata <- function(mds_draws) {
+  mds_pointdata <- data.frame(
+    x = matrixStats::colMedians(mds_draws[, , 1]),
+    y = matrixStats::colMedians(mds_draws[, , 2]),
+    label = frankmakrdiss::conval_comms$short,
+    group = factor(frankmakrdiss::conval_comms$short,
+      levels = frankmakrdiss::conval_comms$short)
+    )
+  return(mds_pointdata)
+}
+
+#' Plot Data for MDS Configuration
+#'
+#' @description
+#' `make_mds_plotdata` prepares the data
+#' in the format for the function `plot_dp_mds`.
+#'
+#' @param draws_mat_list A named list of draws matrices
+#'   containing the MDS configurations
+#' @param target_mat A draws matrix
+#'   containing the target configuration for the procrustes transformation
+#' @return The ouput will be a data frame in the format for
+#'   using the corresponding `plot_dp_mds` function
+#' @export
+make_mds_plotdata <- function(draws_mat_list, target_mat) {
+  mds_dim <- factor(seq_along(draws_mat_list),
+    labels = names(draws_mat_list))
+  mds_hat <- lapply(
+    lapply(draws_mat_list, array, c(4000, 22, 2)),
+    function(i) aperm(
+      sapply(1:4000, function(j)
+        transform_procrustes(
+          array(target_mat, c(4000, 22, 2))[j, , ],
+          i[j, , ]),
+        simplify = "array"),
+      c(3, 1, 2))
+    )
+  mds_plotdata <- vector("list", length = 2L)
+  names(mds_plotdata) <- c("medoids", "density")
+  mds_plotdata$medoids <- do.call(rbind,
+    lapply(seq_along(mds_hat), function(i)
+      data.frame(make_mds_pointdata(mds_hat[[i]]), dim = mds_dim[i])
+      ))
+  mds_plotdata$density <- do.call(rbind,
+    lapply(seq_along(mds_hat), function(i)
+      data.frame(make_mds_contourdata(mds_hat[[i]]), dim = mds_dim[i])
+      ))
+  return(mds_plotdata)
 }
