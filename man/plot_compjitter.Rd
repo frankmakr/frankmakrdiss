@@ -4,11 +4,14 @@
 \alias{plot_compjitter}
 \title{Plot Pairwise Distribution Overlapping}
 \usage{
-plot_compjitter(compjitter)
+plot_compjitter(compjitter, tikzdevice = FALSE)
 }
 \arguments{
 \item{compjitter}{A data frame returned from the function
 \code{make_compjitter}}
+
+\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
 The output will be a ggplot2 graph

@@ -4,11 +4,14 @@
 \alias{plot_sigmapointrange}
 \title{Plot Variance Components}
 \usage{
-plot_sigmapointrange(sigmapointrange)
+plot_sigmapointrange(sigmapointrange, tikzdevice = FALSE)
 }
 \arguments{
 \item{sigmapointrange}{A data frame returned from the function
 \code{make_sigmapointrange}}
+
+\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
 The output will be a ggplot2 graph

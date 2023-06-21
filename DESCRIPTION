@@ -12,7 +12,9 @@ Depends:
     R (>= 4.0.0)
 Imports:
     cmdstanr,
+    ggnewscale,
     ggplot2,
+    ggrepel,
     knitr,
     MASS,
     matrixStats,

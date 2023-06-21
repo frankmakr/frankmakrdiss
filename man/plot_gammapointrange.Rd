@@ -4,11 +4,14 @@
 \alias{plot_gammapointrange}
 \title{Plot Community Effects}
 \usage{
-plot_gammapointrange(gammapointrange)
+plot_gammapointrange(gammapointrange, tikzdevice = FALSE)
 }
 \arguments{
 \item{gammapointrange}{A data frame returned from the function
 \code{make_gammapointrange}}
+
+\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
 The output will be a ggplot2 graph

@@ -1,6 +1,6 @@
 # ------------------------------
 # ---                        ---
-# --- Sample characteristics ---
+# --- Sample Characteristics ---
 # ---                        ---
 # ------------------------------
 
@@ -265,8 +265,8 @@ make_thetapointrange <- function(draws_mat,
   if (!tikzdevice) {
     thetapointrange$color <- factor(thetapointrange$color,
       labels = c(
-        paste0("87% HDR \u03B8 \u2265 ", thetapointrange$xint),
-        paste0("87% HDR \u03B8 < ", thetapointrange$xint))
+        paste0("87% HDR \u03b8 \u2265 ", thetapointrange$xint),
+        paste0("87% HDR \u03b8 < ", thetapointrange$xint))
       )
   } else {
     thetapointrange$color <- factor(thetapointrange$color,
@@ -319,7 +319,7 @@ make_sigmapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87,
   varlist$y <- rep(1:n_cols, 2)
   if (!tikzdevice) {
     varlist$y <- factor(varlist$y, levels = 1:n_cols,
-    labels = c("Bezugsgemeinschaften \u03B3", "Personen \u03C8",
+    labels = c("Bezugsgemeinschaften \u03b3", "Personen \u03c8",
       "Observationen \u0079"))
   } else {
     varlist$y <- factor(varlist$y, levels = 1:n_cols,
@@ -533,9 +533,9 @@ make_lambdapointrange <- function(draws_mat_list, labels, probs = 0.87,
   varlist$color <- ifelse(varlist$ul < 0.03, 1, ifelse(varlist$x < 0.01, 2, 3))
   if (!tikzdevice) {    
     varlist$color <- factor(varlist$color, labels = c(
-      "ul < 0.03 \u22C0 \u0078\u0304 < 0.01",
-      "ul \u2265 0.03 \u22C0 \u0078\u0304 < 0.01",
-      "ul \u2265 0.03 \u22C0 \u0078\u0304 \u2265 0.01"))
+      "ul < 0.03 \u22c0 \u0078\u0303 < 0.01",
+      "ul \u2265 0.03 \u22c0 \u0078\u0303 < 0.01",
+      "ul \u2265 0.03 \u22c0 \u0078\u0303 \u2265 0.01"))
   } else {
     varlist$color <- factor(varlist$color, labels = c(
       "$\\mathrm{ul} < \\num{0.03} \\land \\tilde{x} < \\num{0.01}$",

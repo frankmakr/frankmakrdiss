@@ -4,11 +4,14 @@
 \alias{plot_samplepointrange}
 \title{Plot Sample Characteristics}
 \usage{
-plot_samplepointrange(samplepointrange)
+plot_samplepointrange(samplepointrange, tikzdevice = FALSE)
 }
 \arguments{
 \item{samplepointrange}{A data frame returned from the function
 \code{make_samplepointrange}}
+
+\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
 The output will be a ggplot2 graph
