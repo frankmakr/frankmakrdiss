@@ -9,8 +9,7 @@ bibentry(
   subtitle     = "",
   version      = "0.1.0",
   titleaddon   = "Software",
-  doi          = "https://doi.org/10.5281/zenodo.xxx",
-  url          = "https://github.com/frankmakr/frankmakrdiss",
+  url          = "https://frankmakr.github.io/frankmakrdiss",
   langid       = "american",
   textVersion  = paste(
                    "Krumbholz, F. (2023).",
@@ -18,6 +17,6 @@ bibentry(
                      "frankmakrdiss",
                      "(Version 0.1.0)", 
                      "[R Package]."),
-                   "https://doi.org/10.5281/zenodo.xxx"
+                   "https://frankmakr.github.io/frankmakrdiss"
                    )
 )

@@ -17,7 +17,7 @@ Krumbholz, F. (2023).
 *Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften*
 [Psychological sense of community:
 Content validity of tests in dependence of community contexts]
-[Unpublished Doctoral Dissertation].
+[Unpublished doctoral dissertation].
 FernUniversität in Hagen.
 
 <details>
