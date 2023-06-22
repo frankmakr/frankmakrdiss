@@ -1,0 +1,19 @@
+.row > main {
+  max-width: 60rem;
+}
+
+.navbar-dark .navbar-nav .active > .nav-link {
+  background: $gray-900;
+}
+.navbar-dark .navbar-nav .nav-item > .nav-link:hover {
+  background: $gray-700;
+}
+
+#toc > .nav {
+  a.nav-link {
+    &.active {
+      background-color: mix($secondary, $body-bg, 10%);
+      color: $body-color;
+    }
+  }
+}

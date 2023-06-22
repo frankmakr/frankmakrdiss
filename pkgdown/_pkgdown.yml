@@ -1,7 +1,25 @@
 url: ~
+
 template:
   bootstrap: 5
-  bootswatch: spacelab
+  theme: arrow-light
+  bslib:
+    bg: white
+    fg: "#672773"           # purple
+    primary: "#672773"      # purple
+    secondary: "#753d7f"
+    info: "#d1bed5"         # blended version number
+    body-color: "#343a40"   # gray-800
+    navbar-dark-brand-color: "#d1bed5"
+    navbar-dark-brand-hover-color: white
+    navbar-dark-color: "#d1bed5"
+    navbar-dark-hover-color: white
+    link-color: "#aa1eaa"
+    tooltip-bg: "#6c757d"   # gray-600
+
+navbar:
+  type: dark
+  bg: primary
 
 development:
   mode: devel
