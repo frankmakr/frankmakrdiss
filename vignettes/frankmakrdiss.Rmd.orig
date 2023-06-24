@@ -40,6 +40,10 @@ Remember, they are not on *CRAN*.
 If everything looks good
 we can continue with a first example:
 Reproducing figure 12.6 from the doctoral dissertation.
+Please note that you should not expect *exact reproducibility*
+due to the external constraints mentioned in the
+[Stan reference manual](
+https://mc-stan.org/docs/2_32/reference-manual/reproducibility.html).
 
 ## Reproducing figure 12.6
 
