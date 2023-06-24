@@ -1,4 +1,5 @@
 # frankmakrdiss 0.1.0
 
-## NEW
+## New
+
 + Initial release
