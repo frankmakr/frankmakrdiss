@@ -11,21 +11,26 @@ in multilevel (hierarchical) models.
 \url{https://doi.org/10.1198/004017005000000517}.
 }
 \usage{
-calc_poolstats(y, draws, pars = c("gamma", "delta", "y"))
+calc_poolstats(y, draws_mat, pars = c("gamma", "delta", "y"))
 }
 \arguments{
-\item{y}{A vector with the response variable}
+\item{y}{A numeric vector with the response variable}
 
-\item{draws}{A draws matrix with the relevant pooling parameters.}
+\item{draws_mat}{A \code{draws_matrix} with the relevant pooling parameters}
 
 \item{pars}{A character vector with the names of the relevant residuals
-of the multilevel model.}
+of the multilevel model}
 }
 \value{
-The output will be a vector containing the pooling factors.
+A named vector containing the pooling factors
 }
 \description{
-\code{calc_poolfac} calculates the pooling factors
+\code{calc_poolfac()} calculates the pooling factors
 according to Gelman and Pardoe (2006)
-from a cmdstanr fit object
+from a \code{CmdStanMCMC} object
+}
+\details{
+A \code{draws_matrix} is a numeric matrix
+in which the rows are posterior draws
+and the columns are variables.
 }

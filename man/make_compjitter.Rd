@@ -13,10 +13,10 @@ pairwise overlapping probabilities}
 \item{dims_list}{A list containing the names of the test dimensions}
 }
 \value{
-The ouput will be a data frame in the format for
-using the corresponding \code{plot_compjitter} function
+A data frame in the format for
+using the corresponding \code{plot_compjitter()} function
 }
 \description{
-\code{make_compjitter} prepares the data
-in the format for the function \code{plot_compjitter}.
+\code{make_compjitter()} prepares the data
+in the format for the function \code{plot_compjitter()}.
 }

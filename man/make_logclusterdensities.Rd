@@ -7,14 +7,19 @@
 make_logclusterdensities(draws_mat_list)
 }
 \arguments{
-\item{draws_mat_list}{A named list of draws matrices containing the
-log cluster densities}
+\item{draws_mat_list}{A named list of \code{draws_matrix} objects
+containing the log cluster densities}
 }
 \value{
-The ouput will be a data frame in the format for
-using the corresponding \code{plot_logclusterdensities} function
+A data frame in the format for
+using the corresponding \code{plot_logclusterdensities()} function
 }
 \description{
-\code{make_logclusterdensities} prepares the data
-in the format for the function \code{plot_logclusterdensities}.
+\code{make_logclusterdensities()} prepares the data
+in the format for the function \code{plot_logclusterdensities()}.
+}
+\details{
+A \code{draws_matrix} is a numeric matrix
+in which the rows are posterior draws
+and the columns are variables.
 }

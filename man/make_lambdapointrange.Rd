@@ -7,22 +7,28 @@
 make_lambdapointrange(draws_mat_list, labels, probs = 0.87, tikzdevice = FALSE)
 }
 \arguments{
-\item{draws_mat_list}{A list of draws matrices containing the lambdas}
+\item{draws_mat_list}{A list of \code{draws_matrix} objects
+containing the lambdas}
 
 \item{labels}{A character vector containing the names of the graph facets}
 
 \item{probs}{A numeric value representing
-the probability for the highest density region,
+the probability for the highest density region
 which defaults to \code{probs = 0.87}}
 
-\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+\item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
-The ouput will be a data frame in the format for
-using the corresponding \code{plot_dp_prcstats} function
+A data frame in the format for
+using the corresponding \code{plot_dp_prcstats()} function
 }
 \description{
-\code{make_lambdapointrange} prepares the data
-in the format for the function \code{plot_lambdapointrange}.
+\code{make_lambdapointrange()} prepares the data
+in the format for the function \code{plot_lambdapointrange()}.
+}
+\details{
+A \code{draws_matrix} is a numeric matrix
+in which the rows are posterior draws
+and the columns are variables.
 }

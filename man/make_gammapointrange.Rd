@@ -7,20 +7,25 @@
 make_gammapointrange(draws_mat_1, draws_mat_2, probs = 0.87)
 }
 \arguments{
-\item{draws_mat_1}{A draws matrix containing the community effects
+\item{draws_mat_1}{A \code{draws_matrix} containing the community effects
 from the unadjusted model}
 
-\item{draws_mat_2}{A draws matrix containing the community effects
+\item{draws_mat_2}{A \code{draws_matrix} containing the community effects
 from the adjusted model}
 
-\item{probs}{A numeric value representing
-the probability for the highest density region,
+\item{probs}{The probability for the highest density region
 which defaults to \code{probs = 0.87}}
 }
 \value{
-The ouput will be a data frame in the format for
-using the corresponding \code{plot_gammapointrange} function
+A data frame in the format for
+using the corresponding \code{plot_gammapointrange()} function
 }
 \description{
-\verb{make_gammapointrange\} prepares the data in the format for the function }plot_gammapointrange`.
+\code{make_gammapointrange()} prepares the data
+in the format for the function \code{plot_gammapointrange()}.
+}
+\details{
+A \code{draws_matrix} is a numeric matrix
+in which the rows are posterior draws
+and the columns are variables.
 }

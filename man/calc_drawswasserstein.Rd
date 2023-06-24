@@ -9,14 +9,20 @@ calc_drawswasserstein(draws_mat, ...)
 \arguments{
 \item{draws_mat}{A \code{draws_matrix} containing the distributions}
 
-\item{...}{The type of distance calculated,
+\item{...}{The type of distance calculated
 which must be one of \code{"l1"}, \code{"l2"} or \code{"energy"}}
 }
 \value{
-The output will be a distance matrix
+A n x n numeric matrix
+with n equals to the column number of \code{draws_mat}
 }
 \description{
-\code{calc_drawswasserstein} calculates the
-L1 or L2 Wasserstein distance or the Energy distance
-for all pairwise combinations of distributions in a \code{draws_matrix}
+\code{calc_drawswasserstein()} calculates the
+L1 or L2 Wasserstein distance, or the Energy distance
+for all pairwise combinations of distributions in a \code{draws_matrix}.
+}
+\details{
+A \code{draws_matrix} is a numerical matrix
+in which the rows are posterior draws
+and the columns are variables.
 }

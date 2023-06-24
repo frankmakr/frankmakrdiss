@@ -10,11 +10,11 @@ tabulate_paic(data)
 \item{data}{A numeric vector with AIC values}
 }
 \value{
-A matrix with pairwise comparisons
+A numeric matrix with pairwise comparisons
 containing the probability minimizing the information loss
 }
 \description{
-\code{tabulate_paic} calculates the probability
+\code{tabulate_paic()} calculates the probability
 that one model minimizes the information loss over another model
 and displays the results in a table.
 }

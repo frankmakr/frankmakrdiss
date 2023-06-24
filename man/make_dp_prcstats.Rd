@@ -7,18 +7,23 @@
 make_dp_prcstats(y, y_rep_mat, tikzdevice = FALSE)
 }
 \arguments{
-\item{y}{A vector containing the sample replications}
+\item{y}{A numeric vector containing the sample replications}
 
-\item{y_rep_mat}{A draws matrix containing the population replications}
+\item{y_rep_mat}{A \code{draws_matrix} containing the population replications}
 
-\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+\item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
-The ouput will be a data frame in the format for
-using the corresponding \code{plot_dp_prcstats} function
+A data frame in the format for
+using the corresponding \code{plot_dp_prcstats()} function
 }
 \description{
-\code{make_dp_prcstats} prepares the data
-in the format for the function \code{plot_dp_prcstats}.
+\code{make_dp_prcstats()} prepares the data
+in the format for the function \code{plot_dp_prcstats()}.
+}
+\details{
+A \code{draws_matrix} is a numeric matrix
+in which the rows are posterior draws
+and the columns are variables.
 }

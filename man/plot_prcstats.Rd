@@ -11,7 +11,7 @@ plot_prcstats(prcstats)
 \code{make_prcstats}}
 }
 \value{
-The output will be a ggplot2 graph
+A \code{ggplot2} graph
 }
 \description{
 \code{plot_prcstats} plots data

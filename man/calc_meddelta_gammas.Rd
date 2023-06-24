@@ -7,12 +7,17 @@
 calc_meddelta_gammas(draws_mat)
 }
 \arguments{
-\item{draws_mat}{A draws matrix containing the effects}
+\item{draws_mat}{A \code{draws_matrix} containing the effects}
 }
 \value{
-The output will be a draws matrix with median centered effects
+A \code{draws_matrix} with median centered effects
 }
 \description{
-\code{calc_meddelta_gammas} centers the effects from a draws matrix
+\code{calc_meddelta_gammas()} centers the effects from a \code{draws_matrix}
 at the median
+}
+\details{
+A \code{draws_matrix} is a numeric matrix
+in which the rows are posterior draws
+and the columns are variables.
 }

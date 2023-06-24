@@ -7,30 +7,36 @@
 calc_semci(data, sd, rel, se0 = 2.8, p_ci = NA, dist = "none", ...)
 }
 \arguments{
-\item{data}{A vector containing the measured values}
+\item{data}{A numeric vector containing the measured values}
 
-\item{sd}{A vector of standard deviations of measurement scales.}
+\item{sd}{A numeric vector of standard deviations of measurement scales}
 
-\item{rel}{A vector of reliability coefficients of measurement scales.}
+\item{rel}{A numeric vector of reliability coefficients of measurement scales}
 
 \item{se0}{The number of standard errors from 0 which are regarded
-as the critical value for the confidence interval}
+as the critical value for the confidence interval
+which defaults to \code{se0 = 2.8}}
 
-\item{p_ci}{The confidence niveau in percent}
+\item{p_ci}{The confidence niveau in percent
+which defaults to `p_ci = NA'}
 
 \item{dist}{One of \code{"normal"}, \code{"t"}, or \code{"none"}}
 
 \item{...}{The number of degrees of freedom for the student t distribution}
 }
 \value{
-The output will be a data.frame containing the inputs,
+A data.frame containing the inputs,
 the standard error of measurement, and the lower and upper bounds
 of the confidence interval
 }
 \description{
-\code{calc_semci} returns the standard error of measurement
+\code{calc_semci()} returns the standard error of measurement
 from a given reliability and the corresponding standard deviation.
 The confidence intervals are calculated using
-a normal or a student t distribution
+a normal or a student t distribution,
 or according to the Tschebyschow inequality for an unknown distribution.
+}
+\details{
+One of the arguments \code{se0} or \code{p_ci} must be set to a value.
+The other must be set to \code{NA}.
 }

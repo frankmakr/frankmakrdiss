@@ -27,7 +27,7 @@ A data frame with 1,465 rows and 7 columns.
 in alphabetical order
 or 17 = living outside from Germany}
 \item{studstatus}{Student status used in the FernUniversität
-official statistics (\link[=source]{Berichtswesen, 2022a, 2022b})}
+official statistics (Berichtswesen, 2022a, 2022b)}
 \item{noexpert}{Knowledge of a theory of psychological sense of community
 coded as 0 = Knowledge, 1 = No knowledge}
 \item{numcomm}{The number of communities the person mentioned}

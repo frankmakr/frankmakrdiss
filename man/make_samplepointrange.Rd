@@ -11,14 +11,14 @@ make_samplepointrange(sample_simlist, population_simlist, probs = 0.87)
 
 \item{population_simlist}{A list containing the population replications}
 
-\item{probs}{The probability of the highest density region,
+\item{probs}{The probability of the highest density region
 which defaults to \code{probs = 0.87}}
 }
 \value{
-The ouput will be a data frame in the format for
-using the corresponding \code{plot_samplepointrange} function
+A data frame in the format for
+using the corresponding \code{plot_samplepointrange()} function
 }
 \description{
-\code{make_samplepointrange} prepares the data
-in the format for the function \code{plot_samplepointrange}.
+\code{make_samplepointrange()} prepares the data
+in the format for the function \code{plot_samplepointrange()}.
 }

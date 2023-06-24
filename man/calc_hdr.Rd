@@ -7,15 +7,15 @@
 calc_hdr(vec_x, probs = c(0.5, 0.87, 0.99))
 }
 \arguments{
-\item{vec_x}{A numeric vector containing the posterior samples.}
+\item{vec_x}{A numeric vector containing the posterior samples}
 
-\item{probs}{A vector with the probabilities for the credible intervals.
-The default calculates the 50\%, 87\%, and 99\% HDR.}
+\item{probs}{A numeric vector with the probabilities for the credible intervals
+which defaults to \code{probs = c(0.50, 0.87, 0.99)}}
 }
 \value{
-The output will be a matrix containing the credible intervals.
+A named numeric matrix containing the credible intervals
 }
 \description{
-\code{calc_hdr} calculates the Highest Density Region (HDR)
-from a vector containing posterior samples
+\code{calc_hdr()} calculates the highest density region (HDR)
+from a numeric vector containing posterior samples
 }

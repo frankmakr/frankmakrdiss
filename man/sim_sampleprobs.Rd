@@ -9,10 +9,10 @@ sim_sampleprobs(n, probs)
 \arguments{
 \item{n}{The sample size}
 
-\item{probs}{A vector containing the probabilities}
+\item{probs}{A numeric vector containing the probabilities}
 }
 \value{
-A matrix containing the sample probabilities
+A numeric matrix containing the sample probabilities
 }
 \description{
 Utility function

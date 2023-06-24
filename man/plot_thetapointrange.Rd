@@ -10,11 +10,11 @@ plot_thetapointrange(thetapointrange, tikzdevice = FALSE)
 \item{thetapointrange}{A data frame returned from the function
 \code{make_thetapointrange}}
 
-\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+\item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
-The output will be a ggplot2 graph
+A \code{ggplot2} graph
 }
 \description{
 \code{plot_thetapointrange} plots data

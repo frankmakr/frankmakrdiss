@@ -11,7 +11,7 @@ plot_prcjitter(prcjitter)
 \code{make_prcjitter}}
 }
 \value{
-The output will be a ggplot2 graph
+A \code{ggplot2} graph
 }
 \description{
 \code{plot_prcjitter} plots data

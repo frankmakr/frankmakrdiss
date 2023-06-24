@@ -18,12 +18,17 @@ calc_drawsoverlap(draws_mat)
 \item{draws_mat}{A \code{draws_matrix}}
 }
 \value{
-A n x n matrix
+A n x n numeric matrix
 }
 \description{
-\code{calc_drawsoverlap} calculates the
+\code{calc_drawsoverlap()} calculates the
 generalized distribution overlap according to Weitzman (1970)
-for a \code{draws_matrix}
+for a \code{draws_matrix}.
+}
+\details{
+A \code{draws_matrix} is a numeric matrix
+in which the rows are posterior draws
+and the columns are variables.
 }
 \references{
 Al-Saleh, M. F., & Samawi, H. M. (2007).

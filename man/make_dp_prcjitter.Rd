@@ -7,15 +7,20 @@
 make_dp_prcjitter(y, y_rep_mat)
 }
 \arguments{
-\item{y}{A vector containing the sample replications}
+\item{y}{A numeric vector containing the sample replications}
 
-\item{y_rep_mat}{A draws matrix containing the population replications}
+\item{y_rep_mat}{A \code{draws_matrix} containing the population replications}
 }
 \value{
-The ouput will be a data frame in the format for
-using the corresponding \code{plot_prcjitter} function
+A data frame in the format for
+using the corresponding \code{plot_prcjitter()} function
 }
 \description{
-\code{make_dp_prcjitter} prepares the data
-in the format for the function \code{plot_dp_prcjitter}.
+\code{make_dp_prcjitter()} prepares the data
+in the format for the function \code{plot_dp_prcjitter()}.
+}
+\details{
+A \code{draws_matrix} is a numeric matrix
+in which the rows are posterior draws
+and the columns are variables.
 }

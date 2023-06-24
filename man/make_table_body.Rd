@@ -16,7 +16,7 @@ make_table_body(
 \item{data}{A named matrix or data.frame containing the table data}
 
 \item{space.after}{A numeric vector or single number
-indicating the number of rows after which row additional space is inserted}
+indicating the number of rows after which additional space is inserted}
 
 \item{digits}{The number of digits to be displayed in the table}
 
@@ -28,6 +28,6 @@ indicating the number of rows after which row additional space is inserted}
 The LaTeX table body
 }
 \description{
-\code{make_table_body} strips the table body
-from a \code{knitr::kable} table
+\code{make_table_body()} strips the table body
+from a \code{knitr::kable()} table
 }

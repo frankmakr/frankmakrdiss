@@ -12,24 +12,28 @@ make_sigmapointrange(
 )
 }
 \arguments{
-\item{draws_mat_1}{A draws matrix containing the
+\item{draws_mat_1}{A \code{draws_matrix} containing the
 superpopulation standard deviation from the unadjusted model}
 
-\item{draws_mat_2}{A draws matrix containing the
+\item{draws_mat_2}{A \code{draws_matrix} containing the
 superpopulation standard deviation from the adjusted model}
 
-\item{probs}{A numeric value representing
-the probability for the highest density region,
+\item{probs}{The probability for the highest density region
 which defaults to \code{probs = 0.87}}
 
-\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+\item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
-The ouput will be a data frame in the format for
-using the corresponding \code{plot_sigmapointrange} function
+A data frame in the format for
+using the corresponding \code{plot_sigmapointrange()} function
 }
 \description{
-\code{make_sigmapointrange} prepares the data
-in the format for the function \code{plot_sigmapointrange}.
+\code{make_sigmapointrange()} prepares the data
+in the format for the function \code{plot_sigmapointrange()}.
+}
+\details{
+A \code{draws_matrix} is a numeric matrix
+in which the rows are posterior draws
+and the columns are variables.
 }

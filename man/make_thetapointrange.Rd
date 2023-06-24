@@ -13,24 +13,29 @@ make_thetapointrange(
 )
 }
 \arguments{
-\item{draws_mat}{A draws matrix containing the
+\item{draws_mat}{A \code{draws_matrix} containing the
 community probabilities}
 
-\item{probs}{The probability for the Highest Density Region
+\item{probs}{The probability for the highest density region
 which defaults to \code{probs = 0.87}}
 
 \item{n_group_tilde}{Expected group size in the future sample}
 
 \item{n_sample_tilde}{Expected size of the future sample}
 
-\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+\item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
-The output will be a data frame in the format for
-using the corresponding \code{plot_thetapointrange} function
+A data frame in the format for
+using the corresponding \code{plot_thetapointrange()} function
 }
 \description{
-\code{make_thetapointrange} prepares the data
-in the format for the function \code{plot_thetapointrange}.
+\code{make_thetapointrange()} prepares the data
+in the format for the function \code{plot_thetapointrange()}.
+}
+\details{
+A \code{draws_matrix} is a numeric matrix
+in which the rows are posterior draws
+and the columns are variables.
 }

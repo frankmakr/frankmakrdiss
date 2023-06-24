@@ -7,19 +7,19 @@
 transform_procrustes(x_mat, y_mat, dilation = FALSE)
 }
 \arguments{
-\item{x_mat}{A numerical matirix representing the MDS target configuration}
+\item{x_mat}{A numeric matrix representing the MDS target configuration}
 
-\item{y_mat}{A numerical matrix representing the MDS configuration
+\item{y_mat}{A numeric matrix representing the MDS configuration
 to be compared}
 
 \item{dilation}{A logical indicator for implementing optional scaling
 which defaults to \code{dilation = FALSE}}
 }
 \value{
-A numerical matrix representing the transformed MDS configuration
+A numeric matrix representing the transformed MDS configuration
 }
 \description{
-\code{transform_procrustes} calculates the transformation of a
+\code{transform_procrustes()} calculates the transformation of a
 multidimensional scaling configuration Y
 to a target configuration X.
 }

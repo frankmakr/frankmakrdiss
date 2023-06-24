@@ -22,13 +22,17 @@ community of shared values}
 community of purpose}
 \item{value_x_purpose}{Interaction variable}
 \item{chavis_[1-25]}{The grade to which the test item [1-25] from
-Chavis et al. (2008) is necessary to characterize sense of community}
+Chavis et al. (2008)
+is necessary to characterize sense of community}
 \item{omoto_[1-18]}{The grade to which the test item [1-18] from
-Omoto and Snyder (2010) is necessary to characterize sense of community}
+Omoto and Snyder (2010)
+is necessary to characterize sense of community}
 \item{jason_[1-9]}{The grade to which the test item [1-9] from
-Jason et al. (2015) is necessary to characterize sense of community}
+Jason et al. (2015)
+is necessary to characterize sense of community}
 \item{halamova_[1-22]}{The grade to which the test item [1-22] from
-Halamová et al. (2018) is necessary to characterize sense of community}
+Halamová et al. (2018)
+is necessary to characterize sense of community}
 }
 }
 }

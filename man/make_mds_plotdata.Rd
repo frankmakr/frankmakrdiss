@@ -7,17 +7,22 @@
 make_mds_plotdata(draws_mat_list, target_mat)
 }
 \arguments{
-\item{draws_mat_list}{A named list of draws matrices
+\item{draws_mat_list}{A named list of \code{draws_matrix} objects
 containing the MDS configurations}
 
-\item{target_mat}{A draws matrix
+\item{target_mat}{A \code{draws_matrix}
 containing the target configuration for the procrustes transformation}
 }
 \value{
-The ouput will be a data frame in the format for
-using the corresponding \code{plot_dp_mds} function
+A data frame in the format for
+using the corresponding \code{plot_dp_mds()} function
 }
 \description{
-\code{make_mds_plotdata} prepares the data
-in the format for the function \code{plot_dp_mds}.
+\code{make_mds_plotdata()} prepares the data
+in the format for the function \code{plot_dp_mds()}.
+}
+\details{
+A \code{draws_matrix} is a numeric matrix
+in which the rows are posterior draws
+and the columns are variables.
 }

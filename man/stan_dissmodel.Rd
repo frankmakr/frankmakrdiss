@@ -10,15 +10,18 @@ stan_dissmodel(model_number, stan_data, ...)
 \item{model_number}{A character string containing the model number
 from the doctoral dissertation (i.e. "12.2")}
 
-\item{stan_data}{The data used for the model as a named list}
+\item{stan_data}{The data used for the model as a named list
+with the names corresponding to the variables in model description
+from the doctoral dissertation}
 
-\item{...}{Other arguments for \code{model()} or \code{sample()}}
+\item{...}{Other arguments for \code{cmdstanr::cmdstan_model()} or
+\code{cmdstanr::cmdstan_sample()}}
 }
 \value{
-The function returns a stan fit object.
+A \code{CmdStanMCMC} object
 }
 \description{
-\code{stan_dissmodel} fits the stan models from the doctoral dissertation.
+\code{stan_dissmodel()} fits the Stan models from the doctoral dissertation.
 }
 \details{
 The compiled model is stored in the R user cache

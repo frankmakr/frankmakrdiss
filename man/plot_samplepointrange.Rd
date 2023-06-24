@@ -10,11 +10,11 @@ plot_samplepointrange(samplepointrange, tikzdevice = FALSE)
 \item{samplepointrange}{A data frame returned from the function
 \code{make_samplepointrange}}
 
-\item{tikzdevice}{Logical indicator for preparing the text for tikzDevice
+\item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}
 }
 \value{
-The output will be a ggplot2 graph
+A \code{ggplot2} graph
 }
 \description{
 \code{plot_samplepointrange} plots data
