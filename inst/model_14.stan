@@ -1,9 +1,26 @@
 /**
- * Model-based clustering with dissimilarities: A Bayesian approach
- * (Oh & Raftery, 2007)
+ * This model is based on Oh and Raftery (2007).
+ * Key differences are:
+ * 1. Energy distance (Székely & Rizzo, 2013) normalized for Max = 10.
+ * 1. MDS identification through parameter regularization (Gronau & Lee, 2020).
+ * 2. True distances follow an inverse gamma distribution
+ *    with upper truncation point at 10.
+ * 3. For each observed distance
+ *    one scaling parameter of the inverse gamma distribution is estimated.
+ * 4. Dirichlet process in stick-breaking representation
+ *    for modeling clusters.
+ * 5. Multivariate student-t distribution as finite mixture components.
+ *
+ * Fur the purpose of consistent comparisons and visualizations
+ * the MDS configurations are restricted to two dimensions
+ * and are procrustes transformed
+ * with the classical MDS algorithm (Torgerson, 1952) as target configuration.
+ *
+ * The code is optimised with Stan threading
  */
 
 functions {
+  // Classical MDS algorithm (Torgerson, 1952)
   matrix calc_mds_config(int N, int D, matrix Y) {
     real inv_N = inv(N);
     matrix[N, N] Z = identity_matrix(N) - inv_N;
@@ -19,19 +36,7 @@ functions {
     return mds_config;
   }
 
-  matrix calc_cov_mat(int N, int D, matrix X) {
-    real inv_N = inv(N);
-    row_vector[D] col_means_X;
-    matrix[N, D] X_c;
-    matrix[D, D] cov_mat_X;
-    for (d in 1:D) {
-      col_means_X[d] = mean(X[, d]);
-    }
-    X_c = X - rep_matrix(col_means_X, N);
-    cov_mat_X = inv_N * crossprod(X_c);
-    return cov_mat_X;
-  }
-
+  // Procrustes transformation (Borg, 2005)
   matrix rotate_procrustes(int N, int D, matrix X, matrix Y) {
     real inv_N = inv(N);
     vector[N] ones_vec = ones_vector(N);
@@ -47,6 +52,9 @@ functions {
     return Y_hat;
   }
 
+  // Stick-breaking representation of Dirichlet process
+  // Function based on Arthur Luis code
+  // https://github.com/luiarthur/TuringBnpBenchmarks/blob/master/src/dp-gmm/scripts/dp_sb_gmm_stan.py
   vector calc_dp_probs(int C, vector stick_pieces) {
     vector[C - 1] cumprod1m_stick_pieces
                     = exp(cumulative_sum(log1m(stick_pieces)));
@@ -58,12 +66,14 @@ functions {
     return dp_probs;
   }
 
+  // Stan threading function
   real partial_sum(array[] real Y_slice,
                    int start, int end,
                    array[] row_vector mds_est,
                    vector Delta_psi,
                    real U, int N_choose_2, int N) {
-    vector[N_choose_2] Delta_lower_tri; // Estimated distances
+    // Estimated distances
+    vector[N_choose_2] Delta_lower_tri;
     int index_mds_delta = 1;
     for (j in 1:(N - 1)) {
       for (i in (j + 1):N) {
@@ -71,6 +81,8 @@ functions {
         index_mds_delta += 1;
       }
     }
+    // Mean and scale parameterization for inverse gamma distribution
+    // Scale has the upper bound of 10
     vector[N_choose_2] inv_Delta_psi = inv(Delta_psi);
     array[2] vector[N_choose_2] Delta_shape_inv_gamma
       = { inv_Delta_psi + 2, Delta_lower_tri .* (inv_Delta_psi + 1) };
@@ -82,6 +94,7 @@ functions {
                 Delta_shape_inv_gamma[2][start:end]);
   }
 
+  // Brute force RNG for truncated inverse gamma distribution
   vector trunc_inv_gamma_rng(vector mu, vector psi, real U) {
     int N = num_elements(mu);
     vector[N] inv_psi = inv(psi);
@@ -141,15 +154,8 @@ transformed data {
   }
 
   // Classical multidimensional scaling (Torgerson, 1952)
+  // as target configuration
   matrix[N, D] mds_obs_mat = calc_mds_config(N, D, Y); 
-  cov_matrix[D] mds_obs_cov_mat = calc_cov_mat(N, D, mds_obs_mat);
-  cholesky_factor_cov[D] mds_obs_L = cholesky_decompose(mds_obs_cov_mat);
-  array[N] row_vector[D] mds_obs_array;
-  {
-    for (n in 1:N) {
-      mds_obs_array[n] = mds_obs_mat[n];
-    }
-  }
 
   // Dirichlet process
   // Dirichlet is uniform over the simplex when concentration parameter is 1
@@ -166,21 +172,21 @@ parameters {
   array[n_mds_zero] real mds_est_1;
   array[D] real<lower = 0> mds_est_2;
   array[n_mds_unconstrained] real mds_est_3;
-  vector<lower = 0>[N_choose_2] Delta_psi;   // True distance noise parameter
+  vector<lower = 0>[N_choose_2] Delta_psi; // True distance noise parameter
 
   // Dirichlet process
   vector<lower = 0, upper = 1>[C - 1] dp_lambda_raw; // Mixing proportions
   // Components with ordered constraint for identifiability
   ordered[C] dp_mu_raw_1;
   vector[C] dp_mu_raw_2;
-  real<lower = 1> dp_nu;
-  vector<lower = 0>[D] dp_sigma;
-  cholesky_factor_corr[D] dp_L;                      // Components correlations
+  real<lower = 1> dp_nu;         // Components degrees of freedom
+  vector<lower = 0>[D] dp_sigma; // Components variance
+  cholesky_factor_corr[D] dp_L;  // Components correlations
 }
 
 transformed parameters {
   // Mulidimensional scaling
-  array[N] row_vector[D] mds_est;     // Estimated MDS configuration
+  array[N] row_vector[D] mds_est; // Estimated MDS configuration
   {
     array[N, D] real mds_est_array;
     int index_mds_zeros = 1;
@@ -193,6 +199,7 @@ transformed parameters {
       index_mds_zeros += d;
       index_mds_reals += N - d - 1;
     }
+    // Procrustes transformation with classical MDS as target configuration
     mds_est_mat = rotate_procrustes(N, D, mds_obs_mat, to_matrix(mds_est_array));
     for (n in 1:N) {
       mds_est[n] = mds_est_mat[n];
@@ -200,13 +207,16 @@ transformed parameters {
   }
 
   // Dirichlet process
+  // Component probabilities
   vector[C] dp_lambda = calc_dp_probs(C, dp_lambda_raw);
+  // Building array of location vectors
   array[C] row_vector[D] dp_mu;
   {
     for (c in 1:C) {
       dp_mu[c] = [ dp_mu_raw_1[c], dp_mu_raw_2[c] ];
     }
   }
+  // Precalculation of Cholesky decomposition of covariance matrix
   matrix[D, D] dp_sigma_L = diag_pre_multiply(dp_sigma, dp_L);
 }
 
@@ -219,8 +229,7 @@ model {
   Delta_psi ~ inv_gamma(4, 1);
   
   // Observational model
-  // Scale has the upper bound of 10
-  // Mean and scale parameterization for gamma distribution
+  // Stan threading
   target += reduce_sum_static(partial_sum, Y_lower_tri,
                        grainsize,
                        mds_est, Delta_psi, U, N_choose_2, N);
@@ -249,9 +258,11 @@ model {
 }
 
 generated quantities {
+  // Components covariance matrix
   matrix[D, D] dp_Sigma = multiply_lower_tri_self_transpose(dp_sigma_L);
 
   // Posterior retrodictive check
+  // Cluster probabilities replicated
   array[N_choose_2] real Y_lower_tri_rep;
   {
     array[N] int mix_component;
@@ -274,7 +285,7 @@ generated quantities {
                                     Delta_lower_tri_rep, Delta_psi, U));
   }
 
-  // Cluster densities
+  // Log cluster densities
   array[N, C] real log_cluster_density;
   {
     for (n in 1:N) {

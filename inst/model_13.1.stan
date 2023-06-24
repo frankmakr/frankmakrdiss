@@ -1,5 +1,5 @@
 /**
- * An analysis of variance in a multilevel framework:
+ * An analysis of variance in a multilevel framework (Gelman, 2005):
  * The data is on the context x person level.
  * The finite-population standard deviation
  * represents the variation in the data.
