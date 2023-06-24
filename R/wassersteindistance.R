@@ -30,14 +30,20 @@ calc_wasserstein <- function(x, y, type = "energy") {
 #' Wasserstein Distance
 #'
 #' @description
-#' `calc_drawswasserstein` calculates the
-#' L1 or L2 Wasserstein distance or the Energy distance
-#' for all pairwise combinations of distributions in a `draws_matrix`
+#' `calc_drawswasserstein()` calculates the
+#' L1 or L2 Wasserstein distance, or the Energy distance
+#' for all pairwise combinations of distributions in a `draws_matrix`.
 #'
 #' @param draws_mat A `draws_matrix` containing the distributions
-#' @param ... The type of distance calculated,
+#' @param ... The type of distance calculated
 #'   which must be one of `"l1"`, `"l2"` or `"energy"`
-#' @return The output will be a distance matrix
+#' @return A n x n numeric matrix
+#'   with n equals to the column number of `draws_mat` 
+#' @details
+#' A `draws_matrix` is a numerical matrix
+#' in which the rows are posterior draws
+#' and the columns are variables.
+#' @export
 calc_drawswasserstein <- function(draws_mat, ...) {
   n_col <- ncol(draws_mat)
   dist_mat <- matrix(0, n_col, n_col)

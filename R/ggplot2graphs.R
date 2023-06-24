@@ -34,9 +34,9 @@ theme_frankmakrdiss <- function(...) {
 #'
 #' @param samplepointrange A data frame returned from the function
 #'   `make_samplepointrange`
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The output will be a ggplot2 graph
+#' @return A `ggplot2` graph
 #' @export
 plot_samplepointrange <- function(samplepointrange, tikzdevice = FALSE) {
   sampleplot <- ggplot2::ggplot(samplepointrange,
@@ -84,7 +84,7 @@ plot_samplepointrange <- function(samplepointrange, tikzdevice = FALSE) {
 #'
 #' @param prcjitter A data frame returned from the function
 #'   `make_prcjitter`
-#' @return The output will be a ggplot2 graph
+#' @inherit plot_samplepointrange return
 #' @export
 plot_prcjitter <- function(prcjitter) {
   ggplot2::ggplot(prcjitter, ggplot2::aes(x = .data$x, y = .data$y_rep)) +
@@ -120,7 +120,7 @@ plot_prcjitter <- function(prcjitter) {
 #'
 #' @param prcstats A data frame returned from the function
 #'   `make_prcstats`
-#' @return The output will be a ggplot2 graph
+#' @inherit plot_samplepointrange return
 #' @export
 plot_prcstats <- function(prcstats) {
   ggplot2::ggplot(prcstats, ggplot2::aes(x = .data$x, y = .data$y)) +
@@ -159,9 +159,9 @@ plot_prcstats <- function(prcstats) {
 #'
 #' @param thetapointrange A data frame returned from the function
 #'   `make_thetapointrange`
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The output will be a ggplot2 graph
+#' @inherit plot_samplepointrange return
 #' @export
 plot_thetapointrange <- function(thetapointrange, tikzdevice = FALSE) {
   thetaplot <- ggplot2::ggplot(thetapointrange,
@@ -201,9 +201,9 @@ plot_thetapointrange <- function(thetapointrange, tikzdevice = FALSE) {
 #'
 #' @param sigmapointrange A data frame returned from the function
 #'   `make_sigmapointrange`
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The output will be a ggplot2 graph
+#' @inherit plot_samplepointrange return
 #' @export
 plot_sigmapointrange <- function(sigmapointrange, tikzdevice = FALSE) {
   sigmaplot <- ggplot2::ggplot(sigmapointrange,
@@ -243,9 +243,9 @@ plot_sigmapointrange <- function(sigmapointrange, tikzdevice = FALSE) {
 #'
 #' @param gammapointrange A data frame returned from the function
 #'   `make_gammapointrange`
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The output will be a ggplot2 graph
+#' @inherit plot_samplepointrange return
 #' @export
 plot_gammapointrange <- function(gammapointrange, tikzdevice = FALSE) {
   gammaplot <- ggplot2::ggplot(gammapointrange,
@@ -287,9 +287,9 @@ plot_gammapointrange <- function(gammapointrange, tikzdevice = FALSE) {
 #'
 #' @param compjitter A data frame returned from the function
 #'   `make_compjitter`
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The output will be a ggplot2 graph
+#' @inherit plot_samplepointrange return
 #' @export
 plot_compjitter <- function(compjitter, tikzdevice = FALSE) {
   compplot <- ggplot2::ggplot(compjitter,
@@ -335,7 +335,7 @@ plot_compjitter <- function(compjitter, tikzdevice = FALSE) {
 #'
 #' @param prcjitter A data frame returned from the function
 #'   `make_dp_prcjitter`
-#' @return The output will be a ggplot2 graph
+#' @inherit plot_samplepointrange return
 #' @export
 plot_dp_prcjitter <- function(prcjitter) {
   ggplot2::ggplot(prcjitter, ggplot2::aes(x = .data$x, y = .data$y_rep)) +
@@ -371,7 +371,7 @@ plot_dp_prcjitter <- function(prcjitter) {
 #'
 #' @param prcstats A data frame returned from the function
 #'   `make_dp_prcstats`
-#' @return The output will be a ggplot2 graph
+#' @inherit plot_samplepointrange return
 #' @export
 plot_dp_prcstats <- function(prcstats) {
   ggplot2::ggplot(prcstats, ggplot2::aes(x = .data$x, y = .data$y)) +
@@ -402,9 +402,9 @@ plot_dp_prcstats <- function(prcstats) {
 #'
 #' @param lambdapointrange A data frame returned from the function
 #'   `make_lambdapointrange`
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The output will be a ggplot2 graph
+#' @inherit plot_samplepointrange return
 #' @export
 plot_lambdapointrange <- function(lambdapointrange, tikzdevice = FALSE) {
 lambdaplot <- ggplot2::ggplot(lambdapointrange,
@@ -443,9 +443,9 @@ lambdaplot <- ggplot2::ggplot(lambdapointrange,
 #'
 #' @param lcddata A data frame returned from the function
 #'   `make_logclusterdensities`
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The output will be a ggplot2 graph
+#' @inherit plot_samplepointrange return
 #' @export
 plot_logclusterdensities <- function(lcddata, tikzdevice = FALSE) {
   lcdplot <- ggplot2::ggplot(lcddata, ggplot2::aes(x = .data$x, y = .data$y)) +
@@ -485,10 +485,10 @@ plot_logclusterdensities <- function(lcddata, tikzdevice = FALSE) {
 #'
 #' @param mds_plotdata A data frame returned from the function
 #'   `make_mds_plotdata`
-#' @param mds_color_groups A numerical vector of `length= 4`
+#' @param mds_color_groups A numeric vector of `length= 4`
 #'   containing the numbers of the communities in `conval_comms`
 #'   to be highlighted
-#' @return The output will be a ggplot2 graph
+#' @inherit plot_samplepointrange return
 #' @export
 plot_mds <- function(mds_plotdata, mds_color_groups) {
   ggplot2::ggplot(mds_plotdata[[1]], ggplot2::aes(x = .data$x, y = .data$y)) +

@@ -2,9 +2,9 @@
 #' 
 #' Utility function
 #' 
-#' @param sd A vector of standard deviations of measurement scales.
-#' @param rel A vector of reliability coefficients of measurement scales.
-#' @return The output will be a numeric vector of equal length to input. 
+#' @param sd A numeric vector of standard deviations of measurement scales
+#' @param rel A numeric vector of reliability coefficients of measurement scales
+#' @return A numeric vector of equal length to input 
 #' @noRd
 calc_sem <- function(sd, rel) {
   sem <- sd * sqrt(1 - rel)
@@ -14,23 +14,28 @@ calc_sem <- function(sd, rel) {
 #' Standard Error of Measurement and Confidence Intervals
 #'
 #' @description
-#' `calc_semci` returns the standard error of measurement
+#' `calc_semci()` returns the standard error of measurement
 #' from a given reliability and the corresponding standard deviation.
 #' The confidence intervals are calculated using
-#' a normal or a student t distribution
+#' a normal or a student t distribution,
 #' or according to the Tschebyschow inequality for an unknown distribution.
 #'
-#' @param data A vector containing the measured values
-#' @param sd A vector of standard deviations of measurement scales.
-#' @param rel A vector of reliability coefficients of measurement scales.
+#' @param data A numeric vector containing the measured values
+#' @param sd A numeric vector of standard deviations of measurement scales
+#' @param rel A numeric vector of reliability coefficients of measurement scales
 #' @param se0 The number of standard errors from 0 which are regarded
 #'   as the critical value for the confidence interval
+#'   which defaults to `se0 = 2.8`
 #' @param p_ci The confidence niveau in percent
+#'   which defaults to `p_ci = NA'
 #' @param dist One of `"normal"`, `"t"`, or `"none"`
 #' @param ... The number of degrees of freedom for the student t distribution
-#' @return The output will be a data.frame containing the inputs,
+#' @return A data.frame containing the inputs,
 #'   the standard error of measurement, and the lower and upper bounds
 #'   of the confidence interval
+#' @details One of the arguments `se0` or `p_ci` must be set to a value.
+#'  The other must be set to `NA`.
+#' @export
 calc_semci <- function(data, sd, rel,
                        se0 = 2.8,
                        p_ci = NA,

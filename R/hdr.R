@@ -1,12 +1,14 @@
 #' Calculate the Highest Density Region
 #'
-#' `calc_hdr` calculates the Highest Density Region (HDR)
-#' from a vector containing posterior samples
+#' @description
+#' `calc_hdr()` calculates the highest density region (HDR)
+#' from a numeric vector containing posterior samples
 #'
-#' @param vec_x A numeric vector containing the posterior samples.
-#' @param probs A vector with the probabilities for the credible intervals.
-#'   The default calculates the 50%, 87%, and 99% HDR.
-#' @return The output will be a matrix containing the credible intervals.
+#' @param vec_x A numeric vector containing the posterior samples
+#' @param probs A numeric vector with the probabilities for the credible intervals
+#'   which defaults to `probs = c(0.50, 0.87, 0.99)`
+#' @return A named numeric matrix containing the credible intervals
+#' @export
 calc_hdr <- function(vec_x, probs = c(0.50, 0.87, 0.99)) {
   n <- length(vec_x)
   vec_x_ord <- sort.int(vec_x, method='quick')

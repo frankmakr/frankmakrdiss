@@ -1,18 +1,21 @@
 #' Fit Doctoral Dissertation's Stan Models
 #'
 #' @description
-#' `stan_dissmodel` fits the stan models from the doctoral dissertation.
+#' `stan_dissmodel()` fits the Stan models from the doctoral dissertation.
 #'
 #' @param model_number A character string containing the model number
 #'   from the doctoral dissertation (i.e. "12.2")
 #' @param stan_data The data used for the model as a named list 
-#' @param ... Other arguments for `model()` or `sample()`
+#'   with the names corresponding to the variables in model description
+#'   from the doctoral dissertation
+#' @param ... Other arguments for `cmdstanr::cmdstan_model()` or
+#'   `cmdstanr::cmdstan_sample()`
 #' 
 #' @details
 #' The compiled model is stored in the R user cache
 #' `tools::R_user_dir(package = "frankmakrdiss", which = "cache")`.
 #'
-#' @return The function returns a stan fit object.
+#' @return A `CmdStanMCMC` object
 #' @export
 stan_dissmodel <- function(model_number, stan_data, ...) {
   args <- list(...)

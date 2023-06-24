@@ -1,12 +1,12 @@
 #' Pairwise Relative AIC Comparison
 #'
 #' @description
-#' `tabulate_paic` calculates the probability
+#' `tabulate_paic()` calculates the probability
 #' that one model minimizes the information loss over another model
 #' and displays the results in a table.
 #' 
 #' @param data A numeric vector with AIC values
-#' @return A matrix with pairwise comparisons
+#' @return A numeric matrix with pairwise comparisons
 #'   containing the probability minimizing the information loss
 #' @export
 tabulate_paic <- function(data) {

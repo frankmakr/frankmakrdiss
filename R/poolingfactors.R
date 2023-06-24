@@ -1,14 +1,19 @@
 #' Pooling Factors for a Multilevel Model
 #'
-#' `calc_poolfac` calculates the pooling factors
+#' @description
+#' `calc_poolfac()` calculates the pooling factors
 #' according to Gelman and Pardoe (2006)
-#' from a cmdstanr fit object
+#' from a `CmdStanMCMC` object
 #'
-#' @param y A vector with the response variable
-#' @param draws A draws matrix with the relevant pooling parameters.
+#' @param y A numeric vector with the response variable
+#' @param draws_mat A `draws_matrix` with the relevant pooling parameters
 #' @param pars A character vector with the names of the relevant residuals
-#'   of the multilevel model.
-#' @return The output will be a vector containing the pooling factors.
+#'   of the multilevel model
+#' @return A named vector containing the pooling factors
+#' @details
+#' A `draws_matrix` is a numeric matrix
+#' in which the rows are posterior draws
+#' and the columns are variables.
 #' @source
 #' Gelman, A., & Pardoe, I. (2006).
 #' Bayesian measures of explained variance and pooling
@@ -17,15 +22,15 @@
 #' <https://doi.org/10.1198/004017005000000517>.
 calc_poolstats <- function(
                     y,
-                    draws,
+                    draws_mat,
                     pars = c("gamma", "delta", "y")
                     ) {
   n_pars <- length(pars)
-  n_draws <- nrow(draws)
+  n_draws <- nrow(draws_mat)
   draws_epsilon <- lapply(paste0("epsilon_", pars),
-    function(i) draws[, grep(i, colnames(draws))])
+    function(i) draws_mat[, grep(i, colnames(draws_mat))])
   draws_theta <- lapply(paste0(pars, "_raw")[-n_pars],
-    function(i) draws[, grep(i, colnames(draws))])
+    function(i) draws_mat[, grep(i, colnames(draws_mat))])
   e_v_theta <- vector(mode = "double", length = n_pars)
   e_v_theta[-n_pars] <- vapply(draws_theta, function(i)
     matrixStats::mean2(matrixStats::rowVars(i)), FUN.VALUE = n_pars - 1)

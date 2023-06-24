@@ -2,7 +2,7 @@
 #'
 #' Utility function
 #'
-#' @param x The argument `space.after` from `make_table_body`
+#' @param x The argument `space.after` from `make_table_body()`
 #' @param y A necessary dummy variable
 #' @noRd
 sep_after <- function(x, y = character()) {
@@ -15,12 +15,12 @@ sep_after <- function(x, y = character()) {
 #' LaTeX Tabular Body
 #'
 #' @description
-#' `make_table_body` strips the table body
-#' from a `knitr::kable` table
+#' `make_table_body()` strips the table body
+#' from a `knitr::kable()` table
 #' 
 #' @param data A named matrix or data.frame containing the table data
 #' @param space.after A numeric vector or single number
-#'   indicating the number of rows after which row additional space is inserted
+#'   indicating the number of rows after which additional space is inserted
 #' @param digits The number of digits to be displayed in the table
 #' @param cor.tab Is the table a correlation table
 #' @param row.names Does the data contain row.names

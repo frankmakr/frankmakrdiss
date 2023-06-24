@@ -9,8 +9,8 @@
 #' Utility function
 #'
 #' @param n The sample size
-#' @param probs A vector containing the probabilities
-#' @return A matrix containing the sample probabilities
+#' @param probs A numeric vector containing the probabilities
+#' @return A numeric matrix containing the sample probabilities
 sim_sampleprobs <- function(n, probs) {
   x <- stats::rmultinom(n, 1, probs)
   return(matrixStats::rowSums2(x) / n)
@@ -19,15 +19,15 @@ sim_sampleprobs <- function(n, probs) {
 #' Plot Data for Evaluating Sample Representativity
 #'
 #' @description
-#' `make_samplepointrange` prepares the data
-#' in the format for the function `plot_samplepointrange`.
+#' `make_samplepointrange()` prepares the data
+#' in the format for the function `plot_samplepointrange()`.
 #'
 #' @param sample_simlist A list containing the sample replications
 #' @param population_simlist A list containing the population replications
-#' @param probs The probability of the highest density region,
+#' @param probs The probability of the highest density region
 #'   which defaults to `probs = 0.87`
-#' @return The ouput will be a data frame in the format for
-#'   using the corresponding `plot_samplepointrange` function
+#' @return A data frame in the format for
+#'   using the corresponding `plot_samplepointrange()` function
 #' @export
 make_samplepointrange <- function(sample_simlist, population_simlist,
                                   probs = 0.87) {
@@ -70,7 +70,7 @@ make_samplepointrange <- function(sample_simlist, population_simlist,
 #'
 #' Utility function
 #'
-#' @param data A numerical vector
+#' @param data A numeric vector
 #' @param bx The breaking points
 #' @noRd
 count_bins <- function(data, bx) {
@@ -83,7 +83,7 @@ count_bins <- function(data, bx) {
 #'
 #' Utility function
 #'
-#' @param draws_mat The draws matrix `y_rep_mat`
+#' @param draws_mat The `draws_matrix` `y_rep_mat`
 #' @param bx The breaking points
 #' @noRd
 count_bins_iter <- function(draws_mat, bx) {
@@ -97,9 +97,9 @@ count_bins_iter <- function(draws_mat, bx) {
 #'
 #' Utility function
 #'
-#' @param counts_mat A matrix returned from `count_bins_iter`
+#' @param counts_mat A matrix returned from `count_bins_iter()`
 #' @param q_mat The row quantiles from a matrix returned from
-#'   `count_bins_iter`
+#'   `count_bins_iter()`
 #' @noRd
 qgroups_iter <- function(counts_mat, q_mat) {
   group_rows <- function(row) {
@@ -119,13 +119,17 @@ qgroups_iter <- function(counts_mat, q_mat) {
 #' Plot Data for a Posterior Retrodictive Check
 #'
 #' @description
-#' `make_prcjitter` prepares the data
-#' in the format for the function `plot_prcjitter`.
+#' `make_prcjitter()` prepares the data
+#' in the format for the function `plot_prcjitter()`.
 #'
-#' @param y A vector containing the sample replications
-#' @param y_rep_mat A draws matrix containing the population replications
-#' @return The ouput will be a data frame in the format for
-#'   using the corresponding `plot_prcjitter` function
+#' @param y A nnumeric vector containing the sample replications
+#' @param y_rep_mat A `draws_matrix` containing the population replications
+#' @return A data frame in the format for
+#'   using the corresponding `plot_prcjitter()` function
+#' @details
+#' A `draws_matrix` is a numeric matrix
+#' in which the rows are posterior draws
+#' and the columns are variables.
 #' @export
 make_prcjitter <- function(y, y_rep_mat) {
   bx <- seq(from = floor(min(y, y_rep_mat) * 100) / 100,
@@ -157,7 +161,7 @@ make_prcjitter <- function(y, y_rep_mat) {
 #'
 #' Utility function
 #'
-#' @param data A numerical vector or matrix
+#' @param data A numeric vector or matrix
 #' @noRd
 calc_prcteststat <- function(data) {
   if (is.vector(data) == TRUE) {
@@ -174,15 +178,16 @@ calc_prcteststat <- function(data) {
 #' Plot Data for a Posterior Retrodictive Check
 #'
 #' @description
-#' `make_prcstats` prepares the data
-#' in the format for the function `plot_prcstats`.
+#' `make_prcstats()` prepares the data
+#' in the format for the function `plot_prcstats()`.
 #'
-#' @param y A vector containing the sample replications
-#' @param y_rep_mat A draws matrix containing the population replications
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param y A numeric vector containing the sample replications
+#' @param y_rep_mat A `draws_matrix` containing the population replications
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The ouput will be a data frame in the format for
-#'   using the corresponding `plot_prcstats` function
+#' @return A data frame in the format for
+#'   using the corresponding `plot_prcstats()` function
+#' @inherit make_prcjitter details
 #' @export
 make_prcstats <- function(y, y_rep_mat, tikzdevice = FALSE) {
   stat_y <- calc_prcteststat(y)
@@ -232,19 +237,20 @@ make_prcstats <- function(y, y_rep_mat, tikzdevice = FALSE) {
 #' Plot data for community probabilities
 #'
 #' @description
-#' `make_thetapointrange` prepares the data
-#' in the format for the function `plot_thetapointrange`.
+#' `make_thetapointrange()` prepares the data
+#' in the format for the function `plot_thetapointrange()`.
 #'
-#' @param draws_mat A draws matrix containing the
+#' @param draws_mat A `draws_matrix` containing the
 #'   community probabilities
-#' @param probs The probability for the Highest Density Region
+#' @param probs The probability for the highest density region
 #'   which defaults to `probs = 0.87`
 #' @param n_group_tilde Expected group size in the future sample
 #' @param n_sample_tilde Expected size of the future sample
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The output will be a data frame in the format for
-#'   using the corresponding `plot_thetapointrange` function
+#' @inherit make_prcjitter details
+#' @return A data frame in the format for
+#'   using the corresponding `plot_thetapointrange()` function
 #' @export
 make_thetapointrange <- function(draws_mat,
                                  probs = 0.87,
@@ -293,20 +299,20 @@ make_thetapointrange <- function(draws_mat,
 #' Plot Data for Variance components
 #'
 #' @description
-#' `make_sigmapointrange` prepares the data
-#' in the format for the function `plot_sigmapointrange`.
+#' `make_sigmapointrange()` prepares the data
+#' in the format for the function `plot_sigmapointrange()`.
 #'
-#' @param draws_mat_1 A draws matrix containing the
+#' @param draws_mat_1 A `draws_matrix` containing the
 #'   superpopulation standard deviation from the unadjusted model
-#' @param draws_mat_2 A draws matrix containing the
+#' @param draws_mat_2 A `draws_matrix` containing the
 #'   superpopulation standard deviation from the adjusted model
-#' @param probs A numeric value representing
-#'   the probability for the highest density region,
+#' @param probs The probability for the highest density region
 #'   which defaults to `probs = 0.87`
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The ouput will be a data frame in the format for
-#'   using the corresponding `plot_sigmapointrange` function
+#' @inherit make_prcjitter details
+#' @return A data frame in the format for
+#'   using the corresponding `plot_sigmapointrange()` function
 #' @export
 make_sigmapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87,
                                  tikzdevice = FALSE) {
@@ -337,11 +343,12 @@ make_sigmapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87,
 #' Median Centered Effects
 #'
 #' @description
-#' `calc_meddelta_gammas` centers the effects from a draws matrix
+#' `calc_meddelta_gammas()` centers the effects from a `draws_matrix`
 #' at the median
 #'
-#' @param draws_mat A draws matrix containing the effects
-#' @return The output will be a draws matrix with median centered effects
+#' @param draws_mat A `draws_matrix` containing the effects
+#' @return A `draws_matrix` with median centered effects
+#' @inherit make_prcjitter details
 #' @export
 calc_meddelta_gammas <- function(draws_mat) {
   delta_mat <- draws_mat - matrixStats::rowMedians(draws_mat)
@@ -351,18 +358,18 @@ calc_meddelta_gammas <- function(draws_mat) {
 #' Plot Data for Community Effects
 #'
 #' @description
-#' `make_gammapointrange} prepares the data
-#' in the format for the function `plot_gammapointrange`.
+#' `make_gammapointrange()` prepares the data
+#' in the format for the function `plot_gammapointrange()`.
 #'
-#' @param draws_mat_1 A draws matrix containing the community effects
+#' @param draws_mat_1 A `draws_matrix` containing the community effects
 #'   from the unadjusted model
-#' @param draws_mat_2 A draws matrix containing the community effects
+#' @param draws_mat_2 A `draws_matrix` containing the community effects
 #'   from the adjusted model
-#' @param probs A numeric value representing
-#'   the probability for the highest density region,
+#' @param probs The probability for the highest density region
 #'   which defaults to `probs = 0.87`
-#' @return The ouput will be a data frame in the format for
-#'   using the corresponding `plot_gammapointrange` function
+#' @return A data frame in the format for
+#'   using the corresponding `plot_gammapointrange()` function
+#' @inherit make_prcjitter details
 #' @export
 make_gammapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87) {
   n_cols <- ncol(draws_mat_1)
@@ -383,14 +390,14 @@ make_gammapointrange <- function(draws_mat_1, draws_mat_2, probs = 0.87) {
 #' Plot Data for Pairwise Distribution Overlap
 #'
 #' @description
-#' `make_compjitter` prepares the data
-#' in the format for the function `plot_compjitter`.
+#' `make_compjitter()` prepares the data
+#' in the format for the function `plot_compjitter()`.
 #'
 #' @param probs_list A list containing the
 #'   pairwise overlapping probabilities
 #' @param dims_list A list containing the names of the test dimensions
-#' @return The ouput will be a data frame in the format for
-#'   using the corresponding `plot_compjitter` function
+#' @return A data frame in the format for
+#'   using the corresponding `plot_compjitter()` function
 #' @export
 make_compjitter <- function(probs_list, dims_list) {
   n_probs <- lapply(probs_list, function(i) sum(lower.tri(i)))
@@ -418,13 +425,14 @@ make_compjitter <- function(probs_list, dims_list) {
 #' Plot Data for a Posterior Retrodictive Check
 #'
 #' @description
-#' `make_dp_prcjitter` prepares the data
-#' in the format for the function `plot_dp_prcjitter`.
+#' `make_dp_prcjitter()` prepares the data
+#' in the format for the function `plot_dp_prcjitter()`.
 #'
-#' @param y A vector containing the sample replications
-#' @param y_rep_mat A draws matrix containing the population replications
-#' @return The ouput will be a data frame in the format for
-#'   using the corresponding `plot_prcjitter` function
+#' @param y A numeric vector containing the sample replications
+#' @param y_rep_mat A `draws_matrix` containing the population replications
+#' @return A data frame in the format for
+#'   using the corresponding `plot_prcjitter()` function
+#' @inherit make_prcjitter details
 #' @export
 make_dp_prcjitter <- function(y, y_rep_mat) {
   bx <- seq(from = floor(min(y, y_rep_mat) * 100) / 100,
@@ -455,15 +463,16 @@ make_dp_prcjitter <- function(y, y_rep_mat) {
 #' Plot Data for a Posterior Retrodictive Check
 #'
 #' @description
-#' `make_dp_prcstats` prepares the data
-#' in the format for the function `plot_dp_prcstats`.
+#' `make_dp_prcstats()` prepares the data
+#' in the format for the function `plot_dp_prcstats()`.
 #'
-#' @param y A vector containing the sample replications
-#' @param y_rep_mat A draws matrix containing the population replications
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param y A numeric vector containing the sample replications
+#' @param y_rep_mat A `draws_matrix` containing the population replications
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The ouput will be a data frame in the format for
-#'   using the corresponding `plot_dp_prcstats` function
+#' @return A data frame in the format for
+#'   using the corresponding `plot_dp_prcstats()` function
+#' @inherit make_prcjitter details
 #' @export
 make_dp_prcstats <- function(y, y_rep_mat, tikzdevice = FALSE) {
   stat_y <- calc_prcteststat(y)
@@ -505,18 +514,20 @@ make_dp_prcstats <- function(y, y_rep_mat, tikzdevice = FALSE) {
 #' Plot Data for Cluster Probabilities
 #'
 #' @description
-#' `make_lambdapointrange` prepares the data
-#' in the format for the function `plot_lambdapointrange`.
+#' `make_lambdapointrange()` prepares the data
+#' in the format for the function `plot_lambdapointrange()`.
 #'
-#' @param draws_mat_list A list of draws matrices containing the lambdas
+#' @param draws_mat_list A list of `draws_matrix` objects
+#'   containing the lambdas
 #' @param labels A character vector containing the names of the graph facets
 #' @param probs A numeric value representing
-#'   the probability for the highest density region,
+#'   the probability for the highest density region
 #'   which defaults to `probs = 0.87`
-#' @param tikzdevice Logical indicator for preparing the text for tikzDevice
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
-#' @return The ouput will be a data frame in the format for
-#'   using the corresponding `plot_dp_prcstats` function
+#' @return A data frame in the format for
+#'   using the corresponding `plot_dp_prcstats()` function
+#' @inherit make_prcjitter details
 #' @export
 make_lambdapointrange <- function(draws_mat_list, labels, probs = 0.87,
                                   tikzdevice = FALSE) {
@@ -551,13 +562,14 @@ make_lambdapointrange <- function(draws_mat_list, labels, probs = 0.87,
 #' Plot Data for Cluster Densities
 #'
 #' @description
-#' `make_logclusterdensities` prepares the data
-#' in the format for the function `plot_logclusterdensities`.
+#' `make_logclusterdensities()` prepares the data
+#' in the format for the function `plot_logclusterdensities()`.
 #'
-#' @param draws_mat_list A named list of draws matrices containing the
-#'   log cluster densities 
-#' @return The ouput will be a data frame in the format for
-#'   using the corresponding `plot_logclusterdensities` function
+#' @param draws_mat_list A named list of `draws_matrix` objects
+#'   containing the log cluster densities 
+#' @return A data frame in the format for
+#'   using the corresponding `plot_logclusterdensities()` function
+#' @inherit make_prcjitter details
 #' @export
 make_logclusterdensities <- function(draws_mat_list) {
   lcd_matlist <- lapply(draws_mat_list, function(i)
@@ -578,9 +590,11 @@ make_logclusterdensities <- function(draws_mat_list) {
 #'
 #' Utility function
 #' 
-#' @param x_draws The x coordinates of the MDS configuration in the draws matrix
-#' @param y_draws The y coordinates of the MDS configuration in the draws matrix
-#' @param ... Optional arguments for `MASS::kde2d`
+#' @param x_draws The x coordinates of the MDS configuration
+#'   in the `draws_matrix`
+#' @param y_draws The y coordinates of the MDS configuration
+#'   in the `draws_matrix`
+#' @param ... Optional arguments for `MASS::kde2d()`
 #' @noRd
 calc_2d_hdr <- function(x_draws, y_draws, ...) {
   probs <- seq(0.5, 0.95, 0.025)
@@ -612,7 +626,7 @@ calc_2d_hdr <- function(x_draws, y_draws, ...) {
 #'
 #' Utility function
 #' 
-#' @param mds_draws A draws matrix containing the MDS configuration
+#' @param mds_draws A `draws_matrix` containing the MDS configuration
 #' @noRd
 make_mds_contourdata <- function(mds_draws) {
   contour_list <- lapply(1:22,
@@ -646,7 +660,7 @@ make_mds_contourdata <- function(mds_draws) {
 #'
 #' Utility function
 #' 
-#' @param mds_draws A draws matrix containing the MDS configuration
+#' @param mds_draws A `draws_matrix` containing the MDS configuration
 #' @noRd
 make_mds_pointdata <- function(mds_draws) {
   mds_pointdata <- data.frame(
@@ -662,15 +676,16 @@ make_mds_pointdata <- function(mds_draws) {
 #' Plot Data for MDS Configuration
 #'
 #' @description
-#' `make_mds_plotdata` prepares the data
-#' in the format for the function `plot_dp_mds`.
+#' `make_mds_plotdata()` prepares the data
+#' in the format for the function `plot_dp_mds()`.
 #'
-#' @param draws_mat_list A named list of draws matrices
+#' @param draws_mat_list A named list of `draws_matrix` objects
 #'   containing the MDS configurations
-#' @param target_mat A draws matrix
+#' @param target_mat A `draws_matrix`
 #'   containing the target configuration for the procrustes transformation
-#' @return The ouput will be a data frame in the format for
-#'   using the corresponding `plot_dp_mds` function
+#' @return A data frame in the format for
+#'   using the corresponding `plot_dp_mds()` function
+#' @inherit make_prcjitter details
 #' @export
 make_mds_plotdata <- function(draws_mat_list, target_mat) {
   mds_dim <- factor(seq_along(draws_mat_list),

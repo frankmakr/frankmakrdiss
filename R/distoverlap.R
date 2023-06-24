@@ -23,12 +23,16 @@ calc_overlap <- function(dist1, dist2) {
 #' Calculate Distribution Overlap
 #'
 #' @description
-#' `calc_drawsoverlap` calculates the
+#' `calc_drawsoverlap()` calculates the
 #' generalized distribution overlap according to Weitzman (1970)
-#' for a `draws_matrix`
+#' for a `draws_matrix`.
 #'
 #' @param draws_mat A `draws_matrix`
-#' @return A n x n matrix
+#' @return A n x n numeric matrix
+#' @details
+#' A `draws_matrix` is a numeric matrix
+#' in which the rows are posterior draws
+#' and the columns are variables.
 #' @source
 #' Weitzman, M. S. (1970).
 #' *Measures of overlap of income distribution
