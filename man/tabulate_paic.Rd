@@ -4,10 +4,10 @@
 \alias{tabulate_paic}
 \title{Pairwise Relative AIC Comparison}
 \usage{
-tabulate_paic(data)
+tabulate_paic(vec_aic)
 }
 \arguments{
-\item{data}{A numeric vector with AIC values}
+\item{vec_aic}{A numeric vector with AIC values}
 }
 \value{
 A numeric matrix with pairwise comparisons

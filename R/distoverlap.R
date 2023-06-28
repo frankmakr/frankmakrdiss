@@ -47,6 +47,8 @@ calc_overlap <- function(dist1, dist2) {
 #' <https://doi.org/10.22237/jmasm/1193890440>.
 #' @export
 calc_drawsoverlap <- function(draws_mat) {
+  stopifnot(
+    "draws_mat is not a draws_matrix" = inherits(draws_mat, "draws_matrix"))
   n_col <- ncol(draws_mat)
   overlap_mat <- diag(n_col)
   overlap_mat[lower.tri(overlap_mat)] <- apply(utils::combn(1:n_col, 2), 2,
