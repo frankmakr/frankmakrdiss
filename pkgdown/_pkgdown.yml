@@ -10,6 +10,8 @@ template:
     secondary: "#753d7f"                  # active toc background
     info: "#d1bed5"                       # blended version number
     body-color: "#343a40"                 # gray-800
+    navbar-padding-y: 1.0rem
+    pkgdown-nav-height: 73px
     navbar-dark-brand-color: "#d1bed5"    # blended brand
     navbar-dark-brand-hover-color: white
     navbar-dark-color: "#d1bed5"          # blended non-active toc
