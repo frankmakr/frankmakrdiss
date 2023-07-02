@@ -5,7 +5,7 @@ The format of the CHANGELOG section is based on
 and uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2023-06-12
+## [1.0.0] - 2023-07-02
 
 ### New
 
@@ -94,11 +94,11 @@ A table with 158 rows and 7 columns.
   Student status used in the FernUniversität official statistics
   (Berichtswesen, 2022a)
 + **noexpert**
-  Knowledge of a theory of psychological sense of community
+  Formal theoretical knowledge of a theory of psychological sense of community
   coded as 0 = Knowledge, 1 = No knowledge
 + **numcomm**
   The number of communities the person mentioned
-  with a maximum number of 10 entry fields
+  with a maximum number of 10 entry fields for each person
 
 
 
@@ -151,7 +151,7 @@ A data frame with 1,465 rows and 7 columns.
   Student status used in the FernUniversität official statistics
   (Berichtswesen, 2022b)
 + **noexpert**
-  Knowledge of a theory of psychological sense of community
+  Formal theoretical knowledge of a theory of psychological sense of community
   coded as 0 = Knowledge, 1 = No knowledge
 + **numcomm**
   The number of communities the person mentioned

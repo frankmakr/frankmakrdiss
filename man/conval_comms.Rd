@@ -5,7 +5,7 @@
 \alias{conval_comms}
 \title{Community phrases for the Dataset conval_data}
 \format{
-\subsection{\code{commnames}}{
+\subsection{\code{conval_comms}}{
 
 A data frame with 22 rows and 2 columns.
 }

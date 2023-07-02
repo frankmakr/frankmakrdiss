@@ -5,7 +5,7 @@
 \alias{comms_data}
 \title{Classification Scheme of Communities}
 \format{
-\subsection{\code{communities}}{
+\subsection{\code{comms_data}}{
 
 A data frame with 1,580 rows and 6 columns.
 }

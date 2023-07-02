@@ -25,8 +25,8 @@
 #'     or 17 = living outside from Germany}
 #'   \item{studstatus}{Student status used in the FernUniversität
 #'     official statistics (Berichtswesen, 2022a, 2022b)}
-#'   \item{noexpert}{Knowledge of a theory of psychological sense of community
-#'     coded as 0 = Knowledge, 1 = No knowledge}
+#'   \item{noexpert}{Formal theoretical knowledge of a theory of
+#'     psychological sense of community coded as 0 = Knowledge, 1 = No knowledge}
 #'   \item{numcomm}{The number of communities the person mentioned}
 #' }
 #' @source 
@@ -50,7 +50,7 @@
 #' where persons have experienced themselves sense of community.
 #'
 #' @format
-#' ## `communities`
+#' ## `comms_data`
 #' A data frame with 1,580 rows and 6 columns.
 #' ## Variables
 #' \describe{
@@ -70,7 +70,7 @@
 #' The phrases of the communities in German the persons could choose from
 #'
 #' @format
-#' ## `commnames`
+#' ## `conval_comms`
 #' A data frame with 22 rows and 2 columns.
 #' ## Variables
 #' \describe{
@@ -98,19 +98,19 @@
 #'     community of shared values}
 #'   \item{purpose}{The grade to which the community is a
 #'     community of purpose}
-#'   \item{value_x_purpose}{Interaction variable}
+#'   \item{value_x_purpose}{Interaction variable of `value` and `purpose`}
 #'   \item{chavis_\[1-25\]}{The grade to which the test item \[1-25\] from
 #'     Chavis et al. (2008)
-#'     is necessary to characterize sense of community}
+#'     is rated necessary to characterize sense of community}
 #'   \item{omoto_\[1-18\]}{The grade to which the test item \[1-18\] from
 #'     Omoto and Snyder (2010)
-#'     is necessary to characterize sense of community}
+#'     is rated necessary to characterize sense of community}
 #'   \item{jason_\[1-9\]}{The grade to which the test item \[1-9\] from
 #'     Jason et al. (2015)
-#'     is necessary to characterize sense of community}
+#'     is rated necessary to characterize sense of community}
 #'   \item{halamova_\[1-22\]}{The grade to which the test item \[1-22\] from
 #'     Halamová et al. (2018)
-#'     is necessary to characterize sense of community}
+#'     is rated necessary to characterize sense of community}
 #' }
 #' @source Primary data
 #' @references
