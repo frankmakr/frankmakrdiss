@@ -8,7 +8,7 @@ plot_logclusterdensities(lcddata, tikzdevice = FALSE)
 }
 \arguments{
 \item{lcddata}{A data frame returned from the function
-\code{make_logclusterdensities}}
+\code{make_logclusterdensities()}}
 
 \item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}
@@ -17,6 +17,6 @@ which defaults to \code{tikzdevice = FALSE}}
 A \code{ggplot2} graph
 }
 \description{
-\code{plot_logclusterdensities} plots data
-in the format from the function \code{make_logclusterdensities}.
+\code{plot_logclusterdensities()} plots data
+in the format from the function \code{make_logclusterdensities()}.
 }

@@ -8,7 +8,7 @@ plot_lambdapointrange(lambdapointrange, tikzdevice = FALSE)
 }
 \arguments{
 \item{lambdapointrange}{A data frame returned from the function
-\code{make_lambdapointrange}}
+\code{make_lambdapointrange()}}
 
 \item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}
@@ -17,6 +17,6 @@ which defaults to \code{tikzdevice = FALSE}}
 A \code{ggplot2} graph
 }
 \description{
-\code{plot_lambdapointrange} plots data
-in the format from the function \code{make_lambdapointrange}.
+\code{plot_lambdapointrange()} plots data
+in the format from the function \code{make_lambdapointrange()}.
 }

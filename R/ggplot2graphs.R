@@ -29,11 +29,11 @@ theme_frankmakrdiss <- function(...) {
 #' Plot Sample Characteristics
 #'
 #' @description
-#' `plot_samplepointrange` plots data
-#' in the format from the function `make_samplepointrange`.
+#' `plot_samplepointrange()` plots data
+#' in the format from the function `make_samplepointrange()`.
 #'
 #' @param samplepointrange A data frame returned from the function
-#'   `make_samplepointrange`
+#'   `make_samplepointrange()`
 #' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
 #' @return A `ggplot2` graph
@@ -79,11 +79,11 @@ plot_samplepointrange <- function(samplepointrange, tikzdevice = FALSE) {
 #' Plot Posterior Retrodictive Check
 #'
 #' @description
-#' `plot_prcjitter` plots data
-#' in the format from the function `make_prcjitter`.
+#' `plot_prcjitter()` plots data
+#' in the format from the function `make_prcjitter()`.
 #'
 #' @param prcjitter A data frame returned from the function
-#'   `make_prcjitter`
+#'   `make_prcjitter()`
 #' @inherit plot_samplepointrange return
 #' @export
 plot_prcjitter <- function(prcjitter) {
@@ -115,11 +115,11 @@ plot_prcjitter <- function(prcjitter) {
 #' Plot Posterior Retrodictive Check
 #'
 #' @description
-#' `plot_prcstats` plots data
-#' in the format from the function `make_prcstats`.
+#' `plot_prcstats()` plots data
+#' in the format from the function `make_prcstats()`.
 #'
 #' @param prcstats A data frame returned from the function
-#'   `make_prcstats`
+#'   `make_prcstats()`
 #' @inherit plot_samplepointrange return
 #' @export
 plot_prcstats <- function(prcstats) {
@@ -154,11 +154,11 @@ plot_prcstats <- function(prcstats) {
 #' Plot Community Probabilities
 #'
 #' @description
-#' `plot_thetapointrange` plots data
-#' in the format from the function `make_thetapointrange`.
+#' `plot_thetapointrange()` plots data
+#' in the format from the function `make_thetapointrange()`.
 #'
 #' @param thetapointrange A data frame returned from the function
-#'   `make_thetapointrange`
+#'   `make_thetapointrange()`
 #' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
 #' @inherit plot_samplepointrange return
@@ -196,11 +196,11 @@ plot_thetapointrange <- function(thetapointrange, tikzdevice = FALSE) {
 #' Plot Variance Components
 #'
 #' @description
-#' `plot_sigmapointrange` plots data
-#' in the format from the function `make_sigmapointrange`.
+#' `plot_sigmapointrange()` plots data
+#' in the format from the function `make_sigmapointrange()`.
 #'
 #' @param sigmapointrange A data frame returned from the function
-#'   `make_sigmapointrange`
+#'   `make_sigmapointrange()`
 #' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
 #' @inherit plot_samplepointrange return
@@ -238,11 +238,11 @@ plot_sigmapointrange <- function(sigmapointrange, tikzdevice = FALSE) {
 #' Plot Community Effects
 #'
 #' @description
-#' `plot_gammapointrange` plots data
-#' in the format from the function `make_gammapointrange`.
+#' `plot_gammapointrange()` plots data
+#' in the format from the function `make_gammapointrange()`.
 #'
 #' @param gammapointrange A data frame returned from the function
-#'   `make_gammapointrange`
+#'   `make_gammapointrange()`
 #' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
 #' @inherit plot_samplepointrange return
@@ -282,11 +282,11 @@ plot_gammapointrange <- function(gammapointrange, tikzdevice = FALSE) {
 #' Plot Pairwise Distribution Overlapping
 #'
 #' @description
-#' `plot_compjitter` plots data
-#' in the format from the function `make_compjitter`.
+#' `plot_compjitter()` plots data
+#' in the format from the function `make_compjitter()`.
 #'
 #' @param compjitter A data frame returned from the function
-#'   `make_compjitter`
+#'   `make_compjitter()`
 #' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
 #' @inherit plot_samplepointrange return
@@ -319,6 +319,91 @@ plot_compjitter <- function(compjitter, tikzdevice = FALSE) {
   }
 }
 
+#' Plot Posterior Retrodictive Check
+#'
+#' @description
+#' `plot_hypo_prcstats()` plots data
+#' in the format from the function `make_hypo_prcstats()`.
+#'
+#' @param prcstats A data frame returned from the function
+#'   `make_hypo_prcstats()`
+#' @inherit plot_samplepointrange return
+#' @export
+plot_hypo_prcstats <- function(prcstats) {
+  ggplot2::ggplot(prcstats, ggplot2::aes(x = .data$x, y = .data$y)) +
+    ggplot2::geom_col(ggplot2::aes(fill = .data$fill),
+      color = colorscheme_frankmakrdiss[1, 5], width = 2) +
+    ggplot2::geom_vline(ggplot2::aes(xintercept = .data$stat_y,
+      color = "Observationen")) +
+    ggplot2::scale_color_manual(values = "#000000") +
+    ggplot2::scale_fill_manual(values = c("#ffffff",
+      colorscheme_frankmakrdiss[2, 5])) +
+    ggplot2::scale_x_continuous(
+      labels = scales::label_number(decimal.mark = ",")) +
+    ggplot2::xlab(NULL) +
+    ggplot2::ylab("H\u00e4ufigkeiten") +
+    ggplot2::guides(
+      color = ggplot2::guide_legend(title = NULL,
+        override.aes = list(size = 1.5)),
+      fill = ggplot2::guide_legend(title = NULL)) +
+    ggplot2::facet_wrap(ggplot2::vars(.data$stat_fac), dir = "v", scales = "free_x") +
+    theme_frankmakrdiss()
+}
+
+#' Plot Hypotheses Testing
+#'
+#' @description
+#' `plot_hypopointrange()` plots data
+#' in the format from the function `make_hypopointrange()`.
+#'
+#' @param hypopointrange A data frame returned from the function
+#'   `make_hypopointrange()`
+#' @param type One of "color" or "single"
+#' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
+#'   which defaults to `tikzdevice = FALSE`
+#' @inherit plot_samplepointrange return
+#' @export
+plot_hypopointrange <- function(hypopointrange, type, tikzdevice = FALSE) {
+  if (type == "color") {
+    plot_part1 <- ggplot2::ggplot(hypopointrange,
+        ggplot2::aes(x = .data$x, y = .data$y, color = .data$dim)) +
+      ggplot2::geom_linerange(ggplot2::aes(xmin = .data$ll, xmax = .data$ul),
+        linewidth = 1.5, position = ggplot2::position_dodge(width = 0.7),
+        key_glyph = "path") +
+      ggplot2::geom_point(size = 3,
+        position = ggplot2::position_dodge(width = 0.7)) +
+      ggplot2::scale_color_manual(values = ggplot2::alpha(as.vector(
+        colorscheme_frankmakrdiss[c(1, 2, 5), 5]), c(0.3, 1, 1)))
+  }
+  if (type == "single") {
+    plot_part1 <- ggplot2::ggplot(hypopointrange,
+        ggplot2::aes(x = .data$x, y = .data$y)) +
+      ggplot2::geom_linerange(ggplot2::aes(xmin = .data$ll, xmax = .data$ul),
+        color = colorscheme_frankmakrdiss[5, 5], linewidth = 1.5,
+        position = ggplot2::position_dodge(width = 0.7)) +
+      ggplot2::geom_point(color = colorscheme_frankmakrdiss[5, 5], size = 3,
+        position = ggplot2::position_dodge(width = 0.7))
+  }
+  plot_part2 <- plot_part1 +
+    ggplot2::scale_x_continuous(limits = c(0, 1),
+      labels = scales::label_number(decimal.mark = ",")) +
+    theme_frankmakrdiss()
+  if (!tikzdevice) {
+    plot_part2 +
+      ggplot2::xlab("p") +
+      ggplot2::ylab("/u03b8") +
+      ggplot2::guides(color = ggplot2::guide_legend(title = "87% HDR: ",
+        reverse = TRUE))
+  } else {
+    plot_part2 +
+      ggplot2::xlab("$p$") +
+      ggplot2::ylab("$\\theta_k$") +
+      ggplot2::guides(color = ggplot2::guide_legend(
+        title = "$\\qty{87}{\\percent}\\operatorname{HDR}$: ",
+        reverse = TRUE))
+  }
+}
+
 
 
 # ----------------------
@@ -330,11 +415,11 @@ plot_compjitter <- function(compjitter, tikzdevice = FALSE) {
 #' Plot Posterior Retrodictive Check
 #'
 #' @description
-#' `plot_dp_prcjitter` plots data
-#' in the format from the function `make_dp_prcjitter`.
+#' `plot_dp_prcjitter()` plots data
+#' in the format from the function `make_dp_prcjitter()`.
 #'
 #' @param prcjitter A data frame returned from the function
-#'   `make_dp_prcjitter`
+#'   `make_dp_prcjitter()`
 #' @inherit plot_samplepointrange return
 #' @export
 plot_dp_prcjitter <- function(prcjitter) {
@@ -366,11 +451,11 @@ plot_dp_prcjitter <- function(prcjitter) {
 #' Plot Posterior Retrodictive Check
 #'
 #' @description
-#' `plot_dp_prcstats` plots data
-#' in the format from the function `make_dp_prcstats`.
+#' `plot_dp_prcstats()` plots data
+#' in the format from the function `make_dp_prcstats()`.
 #'
 #' @param prcstats A data frame returned from the function
-#'   `make_dp_prcstats`
+#'   `make_dp_prcstats()`
 #' @inherit plot_samplepointrange return
 #' @export
 plot_dp_prcstats <- function(prcstats) {
@@ -397,11 +482,11 @@ plot_dp_prcstats <- function(prcstats) {
 #' Plot Cluster Probabilities
 #'
 #' @description
-#' `plot_lambdapointrange` plots data
-#' in the format from the function `make_lambdapointrange`.
+#' `plot_lambdapointrange()` plots data
+#' in the format from the function `make_lambdapointrange()`.
 #'
 #' @param lambdapointrange A data frame returned from the function
-#'   `make_lambdapointrange`
+#'   `make_lambdapointrange()`
 #' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
 #' @inherit plot_samplepointrange return
@@ -438,11 +523,11 @@ lambdaplot <- ggplot2::ggplot(lambdapointrange,
 #' Plot Cluster Densities
 #'
 #' @description
-#' `plot_logclusterdensities` plots data
-#' in the format from the function `make_logclusterdensities`.
+#' `plot_logclusterdensities()` plots data
+#' in the format from the function `make_logclusterdensities()`.
 #'
 #' @param lcddata A data frame returned from the function
-#'   `make_logclusterdensities`
+#'   `make_logclusterdensities()`
 #' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
 #' @inherit plot_samplepointrange return
@@ -480,11 +565,11 @@ plot_logclusterdensities <- function(lcddata, tikzdevice = FALSE) {
 #' Plot MDS Configuration
 #'
 #' @description
-#' `plot_mds` plots data
-#' in the format from the function `make_mds_plotdata`.
+#' `plot_mds()` plots data
+#' in the format from the function `make_mds_plotdata()`.
 #'
 #' @param mds_plotdata A data frame returned from the function
-#'   `make_mds_plotdata`
+#'   `make_mds_plotdata()`
 #' @param mds_color_groups A numeric vector of `length= 4`
 #'   containing the numbers of the communities in `conval_comms`
 #'   to be highlighted

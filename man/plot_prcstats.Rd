@@ -8,12 +8,12 @@ plot_prcstats(prcstats)
 }
 \arguments{
 \item{prcstats}{A data frame returned from the function
-\code{make_prcstats}}
+\code{make_prcstats()}}
 }
 \value{
 A \code{ggplot2} graph
 }
 \description{
-\code{plot_prcstats} plots data
-in the format from the function \code{make_prcstats}.
+\code{plot_prcstats()} plots data
+in the format from the function \code{make_prcstats()}.
 }

@@ -8,7 +8,7 @@ plot_mds(mds_plotdata, mds_color_groups)
 }
 \arguments{
 \item{mds_plotdata}{A data frame returned from the function
-\code{make_mds_plotdata}}
+\code{make_mds_plotdata()}}
 
 \item{mds_color_groups}{A numeric vector of \code{length= 4}
 containing the numbers of the communities in \code{conval_comms}
@@ -18,6 +18,6 @@ to be highlighted}
 A \code{ggplot2} graph
 }
 \description{
-\code{plot_mds} plots data
-in the format from the function \code{make_mds_plotdata}.
+\code{plot_mds()} plots data
+in the format from the function \code{make_mds_plotdata()}.
 }

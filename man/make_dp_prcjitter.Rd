@@ -7,9 +7,9 @@
 make_dp_prcjitter(y, y_rep_mat)
 }
 \arguments{
-\item{y}{A numeric vector containing the sample replications}
+\item{y}{A numeric vector containing the observations}
 
-\item{y_rep_mat}{A \code{draws_matrix} containing the population replications}
+\item{y_rep_mat}{A \code{draws_matrix} containing the replicated observations}
 }
 \value{
 A data frame in the format for

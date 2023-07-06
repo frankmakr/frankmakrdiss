@@ -8,7 +8,7 @@ plot_thetapointrange(thetapointrange, tikzdevice = FALSE)
 }
 \arguments{
 \item{thetapointrange}{A data frame returned from the function
-\code{make_thetapointrange}}
+\code{make_thetapointrange()}}
 
 \item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}
@@ -17,6 +17,6 @@ which defaults to \code{tikzdevice = FALSE}}
 A \code{ggplot2} graph
 }
 \description{
-\code{plot_thetapointrange} plots data
-in the format from the function \code{make_thetapointrange}.
+\code{plot_thetapointrange()} plots data
+in the format from the function \code{make_thetapointrange()}.
 }

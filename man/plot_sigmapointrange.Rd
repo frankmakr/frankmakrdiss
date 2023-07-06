@@ -8,7 +8,7 @@ plot_sigmapointrange(sigmapointrange, tikzdevice = FALSE)
 }
 \arguments{
 \item{sigmapointrange}{A data frame returned from the function
-\code{make_sigmapointrange}}
+\code{make_sigmapointrange()}}
 
 \item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}
@@ -17,6 +17,6 @@ which defaults to \code{tikzdevice = FALSE}}
 A \code{ggplot2} graph
 }
 \description{
-\code{plot_sigmapointrange} plots data
-in the format from the function \code{make_sigmapointrange}.
+\code{plot_sigmapointrange()} plots data
+in the format from the function \code{make_sigmapointrange()}.
 }

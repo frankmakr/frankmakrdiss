@@ -8,7 +8,7 @@ plot_samplepointrange(samplepointrange, tikzdevice = FALSE)
 }
 \arguments{
 \item{samplepointrange}{A data frame returned from the function
-\code{make_samplepointrange}}
+\code{make_samplepointrange()}}
 
 \item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}
@@ -17,6 +17,6 @@ which defaults to \code{tikzdevice = FALSE}}
 A \code{ggplot2} graph
 }
 \description{
-\code{plot_samplepointrange} plots data
-in the format from the function \code{make_samplepointrange}.
+\code{plot_samplepointrange()} plots data
+in the format from the function \code{make_samplepointrange()}.
 }

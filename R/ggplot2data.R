@@ -122,8 +122,8 @@ qgroups_iter <- function(counts_mat, q_mat) {
 #' `make_prcjitter()` prepares the data
 #' in the format for the function `plot_prcjitter()`.
 #'
-#' @param y A nnumeric vector containing the sample replications
-#' @param y_rep_mat A `draws_matrix` containing the population replications
+#' @param y A numeric vector containing the observations
+#' @param y_rep_mat A `draws_matrix` containing the replicated observations
 #' @return A data frame in the format for
 #'   using the corresponding `plot_prcjitter()` function
 #' @details
@@ -181,8 +181,8 @@ calc_prcteststat <- function(data) {
 #' `make_prcstats()` prepares the data
 #' in the format for the function `plot_prcstats()`.
 #'
-#' @param y A numeric vector containing the sample replications
-#' @param y_rep_mat A `draws_matrix` containing the population replications
+#' @param y A numeric vector containing the observations
+#' @param y_rep_mat A `draws_matrix` containing the replicated observations
 #' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
 #' @return A data frame in the format for
@@ -414,7 +414,79 @@ make_compjitter <- function(probs_list, dims_list) {
   return(compjitter)
 }
 
+#' Plot Data for a Posterior Retrodictive Check
+#'
+#' @description
+#' `make_hypo_prcstats()` prepares the data
+#' in the format for the function `plot_hypo_prcstats()`.
+#'
+#' @param y A numeric vector containing the observations
+#' @param y_rep_mat A `draws_matrix` containing the replicated observations
+#' @return A data frame in the format for
+#'   using the corresponding `plot_hypo_prcstats()` function
+#' @inherit make_prcjitter details
+#' @export
+make_hypo_prcstats <- function(y, y_rep_mat) {
+  bx <- lapply(seq_along(y), function(i) seq(
+    from = floor(min(y[i], y_rep_mat[, i]) * 100) / 100,
+    to = ceiling(max(y[i], y_rep_mat[, i]) * 100) / 100,
+    by = 2
+    ))
+  counts_stat <- lapply(seq_along(y), function(i)
+    count_bins(y_rep_mat[, i], bx[[i]]))
+  shadelimits <- lapply(seq_along(y), function(i)
+    calc_hdr(y_rep_mat[, i], probs = 0.87))
+  repfactor <- sapply(counts_stat, length)
+  varlist <- vector("list", 5)
+  names(varlist) <- c("stat_fac", "stat_y", "x", "y", "fill")
+  varlist$stat_fac <- factor(
+    unlist(lapply(seq_along(y), function(i) rep(i, repfactor[i]))))
+  varlist$stat_y <- unlist(lapply(seq_along(y), function(i)
+    rep(y[i], repfactor[i])))
+  varlist$x <- as.numeric(unlist(lapply(counts_stat, names)))
+  varlist$y <- unlist(counts_stat)
+  varlist$fill <- factor(
+    unlist(mapply(findInterval,
+      lapply(counts_stat, function(i) as.numeric(names(i))),
+      lapply(shadelimits, sort),
+      MoreArgs = list(left.open = TRUE))),
+    levels = c(0:2), labels = c("Replikationen",
+      "$\\qty{87}{\\percent}\\operatorname{HDR}$", "Replikationen"))
+  prcstatsdata <- data.frame(varlist, row.names = seq_along(varlist$x))
+  return(prcstatsdata)
+}
 
+#' Plot Data for Testing the Hypotheses
+#'
+#' @description
+#' `make_hypopointrange()` prepares the data
+#' in the format for the function `plot_hypopointrange()`.
+#'
+#' @param draws_mat A `draws_matrix` containing the relevant effects
+#' @param label_list A nested `list` containing the names for the y axis
+#'  nested in the names for the color groups 
+#' @param probs The probability for the highest density region
+#'   which defaults to `probs = 0.87`
+#' @return A data frame in the format for
+#'   using the corresponding `plot_hypopointrange()` function
+#' @inherit make_prcjitter details
+#' @export
+make_hypopointrange <- function(draws_mat, label_list, probs = 0.87) {
+  n_cols <- ncol(draws_mat)
+  hdr <- t(apply(draws_mat, 2, calc_hdr, probs = probs))
+  varlist <- vector("list", 5)
+  names(varlist) <- c("x", "y", "ll", "ul", "dim")
+  varlist$x <- matrixStats::colMedians(draws_mat)
+  varlist$y <- factor(1:n_cols, levels = rev(1:n_cols),
+    labels = rev(unlist(label_list)))
+  varlist$ll <- hdr[, 1]
+  varlist$ul <- hdr[, 2]
+  varlist$dim <- factor(
+    rep(seq_along(label_list), sapply(label_list, length)),
+    labels = names(label_list))
+  pointrangedata <- data.frame(varlist, row.names = seq_along(varlist$x))
+  return(pointrangedata)
+}
 
 # ----------------------
 # ---                ---
@@ -428,8 +500,8 @@ make_compjitter <- function(probs_list, dims_list) {
 #' `make_dp_prcjitter()` prepares the data
 #' in the format for the function `plot_dp_prcjitter()`.
 #'
-#' @param y A numeric vector containing the sample replications
-#' @param y_rep_mat A `draws_matrix` containing the population replications
+#' @param y A numeric vector containing the observations
+#' @param y_rep_mat A `draws_matrix` containing the replicated observations
 #' @return A data frame in the format for
 #'   using the corresponding `plot_prcjitter()` function
 #' @inherit make_prcjitter details
@@ -466,8 +538,8 @@ make_dp_prcjitter <- function(y, y_rep_mat) {
 #' `make_dp_prcstats()` prepares the data
 #' in the format for the function `plot_dp_prcstats()`.
 #'
-#' @param y A numeric vector containing the sample replications
-#' @param y_rep_mat A `draws_matrix` containing the population replications
+#' @param y A numeric vector containing the observations
+#' @param y_rep_mat A `draws_matrix` containing the replicated observations
 #' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
 #' @return A data frame in the format for

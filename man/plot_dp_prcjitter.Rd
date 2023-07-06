@@ -8,12 +8,12 @@ plot_dp_prcjitter(prcjitter)
 }
 \arguments{
 \item{prcjitter}{A data frame returned from the function
-\code{make_dp_prcjitter}}
+\code{make_dp_prcjitter()}}
 }
 \value{
 A \code{ggplot2} graph
 }
 \description{
-\code{plot_dp_prcjitter} plots data
-in the format from the function \code{make_dp_prcjitter}.
+\code{plot_dp_prcjitter()} plots data
+in the format from the function \code{make_dp_prcjitter()}.
 }
