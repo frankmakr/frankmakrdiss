@@ -358,7 +358,7 @@ plot_hypo_prcstats <- function(prcstats) {
 #'
 #' @param hypopointrange A data frame returned from the function
 #'   `make_hypopointrange()`
-#' @param type One of "color" or "single"
+#' @param type One of `"color"` or `"single"`
 #' @param tikzdevice Logical indicator for preparing the text for `tikzDevice`
 #'   which defaults to `tikzdevice = FALSE`
 #' @inherit plot_samplepointrange return
