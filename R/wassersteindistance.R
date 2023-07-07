@@ -4,10 +4,14 @@
 #'
 #' @param x A distribution function as vector
 #' @param y A distribution function as vector
-#' @param type One of `"l1"`, `"l2"` or `"energy"`
+#' @param type The typo of distance calculated,
+#'   which must be one of `"l1"`, `"l2"` or `"energy"`
+#'   and defaults to `type = "energy"`
 #' @return The output will be the distance
 #' @noRd
 calc_wasserstein <- function(x, y, type = "energy") {
+  stopifnot("x must be numeric" = is.numeric(x))
+  stopifnot("y must be numeric" = is.numeric(y))
   xy <- c(x, y)
   n_x <- length(x)
   n_y <- length(y)
@@ -37,6 +41,7 @@ calc_wasserstein <- function(x, y, type = "energy") {
 #' @param draws_mat A `draws_matrix` containing the distributions
 #' @param ... The type of distance calculated
 #'   which must be one of `"l1"`, `"l2"` or `"energy"`
+#'   and defaults to `type = "energy"`
 #' @return A n x n numeric matrix
 #'   with n equals to the column number of `draws_mat` 
 #' @details
@@ -45,6 +50,8 @@ calc_wasserstein <- function(x, y, type = "energy") {
 #' and the columns are variables.
 #' @export
 calc_drawswasserstein <- function(draws_mat, ...) {
+  stopifnot(
+    "draws_mat is not a draws_matrix" = inherits(draws_mat, "draws_matrix"))
   n_col <- ncol(draws_mat)
   dist_mat <- matrix(0, n_col, n_col)
   dist_mat[lower.tri(dist_mat)] <- apply(utils::combn(1:n_col, 2), 2,
