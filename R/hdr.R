@@ -10,6 +10,10 @@
 #' @return A named numeric matrix containing the credible intervals
 #' @export
 calc_hdr <- function(vec_x, probs = c(0.50, 0.87, 0.99)) {
+  stopifnot("vec_x must be numeric" = is.numeric(vec_x))
+  stopifnot("probs must be numeric" = is.numeric(probs))
+  stopifnot("Elements of probs must have values between 0 and 1" =
+    min(probs) > 0 && max(probs) < 1)
   n <- length(vec_x)
   vec_x_ord <- sort.int(vec_x, method='quick')
   cutoff <- n - floor(n * probs)
