@@ -6,23 +6,27 @@
 \usage{
 make_table_body(
   data,
-  space.after = 5,
+  space_after = 5,
   digits = 4,
-  cor.tab = FALSE,
-  row.names = TRUE
+  cov_tab = FALSE,
+  row_names = TRUE
 )
 }
 \arguments{
-\item{data}{A named matrix or data.frame containing the table data}
+\item{data}{A named numeric \code{matrix}
+or a \code{data.frame} with at least one numeric column containing the table data}
 
-\item{space.after}{A numeric vector or single number
-indicating the number of rows after which additional space is inserted}
+\item{space_after}{A numeric vector or single number
+indicating the number of rows after which additional space is inserted
+which defaults to \code{space_after = 5}}
 
 \item{digits}{The number of digits to be displayed in the table}
 
-\item{cor.tab}{Is the table a correlation table}
+\item{cov_tab}{A logical indicator for a covariance table
+which defaults to \code{cov_tab = FALSE}}
 
-\item{row.names}{Does the data contain row.names}
+\item{row_names}{A logical indicator for row names
+which defaults to \code{row_names = TRUE}}
 }
 \value{
 The LaTeX table body
