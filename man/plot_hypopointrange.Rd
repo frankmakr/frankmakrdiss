@@ -10,7 +10,7 @@ plot_hypopointrange(hypopointrange, type, tikzdevice = FALSE)
 \item{hypopointrange}{A data frame returned from the function
 \code{make_hypopointrange()}}
 
-\item{type}{One of "color" or "single"}
+\item{type}{One of \code{"color"} or \code{"single"}}
 
 \item{tikzdevice}{Logical indicator for preparing the text for \code{tikzDevice}
 which defaults to \code{tikzdevice = FALSE}}

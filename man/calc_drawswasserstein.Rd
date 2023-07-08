@@ -10,7 +10,8 @@ calc_drawswasserstein(draws_mat, ...)
 \item{draws_mat}{A \code{draws_matrix} containing the distributions}
 
 \item{...}{The type of distance calculated
-which must be one of \code{"l1"}, \code{"l2"} or \code{"energy"}}
+which must be one of \code{"l1"}, \code{"l2"} or \code{"energy"}
+and defaults to \code{type = "energy"}}
 }
 \value{
 A n x n numeric matrix
