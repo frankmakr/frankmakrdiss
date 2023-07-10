@@ -35,27 +35,34 @@ reference:
   - title: Data Sets
     desc: >
       The data sets included in the package.
-  - contents:
+    contents:
     - starts_with("comms_")
     - starts_with("conval_")
     - starts_with("distmat")
 
+  - title: Table Data
+    desc: >
+      Prepares the date to be used in a LaTeX table environment
+    contents:
+    - make_table_body
+
   - title: Plot Data
     desc: >
       Prepares the data in the format for the corresponding `plot_*`function.
-  - contents:
+    contents:
     - starts_with("make_")
+    - -make_table_body
 
   - title: Plots
     desc: >
       Plots the data from the corresponding `make_*`function.
-  - contents:
+    contents:
     - starts_with("plot_")
 
   - title: Statistics
     desc: >
       Calculates useful statistics.
-  - contents:
+    contents:
     - starts_with("calc_")
     - starts_with("tabulate_")
     - starts_with("transform_")
@@ -63,13 +70,13 @@ reference:
   - title: Simulations
     desc: >
       Simulates data.
-  - contents:
+    contents:
     - starts_with("sim_")
 
   - title: Stan Models
     desc: >
       Fits the Stan models.
-  - contents:
+    contents:
     - starts_with("stan_")
 
 news:
