@@ -25,7 +25,7 @@ which defaults to `p_ci = NA'}
 \item{...}{The number of degrees of freedom for the student t distribution}
 }
 \value{
-A data.frame containing the inputs,
+A \code{data.frame} containing the inputs,
 the standard error of measurement, and the lower and upper bounds
 of the confidence interval
 }

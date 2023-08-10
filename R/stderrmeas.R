@@ -30,7 +30,7 @@ calc_sem <- function(sd, rel) {
 #'   which defaults to `p_ci = NA'
 #' @param dist One of `"normal"`, `"t"`, or `"none"`
 #' @param ... The number of degrees of freedom for the student t distribution
-#' @return A data.frame containing the inputs,
+#' @return A `data.frame` containing the inputs,
 #'   the standard error of measurement, and the lower and upper bounds
 #'   of the confidence interval
 #' @details One of the arguments `se0` or `p_ci` must be set to a value.
@@ -41,6 +41,12 @@ calc_semci <- function(data, sd, rel,
                        p_ci = NA,
                        dist = "none",
                        ...) {
+  stopifnot("sd must be positive" = sd > 0)
+  stopifnot("rel must be between 0 and 1" = min(rel) > 0 && max(rel) <= 1)
+  stopifnot("se0 must be positive" = is.na(se0) || se0 > 0)
+  stopifnot("p_ci must be between 0 and 1" = is.na(p_ci) || p_ci > 0 && p_ci < 1)
+  stopifnot("dist must be one of 'normal', 't', or 'none', '" =
+    dist == "normal" || dist == "t" || dist == "none")
   args <- list(...)
   sem <- calc_sem(sd, rel)
   # Tschebyschow inequality
@@ -50,9 +56,11 @@ calc_semci <- function(data, sd, rel,
     } else {
       se0 <- sqrt(1 / (1 - p_ci))
     }
-  # z or t distribution
+  # normal or t distribution
+  } else if(dist == "t" && (!is.numeric(args$df) || args$df < 1)) {
+    stop("df must be greater than 1")
   } else {
-    df <- ifelse(dist == "z", Inf, args$df)
+    df <- ifelse(dist == "normal", Inf, args$df)
     if(!is.na(se0)) { 
       p_ci <- 1 - (1 - stats::pt(se0, df)) * 2
     } else {
