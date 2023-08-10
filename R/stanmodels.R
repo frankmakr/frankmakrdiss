@@ -4,7 +4,8 @@
 #' `stan_dissmodel()` fits the Stan models from the doctoral dissertation.
 #'
 #' @param model_number A character string containing the model number
-#'   from the doctoral dissertation (i.e. "12.2")
+#'   from the doctoral dissertation, which must be one of
+#'   `"12.2"`, `"12.3"`, `"13.1"`, `"13.3"`, `"13.6"`, `"13.6_adj"`, `"13.8"`, or `"14"`.
 #' @param stan_data The data used for the model as a named list 
 #'   with the names corresponding to the variables in model description
 #'   from the doctoral dissertation

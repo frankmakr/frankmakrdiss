@@ -8,7 +8,8 @@ stan_dissmodel(model_number, stan_data, ...)
 }
 \arguments{
 \item{model_number}{A character string containing the model number
-from the doctoral dissertation (i.e. "12.2")}
+from the doctoral dissertation, which must be one of
+\code{"12.2"}, \code{"12.3"}, \code{"13.1"}, \code{"13.3"}, \code{"13.6"}, \code{"13.6_adj"}, \code{"13.8"}, or \code{"14"}.}
 
 \item{stan_data}{The data used for the model as a named list
 with the names corresponding to the variables in model description
