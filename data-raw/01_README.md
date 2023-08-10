@@ -5,7 +5,7 @@ The format of the CHANGELOG section is based on
 and uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2023-07-02
+## [1.0.0] - 2023-08-10
 
 ### New
 
@@ -228,28 +228,28 @@ Berichtswesen. (2022b, April 8).
 FernUniversität in Hagen.
 <https://www.fernuni-hagen.de/uniintern/organisation/statistik/semesterstatistik/wise2019-20.shtml>.
 
-Chavis, D. M., Lee, K. S., \& Acosta, J. D. (2008).
+Chavis, D. M., Lee, K. S., & Acosta, J. D. (2008).
 *The Sense of Community Index (SCI) revised:*
 *The reliability and validity of the SCI-2.*
 Paper presented at the 2nd International Community Psychology Conference.
 Lisboa, Portugal.
 Retrieved October 17, 2018, from <https://senseofcommunity.com>.
 
-Halamová, J. Kanovsky, M., \& Naništová, E. (2018).
+Halamová, J. Kanovsky, M., & Naništová, E. (2018).
 Development and psychometric analysis of the
 sense of community descriptors scale.
 *Psychological Intervention, 27(1), 44-55.*
 <https://doi.org/10.5093/pi2018a8>.
 
-Jason, L. A., Stevens, E., \& Ram, D. (2015).
+Jason, L. A., Stevens, E., & Ram, D. (2015).
 Development of a three-factor psychological sense of community scale.
 *Journal of Community Psychology, 43(8), 973-985.*
 <https://doi.org/10.1002/jcop.21726>.
 
-Omoto, A. M., \& Snyder, M. (2010).
+Omoto, A. M., & Snyder, M. (2010).
 Influences of psychological sense of community on
 voluntary helping and prosocial action.
-In S. Stürmer \& M. Snyder (Eds.),
+In S. Stürmer & M. Snyder (Eds.),
 *The psychology of prosocial behavior:*
 *Group processes, intergroup relations, and helping (pp. 223-243).*
 Wiley-Blackwell.
