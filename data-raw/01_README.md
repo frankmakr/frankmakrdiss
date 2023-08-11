@@ -5,7 +5,7 @@ The format of the CHANGELOG section is based on
 and uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2023-08-10
+## [1.0.0] - 2023-08-23
 
 ### New
 
@@ -39,7 +39,7 @@ Krumbholz, F. (2023).
 *Psychological Sense of Community:*
 *Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften*
 [Psychological sense of community:
-Content validity of tests in dependence of community contexts]
+Content validity of tests in dependence of reference communities]
 (Version 1.0.0)
 [Data set].
 <https://doi.org/10.5281/zenodo.8000035>
@@ -92,7 +92,7 @@ A table with 158 rows and 7 columns.
   or 17 = Living outside from Germany
 + **studstatus**
   Student status used in the FernUniversität official statistics
-  (Berichtswesen, 2022a)
+  (Berichtswesen, 2022)
 + **noexpert**
   Formal theoretical knowledge of a theory of psychological sense of community
   coded as 0 = Knowledge, 1 = No knowledge
@@ -149,7 +149,7 @@ A data frame with 1,465 rows and 7 columns.
   or 17 = Living outside from Germany
 + **studstatus**
   Student status used in the FernUniversität official statistics
-  (Berichtswesen, 2022b)
+  (Berichtswesen, 2023)
 + **noexpert**
   Formal theoretical knowledge of a theory of psychological sense of community
   coded as 0 = Knowledge, 1 = No knowledge
@@ -216,13 +216,13 @@ A table with 22 rows and 2 columns.
 
 ## References
 
-Berichtswesen. (2022a, March 25).
+Berichtswesen. (2022, March 25).
 *Studierendenstatistik für Sommersemester 2018*
 [Student statistics for summer semester 2018].
 FernUniversität in Hagen.
 <https://www.fernuni-hagen.de/uniintern/organisation/statistik/semesterstatistik/sose2018.shtml>.
 
-Berichtswesen. (2022b, April 8).
+Berichtswesen. (2023, March 31).
 *Studierendenstatistik für Wintersemester 2019/20*
 [Student statistics for winter semester 2019/20].
 FernUniversität in Hagen.

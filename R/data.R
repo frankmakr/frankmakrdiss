@@ -24,19 +24,19 @@
 #'     in alphabetical order
 #'     or 17 = living outside from Germany}
 #'   \item{studstatus}{Student status used in the FernUniversität
-#'     official statistics (Berichtswesen, 2022a, 2022b)}
+#'     official statistics (Berichtswesen, 2022, 2023)}
 #'   \item{noexpert}{Formal theoretical knowledge of a theory of
 #'     psychological sense of community coded as 0 = Knowledge, 1 = No knowledge}
 #'   \item{numcomm}{The number of communities the person mentioned}
 #' }
 #' @source 
-#' Berichtswesen. (2022a, March 25).
+#' Berichtswesen. (2022, March 25).
 #' *Studierendenstatistik für Sommersemester 2018*
 #' \[Student statistics for summer semester 2018\].
 #' FernUniversität in Hagen.
 #' <https://www.fernuni-hagen.de/uniintern/organisation/statistik/semesterstatistik/sose2018.shtml>.
 #' 
-#' Berichtswesen. (2022b, April 8).
+#' Berichtswesen. (2023, March 31).
 #' *Studierendenstatistik für Wintersemester 2019/20*
 #' \[Student statistics for winter semester 2019/20\].
 #' FernUniversität in Hagen.

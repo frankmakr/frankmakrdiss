@@ -23,6 +23,8 @@
  * to the prior population parameters.
  *
  * Parameterization of the Beta distribution according to Betancourt:
+ * https://betanalpha.github.io/assets/case_studies/probability_densities.html#242_the_location-dispersion_parameterization
+ *
  * Since sigma^2 <= mu * (1 - mu),
  * a more useful parameterization instead of mean and variance
  * is the mean and the ratio between the variance and the maximum variance.
@@ -58,7 +60,8 @@ functions{
   }
 
   /**
-   * Return the induced Dirichlet density according to Betancourt.
+   * Return the induced Dirichlet density according to Michael Betancourt:
+   * https://betanalpha.github.io/assets/case_studies/ordinal_regression.html#22_Surgical_Cut
    * This is relevant for formulating a principled prior for ordered categories.
    */
   real induced_dirichlet_lpdf(vector cut_points, vector alpha, real anchor) {
@@ -349,4 +352,3 @@ generated quantities {
   counts[13] = N_con;
   counts[14] = N;
 }
-

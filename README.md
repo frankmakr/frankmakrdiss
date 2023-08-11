@@ -16,7 +16,7 @@ Krumbholz, F. (2023).
 *Psychological Sense of Community:*
 *Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften*
 [Psychological sense of community:
-Content validity of tests in dependence of community contexts]
+Content validity of tests in dependence of reference communities]
 [Unpublished doctoral dissertation].
 FernUniversität in Hagen.
 
@@ -34,7 +34,7 @@ FernUniversität in Hagen.
         in Abhängigkeit von Bezugsgemeinschaften},
     title = {Psychological Sense of Community},
     subtitle = {Content validity of tests
-        in dependence of community contexts},
+        in dependence of reference communities},
     titleaddon = {Unpublished doctoral dissertation},
     institution = {FernUniversität in Hagen},
     langid = {ngerman}

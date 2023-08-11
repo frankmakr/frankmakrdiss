@@ -52,9 +52,11 @@ functions {
     return Y_hat;
   }
 
-  // Stick-breaking representation of Dirichlet process
-  // Function based on Arthur Luis code
-  // https://github.com/luiarthur/TuringBnpBenchmarks/blob/master/src/dp-gmm/scripts/dp_sb_gmm_stan.py
+  /**
+   * Stick-breaking representation of Dirichlet process
+   * Function based on Arthur Luis code
+   * https://github.com/luiarthur/TuringBnpBenchmarks/blob/master/src/dp-gmm/scripts/dp_sb_gmm_stan.py
+   */
   vector calc_dp_probs(int C, vector stick_pieces) {
     vector[C - 1] cumprod1m_stick_pieces
                     = exp(cumulative_sum(log1m(stick_pieces)));
