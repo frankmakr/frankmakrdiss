@@ -5,7 +5,7 @@ The format of the CHANGELOG section is based on
 and uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2023-08-23
+## [1.0.0] - 2023-08-25
 
 ### New
 
