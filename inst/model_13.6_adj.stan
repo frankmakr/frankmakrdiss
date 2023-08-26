@@ -90,23 +90,23 @@ functions{
 }
 
 data {
-  int<lower = 0> N;  // Number of observations
+  int<lower = 0> N; // Number of observations
 
-  int<lower = 0> J;  // Number of group levels in data
+  int<lower = 0> J; // Number of group levels in data
   int<lower = 0> K;
 
-  int<lower = 0> P;  // Number of observational predictors
-  int<lower = 0> U;  // Number of group predictors
+  int<lower = 0> P; // Number of observational predictors
+  int<lower = 0> U; // Number of group predictors
   int<lower = 0> V;
 
-  int<lower = 1, upper = J> jj[N];  // Group id's
+  int<lower = 1, upper = J> jj[N]; // Group id's
   int<lower = 1, upper = K> kk[N];
 
-  matrix[N, P] x;  // Observational predictors
-  matrix[J, U] u;  // Group predictors
+  matrix[N, P] x; // Observational predictors
+  matrix[J, U] u; // Group predictors
   matrix[K, V] v;
 
-  real<lower = 0, upper = 1> y[N];  // Observed responses
+  real<lower = 0, upper = 1> y[N]; // Observed responses
 }
 
 transformed data {
@@ -117,16 +117,16 @@ transformed data {
   int N_sumcat = sum(N_cat);
   int N_con = N - N_sumcat;
 
-  int jj_cat[N_sumcat];       // Array for categorical group id's
+  int jj_cat[N_sumcat];      // Array for categorical group id's
   int kk_cat[N_sumcat];
-  int jj_con[N_con];          // Array for continuous group id's
+  int jj_con[N_con];         // Array for continuous group id's
   int kk_con[N_con];
-  matrix[N_sumcat, P] x_cat;  // Matrix for categorical predictors
-  matrix[N_con, P] x_con;     // Matrix for continuous predictors
-  int y_cat[N_sumcat];        // Array for categorical responses
-  real y_con[N_con];          // Array for continuous responses
+  matrix[N_sumcat, P] x_cat; // Matrix for categorical predictors
+  matrix[N_con, P] x_con;    // Matrix for continuous predictors
+  int y_cat[N_sumcat];       // Array for categorical responses
+  real y_con[N_con];         // Array for continuous responses
 
-  int index_cat = 0;          // Index for loop
+  int index_cat = 0;         // Index for loop
   int index_con = 0;
 
   // Broadcast the arrays for the categorical and continuous responses
@@ -166,25 +166,25 @@ parameters {
   real mu_k_logit;
 
   // Variance components
-  real<lower = 0> sigma_gamma;  // Superpopulation standard deviation
+  real<lower = 0> sigma_gamma; // Superpopulation standard deviation
   real<lower = 0> sigma_delta;
   vector<multiplier = sigma_gamma>[J] gamma_raw_logit;
   vector<multiplier = sigma_delta>[K] delta_raw_logit;
 
   // Adjusting covariates
-  vector[P] beta_ord_logit;  // Regression parameters
+  vector[P] beta_ord_logit; // Regression parameters
   vector[P] beta_con_logit;
   vector[U] zeta_logit;
   vector[V] eta_logit;
 
   // Finite mixture
-  real<lower = 0, upper = 1> lambda;  // Mixing proportion
+  real<lower = 0, upper = 1> lambda; // Mixing proportion
 
   // Ordered categories
-  ordered[C - 1] cut_points;  // Cut points
+  ordered[C - 1] cut_points; // Cut points
 
   // Beta distribution
-  real<lower = 0, upper = 1> phi;  // Ratio var / max(var)
+  real<lower = 0, upper = 1> phi; // Ratio var / max(var)
 }
 
 transformed parameters {
@@ -205,10 +205,10 @@ model {
   { sigma_gamma, sigma_delta } ~ gamma(2, 4);
 
   // Population model
-  mu_obs_logit ~ student_t(7, 0, 0.4);  // stan-dev wiki prior recommendations
+  mu_obs_logit ~ student_t(7, 0, 0.4);
   { mu_j_logit, mu_k_logit } ~ normal(0, 0.001);
 
-  beta_ord_logit ~ student_t(7, 0, 0.3);  // stan-dev wiki prior recommendations
+  beta_ord_logit ~ student_t(7, 0, 0.3);
   beta_con_logit ~ student_t(7, 0, 0.3);
   zeta_logit ~ student_t(7, 0, 0.3);
   eta_logit ~ student_t(7, 0, 0.3);
@@ -216,14 +216,14 @@ model {
   gamma_raw_logit ~ normal_id_glm(u, mu_j_logit, zeta_logit, sigma_gamma);
   delta_raw_logit ~ normal_id_glm(v, mu_k_logit, eta_logit, sigma_delta);
  
-  lambda ~ uniform(0, 1);  // stan-dev wiki prior recommendations
+  lambda ~ uniform(0, 1);
 
   cut_points ~ induced_dirichlet(rep_vector(1, C), 0);
 
-  phi ~ uniform(0, 1);  // stan-dev wiki prior recommendations
+  phi ~ uniform(0, 1);
 
   // Observational model
-  N_sumcat ~ binomial(N, lambda);  // Stan user's guide 5.6
+  N_sumcat ~ binomial(N, lambda);
   y_cat ~ ordered_logistic(theta_logit, cut_points);
   y_con ~ beta(shape_beta[1], shape_beta[2]);
 }
@@ -287,12 +287,8 @@ generated quantities {
   real<lower = 0> s_y_con;
   real<lower = 0> s_y;
 
-  // Replications for posterior predictive checks (Stan user's guide 26.6):
-  real y_rep[N];  // Population parameters replicated
-
-  int counts[14];  // Counts for checking
-
-  // Replications
+  // Posterior retrodictive check, population parameters replicated
+  real y_rep[N];
   {
     vector[J] gamma_raw_logit_rep
       = to_vector(normal_rng(mu_j_logit + u * zeta_logit, sigma_gamma));
@@ -344,11 +340,15 @@ generated quantities {
     s_y = sd(append_row(e_y_cat, e_y_con));
   }
 
-  // Counts
-  for (c in 1:C) {
-    counts[c] = N_cat[c];
+
+  // Counts for checking
+  int counts[14];
+  {
+    for (c in 1:C) {
+      counts[c] = N_cat[c];
+    }
+    counts[12] = N_sumcat;
+    counts[13] = N_con;
+    counts[14] = N;
   }
-  counts[12] = N_sumcat;
-  counts[13] = N_con;
-  counts[14] = N;
 }

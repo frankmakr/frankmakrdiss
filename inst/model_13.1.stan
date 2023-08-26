@@ -22,15 +22,15 @@
  */
 
 data {
-  int<lower = 1> N;  // Number of observations in data
+  int<lower = 1> N; // Number of observations in data
 
-  int<lower = 1> J;  // Number of group levels in data
+  int<lower = 1> J; // Number of group levels in data
   int<lower = 1> K;
 
-  int<lower = 1, upper = J> jj[N];  // Group id's
+  int<lower = 1, upper = J> jj[N]; // Group id's
   int<lower = 1, upper = K> kk[N];
 
-  real<lower = 0, upper = 1> y[N];  // Observed responses
+  real<lower = 0, upper = 1> y[N]; // Observed responses
 }
 
 parameters {
@@ -40,13 +40,13 @@ parameters {
   real mu_k;
 
   // Variance components
-  real<lower = 0> sigma_gamma;  // Superpopulation standard deviation
+  real<lower = 0> sigma_gamma; // Superpopulation standard deviation
   real<lower = 0> sigma_delta;
   vector<multiplier = sigma_gamma>[J] gamma_raw;
   vector<multiplier = sigma_delta>[K] delta_raw;
 
   // Normal distribution
-  real<lower = 0> sigma_y;  // Superpopulation standard deviation
+  real<lower = 0> sigma_y; // Superpopulation standard deviation
 }
 
 transformed parameters {
@@ -59,13 +59,13 @@ model {
   { sigma_gamma, sigma_delta } ~ gamma(2, 4);
 
   // Population model
-  mu_obs ~ student_t(7, 0, 0.4);  // stan-dev wiki prior recommendations
+  mu_obs ~ student_t(7, 0, 0.4);
   { mu_j, mu_k } ~ normal(0, 0.001);
 
   gamma_raw ~ normal(mu_j, sigma_gamma);
   delta_raw ~ normal(mu_k, sigma_delta);
 
-  sigma_y ~ gamma(2, 4);  // stan-dev wiki prior recommendations
+  sigma_y ~ gamma(2, 4);
 
   // Observational model
   y ~ normal(mu_normal, sigma_y);
@@ -97,9 +97,8 @@ generated quantities {
   real<lower = 0> s_delta = sd(delta_raw);
   real<lower = 0> s_y = sd(epsilon_y);
 
-  // Replications for posterior predictive checks (Stan user's guide 26.6):
-  real y_rep[N];  // Population parameters replicated 
-
+  // Posterior retrodictive check, population parameters replicated
+  real y_rep[N];
   {
     vector[J] gamma_raw_rep
       = to_vector(normal_rng(rep_vector(mu_j, J), sigma_gamma));

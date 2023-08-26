@@ -20,7 +20,13 @@
  */
 
 functions {
-  // Classical MDS algorithm (Torgerson, 1952)
+  /**
+   * Classical MDS algorithm (Torgerson, 1952)
+   * @param N Number of data points.
+   * @param D Number of MDS dimensions.
+   * @param Y Observed distance matrix.
+   * @return MDS configuration.
+   */
   matrix calc_mds_config(int N, int D, matrix Y) {
     real inv_N = inv(N);
     matrix[N, N] Z = identity_matrix(N) - inv_N;
@@ -36,7 +42,14 @@ functions {
     return mds_config;
   }
 
-  // Procrustes transformation (Borg, 2005)
+  /**
+   * Procrustes transformation (Borg, 2005)
+   * @param N Number of data points.
+   * @param D Number of MDS dimensions.
+   * @param X MDS target configuration.
+   * @param Y MDS configuration to be compared.
+   * @return Transformed MDS configuration.
+   */
   matrix rotate_procrustes(int N, int D, matrix X, matrix Y) {
     real inv_N = inv(N);
     vector[N] ones_vec = ones_vector(N);
@@ -56,6 +69,9 @@ functions {
    * Stick-breaking representation of Dirichlet process
    * Function based on Arthur Luis code
    * https://github.com/luiarthur/TuringBnpBenchmarks/blob/master/src/dp-gmm/scripts/dp_sb_gmm_stan.py
+   * @param C Maximum number of clusters.
+   * @param stick_pieces Raw mixing proportions.
+   * @return Mixing proportions.
    */
   vector calc_dp_probs(int C, vector stick_pieces) {
     vector[C - 1] cumprod1m_stick_pieces
@@ -68,7 +84,9 @@ functions {
     return dp_probs;
   }
 
-  // Stan threading function
+  /**
+   * Stan threading function
+   */
   real partial_sum(array[] real Y_slice,
                    int start, int end,
                    array[] row_vector mds_est,
@@ -96,7 +114,13 @@ functions {
                 Delta_shape_inv_gamma[2][start:end]);
   }
 
-  // Brute force RNG for truncated inverse gamma distribution
+  /**
+   * Brute force RNG for truncated inverse gamma distribution
+   * @param mu Mean.
+   * @param psi Scale.
+   * @param U Upper bound.
+   * @return RNG.
+   */
   vector trunc_inv_gamma_rng(vector mu, vector psi, real U) {
     int N = num_elements(mu);
     vector[N] inv_psi = inv(psi);
@@ -263,8 +287,7 @@ generated quantities {
   // Components covariance matrix
   matrix[D, D] dp_Sigma = multiply_lower_tri_self_transpose(dp_sigma_L);
 
-  // Posterior retrodictive check
-  // Cluster probabilities replicated
+  // Posterior retrodictive check, cluster probabilities replicated
   array[N_choose_2] real Y_lower_tri_rep;
   {
     array[N] int mix_component;
