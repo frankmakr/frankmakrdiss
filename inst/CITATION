@@ -4,18 +4,18 @@ bibentry(
   bibtype      = "misc",
   entrysubtype = "R Package",
   author       = "Frank Krumbholz",
-  year         = 2023,
+  year         = 2025,
   title        = "frankmakrdiss",
   subtitle     = "",
-  version      = "0.1.0",
+  version      = "0.1.1",
   titleaddon   = "Software",
   url          = "https://frankmakr.github.io/frankmakrdiss",
   langid       = "american",
   textVersion  = paste(
-                   "Krumbholz, F. (2023).",
+                   "Krumbholz, F. (2025).",
                    paste0(
                      "frankmakrdiss",
-                     "(Version 0.1.0)", 
+                     "(Version 0.1.1)", 
                      "[R Package]."),
                    "https://frankmakr.github.io/frankmakrdiss"
                    )
