@@ -34,13 +34,14 @@
 
   "related_identifiers": [
     {
+      "relation": "isSupplementTo",
+      "identifier": "https://doi.org/10.1007/978-3-658-47919-0",
+      "resource_type": "book"
+    },
+    {
       "relation": "hasPart",
-      "identifier":"https://doi.org/10.5281/zenodo.8000035",
+      "identifier": "https://doi.org/10.5281/zenodo.8000035",
       "resource_type": "dataset"
     }
-  ],
-
-  "references": [
-    "Krumbholz, F. (2023). Psychological Sense of Community: Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften [Psychological sense of community: Content validity of tests in dependence of reference communities] [Unpublished doctoral dissertation]. FernUniversität in Hagen."
   ]
 }

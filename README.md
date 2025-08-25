@@ -12,13 +12,13 @@
 
 The *R* package *frankmakrdiss* supplements the doctoral dissertation:
 
-Krumbholz, F. (2023).
+Krumbholz, F. (2025).
 *Psychological Sense of Community:*
 *Inhaltsvalidität von Testverfahren in Abhängigkeit von Bezugsgemeinschaften*
 [Psychological sense of community:
-Content validity of tests in dependence of reference communities]
-[Unpublished doctoral dissertation].
-FernUniversität in Hagen.
+Content validity of tests in dependence of reference communities].
+Wiesbaden: Springer.
+[https://doi.org/10.1007/978-3-658-47919-0](https://doi.org/10.1007/978-3-658-47919-0)
 
 <details>
 
@@ -26,17 +26,18 @@ FernUniversität in Hagen.
 
 ``` bibtex
 # BibTeX
-@unpublished{Krumbholz2023,
+@book{Krumbholz2025,
     author = {Krumbholz, F.},
-    date = {2023},
-    origtitle = {Psychological Sense of Community:,
+    date = {2025},
+    origtitle = {Psychological Sense of Community:
         Inhaltsvalidität von Testverfahren
         in Abhängigkeit von Bezugsgemeinschaften},
     title = {Psychological Sense of Community},
     subtitle = {Content validity of tests
         in dependence of reference communities},
-    titleaddon = {Unpublished doctoral dissertation},
-    institution = {FernUniversität in Hagen},
+    publisher = {Springer},
+    location = {Wiesbaden},
+    url = {https://doi.org/10.1007/978-3-658-47919-0},
     langid = {ngerman}
 }
 ```
@@ -63,7 +64,7 @@ for detailed instructions.
 
 # Install cmdstanr
 install.packages("cmdstanr",
-  repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+  repos = c("https://stan-dev.r-universe.dev", getOption("repos")))
 
 # Install CmdStan
 cmdstanr::install_cmdstan()
@@ -86,7 +87,7 @@ At this time
 the documentation of *frankmakrdiss*
 is not detailed enough to be self-explanatory.
 That is why it is highly recommended
-to read the doctoral dissertation before using this package.
+to read the book before using this package.
 
 This is an ongoing project.
 So, please be patient.

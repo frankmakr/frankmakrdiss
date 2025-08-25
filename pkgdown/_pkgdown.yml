@@ -42,7 +42,7 @@ reference:
 
   - title: Table Data
     desc: >
-      Prepares the date to be used in a LaTeX table environment
+      Prepares the data to be used in a LaTeX table environment
     contents:
     - make_table_body
 
