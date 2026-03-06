@@ -36,11 +36,16 @@
     {
       "relation": "isSupplementTo",
       "identifier": "https://doi.org/10.1007/978-3-658-47919-0",
-      "resource_type": "book"
+      "resource_type": "publication-book"
+    },
+    {
+      "relation": "isDocumentedBy",
+      "identifier": "https://frankmakr.github.io/frankmakrdiss",
+      "resource_type": "publication-softwaredocumentation"
     },
     {
       "relation": "hasPart",
-      "identifier": "https://doi.org/10.5281/zenodo.8000035",
+      "identifier": "https://doi.org/10.5281/zenodo.8000034",
       "resource_type": "dataset"
     }
   ]
